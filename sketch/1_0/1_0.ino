@@ -1,4 +1,5 @@
 //MINIMAL SPIFFS
+#include <elapsedMillis.h>
 #include "bitmaps.h"
 #include "BluetoothSerial.h"
 BluetoothSerial ESP_BT;
@@ -44,6 +45,11 @@ String httpRequestData = "";
 char serverName[64];
 char* link_begin = "http://";
 
+elapsedMillis timeElapsed;//Create an Instance
+bool boot1_ = true;
+bool boot2_ = false;
+bool bt_ = false;
+char* bt_name = "Punishman";
 
 const char index_html[] PROGMEM = R"rawliteral(
 <!DOCTYPE HTML><html><head>
@@ -76,7 +82,9 @@ String style =
 /* Login page */
 String loginIndex =
   "<form name=loginForm>"
-  "<h1>Legend Master</h1>"
+  "<h1>"
+  + String(bt_name) + 
+  "</h1>"
   "<input name=userid placeholder='User ID'> "
   "<input name=pwd placeholder=Password type=Password> "
   "<input type=submit onclick=check(this.form) class=btn value=Login></form>"
@@ -140,22 +148,19 @@ void setup() {
   Serial.begin(115200);                 // Serial setup
 
 
-    // SSD1306_SWITCHCAPVCC = generate display voltage from 3.3V internally
-  if(!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) { 
+  // SSD1306_SWITCHCAPVCC = generate display voltage from 3.3V internally
+  if (!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) {
     Serial.println(F("SSD1306 allocation failed"));
-    for(;;); // Don't proceed, loop forever
+    for (;;); // Don't proceed, loop forever
   }
-
-  show_boot1();
-  show_boot2();
-  show_bt();
-  test_show();
-
-
-
-
   
-  ESP_BT.begin("LegendMaster");
+  display.drawPixel(10, 10, SSD1306_WHITE);
+  display.display();
+  display.clearDisplay();
+  show_boot1();
+
+ 
+  ESP_BT.begin(bt_name);
   //saveCredentials();
   loadCredentials();
 
@@ -163,7 +168,7 @@ void setup() {
 
   WiFi.disconnect();
   WiFi.config(INADDR_NONE, INADDR_NONE, INADDR_NONE);  // This is a MUST!
-  if (!WiFi.setHostname("Legend Master")) {
+  if (!WiFi.setHostname(bt_name)) {
     Serial.println("Hostname failed to configure");
   }
 
@@ -173,7 +178,7 @@ void setup() {
 
   while (WiFi.status() != WL_CONNECTED) {
     readBT();
-    }
+  }
 
 
 
@@ -229,15 +234,55 @@ void setup() {
     }
   });
   server.begin();
+
+
+  
 }
 
 void loop() {
-    readBT();
+  readBT();
 
   // put your main code here, to run repeatedly:
 
   server.handleClient();
   delay(1);
+
+
+
+if (boot1_ == true){
+   show_boot1();
+   if (timeElapsed > 4000)
+  {
+    boot1_ = false;
+    boot2_ = true;
+    bt_ = false;
+    timeElapsed = 0;              // reset the counter to 0 so the counting starts over...
+  }
+}
+if (boot2_ == true){
+   show_boot2();
+   if (timeElapsed > 3000)
+  {
+    boot1_ = false;
+    boot2_ = false;
+    bt_ = true;
+    timeElapsed = 0;              // reset the counter to 0 so the counting starts over...
+  }
+}
+if (bt_ == true){
+   show_bt();
+   if (timeElapsed > 2000)
+  {
+    boot1_ = false;
+    boot2_ = false;
+    bt_ = false;
+    timeElapsed = 0;              // reset the counter to 0 so the counting starts over...
+  }
+}
+
+
+   
+  
 }
 
 /** Load WLAN credentials from EEPROM */
@@ -321,10 +366,10 @@ void readBT() {
       delay(100);
       ESP.restart();
     }
-      else if (recieved == '*')
+    else if (recieved == '*')
     {
       inData.trim();
-      Serial.print("New serverName address: http://"); Serial.print(inData); 
+      Serial.print("New serverName address: http://"); Serial.print(inData);
       Serial.println();
       ESP_BT.print("New serverName address: http://"); ESP_BT.print(inData);
       ESP_BT.println();
@@ -335,7 +380,7 @@ void readBT() {
       ESP_BT.println("Reboot...");
       Serial.println("Reboot...");
       delay(100);
-       ESP.restart();
+      ESP.restart();
     }
     else if (recieved == '#')
     {
@@ -386,98 +431,108 @@ void show_boot1(void) {
   display.clearDisplay(); //for Clearing the display
   display.drawBitmap(0, 0, boot1, 128, 64, WHITE); // display.drawBitmap(x position, y position, bitmap data, bitmap width, bitmap height, color)
   display.display();
-  delay(3000);
-  }
+}
+
+
 void show_boot2(void) {
-    display.clearDisplay(); //for Clearing the display
+  display.clearDisplay(); //for Clearing the display
   display.drawBitmap(0, 0, boot2, 128, 64, WHITE); // display.drawBitmap(x position, y position, bitmap data, bitmap width, bitmap height, color)
   display.display();
-  delay(2000);
-  }
+}
+
+
 void show_bt(void) {
-    display.clearDisplay(); //for Clearing the display
+  display.clearDisplay(); //for Clearing the display
   display.drawBitmap(0, 0, bt, 128, 64, WHITE); // display.drawBitmap(x position, y position, bitmap data, bitmap width, bitmap height, color)
+
+  display.setTextSize(1.5); // Draw 2X-scale text
+  display.setTextColor(SSD1306_WHITE);
+  display.println(String(bt_name));
+  display.setCursor(40, 10);
+  
   display.display();
-  delay(5000);
-  }
-void test_show(void){
+  
+}
+
+
+void test_show(void) {
   display.clearDisplay(); //for Clearing the display
   display.drawBitmap(0, 0, d1_1, 128, 64, WHITE); // display.drawBitmap(x position, y position, bitmap data, bitmap width, bitmap height, color)
   display.display();
   delay(1000);
 
-    display.clearDisplay(); //for Clearing the display
+  display.clearDisplay(); //for Clearing the display
   display.drawBitmap(0, 0, d1_2, 128, 64, WHITE); // display.drawBitmap(x position, y position, bitmap data, bitmap width, bitmap height, color)
   display.display();
   delay(1000);
 
-    display.clearDisplay(); //for Clearing the display
+  display.clearDisplay(); //for Clearing the display
   display.drawBitmap(0, 0, d1_3, 128, 64, WHITE); // display.drawBitmap(x position, y position, bitmap data, bitmap width, bitmap height, color)
   display.display();
   delay(1000);
 
-    display.clearDisplay(); //for Clearing the display
+  display.clearDisplay(); //for Clearing the display
   display.drawBitmap(0, 0, d1_4, 128, 64, WHITE); // display.drawBitmap(x position, y position, bitmap data, bitmap width, bitmap height, color)
   display.display();
   delay(1000);
 
-    display.clearDisplay(); //for Clearing the display
+  display.clearDisplay(); //for Clearing the display
   display.drawBitmap(0, 0, d1_5, 128, 64, WHITE); // display.drawBitmap(x position, y position, bitmap data, bitmap width, bitmap height, color)
   display.display();
   delay(1000);
 
-    display.clearDisplay(); //for Clearing the display
+  display.clearDisplay(); //for Clearing the display
   display.drawBitmap(0, 0, d1_6, 128, 64, WHITE); // display.drawBitmap(x position, y position, bitmap data, bitmap width, bitmap height, color)
   display.display();
   delay(1000);
 
-    display.clearDisplay(); //for Clearing the display
+  display.clearDisplay(); //for Clearing the display
   display.drawBitmap(0, 0, d1_7, 128, 64, WHITE); // display.drawBitmap(x position, y position, bitmap data, bitmap width, bitmap height, color)
   display.display();
   delay(1000);
 
-    display.clearDisplay(); //for Clearing the display
+  display.clearDisplay(); //for Clearing the display
   display.drawBitmap(0, 0, d1_8, 128, 64, WHITE); // display.drawBitmap(x position, y position, bitmap data, bitmap width, bitmap height, color)
   display.display();
   delay(1000);
 
-    display.clearDisplay(); //for Clearing the display
+  display.clearDisplay(); //for Clearing the display
   display.drawBitmap(0, 0, d1_9, 128, 64, WHITE); // display.drawBitmap(x position, y position, bitmap data, bitmap width, bitmap height, color)
   display.display();
   delay(1000);
 
-    display.clearDisplay(); //for Clearing the display
+  display.clearDisplay(); //for Clearing the display
   display.drawBitmap(0, 0, d1_10, 128, 64, WHITE); // display.drawBitmap(x position, y position, bitmap data, bitmap width, bitmap height, color)
   display.display();
   delay(1000);
 
-    display.clearDisplay(); //for Clearing the display
+  display.clearDisplay(); //for Clearing the display
   display.drawBitmap(0, 0, d1_11, 128, 64, WHITE); // display.drawBitmap(x position, y position, bitmap data, bitmap width, bitmap height, color)
   display.display();
   delay(1000);
 
-    display.clearDisplay(); //for Clearing the display
+  display.clearDisplay(); //for Clearing the display
   display.drawBitmap(0, 0, d1_12, 128, 64, WHITE); // display.drawBitmap(x position, y position, bitmap data, bitmap width, bitmap height, color)
   display.display();
   delay(1000);
 
-    display.clearDisplay(); //for Clearing the display
+  display.clearDisplay(); //for Clearing the display
   display.drawBitmap(0, 0, d1_13, 128, 64, WHITE); // display.drawBitmap(x position, y position, bitmap data, bitmap width, bitmap height, color)
   display.display();
   delay(1000);
 
-    display.clearDisplay(); //for Clearing the display
+  display.clearDisplay(); //for Clearing the display
   display.drawBitmap(0, 0, d1_14, 128, 64, WHITE); // display.drawBitmap(x position, y position, bitmap data, bitmap width, bitmap height, color)
   display.display();
   delay(1000);
 
-    display.clearDisplay(); //for Clearing the display
+  display.clearDisplay(); //for Clearing the display
   display.drawBitmap(0, 0, d1_15, 128, 64, WHITE); // display.drawBitmap(x position, y position, bitmap data, bitmap width, bitmap height, color)
   display.display();
   delay(1000);
 
-    display.clearDisplay(); //for Clearing the display
+  display.clearDisplay(); //for Clearing the display
   display.drawBitmap(0, 0, d1_16, 128, 64, WHITE); // display.drawBitmap(x position, y position, bitmap data, bitmap width, bitmap height, color)
   display.display();
   delay(1000);
-  }
+}
