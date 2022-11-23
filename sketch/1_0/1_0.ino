@@ -1,6 +1,7 @@
 //MINIMAL SPIFFS
 #include <elapsedMillis.h>
 #include "bitmaps.h"
+
 #include "BluetoothSerial.h"
 BluetoothSerial ESP_BT;
 #include <WiFi.h>
@@ -30,12 +31,28 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
 String inData;
 // Replace with your network credentials
-char host[] = "LegendMaster";
 char ssid[32]     = "zaera";
 char password[32] = "13579135791";
 bool status_wifi = false;
 String ip = "";
 WebServer server(80);
+
+
+#define BUTTON_LEFT 17 // GIOP21 pin connected to button
+int currentState_left;     // the current reading from the input pin
+int lastState_left = HIGH; // the previous state from the input pin
+
+#define BUTTON_RIGHT 27 // GIOP21 pin connected to button
+int currentState_right;     // the current reading from the input pin
+int lastState_right = HIGH; // the previous state from the input pin
+long long_press_sleep = 0;
+
+bool sleepingFlag = false;
+
+
+#define BUTTON_PIN_BITMASK 0x200000000 // 2^33 in hex
+
+RTC_DATA_ATTR int bootCount = 0;
 
 
 
@@ -49,103 +66,24 @@ elapsedMillis timeElapsed;//Create an Instance
 bool boot1_ = true;
 bool boot2_ = false;
 bool bt_ = false;
-char* bt_name = "Punishman";
+char* host = "Punishman";
 
-const char index_html[] PROGMEM = R"rawliteral(
-<!DOCTYPE HTML><html><head>
-  <title>ESP Input Form</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head><body>
-  <form action="/get">
-    input1: <input type="text" name="input1">
-    <input type="submit" value="Submit">
-  </form><br>
-  <form action="/get">
-    input2: <input type="text" name="input2">
-    <input type="submit" value="Submit">
-  </form><br>
-  <form action="/get">
-    input3: <input type="text" name="input3">
-    <input type="submit" value="Submit">
-  </form>
-</body></html>)rawliteral";
 
-/* Style */
-String style =
-  "<style>#file-input,input{width:100%;height:44px;border-radius:4px;margin:10px auto;font-size:15px}"
-  "input{background:#f1f1f1;border:0;padding:0 15px}body{background:#3498db;font-family:sans-serif;font-size:14px;color:#777}"
-  "#file-input{padding:0;border:1px solid #ddd;line-height:44px;text-align:left;display:block;cursor:pointer}"
-  "#bar,#prgbar{background-color:#f1f1f1;border-radius:10px}#bar{background-color:#3498db;width:0%;height:10px}"
-  "form{background:#fff;max-width:258px;margin:75px auto;padding:30px;border-radius:5px;text-align:center}"
-  ".btn{background:#3498db;color:#fff;cursor:pointer}</style>";
+#include "webserver.h"
 
-/* Login page */
-String loginIndex =
-  "<form name=loginForm>"
-  "<h1>"
-  + String(bt_name) + 
-  "</h1>"
-  "<input name=userid placeholder='User ID'> "
-  "<input name=pwd placeholder=Password type=Password> "
-  "<input type=submit onclick=check(this.form) class=btn value=Login></form>"
-  "<script>"
-  "function check(form) {"
-  "if(form.userid.value=='admin' && form.pwd.value=='admin')"
-  "{window.open('/serverIndex')}"
-  "else"
-  "{alert('Error Password or Username')}"
-  "}"
-  "</script>" + style;
 
-/* Server Index Page */
-String serverIndex =
-  "<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>"
-  "<form method='POST' action='#' enctype='multipart/form-data' id='upload_form'>"
-  "<input type='file' name='update' id='file' onchange='sub(this)' style=display:none>"
-  "<label id='file-input' for='file'>   Choose file...</label>"
-  "<input type='submit' class=btn value='Update'>"
-  "<br><br>"
-  "<div id='prg'></div>"
-  "<br><div id='prgbar'><div id='bar'></div></div><br></form>"
-  "<script>"
-  "function sub(obj){"
-  "var fileName = obj.value.split('\\\\');"
-  "document.getElementById('file-input').innerHTML = '   '+ fileName[fileName.length-1];"
-  "};"
-  "$('form').submit(function(e){"
-  "e.preventDefault();"
-  "var form = $('#upload_form')[0];"
-  "var data = new FormData(form);"
-  "$.ajax({"
-  "url: '/update',"
-  "type: 'POST',"
-  "data: data,"
-  "contentType: false,"
-  "processData:false,"
-  "xhr: function() {"
-  "var xhr = new window.XMLHttpRequest();"
-  "xhr.upload.addEventListener('progress', function(evt) {"
-  "if (evt.lengthComputable) {"
-  "var per = evt.loaded / evt.total;"
-  "$('#prg').html('progress: ' + Math.round(per*100) + '%');"
-  "$('#bar').css('width',Math.round(per*100) + '%');"
-  "}"
-  "}, false);"
-  "return xhr;"
-  "},"
-  "success:function(d, s) {"
-  "console.log('success!') "
-  "},"
-  "error: function (a, b, c) {"
-  "}"
-  "});"
-  "});"
-  "</script>" + style;
+
 
 void setup() {
+  pinMode(BUTTON_LEFT, INPUT_PULLUP);
+  pinMode(BUTTON_RIGHT, INPUT_PULLUP);
+
+  
 
   // put your setup code here, to run once:
   Serial.begin(115200);                 // Serial setup
+
+  delay(500);
 
 
   // SSD1306_SWITCHCAPVCC = generate display voltage from 3.3V internally
@@ -153,14 +91,14 @@ void setup() {
     Serial.println(F("SSD1306 allocation failed"));
     for (;;); // Don't proceed, loop forever
   }
-  
+
   display.drawPixel(10, 10, SSD1306_WHITE);
   display.display();
   display.clearDisplay();
   show_boot1();
 
- 
-  ESP_BT.begin(bt_name);
+
+  ESP_BT.begin(host);
   //saveCredentials();
   loadCredentials();
 
@@ -168,7 +106,7 @@ void setup() {
 
   WiFi.disconnect();
   WiFi.config(INADDR_NONE, INADDR_NONE, INADDR_NONE);  // This is a MUST!
-  if (!WiFi.setHostname(bt_name)) {
+  if (!WiFi.setHostname(host)) {
     Serial.println("Hostname failed to configure");
   }
 
@@ -236,10 +174,45 @@ void setup() {
   server.begin();
 
 
-  
+
 }
 
 void loop() {
+
+  currentState_left = digitalRead(BUTTON_LEFT);
+  currentState_right = digitalRead(BUTTON_RIGHT);
+
+  if (lastState_left == LOW && currentState_left == HIGH) {
+    Serial.println("LEFT");
+  }
+
+  if (lastState_right == LOW && currentState_right == HIGH) {
+    Serial.println("RIGHT");
+    long_press_sleep = 0;
+  }
+
+  else if (currentState_right == LOW) {
+    long_press_sleep = long_press_sleep + 1;
+  }
+  if (long_press_sleep > 800) {
+    long_press_sleep = 0;
+    delay(1000);
+    esp_sleep_enable_ext0_wakeup(GPIO_NUM_27,0);
+    Serial.println("Going to sleep now");
+    display.clearDisplay();
+    display.display();
+    display.ssd1306_command(SSD1306_DISPLAYOFF);  // put the OLED display in sleep mode
+    display.ssd1306_command(0x8D);          // disable charge pump
+
+    
+    delay(1000);
+    sleepingFlag = true;
+    esp_deep_sleep_start();
+    Serial.println("This will never be printed");
+  }
+  lastState_left = currentState_left;
+  lastState_right = currentState_right;
+
   readBT();
 
   // put your main code here, to run repeatedly:
@@ -247,42 +220,44 @@ void loop() {
   server.handleClient();
   delay(1);
 
+  boot_and_main();
 
+  print_wakeup_reason();
 
-if (boot1_ == true){
-   show_boot1();
-   if (timeElapsed > 4000)
-  {
-    boot1_ = false;
-    boot2_ = true;
-    bt_ = false;
-    timeElapsed = 0;              // reset the counter to 0 so the counting starts over...
-  }
-}
-if (boot2_ == true){
-   show_boot2();
-   if (timeElapsed > 3000)
-  {
-    boot1_ = false;
-    boot2_ = false;
-    bt_ = true;
-    timeElapsed = 0;              // reset the counter to 0 so the counting starts over...
-  }
-}
-if (bt_ == true){
-   show_bt();
-   if (timeElapsed > 2000)
-  {
-    boot1_ = false;
-    boot2_ = false;
-    bt_ = false;
-    timeElapsed = 0;              // reset the counter to 0 so the counting starts over...
-  }
 }
 
+void boot_and_main() {
 
-   
-  
+  if (boot1_ == true) {
+    show_boot1();
+    if (timeElapsed > 4000)
+    {
+      boot1_ = false;
+      boot2_ = true;
+      bt_ = false;
+      timeElapsed = 0;              // reset the counter to 0 so the counting starts over...
+    }
+  }
+  if (boot2_ == true) {
+    show_boot2();
+    if (timeElapsed > 3000)
+    {
+      boot1_ = false;
+      boot2_ = false;
+      bt_ = true;
+      timeElapsed = 0;              // reset the counter to 0 so the counting starts over...
+    }
+  }
+  if (bt_ == true) {
+    show_bt();
+    if (timeElapsed > 2000)
+    {
+      boot1_ = false;
+      boot2_ = false;
+      bt_ = false;
+      timeElapsed = 0;              // reset the counter to 0 so the counting starts over...
+    }
+  }
 }
 
 /** Load WLAN credentials from EEPROM */
@@ -447,11 +422,11 @@ void show_bt(void) {
 
   display.setTextSize(1.5); // Draw 2X-scale text
   display.setTextColor(SSD1306_WHITE);
-  display.println(String(bt_name));
+  display.println(String(host));
   display.setCursor(40, 10);
-  
+
   display.display();
-  
+
 }
 
 
@@ -536,3 +511,28 @@ void test_show(void) {
   display.display();
   delay(1000);
 }
+
+void print_wakeup_reason() {
+  esp_sleep_wakeup_cause_t wakeup_reason;
+
+  wakeup_reason = esp_sleep_get_wakeup_cause();
+  if(sleepingFlag==true){
+    Serial.println("Wake Up");
+    wakeup();
+    }
+
+//  switch (wakeup_reason) {
+//    case ESP_SLEEP_WAKEUP_EXT0 : Serial.println("Wakeup caused by external signal using RTC_IO"); break;
+//    case ESP_SLEEP_WAKEUP_EXT1 : Serial.println("Wakeup caused by external signal using RTC_CNTL"); break;
+//    case ESP_SLEEP_WAKEUP_TIMER : Serial.println("Wakeup caused by timer"); break;
+//    case ESP_SLEEP_WAKEUP_TOUCHPAD : Serial.println("Wakeup caused by touchpad"); break;
+//    case ESP_SLEEP_WAKEUP_ULP : Serial.println("Wakeup caused by ULP program"); break;
+//    default : Serial.printf("Wakeup was not caused by deep sleep: %d\n", wakeup_reason); break;
+//  }
+}
+void wakeup(){
+  delay(100);
+  Serial.println("Wake Up");
+  delay(100);
+  sleepingFlag = false;
+  }
