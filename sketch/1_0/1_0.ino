@@ -31,6 +31,8 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
 String inData;
 // Replace with your network credentials
+
+char* host = "Punishman_LM011";
 char ssid[32]     = "zaera";
 char password[32] = "13579135791";
 bool status_wifi = false;
@@ -66,7 +68,7 @@ elapsedMillis timeElapsed;//Create an Instance
 bool boot1_ = true;
 bool boot2_ = false;
 bool bt_ = false;
-char* host = "Punishman";
+
 
 
 #include "webserver.h"
@@ -100,7 +102,8 @@ void setup() {
 
   ESP_BT.begin(host);
   //saveCredentials();
-  loadCredentials();
+  
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  loadCredentials();
 
   strcpy(serverName, link_begin);
 
@@ -110,13 +113,14 @@ void setup() {
     Serial.println("Hostname failed to configure");
   }
 
-
   WiFi.begin(ssid, password);
   Serial.println("Connecting");
 
-  while (WiFi.status() != WL_CONNECTED) {
-    readBT();
-  }
+// WIFI retries goes here
+
+//  while (WiFi.status() != WL_CONNECTED) {
+//    readBT();
+//  }
 
 
 
@@ -420,12 +424,17 @@ void show_bt(void) {
   display.clearDisplay(); //for Clearing the display
   display.drawBitmap(0, 0, bt, 128, 64, WHITE); // display.drawBitmap(x position, y position, bitmap data, bitmap width, bitmap height, color)
 
-  display.setTextSize(1.5); // Draw 2X-scale text
+  display.setTextSize(1); // Draw 2X-scale text
   display.setTextColor(SSD1306_WHITE);
-  display.println(String(host));
-  display.setCursor(40, 10);
+  display.setCursor(33, 14);
+  String ip_con = WiFi.localIP().toString();
+  if (ip_con == "0.0.0.0"){
+    ip_con = "can't connect..";
+    }
+  display.println(String(host) + '\n' + '\n'+ '\n' + "      " + String(ssid) + '\n' + '\n' + "      " + ip_con);
 
   display.display();
+  
 
 }
 
