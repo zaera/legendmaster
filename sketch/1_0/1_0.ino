@@ -1,4 +1,5 @@
 //MINIMAL SPIFFS
+#include <Pangodream_18650_CL.h>
 #include <elapsedMillis.h>
 #include "bitmaps.h"
 
@@ -12,6 +13,9 @@ BluetoothSerial ESP_BT;
 #include "EEPROM.h"
 #include <SPI.h>
 #include <Wire.h>
+
+
+Pangodream_18650_CL BL;
 
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
@@ -186,6 +190,7 @@ void setup() {
 }
 
 void loop() {
+  battery();
 
   currentState_left = digitalRead(BUTTON_LEFT);
   currentState_right = digitalRead(BUTTON_RIGHT);
@@ -569,4 +574,17 @@ void wakeup(){
   Serial.println("Wake Up");
   delay(100);
   sleepingFlag = false;
+  }
+
+void battery(){
+   Serial.print("Value from pin: ");
+  Serial.println(analogRead(34));
+  Serial.print("Average value from pin: ");
+  Serial.println(BL.pinRead());
+  Serial.print("Volts: ");
+  Serial.println(BL.getBatteryVolts());
+  Serial.print("Charge level: ");
+  Serial.println(BL.getBatteryChargeLevel());
+  Serial.println("");
+  delay(1000);
   }
