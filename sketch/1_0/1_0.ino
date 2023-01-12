@@ -13,6 +13,7 @@ BluetoothSerial ESP_BT;
 #include "EEPROM.h"
 #include <SPI.h>
 #include <Wire.h>
+#include <ESP2SOTA.h>
 
 
 Pangodream_18650_CL BL;
@@ -41,7 +42,7 @@ String inData;
 // Replace with your network credentials
 
 char* host = "Punishman_LM011";
-char ssid[32]     = "zaera";
+char ssid[32] = "Punishman_LM011";
 char password[32] = "13579135791";
 bool status_wifi = false;
 String ip = "";
@@ -115,14 +116,14 @@ void setup() {
 
   strcpy(serverName, link_begin);
 
-  WiFi.disconnect();
-  WiFi.config(INADDR_NONE, INADDR_NONE, INADDR_NONE);  // This is a MUST!
-  if (!WiFi.setHostname(host)) {
-    Serial.println("Hostname failed to configure");
-  }
-
-  WiFi.begin(ssid, password);
-  Serial.println("Connecting");
+//  WiFi.disconnect();
+//  WiFi.config(INADDR_NONE, INADDR_NONE, INADDR_NONE);  // This is a MUST!
+//  if (!WiFi.setHostname(host)) {
+//    Serial.println("Hostname failed to configure");
+//  }
+//
+//  WiFi.begin(ssid, password);
+//  Serial.println("Connecting");
 
 // WIFI retries goes here
 
@@ -132,64 +133,83 @@ void setup() {
 
 
 
-  Serial.println("");
-  Serial.print("Connected to WiFi network with IP Address: ");
-  Serial.println(WiFi.localIP());
-  ip = WiFi.localIP().toString();
-  status_wifi = true;
+//  Serial.println("");
+//  Serial.print("Connected to WiFi network with IP Address: ");
+//  Serial.println(WiFi.localIP());
+//  ip = WiFi.localIP().toString();
+//  status_wifi = true;
 
 
 
   /*use mdns for host name resolution*/
-  if (!MDNS.begin(host)) { //http://esp32.local
-    Serial.println("Error setting up MDNS responder!");
-    while (1) {
-      delay(1000);
-    }
-  }
-  Serial.println("mDNS responder started");
-  /*return index page which is stored in serverIndex */
-  server.on("/", HTTP_GET, []() {
+//  if (!MDNS.begin(host)) { //http://esp32.local
+//    Serial.println("Error setting up MDNS responder!");
+//    while (1) {
+//      delay(1000);
+//    }
+//  }
+//  Serial.println("mDNS responder started");
+//  /*return index page which is stored in serverIndex */
+//  server.on("/", HTTP_GET, []() {
+//    server.sendHeader("Connection", "close");
+//    server.send(200, "text/html", loginIndex);
+//  });
+//  server.on("/serverIndex", HTTP_GET, []() {
+//    server.sendHeader("Connection", "close");
+//    server.send(200, "text/html", serverIndex);
+//    //server.send(200, "text/html", index_html);
+//  });
+//  /*handling uploading firmware file */
+//  server.on("/update", HTTP_POST, []() {
+//    server.sendHeader("Connection", "close");
+//    server.send(200, "text/plain", (Update.hasError()) ? "FAIL" : "OK");
+//    ESP.restart();
+//  }, []() {
+//    HTTPUpload& upload = server.upload();
+//    if (upload.status == UPLOAD_FILE_START) {
+//      Serial.printf("Update: %s\n", upload.filename.c_str());
+//      if (!Update.begin(UPDATE_SIZE_UNKNOWN)) { //start with max available size
+//        Update.printError(Serial);
+//      }
+//    } else if (upload.status == UPLOAD_FILE_WRITE) {
+//      /* flashing firmware to ESP*/
+//      if (Update.write(upload.buf, upload.currentSize) != upload.currentSize) {
+//        Update.printError(Serial);
+//      }
+//    } else if (upload.status == UPLOAD_FILE_END) {
+//      if (Update.end(true)) { //true to set the size to the current progress
+//        Serial.printf("Update Success: %u\nRebooting...\n", upload.totalSize);
+//      } else {
+//        Update.printError(Serial);
+//      }
+//    }
+//  });
+//  server.begin();
+
+WiFi.mode(WIFI_AP);  
+  WiFi.softAP(ssid, password);
+  delay(1000);
+  IPAddress IP = IPAddress (10, 10, 10, 1);
+  IPAddress NMask = IPAddress (255, 255, 255, 0);
+  WiFi.softAPConfig(IP, IP, NMask);
+  IPAddress myIP = WiFi.softAPIP();
+  Serial.print("AP IP address: ");
+  Serial.println(myIP);
+
+  /* SETUP YOR WEB OWN ENTRY POINTS */
+  server.on("/myurl", HTTP_GET, []() {
     server.sendHeader("Connection", "close");
-    server.send(200, "text/html", loginIndex);
+    server.send(200, "text/plain", "Hello there!");
   });
-  server.on("/serverIndex", HTTP_GET, []() {
-    server.sendHeader("Connection", "close");
-    server.send(200, "text/html", serverIndex);
-    //server.send(200, "text/html", index_html);
-  });
-  /*handling uploading firmware file */
-  server.on("/update", HTTP_POST, []() {
-    server.sendHeader("Connection", "close");
-    server.send(200, "text/plain", (Update.hasError()) ? "FAIL" : "OK");
-    ESP.restart();
-  }, []() {
-    HTTPUpload& upload = server.upload();
-    if (upload.status == UPLOAD_FILE_START) {
-      Serial.printf("Update: %s\n", upload.filename.c_str());
-      if (!Update.begin(UPDATE_SIZE_UNKNOWN)) { //start with max available size
-        Update.printError(Serial);
-      }
-    } else if (upload.status == UPLOAD_FILE_WRITE) {
-      /* flashing firmware to ESP*/
-      if (Update.write(upload.buf, upload.currentSize) != upload.currentSize) {
-        Update.printError(Serial);
-      }
-    } else if (upload.status == UPLOAD_FILE_END) {
-      if (Update.end(true)) { //true to set the size to the current progress
-        Serial.printf("Update Success: %u\nRebooting...\n", upload.totalSize);
-      } else {
-        Update.printError(Serial);
-      }
-    }
-  });
+
+  /* INITIALIZE ESP2SOTA LIBRARY */
+  ESP2SOTA.begin(&server);
   server.begin();
-
-
 
 }
 
 void loop() {
+  server.handleClient();
   battery();
 
   currentState_left = digitalRead(BUTTON_LEFT);
@@ -237,7 +257,7 @@ void loop() {
   boot_and_main();
 
   print_wakeup_reason();
-
+  delay(5);
 }
 
 void boot_and_main() {
