@@ -1,6 +1,7 @@
 using Toybox.Application;
 using Toybox.WatchUi;
 using Toybox.ActivityRecording;
+using Toybox.Position;
 
 class legendmasterApp extends Application.AppBase {
     var session = null;
@@ -10,7 +11,9 @@ class legendmasterApp extends Application.AppBase {
     }
 
     function onStart(state) {
-        // Создаем сессию сразу при старте
+        // Включаем GPS на постоянный поиск
+        Position.enableLocationEvents(Position.LOCATION_CONTINUOUS, method(:onPosition));
+        
         if (session == null) {
             session = ActivityRecording.createSession({
                 :name=>"Orienteering",
@@ -20,12 +23,17 @@ class legendmasterApp extends Application.AppBase {
     }
 
     function onStop(state) {
-        // Если приложение закрыто без сохранения — сохраняем принудительно
+        Position.enableLocationEvents(Position.LOCATION_DISABLE, method(:onPosition));
         if (session != null && session.isRecording()) {
             session.stop();
             session.save();
             session = null;
         }
+    }
+
+    // Обработчик для компилятора (важна типизация для SDK 8.x)
+    function onPosition(info as Position.Info) as Void {
+        WatchUi.requestUpdate(); 
     }
 
     function getInitialView() {

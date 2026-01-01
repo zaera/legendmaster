@@ -4,202 +4,216 @@
     <pcToLineNum>
         <entry filename="c:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\bin\\gen\\006-B2413-00\\source\\Rez.mcgen" id="1" lineNum="7" parent="globals/Rez" pc="268435460" symbol="&lt;init&gt;"/>
         <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="2" lineNum="4" parent="globals/legendmasterDelegate" pc="268435479" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="3" lineNum="7" parent="globals/legendmasterView" pc="268435498" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="3" lineNum="14" parent="globals/legendmasterView" pc="268435516" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="3" lineNum="8" parent="globals/legendmasterView" pc="268435498" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="3" lineNum="11" parent="globals/legendmasterView" pc="268435516" symbol="&lt;init&gt;"/>
         <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterMenuDelegate.mc" id="4" lineNum="5" parent="globals/legendmasterMenuDelegate" pc="268436819" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterApp.mc" id="5" lineNum="5" parent="globals/legendmasterApp" pc="268436838" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="6" lineNum="31" parent="globals/legendmasterDelegate" pc="268436857" symbol="onBack"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="6" lineNum="32" parent="globals/legendmasterDelegate" pc="268436861" symbol="onBack"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="6" lineNum="34" parent="globals/legendmasterDelegate" pc="268436878" symbol="onBack"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="6" lineNum="35" parent="globals/legendmasterDelegate" pc="268436901" symbol="onBack"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="6" lineNum="36" parent="globals/legendmasterDelegate" pc="268436914" symbol="onBack"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="6" lineNum="37" parent="globals/legendmasterDelegate" pc="268436932" symbol="onBack"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="6" lineNum="39" parent="globals/legendmasterDelegate" pc="268436944" symbol="onBack"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="6" lineNum="40" parent="globals/legendmasterDelegate" pc="268436960" symbol="onBack"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="6" lineNum="43" parent="globals/legendmasterDelegate" pc="268436966" symbol="onBack"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="6" lineNum="44" parent="globals/legendmasterDelegate" pc="268436989" symbol="onBack"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="6" lineNum="45" parent="globals/legendmasterDelegate" pc="268437012" symbol="onBack"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="6" lineNum="47" parent="globals/legendmasterDelegate" pc="268437018" symbol="onBack"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="7" lineNum="69" parent="globals/legendmasterDelegate" pc="268437021" symbol="onPreviousPage"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="7" lineNum="70" parent="globals/legendmasterDelegate" pc="268437023" symbol="onPreviousPage"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="7" lineNum="70" parent="globals/legendmasterDelegate" pc="268437046" symbol="onPreviousPage"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="7" lineNum="72" parent="globals/legendmasterDelegate" pc="268437052" symbol="onPreviousPage"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="7" lineNum="72" parent="globals/legendmasterDelegate" pc="268437075" symbol="onPreviousPage"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="7" lineNum="73" parent="globals/legendmasterDelegate" pc="268437101" symbol="onPreviousPage"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="7" lineNum="74" parent="globals/legendmasterDelegate" pc="268437124" symbol="onPreviousPage"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="8" lineNum="7" parent="globals/legendmasterDelegate" pc="268437127" symbol="initialize"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="8" lineNum="8" parent="globals/legendmasterDelegate" pc="268437129" symbol="initialize"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="8" lineNum="9" parent="globals/legendmasterDelegate" pc="268437147" symbol="initialize"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="9" lineNum="13" parent="globals/legendmasterDelegate" pc="268437158" symbol="onSelect"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="9" lineNum="14" parent="globals/legendmasterDelegate" pc="268437162" symbol="onSelect"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="9" lineNum="15" parent="globals/legendmasterDelegate" pc="268437179" symbol="onSelect"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="9" lineNum="15" parent="globals/legendmasterDelegate" pc="268437191" symbol="onSelect"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="9" lineNum="17" parent="globals/legendmasterDelegate" pc="268437197" symbol="onSelect"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="9" lineNum="19" parent="globals/legendmasterDelegate" pc="268437243" symbol="onSelect"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="9" lineNum="20" parent="globals/legendmasterDelegate" pc="268437261" symbol="onSelect"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="9" lineNum="23" parent="globals/legendmasterDelegate" pc="268437283" symbol="onSelect"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="9" lineNum="24" parent="globals/legendmasterDelegate" pc="268437301" symbol="onSelect"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="9" lineNum="26" parent="globals/legendmasterDelegate" pc="268437320" symbol="onSelect"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="9" lineNum="27" parent="globals/legendmasterDelegate" pc="268437336" symbol="onSelect"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="10" lineNum="51" parent="globals/legendmasterDelegate" pc="268437339" symbol="onNextPage"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="10" lineNum="53" parent="globals/legendmasterDelegate" pc="268437343" symbol="onNextPage"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="10" lineNum="54" parent="globals/legendmasterDelegate" pc="268437366" symbol="onNextPage"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="10" lineNum="55" parent="globals/legendmasterDelegate" pc="268437383" symbol="onNextPage"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="10" lineNum="56" parent="globals/legendmasterDelegate" pc="268437396" symbol="onNextPage"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="10" lineNum="57" parent="globals/legendmasterDelegate" pc="268437414" symbol="onNextPage"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="10" lineNum="59" parent="globals/legendmasterDelegate" pc="268437426" symbol="onNextPage"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="10" lineNum="60" parent="globals/legendmasterDelegate" pc="268437442" symbol="onNextPage"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="10" lineNum="63" parent="globals/legendmasterDelegate" pc="268437448" symbol="onNextPage"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="10" lineNum="63" parent="globals/legendmasterDelegate" pc="268437471" symbol="onNextPage"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="10" lineNum="64" parent="globals/legendmasterDelegate" pc="268437497" symbol="onNextPage"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="10" lineNum="65" parent="globals/legendmasterDelegate" pc="268437520" symbol="onNextPage"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="11" lineNum="101" parent="globals/legendmasterView" pc="268437523" symbol="drawPauseMenu"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="11" lineNum="102" parent="globals/legendmasterView" pc="268437527" symbol="drawPauseMenu"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="11" lineNum="103" parent="globals/legendmasterView" pc="268437549" symbol="drawPauseMenu"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="11" lineNum="105" parent="globals/legendmasterView" pc="268437589" symbol="drawPauseMenu"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="11" lineNum="106" parent="globals/legendmasterView" pc="268437640" symbol="drawPauseMenu"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="11" lineNum="108" parent="globals/legendmasterView" pc="268437682" symbol="drawPauseMenu"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="11" lineNum="109" parent="globals/legendmasterView" pc="268437728" symbol="drawPauseMenu"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="11" lineNum="111" parent="globals/legendmasterView" pc="268437780" symbol="drawPauseMenu"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="11" lineNum="112" parent="globals/legendmasterView" pc="268437802" symbol="drawPauseMenu"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="11" lineNum="113" parent="globals/legendmasterView" pc="268437845" symbol="drawPauseMenu"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="11" lineNum="114" parent="globals/legendmasterView" pc="268437867" symbol="drawPauseMenu"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="11" lineNum="115" parent="globals/legendmasterView" pc="268437910" symbol="drawPauseMenu"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="11" lineNum="116" parent="globals/legendmasterView" pc="268437932" symbol="drawPauseMenu"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="12" lineNum="27" parent="globals/legendmasterView" pc="268437973" symbol="onLayout"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="12" lineNum="28" parent="globals/legendmasterView" pc="268437975" symbol="onLayout"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="13" lineNum="184" parent="globals/legendmasterView" pc="268438023" symbol="formatTime"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="13" lineNum="185" parent="globals/legendmasterView" pc="268438027" symbol="formatTime"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="13" lineNum="186" parent="globals/legendmasterView" pc="268438037" symbol="formatTime"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="14" lineNum="168" parent="globals/legendmasterView" pc="268438089" symbol="drawNavigation"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="14" lineNum="169" parent="globals/legendmasterView" pc="268438091" symbol="drawNavigation"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="14" lineNum="170" parent="globals/legendmasterView" pc="268438113" symbol="drawNavigation"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="14" lineNum="171" parent="globals/legendmasterView" pc="268438153" symbol="drawNavigation"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="14" lineNum="172" parent="globals/legendmasterView" pc="268438186" symbol="drawNavigation"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="14" lineNum="173" parent="globals/legendmasterView" pc="268438203" symbol="drawNavigation"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="14" lineNum="174" parent="globals/legendmasterView" pc="268438236" symbol="drawNavigation"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="14" lineNum="176" parent="globals/legendmasterView" pc="268438289" symbol="drawNavigation"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="14" lineNum="179" parent="globals/legendmasterView" pc="268438332" symbol="drawNavigation"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="14" lineNum="180" parent="globals/legendmasterView" pc="268438349" symbol="drawNavigation"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="15" lineNum="82" parent="globals/legendmasterView" pc="268438371" symbol="drawMain"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="15" lineNum="83" parent="globals/legendmasterView" pc="268438375" symbol="drawMain"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="15" lineNum="84" parent="globals/legendmasterView" pc="268438397" symbol="drawMain"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="15" lineNum="85" parent="globals/legendmasterView" pc="268438411" symbol="drawMain"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="15" lineNum="86" parent="globals/legendmasterView" pc="268438418" symbol="drawMain"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="15" lineNum="86" parent="globals/legendmasterView" pc="268438431" symbol="drawMain"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="15" lineNum="87" parent="globals/legendmasterView" pc="268438464" symbol="drawMain"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="15" lineNum="87" parent="globals/legendmasterView" pc="268438477" symbol="drawMain"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="15" lineNum="89" parent="globals/legendmasterView" pc="268438504" symbol="drawMain"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="15" lineNum="90" parent="globals/legendmasterView" pc="268438553" symbol="drawMain"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="15" lineNum="91" parent="globals/legendmasterView" pc="268438599" symbol="drawMain"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="15" lineNum="93" parent="globals/legendmasterView" pc="268438645" symbol="drawMain"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="15" lineNum="94" parent="globals/legendmasterView" pc="268438662" symbol="drawMain"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="15" lineNum="95" parent="globals/legendmasterView" pc="268438684" symbol="drawMain"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="15" lineNum="97" parent="globals/legendmasterView" pc="268438730" symbol="drawMain"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="16" lineNum="38" parent="globals/legendmasterView" pc="268438749" symbol="scrollIcons"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="16" lineNum="39" parent="globals/legendmasterView" pc="268438753" symbol="scrollIcons"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="16" lineNum="40" parent="globals/legendmasterView" pc="268438769" symbol="scrollIcons"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="16" lineNum="41" parent="globals/legendmasterView" pc="268438788" symbol="scrollIcons"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="16" lineNum="41" parent="globals/legendmasterView" pc="268438805" symbol="scrollIcons"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="16" lineNum="42" parent="globals/legendmasterView" pc="268438821" symbol="scrollIcons"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="16" lineNum="42" parent="globals/legendmasterView" pc="268438835" symbol="scrollIcons"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="16" lineNum="43" parent="globals/legendmasterView" pc="268438854" symbol="scrollIcons"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="17" lineNum="31" parent="globals/legendmasterView" pc="268438871" symbol="changePage"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="17" lineNum="32" parent="globals/legendmasterView" pc="268438873" symbol="changePage"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="17" lineNum="33" parent="globals/legendmasterView" pc="268438889" symbol="changePage"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="17" lineNum="33" parent="globals/legendmasterView" pc="268438906" symbol="changePage"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="17" lineNum="34" parent="globals/legendmasterView" pc="268438922" symbol="changePage"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="17" lineNum="34" parent="globals/legendmasterView" pc="268438939" symbol="changePage"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="17" lineNum="35" parent="globals/legendmasterView" pc="268438955" symbol="changePage"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="18" lineNum="147" parent="globals/legendmasterView" pc="268438972" symbol="drawUIElements"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="18" lineNum="148" parent="globals/legendmasterView" pc="268438976" symbol="drawUIElements"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="18" lineNum="149" parent="globals/legendmasterView" pc="268438986" symbol="drawUIElements"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="18" lineNum="150" parent="globals/legendmasterView" pc="268438996" symbol="drawUIElements"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="18" lineNum="153" parent="globals/legendmasterView" pc="268439018" symbol="drawUIElements"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="18" lineNum="154" parent="globals/legendmasterView" pc="268439174" symbol="drawUIElements"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="18" lineNum="157" parent="globals/legendmasterView" pc="268439330" symbol="drawUIElements"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="18" lineNum="158" parent="globals/legendmasterView" pc="268439347" symbol="drawUIElements"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="18" lineNum="159" parent="globals/legendmasterView" pc="268439374" symbol="drawUIElements"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="18" lineNum="160" parent="globals/legendmasterView" pc="268439406" symbol="drawUIElements"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="18" lineNum="163" parent="globals/legendmasterView" pc="268439438" symbol="drawUIElements"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="18" lineNum="164" parent="globals/legendmasterView" pc="268439455" symbol="drawUIElements"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="19" lineNum="137" parent="globals/legendmasterView" pc="268439477" symbol="drawPauseSymbol"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="19" lineNum="138" parent="globals/legendmasterView" pc="268439481" symbol="drawPauseSymbol"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="19" lineNum="139" parent="globals/legendmasterView" pc="268439503" symbol="drawPauseSymbol"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="19" lineNum="140" parent="globals/legendmasterView" pc="268439520" symbol="drawPauseSymbol"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="19" lineNum="141" parent="globals/legendmasterView" pc="268439530" symbol="drawPauseSymbol"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="19" lineNum="142" parent="globals/legendmasterView" pc="268439540" symbol="drawPauseSymbol"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="19" lineNum="143" parent="globals/legendmasterView" pc="268439560" symbol="drawPauseSymbol"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="19" lineNum="144" parent="globals/legendmasterView" pc="268439604" symbol="drawPauseSymbol"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="20" lineNum="119" parent="globals/legendmasterView" pc="268439649" symbol="drawIcons"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="20" lineNum="120" parent="globals/legendmasterView" pc="268439653" symbol="drawIcons"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="20" lineNum="121" parent="globals/legendmasterView" pc="268439673" symbol="drawIcons"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="20" lineNum="122" parent="globals/legendmasterView" pc="268439692" symbol="drawIcons"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="20" lineNum="123" parent="globals/legendmasterView" pc="268439714" symbol="drawIcons"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="20" lineNum="124" parent="globals/legendmasterView" pc="268439784" symbol="drawIcons"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="20" lineNum="125" parent="globals/legendmasterView" pc="268439797" symbol="drawIcons"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="20" lineNum="126" parent="globals/legendmasterView" pc="268439817" symbol="drawIcons"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="20" lineNum="127" parent="globals/legendmasterView" pc="268439835" symbol="drawIcons"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="20" lineNum="128" parent="globals/legendmasterView" pc="268439848" symbol="drawIcons"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="20" lineNum="129" parent="globals/legendmasterView" pc="268439859" symbol="drawIcons"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="20" lineNum="130" parent="globals/legendmasterView" pc="268439878" symbol="drawIcons"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="20" lineNum="134" parent="globals/legendmasterView" pc="268439943" symbol="drawIcons"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="21" lineNum="22" parent="globals/legendmasterView" pc="268439966" symbol="initialize"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="21" lineNum="23" parent="globals/legendmasterView" pc="268439968" symbol="initialize"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="21" lineNum="24" parent="globals/legendmasterView" pc="268439986" symbol="initialize"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="22" lineNum="75" parent="globals/legendmasterView" pc="268440010" symbol="drawSplashScreen"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="22" lineNum="76" parent="globals/legendmasterView" pc="268440012" symbol="drawSplashScreen"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="22" lineNum="77" parent="globals/legendmasterView" pc="268440034" symbol="drawSplashScreen"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="22" lineNum="78" parent="globals/legendmasterView" pc="268440083" symbol="drawSplashScreen"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="22" lineNum="79" parent="globals/legendmasterView" pc="268440105" symbol="drawSplashScreen"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="23" lineNum="46" parent="globals/legendmasterView" pc="268440155" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="23" lineNum="47" parent="globals/legendmasterView" pc="268440159" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="23" lineNum="48" parent="globals/legendmasterView" pc="268440181" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="23" lineNum="50" parent="globals/legendmasterView" pc="268440193" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="23" lineNum="51" parent="globals/legendmasterView" pc="268440219" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="23" lineNum="52" parent="globals/legendmasterView" pc="268440252" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="23" lineNum="53" parent="globals/legendmasterView" pc="268440270" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="23" lineNum="54" parent="globals/legendmasterView" pc="268440286" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="23" lineNum="57" parent="globals/legendmasterView" pc="268440290" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="23" lineNum="58" parent="globals/legendmasterView" pc="268440307" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="23" lineNum="61" parent="globals/legendmasterView" pc="268440324" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="23" lineNum="62" parent="globals/legendmasterView" pc="268440341" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="23" lineNum="65" parent="globals/legendmasterView" pc="268440364" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="23" lineNum="66" parent="globals/legendmasterView" pc="268440381" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="23" lineNum="67" parent="globals/legendmasterView" pc="268440402" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="23" lineNum="68" parent="globals/legendmasterView" pc="268440419" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="23" lineNum="70" parent="globals/legendmasterView" pc="268440442" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterMenuDelegate.mc" id="24" lineNum="11" parent="globals/legendmasterMenuDelegate" pc="268440465" symbol="onMenuItem"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterMenuDelegate.mc" id="24" lineNum="12" parent="globals/legendmasterMenuDelegate" pc="268440467" symbol="onMenuItem"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterMenuDelegate.mc" id="24" lineNum="13" parent="globals/legendmasterMenuDelegate" pc="268440478" symbol="onMenuItem"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterMenuDelegate.mc" id="24" lineNum="14" parent="globals/legendmasterMenuDelegate" pc="268440502" symbol="onMenuItem"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterMenuDelegate.mc" id="24" lineNum="15" parent="globals/legendmasterMenuDelegate" pc="268440513" symbol="onMenuItem"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterMenuDelegate.mc" id="25" lineNum="7" parent="globals/legendmasterMenuDelegate" pc="268440538" symbol="initialize"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterMenuDelegate.mc" id="25" lineNum="8" parent="globals/legendmasterMenuDelegate" pc="268440540" symbol="initialize"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterApp.mc" id="26" lineNum="12" parent="globals/legendmasterApp" pc="268440559" symbol="onStart"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterApp.mc" id="26" lineNum="14" parent="globals/legendmasterApp" pc="268440561" symbol="onStart"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterApp.mc" id="26" lineNum="15" parent="globals/legendmasterApp" pc="268440573" symbol="onStart"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterApp.mc" id="27" lineNum="31" parent="globals/legendmasterApp" pc="268440632" symbol="getInitialView"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterApp.mc" id="27" lineNum="32" parent="globals/legendmasterApp" pc="268440636" symbol="getInitialView"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterApp.mc" id="27" lineNum="33" parent="globals/legendmasterApp" pc="268440660" symbol="getInitialView"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterApp.mc" id="28" lineNum="8" parent="globals/legendmasterApp" pc="268440709" symbol="initialize"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterApp.mc" id="28" lineNum="9" parent="globals/legendmasterApp" pc="268440711" symbol="initialize"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterApp.mc" id="29" lineNum="22" parent="globals/legendmasterApp" pc="268440730" symbol="onStop"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterApp.mc" id="29" lineNum="24" parent="globals/legendmasterApp" pc="268440732" symbol="onStop"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterApp.mc" id="29" lineNum="25" parent="globals/legendmasterApp" pc="268440765" symbol="onStop"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterApp.mc" id="29" lineNum="26" parent="globals/legendmasterApp" pc="268440783" symbol="onStop"/>
-        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterApp.mc" id="29" lineNum="27" parent="globals/legendmasterApp" pc="268440801" symbol="onStop"/>
-        <entry filename="c:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\bin\\gen\\006-B2413-00\\source\\Rez.mcgen" id="30" lineNum="18" parent="globals/Rez/Layouts" pc="268440814" symbol="MainLayout"/>
-        <entry filename="c:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\bin\\gen\\006-B2413-00\\source\\Rez.mcgen" id="30" lineNum="19" parent="globals/Rez/Layouts" pc="268440826" symbol="MainLayout"/>
-        <entry filename="c:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\bin\\gen\\006-B2413-00\\source\\Rez.mcgen" id="30" lineNum="21" parent="globals/Rez/Layouts" pc="268440839" symbol="MainLayout"/>
-        <entry filename="c:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\bin\\gen\\006-B2413-00\\source\\Rez.mcgen" id="30" lineNum="23" parent="globals/Rez/Layouts" pc="268440973" symbol="MainLayout"/>
-        <entry filename="c:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\bin\\gen\\006-B2413-00\\source\\Rez.mcgen" id="30" lineNum="24" parent="globals/Rez/Layouts" pc="268441078" symbol="MainLayout"/>
-        <entry filename="c:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\bin\\gen\\006-B2413-00\\source\\Rez.mcgen" id="30" lineNum="26" parent="globals/Rez/Layouts" pc="268441115" symbol="MainLayout"/>
-        <entry filename="c:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\bin\\gen\\006-B2413-00\\source\\Rez.mcgen" id="31" lineNum="31" parent="globals/Rez/Menus/MainMenu" pc="268441142" symbol="&lt;init&gt;"/>
-        <entry filename="c:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\bin\\gen\\006-B2413-00\\source\\Rez.mcgen" id="32" lineNum="32" parent="globals/Rez/Menus/MainMenu" pc="268441161" symbol="initialize"/>
-        <entry filename="c:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\bin\\gen\\006-B2413-00\\source\\Rez.mcgen" id="32" lineNum="33" parent="globals/Rez/Menus/MainMenu" pc="268441163" symbol="initialize"/>
-        <entry filename="c:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\bin\\gen\\006-B2413-00\\source\\Rez.mcgen" id="32" lineNum="34" parent="globals/Rez/Menus/MainMenu" pc="268441181" symbol="initialize"/>
-        <entry filename="c:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\bin\\gen\\006-B2413-00\\source\\Rez.mcgen" id="32" lineNum="35" parent="globals/Rez/Menus/MainMenu" pc="268441237" symbol="initialize"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterApp.mc" id="5" lineNum="6" parent="globals/legendmasterApp" pc="268436838" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="6" lineNum="17" parent="globals/legendmasterDelegate" pc="268436857" symbol="onBack"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="6" lineNum="18" parent="globals/legendmasterDelegate" pc="268436861" symbol="onBack"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="6" lineNum="19" parent="globals/legendmasterDelegate" pc="268436884" symbol="onBack"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="6" lineNum="20" parent="globals/legendmasterDelegate" pc="268436901" symbol="onBack"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="6" lineNum="20" parent="globals/legendmasterDelegate" pc="268436914" symbol="onBack"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="6" lineNum="20" parent="globals/legendmasterDelegate" pc="268436932" symbol="onBack"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="6" lineNum="21" parent="globals/legendmasterDelegate" pc="268436944" symbol="onBack"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="6" lineNum="21" parent="globals/legendmasterDelegate" pc="268436960" symbol="onBack"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="6" lineNum="23" parent="globals/legendmasterDelegate" pc="268436966" symbol="onBack"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="6" lineNum="23" parent="globals/legendmasterDelegate" pc="268436989" symbol="onBack"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="6" lineNum="23" parent="globals/legendmasterDelegate" pc="268437012" symbol="onBack"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="6" lineNum="24" parent="globals/legendmasterDelegate" pc="268437018" symbol="onBack"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="7" lineNum="38" parent="globals/legendmasterDelegate" pc="268437021" symbol="onPreviousPage"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="7" lineNum="39" parent="globals/legendmasterDelegate" pc="268437023" symbol="onPreviousPage"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="7" lineNum="39" parent="globals/legendmasterDelegate" pc="268437046" symbol="onPreviousPage"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="7" lineNum="40" parent="globals/legendmasterDelegate" pc="268437052" symbol="onPreviousPage"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="7" lineNum="40" parent="globals/legendmasterDelegate" pc="268437075" symbol="onPreviousPage"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="7" lineNum="41" parent="globals/legendmasterDelegate" pc="268437101" symbol="onPreviousPage"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="7" lineNum="42" parent="globals/legendmasterDelegate" pc="268437124" symbol="onPreviousPage"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="8" lineNum="6" parent="globals/legendmasterDelegate" pc="268437127" symbol="initialize"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="8" lineNum="6" parent="globals/legendmasterDelegate" pc="268437129" symbol="initialize"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="8" lineNum="6" parent="globals/legendmasterDelegate" pc="268437147" symbol="initialize"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="9" lineNum="8" parent="globals/legendmasterDelegate" pc="268437158" symbol="onSelect"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="9" lineNum="9" parent="globals/legendmasterDelegate" pc="268437162" symbol="onSelect"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="9" lineNum="10" parent="globals/legendmasterDelegate" pc="268437179" symbol="onSelect"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="9" lineNum="10" parent="globals/legendmasterDelegate" pc="268437191" symbol="onSelect"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="9" lineNum="11" parent="globals/legendmasterDelegate" pc="268437197" symbol="onSelect"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="9" lineNum="11" parent="globals/legendmasterDelegate" pc="268437243" symbol="onSelect"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="9" lineNum="11" parent="globals/legendmasterDelegate" pc="268437261" symbol="onSelect"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="9" lineNum="12" parent="globals/legendmasterDelegate" pc="268437283" symbol="onSelect"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="9" lineNum="12" parent="globals/legendmasterDelegate" pc="268437301" symbol="onSelect"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="9" lineNum="13" parent="globals/legendmasterDelegate" pc="268437320" symbol="onSelect"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="9" lineNum="14" parent="globals/legendmasterDelegate" pc="268437336" symbol="onSelect"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="10" lineNum="27" parent="globals/legendmasterDelegate" pc="268437339" symbol="onNextPage"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="10" lineNum="28" parent="globals/legendmasterDelegate" pc="268437343" symbol="onNextPage"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="10" lineNum="29" parent="globals/legendmasterDelegate" pc="268437366" symbol="onNextPage"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="10" lineNum="30" parent="globals/legendmasterDelegate" pc="268437383" symbol="onNextPage"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="10" lineNum="30" parent="globals/legendmasterDelegate" pc="268437396" symbol="onNextPage"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="10" lineNum="30" parent="globals/legendmasterDelegate" pc="268437414" symbol="onNextPage"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="10" lineNum="31" parent="globals/legendmasterDelegate" pc="268437426" symbol="onNextPage"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="10" lineNum="31" parent="globals/legendmasterDelegate" pc="268437442" symbol="onNextPage"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="10" lineNum="33" parent="globals/legendmasterDelegate" pc="268437448" symbol="onNextPage"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="10" lineNum="33" parent="globals/legendmasterDelegate" pc="268437471" symbol="onNextPage"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="10" lineNum="34" parent="globals/legendmasterDelegate" pc="268437497" symbol="onNextPage"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="10" lineNum="35" parent="globals/legendmasterDelegate" pc="268437520" symbol="onNextPage"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="11" lineNum="110" parent="globals/legendmasterView" pc="268437523" symbol="drawPauseMenu"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="11" lineNum="111" parent="globals/legendmasterView" pc="268437527" symbol="drawPauseMenu"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="11" lineNum="112" parent="globals/legendmasterView" pc="268437549" symbol="drawPauseMenu"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="11" lineNum="113" parent="globals/legendmasterView" pc="268437589" symbol="drawPauseMenu"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="11" lineNum="114" parent="globals/legendmasterView" pc="268437647" symbol="drawPauseMenu"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="11" lineNum="115" parent="globals/legendmasterView" pc="268437696" symbol="drawPauseMenu"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="11" lineNum="116" parent="globals/legendmasterView" pc="268437742" symbol="drawPauseMenu"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="11" lineNum="117" parent="globals/legendmasterView" pc="268437794" symbol="drawPauseMenu"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="11" lineNum="117" parent="globals/legendmasterView" pc="268437816" symbol="drawPauseMenu"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="11" lineNum="118" parent="globals/legendmasterView" pc="268437859" symbol="drawPauseMenu"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="11" lineNum="118" parent="globals/legendmasterView" pc="268437881" symbol="drawPauseMenu"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="11" lineNum="119" parent="globals/legendmasterView" pc="268437924" symbol="drawPauseMenu"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="11" lineNum="119" parent="globals/legendmasterView" pc="268437946" symbol="drawPauseMenu"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="12" lineNum="20" parent="globals/legendmasterView" pc="268437987" symbol="onLayout"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="12" lineNum="20" parent="globals/legendmasterView" pc="268437989" symbol="onLayout"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="13" lineNum="171" parent="globals/legendmasterView" pc="268438037" symbol="formatTime"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="13" lineNum="172" parent="globals/legendmasterView" pc="268438041" symbol="formatTime"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="13" lineNum="173" parent="globals/legendmasterView" pc="268438051" symbol="formatTime"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="14" lineNum="157" parent="globals/legendmasterView" pc="268438103" symbol="drawNavigation"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="14" lineNum="158" parent="globals/legendmasterView" pc="268438105" symbol="drawNavigation"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="14" lineNum="159" parent="globals/legendmasterView" pc="268438127" symbol="drawNavigation"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="14" lineNum="160" parent="globals/legendmasterView" pc="268438167" symbol="drawNavigation"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="14" lineNum="161" parent="globals/legendmasterView" pc="268438187" symbol="drawNavigation"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="14" lineNum="161" parent="globals/legendmasterView" pc="268438204" symbol="drawNavigation"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="14" lineNum="161" parent="globals/legendmasterView" pc="268438237" symbol="drawNavigation"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="14" lineNum="162" parent="globals/legendmasterView" pc="268438290" symbol="drawNavigation"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="14" lineNum="163" parent="globals/legendmasterView" pc="268438333" symbol="drawNavigation"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="14" lineNum="163" parent="globals/legendmasterView" pc="268438350" symbol="drawNavigation"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="15" lineNum="56" parent="globals/legendmasterView" pc="268438372" symbol="drawMain"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="15" lineNum="57" parent="globals/legendmasterView" pc="268438376" symbol="drawMain"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="15" lineNum="58" parent="globals/legendmasterView" pc="268438398" symbol="drawMain"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="15" lineNum="59" parent="globals/legendmasterView" pc="268438456" symbol="drawMain"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="15" lineNum="60" parent="globals/legendmasterView" pc="268438505" symbol="drawMain"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="15" lineNum="61" parent="globals/legendmasterView" pc="268438554" symbol="drawMain"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="15" lineNum="62" parent="globals/legendmasterView" pc="268438600" symbol="drawMain"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="15" lineNum="64" parent="globals/legendmasterView" pc="268438646" symbol="drawMain"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="15" lineNum="66" parent="globals/legendmasterView" pc="268438664" symbol="drawMain"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="15" lineNum="67" parent="globals/legendmasterView" pc="268438681" symbol="drawMain"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="15" lineNum="68" parent="globals/legendmasterView" pc="268438703" symbol="drawMain"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="15" lineNum="69" parent="globals/legendmasterView" pc="268438749" symbol="drawMain"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="16" lineNum="29" parent="globals/legendmasterView" pc="268438768" symbol="scrollIcons"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="16" lineNum="30" parent="globals/legendmasterView" pc="268438772" symbol="scrollIcons"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="16" lineNum="31" parent="globals/legendmasterView" pc="268438788" symbol="scrollIcons"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="16" lineNum="32" parent="globals/legendmasterView" pc="268438807" symbol="scrollIcons"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="16" lineNum="32" parent="globals/legendmasterView" pc="268438824" symbol="scrollIcons"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="16" lineNum="33" parent="globals/legendmasterView" pc="268438840" symbol="scrollIcons"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="16" lineNum="33" parent="globals/legendmasterView" pc="268438854" symbol="scrollIcons"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="16" lineNum="34" parent="globals/legendmasterView" pc="268438873" symbol="scrollIcons"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="17" lineNum="22" parent="globals/legendmasterView" pc="268438890" symbol="changePage"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="17" lineNum="23" parent="globals/legendmasterView" pc="268438892" symbol="changePage"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="17" lineNum="24" parent="globals/legendmasterView" pc="268438908" symbol="changePage"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="17" lineNum="24" parent="globals/legendmasterView" pc="268438925" symbol="changePage"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="17" lineNum="25" parent="globals/legendmasterView" pc="268438941" symbol="changePage"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="17" lineNum="25" parent="globals/legendmasterView" pc="268438958" symbol="changePage"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="17" lineNum="26" parent="globals/legendmasterView" pc="268438974" symbol="changePage"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="18" lineNum="139" parent="globals/legendmasterView" pc="268438991" symbol="drawUIElements"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="18" lineNum="140" parent="globals/legendmasterView" pc="268438995" symbol="drawUIElements"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="18" lineNum="141" parent="globals/legendmasterView" pc="268439015" symbol="drawUIElements"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="18" lineNum="142" parent="globals/legendmasterView" pc="268439037" symbol="drawUIElements"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="18" lineNum="143" parent="globals/legendmasterView" pc="268439193" symbol="drawUIElements"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="18" lineNum="144" parent="globals/legendmasterView" pc="268439349" symbol="drawUIElements"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="18" lineNum="145" parent="globals/legendmasterView" pc="268439366" symbol="drawUIElements"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="18" lineNum="146" parent="globals/legendmasterView" pc="268439434" symbol="drawUIElements"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="18" lineNum="147" parent="globals/legendmasterView" pc="268439502" symbol="drawUIElements"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="18" lineNum="147" parent="globals/legendmasterView" pc="268439519" symbol="drawUIElements"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="19" lineNum="150" parent="globals/legendmasterView" pc="268439541" symbol="drawPauseSymbol"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="19" lineNum="151" parent="globals/legendmasterView" pc="268439545" symbol="drawPauseSymbol"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="19" lineNum="151" parent="globals/legendmasterView" pc="268439567" symbol="drawPauseSymbol"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="19" lineNum="152" parent="globals/legendmasterView" pc="268439584" symbol="drawPauseSymbol"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="19" lineNum="153" parent="globals/legendmasterView" pc="268439610" symbol="drawPauseSymbol"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="19" lineNum="154" parent="globals/legendmasterView" pc="268439654" symbol="drawPauseSymbol"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="20" lineNum="72" parent="globals/legendmasterView" pc="268439699" symbol="drawGPSBottom"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="20" lineNum="73" parent="globals/legendmasterView" pc="268439703" symbol="drawGPSBottom"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="20" lineNum="74" parent="globals/legendmasterView" pc="268439720" symbol="drawGPSBottom"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="20" lineNum="75" parent="globals/legendmasterView" pc="268439758" symbol="drawGPSBottom"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="20" lineNum="78" parent="globals/legendmasterView" pc="268439831" symbol="drawGPSBottom"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="20" lineNum="79" parent="globals/legendmasterView" pc="268439838" symbol="drawGPSBottom"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="20" lineNum="80" parent="globals/legendmasterView" pc="268439845" symbol="drawGPSBottom"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="20" lineNum="81" parent="globals/legendmasterView" pc="268439852" symbol="drawGPSBottom"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="20" lineNum="82" parent="globals/legendmasterView" pc="268439859" symbol="drawGPSBottom"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="20" lineNum="84" parent="globals/legendmasterView" pc="268439866" symbol="drawGPSBottom"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="20" lineNum="88" parent="globals/legendmasterView" pc="268439873" symbol="drawGPSBottom"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="20" lineNum="89" parent="globals/legendmasterView" pc="268439895" symbol="drawGPSBottom"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="20" lineNum="90" parent="globals/legendmasterView" pc="268439920" symbol="drawGPSBottom"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="20" lineNum="92" parent="globals/legendmasterView" pc="268439930" symbol="drawGPSBottom"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="20" lineNum="96" parent="globals/legendmasterView" pc="268439952" symbol="drawGPSBottom"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="20" lineNum="99" parent="globals/legendmasterView" pc="268439984" symbol="drawGPSBottom"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="20" lineNum="102" parent="globals/legendmasterView" pc="268440010" symbol="drawGPSBottom"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="20" lineNum="105" parent="globals/legendmasterView" pc="268440057" symbol="drawGPSBottom"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="20" lineNum="107" parent="globals/legendmasterView" pc="268440079" symbol="drawGPSBottom"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="21" lineNum="122" parent="globals/legendmasterView" pc="268440126" symbol="drawIcons"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="21" lineNum="123" parent="globals/legendmasterView" pc="268440130" symbol="drawIcons"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="21" lineNum="124" parent="globals/legendmasterView" pc="268440169" symbol="drawIcons"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="21" lineNum="125" parent="globals/legendmasterView" pc="268440191" symbol="drawIcons"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="21" lineNum="126" parent="globals/legendmasterView" pc="268440261" symbol="drawIcons"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="21" lineNum="127" parent="globals/legendmasterView" pc="268440274" symbol="drawIcons"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="21" lineNum="128" parent="globals/legendmasterView" pc="268440294" symbol="drawIcons"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="21" lineNum="129" parent="globals/legendmasterView" pc="268440312" symbol="drawIcons"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="21" lineNum="130" parent="globals/legendmasterView" pc="268440325" symbol="drawIcons"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="21" lineNum="131" parent="globals/legendmasterView" pc="268440336" symbol="drawIcons"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="21" lineNum="132" parent="globals/legendmasterView" pc="268440355" symbol="drawIcons"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="21" lineNum="136" parent="globals/legendmasterView" pc="268440420" symbol="drawIcons"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="22" lineNum="19" parent="globals/legendmasterView" pc="268440443" symbol="initialize"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="22" lineNum="19" parent="globals/legendmasterView" pc="268440445" symbol="initialize"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="22" lineNum="19" parent="globals/legendmasterView" pc="268440463" symbol="initialize"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="23" lineNum="166" parent="globals/legendmasterView" pc="268440487" symbol="drawSplashScreen"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="23" lineNum="167" parent="globals/legendmasterView" pc="268440489" symbol="drawSplashScreen"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="23" lineNum="167" parent="globals/legendmasterView" pc="268440511" symbol="drawSplashScreen"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="23" lineNum="168" parent="globals/legendmasterView" pc="268440560" symbol="drawSplashScreen"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="23" lineNum="168" parent="globals/legendmasterView" pc="268440582" symbol="drawSplashScreen"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="24" lineNum="37" parent="globals/legendmasterView" pc="268440632" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="24" lineNum="38" parent="globals/legendmasterView" pc="268440636" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="24" lineNum="39" parent="globals/legendmasterView" pc="268440658" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="24" lineNum="40" parent="globals/legendmasterView" pc="268440670" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="24" lineNum="43" parent="globals/legendmasterView" pc="268440696" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="24" lineNum="44" parent="globals/legendmasterView" pc="268440729" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="24" lineNum="45" parent="globals/legendmasterView" pc="268440747" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="24" lineNum="46" parent="globals/legendmasterView" pc="268440763" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="24" lineNum="49" parent="globals/legendmasterView" pc="268440767" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="24" lineNum="50" parent="globals/legendmasterView" pc="268440784" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="24" lineNum="50" parent="globals/legendmasterView" pc="268440801" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="24" lineNum="51" parent="globals/legendmasterView" pc="268440824" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="24" lineNum="51" parent="globals/legendmasterView" pc="268440841" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="24" lineNum="52" parent="globals/legendmasterView" pc="268440862" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="24" lineNum="52" parent="globals/legendmasterView" pc="268440879" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="24" lineNum="53" parent="globals/legendmasterView" pc="268440902" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterMenuDelegate.mc" id="25" lineNum="11" parent="globals/legendmasterMenuDelegate" pc="268440923" symbol="onMenuItem"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterMenuDelegate.mc" id="25" lineNum="12" parent="globals/legendmasterMenuDelegate" pc="268440925" symbol="onMenuItem"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterMenuDelegate.mc" id="25" lineNum="13" parent="globals/legendmasterMenuDelegate" pc="268440936" symbol="onMenuItem"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterMenuDelegate.mc" id="25" lineNum="14" parent="globals/legendmasterMenuDelegate" pc="268440960" symbol="onMenuItem"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterMenuDelegate.mc" id="25" lineNum="15" parent="globals/legendmasterMenuDelegate" pc="268440971" symbol="onMenuItem"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterMenuDelegate.mc" id="26" lineNum="7" parent="globals/legendmasterMenuDelegate" pc="268440996" symbol="initialize"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterMenuDelegate.mc" id="26" lineNum="8" parent="globals/legendmasterMenuDelegate" pc="268440998" symbol="initialize"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterApp.mc" id="27" lineNum="13" parent="globals/legendmasterApp" pc="268441017" symbol="onStart"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterApp.mc" id="27" lineNum="15" parent="globals/legendmasterApp" pc="268441019" symbol="onStart"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterApp.mc" id="27" lineNum="17" parent="globals/legendmasterApp" pc="268441056" symbol="onStart"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterApp.mc" id="27" lineNum="18" parent="globals/legendmasterApp" pc="268441068" symbol="onStart"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterApp.mc" id="28" lineNum="35" parent="globals/legendmasterApp" pc="268441127" symbol="onPosition"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterApp.mc" id="28" lineNum="36" parent="globals/legendmasterApp" pc="268441129" symbol="onPosition"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterApp.mc" id="29" lineNum="39" parent="globals/legendmasterApp" pc="268441146" symbol="getInitialView"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterApp.mc" id="29" lineNum="40" parent="globals/legendmasterApp" pc="268441150" symbol="getInitialView"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterApp.mc" id="29" lineNum="41" parent="globals/legendmasterApp" pc="268441174" symbol="getInitialView"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterApp.mc" id="30" lineNum="9" parent="globals/legendmasterApp" pc="268441223" symbol="initialize"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterApp.mc" id="30" lineNum="10" parent="globals/legendmasterApp" pc="268441225" symbol="initialize"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterApp.mc" id="31" lineNum="25" parent="globals/legendmasterApp" pc="268441244" symbol="onStop"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterApp.mc" id="31" lineNum="26" parent="globals/legendmasterApp" pc="268441246" symbol="onStop"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterApp.mc" id="31" lineNum="27" parent="globals/legendmasterApp" pc="268441283" symbol="onStop"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterApp.mc" id="31" lineNum="28" parent="globals/legendmasterApp" pc="268441316" symbol="onStop"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterApp.mc" id="31" lineNum="29" parent="globals/legendmasterApp" pc="268441334" symbol="onStop"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterApp.mc" id="31" lineNum="30" parent="globals/legendmasterApp" pc="268441352" symbol="onStop"/>
+        <entry filename="c:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\bin\\gen\\006-B2413-00\\source\\Rez.mcgen" id="32" lineNum="18" parent="globals/Rez/Layouts" pc="268441365" symbol="MainLayout"/>
+        <entry filename="c:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\bin\\gen\\006-B2413-00\\source\\Rez.mcgen" id="32" lineNum="19" parent="globals/Rez/Layouts" pc="268441377" symbol="MainLayout"/>
+        <entry filename="c:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\bin\\gen\\006-B2413-00\\source\\Rez.mcgen" id="32" lineNum="21" parent="globals/Rez/Layouts" pc="268441390" symbol="MainLayout"/>
+        <entry filename="c:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\bin\\gen\\006-B2413-00\\source\\Rez.mcgen" id="32" lineNum="23" parent="globals/Rez/Layouts" pc="268441524" symbol="MainLayout"/>
+        <entry filename="c:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\bin\\gen\\006-B2413-00\\source\\Rez.mcgen" id="32" lineNum="24" parent="globals/Rez/Layouts" pc="268441629" symbol="MainLayout"/>
+        <entry filename="c:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\bin\\gen\\006-B2413-00\\source\\Rez.mcgen" id="32" lineNum="26" parent="globals/Rez/Layouts" pc="268441666" symbol="MainLayout"/>
+        <entry filename="c:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\bin\\gen\\006-B2413-00\\source\\Rez.mcgen" id="33" lineNum="31" parent="globals/Rez/Menus/MainMenu" pc="268441693" symbol="&lt;init&gt;"/>
+        <entry filename="c:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\bin\\gen\\006-B2413-00\\source\\Rez.mcgen" id="34" lineNum="32" parent="globals/Rez/Menus/MainMenu" pc="268441712" symbol="initialize"/>
+        <entry filename="c:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\bin\\gen\\006-B2413-00\\source\\Rez.mcgen" id="34" lineNum="33" parent="globals/Rez/Menus/MainMenu" pc="268441714" symbol="initialize"/>
+        <entry filename="c:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\bin\\gen\\006-B2413-00\\source\\Rez.mcgen" id="34" lineNum="34" parent="globals/Rez/Menus/MainMenu" pc="268441732" symbol="initialize"/>
+        <entry filename="c:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\bin\\gen\\006-B2413-00\\source\\Rez.mcgen" id="34" lineNum="35" parent="globals/Rez/Menus/MainMenu" pc="268441788" symbol="initialize"/>
     </pcToLineNum>
     <symbolTable>
         <entry id="8388639" module="true" symbol="Graphics"/>
@@ -208,54 +222,55 @@
         <entry field="true" id="15" symbol="appState"/>
         <entry id="6" module="true" symbol="globals/Rez/Menus"/>
         <entry id="8388638" module="true" symbol="ActivityRecording"/>
-        <entry id="34" method="true" symbol="MainLayout"/>
-        <entry id="25" method="true" symbol="drawUIElements"/>
+        <entry id="36" method="true" symbol="MainLayout"/>
+        <entry id="26" method="true" symbol="drawUIElements"/>
         <entry field="true" id="17" symbol="controlPoints"/>
         <entry field="true" id="8388890" symbol="sport"/>
-        <entry field="true" id="36" symbol="LegendFont"/>
+        <entry id="32" method="true" symbol="onPosition"/>
+        <entry field="true" id="38" symbol="LegendFont"/>
         <entry field="true" id="8388611" module="true" symbol="Toybox"/>
-        <entry field="true" id="37" symbol="AppName"/>
+        <entry field="true" id="39" symbol="AppName"/>
         <entry id="7" module="true" symbol="globals/Rez/Strings"/>
-        <entry id="26" method="true" symbol="formatTime"/>
+        <entry id="27" method="true" symbol="formatTime"/>
         <entry id="8388772" module="true" object="true" symbol="Fonts"/>
         <entry id="8389345" symbol="rezId"/>
         <entry id="8388631" module="true" symbol="Activity"/>
-        <entry id="21" method="true" symbol="drawNavigation"/>
+        <entry id="22" method="true" symbol="drawNavigation"/>
         <entry id="8388648" module="true" symbol="WatchUi"/>
         <entry id="8389081" method="true" symbol="onBack"/>
-        <entry id="24" method="true" symbol="drawSplashScreen"/>
-        <entry field="true" id="29" symbol="pageID"/>
+        <entry id="25" method="true" symbol="drawSplashScreen"/>
+        <entry field="true" id="30" symbol="pageID"/>
         <entry id="2" module="true" symbol="globals/Rez"/>
-        <entry field="true" id="40" symbol="prompt"/>
-        <entry field="true" id="33" symbol="id_monkey"/>
+        <entry field="true" id="42" symbol="prompt"/>
+        <entry field="true" id="35" symbol="id_monkey"/>
         <entry id="8389124" method="true" symbol="onUpdate"/>
         <entry field="true" id="8389065" symbol="locY"/>
         <entry field="true" id="8389064" symbol="locX"/>
         <entry id="8388771" module="true" object="true" symbol="Drawables"/>
         <entry id="8389348" symbol="font"/>
         <entry id="9" object="true" symbol="legendmasterDelegate"/>
-        <entry id="42" symbol="item_2"/>
-        <entry id="41" symbol="item_1"/>
+        <entry id="44" symbol="item_2"/>
+        <entry id="43" symbol="item_1"/>
         <entry id="8389079" method="true" symbol="onPreviousPage"/>
         <entry id="13" module="true" symbol="Menus"/>
         <entry id="5" module="true" symbol="globals/Rez/Layouts"/>
-        <entry id="22" method="true" symbol="drawPauseMenu"/>
+        <entry id="23" method="true" symbol="drawPauseMenu"/>
         <entry id="8389122" method="true" symbol="onLayout"/>
         <entry field="true" id="8389063" symbol="identifier"/>
         <entry id="8389349" symbol="justification"/>
-        <entry id="20" method="true" symbol="drawMain"/>
-        <entry field="true" id="27" symbol="launchTime"/>
+        <entry id="21" method="true" symbol="drawMain"/>
+        <entry field="true" id="28" symbol="launchTime"/>
         <entry id="8" object="true" symbol="legendmasterApp"/>
         <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
-        <entry id="35" object="true" symbol="MainMenu"/>
+        <entry id="37" object="true" symbol="MainMenu"/>
         <entry id="8388644" module="true" symbol="System"/>
         <entry id="8389619" method="true" symbol="onSelect"/>
         <entry id="8388769" module="true" object="true" symbol="Rez"/>
-        <entry id="30" method="true" symbol="scrollIcons"/>
-        <entry id="19" method="true" symbol="drawIcons"/>
+        <entry id="31" method="true" symbol="scrollIcons"/>
+        <entry id="20" method="true" symbol="drawIcons"/>
         <entry field="true" id="18" symbol="currentIndex"/>
         <entry id="8388640" module="true" symbol="Lang"/>
-        <entry field="true" id="32" symbol="LauncherIcon"/>
+        <entry field="true" id="34" symbol="LauncherIcon"/>
         <entry id="8388610" symbol="statics"/>
         <entry id="8389350" module="true" symbol="globals"/>
         <entry id="8388770" module="true" object="true" symbol="Strings"/>
@@ -269,90 +284,101 @@
         <entry id="8389281" method="true" symbol="onStop"/>
         <entry id="8389109" method="true" symbol="onMenuItem"/>
         <entry field="true" id="8389347" symbol="color"/>
-        <entry field="true" id="28" symbol="myFont"/>
+        <entry field="true" id="29" symbol="myFont"/>
         <entry id="10" object="true" symbol="legendmasterMenuDelegate"/>
         <entry id="12" module="true" symbol="Layouts"/>
-        <entry id="23" method="true" symbol="drawPauseSymbol"/>
+        <entry id="24" method="true" symbol="drawPauseSymbol"/>
+        <entry id="8388642" module="true" symbol="Position"/>
         <entry id="11" object="true" symbol="legendmasterView"/>
         <entry id="4" module="true" symbol="globals/Rez/Fonts"/>
-        <entry field="true" id="31" symbol="session"/>
+        <entry field="true" id="33" symbol="session"/>
         <entry id="8389078" method="true" symbol="onNextPage"/>
         <entry id="8388635" module="true" symbol="Application"/>
-        <entry field="true" id="39" symbol="menu_label_2"/>
-        <entry field="true" id="38" symbol="menu_label_1"/>
+        <entry id="19" method="true" symbol="drawGPSBottom"/>
+        <entry field="true" id="41" symbol="menu_label_2"/>
+        <entry field="true" id="40" symbol="menu_label_1"/>
     </symbolTable>
     <localVars>
-        <entry endPc="268437020" name="app" stackId="1" startPc="268436861"/>
+        <entry endPc="268436962" name="app" stackId="1" startPc="268436884"/>
         <entry arg="true" endPc="268437157" name="v" stackId="1" startPc="268437127"/>
         <entry endPc="268437338" name="app" stackId="1" startPc="268437162"/>
         <entry endPc="268437444" name="app" stackId="1" startPc="268437366"/>
-        <entry arg="true" endPc="268437972" name="dc" stackId="1" startPc="268437523"/>
-        <entry arg="true" endPc="268437972" name="info" stackId="2" startPc="268437523"/>
-        <entry arg="true" endPc="268437972" name="w" stackId="3" startPc="268437523"/>
-        <entry arg="true" endPc="268437972" name="h" stackId="4" startPc="268437523"/>
-        <entry endPc="268437971" name="dist" stackId="5" startPc="268437527"/>
-        <entry endPc="268437971" name="timer" stackId="6" startPc="268437527"/>
-        <entry arg="true" endPc="268438022" name="dc" stackId="1" startPc="268437973"/>
-        <entry arg="true" endPc="268438088" name="ms" stackId="1" startPc="268438023"/>
-        <entry endPc="268438088" name="s" stackId="2" startPc="268438027"/>
-        <entry arg="true" endPc="268438370" name="dc" stackId="1" startPc="268438089"/>
-        <entry arg="true" endPc="268438370" name="info" stackId="2" startPc="268438089"/>
-        <entry arg="true" endPc="268438370" name="w" stackId="3" startPc="268438089"/>
-        <entry arg="true" endPc="268438370" name="h" stackId="4" startPc="268438089"/>
-        <entry arg="true" endPc="268438748" name="dc" stackId="1" startPc="268438371"/>
-        <entry arg="true" endPc="268438748" name="info" stackId="2" startPc="268438371"/>
-        <entry arg="true" endPc="268438748" name="app" stackId="3" startPc="268438371"/>
-        <entry arg="true" endPc="268438748" name="w" stackId="4" startPc="268438371"/>
-        <entry arg="true" endPc="268438748" name="h" stackId="5" startPc="268438371"/>
-        <entry endPc="268438747" name="dist" stackId="6" startPc="268438375"/>
-        <entry endPc="268438747" name="timer" stackId="7" startPc="268438375"/>
-        <entry arg="true" endPc="268438870" name="step" stackId="1" startPc="268438749"/>
-        <entry endPc="268438869" name="size" stackId="2" startPc="268438753"/>
-        <entry arg="true" endPc="268438971" name="dir" stackId="1" startPc="268438871"/>
-        <entry arg="true" endPc="268439476" name="dc" stackId="1" startPc="268438972"/>
-        <entry arg="true" endPc="268439476" name="w" stackId="2" startPc="268438972"/>
-        <entry arg="true" endPc="268439476" name="h" stackId="3" startPc="268438972"/>
-        <entry arg="true" endPc="268439476" name="midX" stackId="4" startPc="268438972"/>
-        <entry arg="true" endPc="268439476" name="midY" stackId="5" startPc="268438972"/>
-        <entry endPc="268439475" name="leftX" stackId="6" startPc="268438976"/>
-        <entry endPc="268439475" name="rightX" stackId="7" startPc="268438976"/>
-        <entry endPc="268439475" name="cs" stackId="8" startPc="268438976"/>
-        <entry endPc="268439475" name="curX" stackId="9" startPc="268438976"/>
-        <entry endPc="268439475" name="curY" stackId="10" startPc="268438976"/>
-        <entry arg="true" endPc="268439648" name="dc" stackId="1" startPc="268439477"/>
-        <entry arg="true" endPc="268439648" name="w" stackId="2" startPc="268439477"/>
-        <entry arg="true" endPc="268439648" name="h" stackId="3" startPc="268439477"/>
-        <entry endPc="268439647" name="rightX" stackId="4" startPc="268439481"/>
-        <entry endPc="268439647" name="midY" stackId="5" startPc="268439481"/>
-        <entry endPc="268439647" name="pX" stackId="6" startPc="268439481"/>
-        <entry endPc="268439647" name="pY" stackId="7" startPc="268439481"/>
-        <entry arg="true" endPc="268439965" name="dc" stackId="1" startPc="268439649"/>
-        <entry arg="true" endPc="268439965" name="w" stackId="2" startPc="268439649"/>
-        <entry arg="true" endPc="268439965" name="h" stackId="3" startPc="268439649"/>
-        <entry endPc="268439964" name="midX" stackId="4" startPc="268439653"/>
-        <entry endPc="268439964" name="midY" stackId="5" startPc="268439653"/>
-        <entry endPc="268439964" name="currentData" stackId="6" startPc="268439653"/>
-        <entry endPc="268439939" name="step" stackId="7" startPc="268439797"/>
-        <entry endPc="268439939" name="startX" stackId="8" startPc="268439797"/>
-        <entry endPc="268439939" name="i" stackId="9" startPc="268439835"/>
-        <entry endPc="268439926" name="iconID" stackId="10" startPc="268439835"/>
-        <entry endPc="268439923" name="char" stackId="11" startPc="268439859"/>
-        <entry arg="true" endPc="268440154" name="dc" stackId="1" startPc="268440010"/>
-        <entry arg="true" endPc="268440154" name="w" stackId="2" startPc="268440010"/>
-        <entry arg="true" endPc="268440154" name="h" stackId="3" startPc="268440010"/>
-        <entry arg="true" endPc="268440464" name="dc" stackId="1" startPc="268440155"/>
-        <entry endPc="268440463" name="w" stackId="2" startPc="268440159"/>
-        <entry endPc="268440463" name="h" stackId="3" startPc="268440159"/>
-        <entry endPc="268440463" name="info" stackId="4" startPc="268440159"/>
-        <entry endPc="268440463" name="app" stackId="5" startPc="268440159"/>
-        <entry arg="true" endPc="268440537" name="item" stackId="1" startPc="268440465"/>
-        <entry arg="true" endPc="268440631" name="state" stackId="1" startPc="268440559"/>
-        <entry endPc="268440708" name="view" stackId="1" startPc="268440636"/>
-        <entry arg="true" endPc="268440813" name="state" stackId="1" startPc="268440730"/>
-        <entry arg="true" endPc="268441141" name="dc" stackId="1" startPc="268440814"/>
-        <entry endPc="268441141" name="rez_cmp_local_var_dc_getWidth" stackId="2" startPc="268440826"/>
-        <entry endPc="268441141" name="rez_cmp_local_text_1193959466" stackId="3" startPc="268440826"/>
-        <entry endPc="268441141" name="rez_cmp_local_bitmap_id_monkey" stackId="4" startPc="268440826"/>
+        <entry arg="true" endPc="268437986" name="dc" stackId="1" startPc="268437523"/>
+        <entry arg="true" endPc="268437986" name="info" stackId="2" startPc="268437523"/>
+        <entry arg="true" endPc="268437986" name="w" stackId="3" startPc="268437523"/>
+        <entry arg="true" endPc="268437986" name="h" stackId="4" startPc="268437523"/>
+        <entry endPc="268437985" name="dist" stackId="5" startPc="268437527"/>
+        <entry endPc="268437985" name="timer" stackId="6" startPc="268437527"/>
+        <entry arg="true" endPc="268438036" name="dc" stackId="1" startPc="268437987"/>
+        <entry arg="true" endPc="268438102" name="ms" stackId="1" startPc="268438037"/>
+        <entry endPc="268438102" name="s" stackId="2" startPc="268438041"/>
+        <entry arg="true" endPc="268438371" name="dc" stackId="1" startPc="268438103"/>
+        <entry arg="true" endPc="268438371" name="info" stackId="2" startPc="268438103"/>
+        <entry arg="true" endPc="268438371" name="w" stackId="3" startPc="268438103"/>
+        <entry arg="true" endPc="268438371" name="h" stackId="4" startPc="268438103"/>
+        <entry arg="true" endPc="268438767" name="dc" stackId="1" startPc="268438372"/>
+        <entry arg="true" endPc="268438767" name="info" stackId="2" startPc="268438372"/>
+        <entry arg="true" endPc="268438767" name="w" stackId="3" startPc="268438372"/>
+        <entry arg="true" endPc="268438767" name="h" stackId="4" startPc="268438372"/>
+        <entry endPc="268438766" name="dist" stackId="5" startPc="268438376"/>
+        <entry endPc="268438766" name="timer" stackId="6" startPc="268438376"/>
+        <entry arg="true" endPc="268438889" name="step" stackId="1" startPc="268438768"/>
+        <entry endPc="268438888" name="size" stackId="2" startPc="268438772"/>
+        <entry arg="true" endPc="268438990" name="dir" stackId="1" startPc="268438890"/>
+        <entry arg="true" endPc="268439540" name="dc" stackId="1" startPc="268438991"/>
+        <entry arg="true" endPc="268439540" name="w" stackId="2" startPc="268438991"/>
+        <entry arg="true" endPc="268439540" name="h" stackId="3" startPc="268438991"/>
+        <entry arg="true" endPc="268439540" name="midX" stackId="4" startPc="268438991"/>
+        <entry arg="true" endPc="268439540" name="midY" stackId="5" startPc="268438991"/>
+        <entry endPc="268439539" name="lX" stackId="6" startPc="268438995"/>
+        <entry endPc="268439539" name="rX" stackId="7" startPc="268438995"/>
+        <entry arg="true" endPc="268439698" name="dc" stackId="1" startPc="268439541"/>
+        <entry arg="true" endPc="268439698" name="w" stackId="2" startPc="268439541"/>
+        <entry arg="true" endPc="268439698" name="h" stackId="3" startPc="268439541"/>
+        <entry endPc="268439697" name="rX" stackId="4" startPc="268439545"/>
+        <entry endPc="268439697" name="mY" stackId="5" startPc="268439545"/>
+        <entry arg="true" endPc="268440125" name="dc" stackId="1" startPc="268439699"/>
+        <entry arg="true" endPc="268440125" name="w" stackId="2" startPc="268439699"/>
+        <entry arg="true" endPc="268440125" name="h" stackId="3" startPc="268439699"/>
+        <entry endPc="268440124" name="posInfo" stackId="4" startPc="268439703"/>
+        <entry endPc="268440124" name="acc" stackId="5" startPc="268439703"/>
+        <entry endPc="268440124" name="colors" stackId="6" startPc="268439703"/>
+        <entry endPc="268440124" name="wingW" stackId="7" startPc="268439703"/>
+        <entry endPc="268440124" name="wingH" stackId="8" startPc="268439703"/>
+        <entry endPc="268440124" name="bodyW" stackId="9" startPc="268439703"/>
+        <entry endPc="268440124" name="bodyH" stackId="10" startPc="268439703"/>
+        <entry endPc="268440124" name="gap" stackId="11" startPc="268439703"/>
+        <entry endPc="268440124" name="textOffset" stackId="12" startPc="268439703"/>
+        <entry endPc="268440124" name="totalWidth" stackId="13" startPc="268439703"/>
+        <entry endPc="268440124" name="x" stackId="14" startPc="268439703"/>
+        <entry endPc="268440124" name="y" stackId="15" startPc="268439703"/>
+        <entry arg="true" endPc="268440442" name="dc" stackId="1" startPc="268440126"/>
+        <entry arg="true" endPc="268440442" name="w" stackId="2" startPc="268440126"/>
+        <entry arg="true" endPc="268440442" name="h" stackId="3" startPc="268440126"/>
+        <entry endPc="268440441" name="midX" stackId="4" startPc="268440130"/>
+        <entry endPc="268440441" name="midY" stackId="5" startPc="268440130"/>
+        <entry endPc="268440441" name="currentData" stackId="6" startPc="268440130"/>
+        <entry endPc="268440416" name="step" stackId="7" startPc="268440274"/>
+        <entry endPc="268440416" name="startX" stackId="8" startPc="268440274"/>
+        <entry endPc="268440416" name="i" stackId="9" startPc="268440312"/>
+        <entry endPc="268440403" name="iconID" stackId="10" startPc="268440312"/>
+        <entry endPc="268440400" name="char" stackId="11" startPc="268440336"/>
+        <entry arg="true" endPc="268440631" name="dc" stackId="1" startPc="268440487"/>
+        <entry arg="true" endPc="268440631" name="w" stackId="2" startPc="268440487"/>
+        <entry arg="true" endPc="268440631" name="h" stackId="3" startPc="268440487"/>
+        <entry arg="true" endPc="268440922" name="dc" stackId="1" startPc="268440632"/>
+        <entry endPc="268440921" name="w" stackId="2" startPc="268440636"/>
+        <entry endPc="268440921" name="h" stackId="3" startPc="268440636"/>
+        <entry endPc="268440921" name="info" stackId="4" startPc="268440636"/>
+        <entry arg="true" endPc="268440995" name="item" stackId="1" startPc="268440923"/>
+        <entry arg="true" endPc="268441126" name="state" stackId="1" startPc="268441017"/>
+        <entry arg="true" endPc="268441145" name="info" stackId="1" startPc="268441127"/>
+        <entry endPc="268441222" name="view" stackId="1" startPc="268441150"/>
+        <entry arg="true" endPc="268441364" name="state" stackId="1" startPc="268441244"/>
+        <entry arg="true" endPc="268441692" name="dc" stackId="1" startPc="268441365"/>
+        <entry endPc="268441692" name="rez_cmp_local_var_dc_getWidth" stackId="2" startPc="268441377"/>
+        <entry endPc="268441692" name="rez_cmp_local_text_1193959466" stackId="3" startPc="268441377"/>
+        <entry endPc="268441692" name="rez_cmp_local_bitmap_id_monkey" stackId="4" startPc="268441377"/>
     </localVars>
     <deviceInfo deviceVersion="8fc30743a4191ec19bcafa28e3ffcc2b5a958a17" partNumber="006-B2413-00"/>
     <annotations>
@@ -369,14 +395,14 @@
         <dataEntry label="globals/Rez" offset="158" parentId="globals" symbolId="Rez" type="module"/>
         <dataEntry label="globals/legendmasterDelegate" offset="229" parentId="globals" symbolId="legendmasterDelegate" type="class"/>
         <dataEntry label="globals/legendmasterView" offset="316" parentId="globals" symbolId="legendmasterView" type="class"/>
-        <dataEntry label="globals/legendmasterMenuDelegate" offset="507" parentId="globals" symbolId="legendmasterMenuDelegate" type="class"/>
-        <dataEntry label="globals/legendmasterApp" offset="562" parentId="globals" symbolId="legendmasterApp" type="class"/>
-        <dataEntry label="globals/Rez/Drawables" offset="641" parentId="Rez" symbolId="Drawables" type="module"/>
-        <dataEntry label="globals/Rez/Layouts" offset="688" parentId="Rez" symbolId="Layouts" type="module"/>
-        <dataEntry label="globals/Rez/Menus" offset="727" parentId="Rez" symbolId="Menus" type="module"/>
-        <dataEntry label="globals/Rez/Fonts" offset="766" parentId="Rez" symbolId="Fonts" type="module"/>
-        <dataEntry label="globals/Rez/Strings" offset="805" parentId="Rez" symbolId="Strings" type="module"/>
-        <dataEntry label="globals/Rez/Menus/MainMenu" offset="868" parentId="Menus" symbolId="MainMenu" type="class"/>
+        <dataEntry label="globals/legendmasterMenuDelegate" offset="515" parentId="globals" symbolId="legendmasterMenuDelegate" type="class"/>
+        <dataEntry label="globals/legendmasterApp" offset="570" parentId="globals" symbolId="legendmasterApp" type="class"/>
+        <dataEntry label="globals/Rez/Drawables" offset="657" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Layouts" offset="704" parentId="Rez" symbolId="Layouts" type="module"/>
+        <dataEntry label="globals/Rez/Menus" offset="743" parentId="Rez" symbolId="Menus" type="module"/>
+        <dataEntry label="globals/Rez/Fonts" offset="782" parentId="Rez" symbolId="Fonts" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="821" parentId="Rez" symbolId="Strings" type="module"/>
+        <dataEntry label="globals/Rez/Menus/MainMenu" offset="884" parentId="Menus" symbolId="MainMenu" type="class"/>
     </dataEntryOffsetMappings>
     <functions>
         <functionEntry accessMode="public" endPc="268435478" name="&lt;init&gt;" parent="Rez" startPc="268435460">
@@ -425,45 +451,44 @@
         <functionEntry accessMode="public" endPc="268437522" name="onNextPage" parent="legendmasterDelegate" startPc="268437339">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268437972" name="drawPauseMenu" parent="legendmasterView" startPc="268437523">
+        <functionEntry accessMode="public" endPc="268437986" name="drawPauseMenu" parent="legendmasterView" startPc="268437523">
             <param id="dc"/>
             <param id="info"/>
             <param id="w"/>
             <param id="h"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268438022" name="onLayout" parent="legendmasterView" startPc="268437973">
+        <functionEntry accessMode="public" endPc="268438036" name="onLayout" parent="legendmasterView" startPc="268437987">
             <param id="dc"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268438088" name="formatTime" parent="legendmasterView" startPc="268438023">
+        <functionEntry accessMode="public" endPc="268438102" name="formatTime" parent="legendmasterView" startPc="268438037">
             <param id="ms"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268438370" name="drawNavigation" parent="legendmasterView" startPc="268438089">
+        <functionEntry accessMode="public" endPc="268438371" name="drawNavigation" parent="legendmasterView" startPc="268438103">
             <param id="dc"/>
             <param id="info"/>
             <param id="w"/>
             <param id="h"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268438748" name="drawMain" parent="legendmasterView" startPc="268438371">
+        <functionEntry accessMode="public" endPc="268438767" name="drawMain" parent="legendmasterView" startPc="268438372">
             <param id="dc"/>
             <param id="info"/>
-            <param id="app"/>
             <param id="w"/>
             <param id="h"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268438870" name="scrollIcons" parent="legendmasterView" startPc="268438749">
+        <functionEntry accessMode="public" endPc="268438889" name="scrollIcons" parent="legendmasterView" startPc="268438768">
             <param id="step"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268438971" name="changePage" parent="legendmasterView" startPc="268438871">
+        <functionEntry accessMode="public" endPc="268438990" name="changePage" parent="legendmasterView" startPc="268438890">
             <param id="dir"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268439476" name="drawUIElements" parent="legendmasterView" startPc="268438972">
+        <functionEntry accessMode="public" endPc="268439540" name="drawUIElements" parent="legendmasterView" startPc="268438991">
             <param id="dc"/>
             <param id="w"/>
             <param id="h"/>
@@ -471,60 +496,70 @@
             <param id="midY"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268439648" name="drawPauseSymbol" parent="legendmasterView" startPc="268439477">
+        <functionEntry accessMode="public" endPc="268439698" name="drawPauseSymbol" parent="legendmasterView" startPc="268439541">
             <param id="dc"/>
             <param id="w"/>
             <param id="h"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268439965" name="drawIcons" parent="legendmasterView" startPc="268439649">
+        <functionEntry accessMode="public" endPc="268440125" name="drawGPSBottom" parent="legendmasterView" startPc="268439699">
             <param id="dc"/>
             <param id="w"/>
             <param id="h"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268440009" name="initialize" parent="legendmasterView" startPc="268439966">
-            <documentation/>
-        </functionEntry>
-        <functionEntry accessMode="public" endPc="268440154" name="drawSplashScreen" parent="legendmasterView" startPc="268440010">
+        <functionEntry accessMode="public" endPc="268440442" name="drawIcons" parent="legendmasterView" startPc="268440126">
             <param id="dc"/>
             <param id="w"/>
             <param id="h"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268440464" name="onUpdate" parent="legendmasterView" startPc="268440155">
+        <functionEntry accessMode="public" endPc="268440486" name="initialize" parent="legendmasterView" startPc="268440443">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440631" name="drawSplashScreen" parent="legendmasterView" startPc="268440487">
+            <param id="dc"/>
+            <param id="w"/>
+            <param id="h"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440922" name="onUpdate" parent="legendmasterView" startPc="268440632">
             <param id="dc"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268440537" name="onMenuItem" parent="legendmasterMenuDelegate" startPc="268440465">
+        <functionEntry accessMode="public" endPc="268440995" name="onMenuItem" parent="legendmasterMenuDelegate" startPc="268440923">
             <param id="item"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268440558" name="initialize" parent="legendmasterMenuDelegate" startPc="268440538">
+        <functionEntry accessMode="public" endPc="268441016" name="initialize" parent="legendmasterMenuDelegate" startPc="268440996">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268440631" name="onStart" parent="legendmasterApp" startPc="268440559">
+        <functionEntry accessMode="public" endPc="268441126" name="onStart" parent="legendmasterApp" startPc="268441017">
             <param id="state"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268440708" name="getInitialView" parent="legendmasterApp" startPc="268440632">
+        <functionEntry accessMode="public" endPc="268441145" name="onPosition" parent="legendmasterApp" startPc="268441127">
+            <param id="info"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268440729" name="initialize" parent="legendmasterApp" startPc="268440709">
+        <functionEntry accessMode="public" endPc="268441222" name="getInitialView" parent="legendmasterApp" startPc="268441146">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268440813" name="onStop" parent="legendmasterApp" startPc="268440730">
+        <functionEntry accessMode="public" endPc="268441243" name="initialize" parent="legendmasterApp" startPc="268441223">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268441364" name="onStop" parent="legendmasterApp" startPc="268441244">
             <param id="state"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268441141" name="MainLayout" parent="Layouts" startPc="268440814">
+        <functionEntry accessMode="public" endPc="268441692" name="MainLayout" parent="Layouts" startPc="268441365">
             <param id="dc"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268441160" name="&lt;init&gt;" parent="MainMenu" startPc="268441142">
+        <functionEntry accessMode="public" endPc="268441711" name="&lt;init&gt;" parent="MainMenu" startPc="268441693">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268441293" name="initialize" parent="MainMenu" startPc="268441161">
+        <functionEntry accessMode="public" endPc="268441844" name="initialize" parent="MainMenu" startPc="268441712">
             <documentation/>
         </functionEntry>
     </functions>
