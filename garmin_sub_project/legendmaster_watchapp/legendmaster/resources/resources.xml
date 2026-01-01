@@ -1,0 +1,5 @@
+<resources>
+   <fonts>
+      <font id="LegendFont" filename="legend_font.fnt" />
+   </fonts>
+</resources>

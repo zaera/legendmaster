@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+    <manifest filename="C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\manifest.xml"/>
+    <pcToLineNum>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterApp.mc" id="1" lineNum="17" parent="globals/MainView" pc="268435460" symbol="&lt;init&gt;"/>
+        <entry filename="c:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\enduro\\gen\\006-B3907-00\\source\\Rez.mcgen" id="2" lineNum="7" parent="globals/Rez" pc="268435472" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="3" lineNum="4" parent="globals/legendmasterDelegate" pc="268435492" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="4" lineNum="4" parent="globals/legendmasterView" pc="268435504" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterMenuDelegate.mc" id="5" lineNum="5" parent="globals/legendmasterMenuDelegate" pc="268435516" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterApp.mc" id="6" lineNum="5" parent="globals/legendmasterApp" pc="268435528" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterApp.mc" id="7" lineNum="19" parent="globals/MainView" pc="268435540" symbol="initialize"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterApp.mc" id="7" lineNum="20" parent="globals/MainView" pc="268435542" symbol="initialize"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterApp.mc" id="8" lineNum="23" parent="globals/MainView" pc="268435555" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterApp.mc" id="8" lineNum="24" parent="globals/MainView" pc="268435558" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterApp.mc" id="8" lineNum="26" parent="globals/MainView" pc="268435566" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterApp.mc" id="8" lineNum="27" parent="globals/MainView" pc="268435575" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterApp.mc" id="8" lineNum="29" parent="globals/MainView" pc="268435584" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterApp.mc" id="8" lineNum="31" parent="globals/MainView" pc="268435600" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="9" lineNum="10" parent="globals/legendmasterDelegate" pc="268435630" symbol="onMenu"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="9" lineNum="11" parent="globals/legendmasterDelegate" pc="268435632" symbol="onMenu"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="9" lineNum="12" parent="globals/legendmasterDelegate" pc="268435697" symbol="onMenu"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="10" lineNum="6" parent="globals/legendmasterDelegate" pc="268435699" symbol="initialize"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterDelegate.mc" id="10" lineNum="7" parent="globals/legendmasterDelegate" pc="268435701" symbol="initialize"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="12" lineNum="11" parent="globals/legendmasterView" pc="268435714" symbol="onLayout"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="12" lineNum="12" parent="globals/legendmasterView" pc="268435716" symbol="onLayout"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="13" lineNum="6" parent="globals/legendmasterView" pc="268435750" symbol="initialize"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="13" lineNum="7" parent="globals/legendmasterView" pc="268435752" symbol="initialize"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="15" lineNum="22" parent="globals/legendmasterView" pc="268435765" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterView.mc" id="15" lineNum="24" parent="globals/legendmasterView" pc="268435767" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterMenuDelegate.mc" id="16" lineNum="11" parent="globals/legendmasterMenuDelegate" pc="268435784" symbol="onMenuItem"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterMenuDelegate.mc" id="16" lineNum="12" parent="globals/legendmasterMenuDelegate" pc="268435786" symbol="onMenuItem"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterMenuDelegate.mc" id="16" lineNum="13" parent="globals/legendmasterMenuDelegate" pc="268435797" symbol="onMenuItem"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterMenuDelegate.mc" id="16" lineNum="14" parent="globals/legendmasterMenuDelegate" pc="268435818" symbol="onMenuItem"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterMenuDelegate.mc" id="16" lineNum="15" parent="globals/legendmasterMenuDelegate" pc="268435829" symbol="onMenuItem"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterMenuDelegate.mc" id="17" lineNum="7" parent="globals/legendmasterMenuDelegate" pc="268435851" symbol="initialize"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterMenuDelegate.mc" id="17" lineNum="8" parent="globals/legendmasterMenuDelegate" pc="268435853" symbol="initialize"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterApp.mc" id="18" lineNum="12" parent="globals/legendmasterApp" pc="268435866" symbol="getInitialView"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterApp.mc" id="18" lineNum="13" parent="globals/legendmasterApp" pc="268435868" symbol="getInitialView"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterApp.mc" id="19" lineNum="7" parent="globals/legendmasterApp" pc="268435894" symbol="initialize"/>
+        <entry filename="C:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\source\\legendmasterApp.mc" id="19" lineNum="8" parent="globals/legendmasterApp" pc="268435896" symbol="initialize"/>
+        <entry filename="c:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\enduro\\gen\\006-B3907-00\\source\\Rez.mcgen" id="20" lineNum="14" parent="globals/Rez/Layouts" pc="268435909" symbol="MainLayout"/>
+        <entry filename="c:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\enduro\\gen\\006-B3907-00\\source\\Rez.mcgen" id="20" lineNum="15" parent="globals/Rez/Layouts" pc="268435920" symbol="MainLayout"/>
+        <entry filename="c:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\enduro\\gen\\006-B3907-00\\source\\Rez.mcgen" id="20" lineNum="17" parent="globals/Rez/Layouts" pc="268435929" symbol="MainLayout"/>
+        <entry filename="c:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\enduro\\gen\\006-B3907-00\\source\\Rez.mcgen" id="20" lineNum="19" parent="globals/Rez/Layouts" pc="268436032" symbol="MainLayout"/>
+        <entry filename="c:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\enduro\\gen\\006-B3907-00\\source\\Rez.mcgen" id="20" lineNum="20" parent="globals/Rez/Layouts" pc="268436116" symbol="MainLayout"/>
+        <entry filename="c:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\enduro\\gen\\006-B3907-00\\source\\Rez.mcgen" id="20" lineNum="22" parent="globals/Rez/Layouts" pc="268436147" symbol="MainLayout"/>
+        <entry filename="c:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\enduro\\gen\\006-B3907-00\\source\\Rez.mcgen" id="21" lineNum="27" parent="globals/Rez/Menus/MainMenu" pc="268436162" symbol="&lt;init&gt;"/>
+        <entry filename="c:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\enduro\\gen\\006-B3907-00\\source\\Rez.mcgen" id="22" lineNum="28" parent="globals/Rez/Menus/MainMenu" pc="268436174" symbol="initialize"/>
+        <entry filename="c:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\enduro\\gen\\006-B3907-00\\source\\Rez.mcgen" id="22" lineNum="29" parent="globals/Rez/Menus/MainMenu" pc="268436176" symbol="initialize"/>
+        <entry filename="c:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\enduro\\gen\\006-B3907-00\\source\\Rez.mcgen" id="22" lineNum="30" parent="globals/Rez/Menus/MainMenu" pc="268436188" symbol="initialize"/>
+        <entry filename="c:\\Users\\punishman\\Documents\\GitHub\\legendmaster\\garmin_sub_project\\legendmaster_watchapp\\legendmaster\\enduro\\gen\\006-B3907-00\\source\\Rez.mcgen" id="22" lineNum="31" parent="globals/Rez/Menus/MainMenu" pc="268436233" symbol="initialize"/>
+    </pcToLineNum>
+    <symbolTable>
+        <entry id="8388639" module="true" symbol="Graphics"/>
+        <entry field="true" id="8389346" symbol="text"/>
+        <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+        <entry id="5" module="true" symbol="globals/Rez/Menus"/>
+        <entry id="16" method="true" symbol="MainLayout"/>
+        <entry field="true" id="8388611" module="true" symbol="Toybox"/>
+        <entry field="true" id="18" symbol="AppName"/>
+        <entry id="6" module="true" symbol="globals/Rez/Strings"/>
+        <entry id="8389080" method="true" symbol="onMenu"/>
+        <entry id="8389345" symbol="rezId"/>
+        <entry id="8388648" module="true" symbol="WatchUi"/>
+        <entry id="2" module="true" symbol="globals/Rez"/>
+        <entry field="true" id="21" symbol="prompt"/>
+        <entry id="7" object="true" symbol="MainView"/>
+        <entry field="true" id="15" symbol="id_monkey"/>
+        <entry id="8389124" method="true" symbol="onUpdate"/>
+        <entry field="true" id="8389065" symbol="locY"/>
+        <entry field="true" id="8389064" symbol="locX"/>
+        <entry id="8388771" module="true" object="true" symbol="Drawables"/>
+        <entry id="8389348" symbol="font"/>
+        <entry id="9" object="true" symbol="legendmasterDelegate"/>
+        <entry id="23" symbol="item_2"/>
+        <entry id="22" symbol="item_1"/>
+        <entry id="13" module="true" symbol="Menus"/>
+        <entry id="4" module="true" symbol="globals/Rez/Layouts"/>
+        <entry id="8389122" method="true" symbol="onLayout"/>
+        <entry field="true" id="8389063" symbol="identifier"/>
+        <entry id="8389349" symbol="justification"/>
+        <entry id="8" object="true" symbol="legendmasterApp"/>
+        <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
+        <entry id="17" object="true" symbol="MainMenu"/>
+        <entry id="8388644" module="true" symbol="System"/>
+        <entry id="8388769" module="true" object="true" symbol="Rez"/>
+        <entry id="8388640" module="true" symbol="Lang"/>
+        <entry field="true" id="14" symbol="LauncherIcon"/>
+        <entry id="8388610" symbol="statics"/>
+        <entry id="8389123" method="true" symbol="onShow"/>
+        <entry id="8389350" module="true" symbol="globals"/>
+        <entry id="8388770" module="true" object="true" symbol="Strings"/>
+        <entry id="8388702" method="true" symbol="initialize"/>
+        <entry id="8389280" method="true" symbol="getInitialView"/>
+        <entry id="8389109" method="true" symbol="onMenuItem"/>
+        <entry field="true" id="8389347" symbol="color"/>
+        <entry id="10" object="true" symbol="legendmasterMenuDelegate"/>
+        <entry id="12" module="true" symbol="Layouts"/>
+        <entry id="11" object="true" symbol="legendmasterView"/>
+        <entry id="8389125" method="true" symbol="onHide"/>
+        <entry id="8388635" module="true" symbol="Application"/>
+        <entry field="true" id="20" symbol="menu_label_2"/>
+        <entry field="true" id="19" symbol="menu_label_1"/>
+    </symbolTable>
+    <localVars>
+        <entry arg="true" endPc="268435629" name="dc" stackId="1" startPc="268435555"/>
+        <entry endPc="268435628" name="w" stackId="2" startPc="268435558"/>
+        <entry endPc="268435628" name="h" stackId="3" startPc="268435558"/>
+        <entry arg="true" endPc="268435749" name="dc" stackId="1" startPc="268435714"/>
+        <entry arg="true" endPc="268435783" name="dc" stackId="1" startPc="268435765"/>
+        <entry arg="true" endPc="268435850" name="item" stackId="1" startPc="268435784"/>
+        <entry arg="true" endPc="268436161" name="dc" stackId="1" startPc="268435909"/>
+        <entry endPc="268436161" name="rez_cmp_local_var_dc_getWidth" stackId="2" startPc="268435920"/>
+        <entry endPc="268436161" name="rez_cmp_local_text_1193959466" stackId="3" startPc="268435920"/>
+        <entry endPc="268436161" name="rez_cmp_local_bitmap_id_monkey" stackId="4" startPc="268435920"/>
+    </localVars>
+    <deviceInfo deviceVersion="5c7ae9cf907f88c116a91dc4ffd75be9b5b7d2e9" partNumber="006-B3907-00"/>
+    <annotations>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="menu_label_2"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="menu_label_1"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="prompt"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="id_monkey"/>
+    </annotations>
+    <dataEntryOffsetMappings>
+        <dataEntry label="globals" offset="67" parentId="" symbolId="globals" type="module"/>
+        <dataEntry label="globals/MainView" offset="152" parentId="globals" symbolId="MainView" type="class"/>
+        <dataEntry label="globals/Rez" offset="205" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry label="globals/legendmasterDelegate" offset="267" parentId="globals" symbolId="legendmasterDelegate" type="class"/>
+        <dataEntry label="globals/legendmasterView" offset="320" parentId="globals" symbolId="legendmasterView" type="class"/>
+        <dataEntry label="globals/legendmasterMenuDelegate" offset="400" parentId="globals" symbolId="legendmasterMenuDelegate" type="class"/>
+        <dataEntry label="globals/legendmasterApp" offset="453" parentId="globals" symbolId="legendmasterApp" type="class"/>
+        <dataEntry label="globals/Rez/Drawables" offset="506" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Layouts" offset="550" parentId="Rez" symbolId="Layouts" type="module"/>
+        <dataEntry label="globals/Rez/Menus" offset="585" parentId="Rez" symbolId="Menus" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="620" parentId="Rez" symbolId="Strings" type="module"/>
+        <dataEntry label="globals/Rez/Menus/MainMenu" offset="682" parentId="Menus" symbolId="MainMenu" type="class"/>
+    </dataEntryOffsetMappings>
+    <functions>
+        <functionEntry accessMode="public" endPc="268435471" name="&lt;init&gt;" parent="MainView" startPc="268435460">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435491" name="&lt;init&gt;" parent="Rez" startPc="268435472">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435503" name="&lt;init&gt;" parent="legendmasterDelegate" startPc="268435492">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435515" name="&lt;init&gt;" parent="legendmasterView" startPc="268435504">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435527" name="&lt;init&gt;" parent="legendmasterMenuDelegate" startPc="268435516">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435539" name="&lt;init&gt;" parent="legendmasterApp" startPc="268435528">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435554" name="initialize" parent="MainView" startPc="268435540">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435629" name="onUpdate" parent="MainView" startPc="268435555">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Layouts">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Menus">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435698" name="onMenu" parent="legendmasterDelegate" startPc="268435630">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435713" name="initialize" parent="legendmasterDelegate" startPc="268435699">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onShow" parent="legendmasterView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435749" name="onLayout" parent="legendmasterView" startPc="268435714">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435764" name="initialize" parent="legendmasterView" startPc="268435750">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onHide" parent="legendmasterView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435783" name="onUpdate" parent="legendmasterView" startPc="268435765">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435850" name="onMenuItem" parent="legendmasterMenuDelegate" startPc="268435784">
+            <param id="item"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435865" name="initialize" parent="legendmasterMenuDelegate" startPc="268435851">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435893" name="getInitialView" parent="legendmasterApp" startPc="268435866">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435908" name="initialize" parent="legendmasterApp" startPc="268435894">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436161" name="MainLayout" parent="Layouts" startPc="268435909">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436173" name="&lt;init&gt;" parent="MainMenu" startPc="268436162">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436278" name="initialize" parent="MainMenu" startPc="268436174">
+            <documentation/>
+        </functionEntry>
+    </functions>
+</debugInfo>

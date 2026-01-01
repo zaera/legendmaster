@@ -1,0 +1,1199 @@
+[
+  {
+    "name": "0_1E",
+    "glyph": "i_0_1E",
+    "unicode_dec": 57600,
+    "unicode_hex": "0xe100",
+    "unicode_escape": "\\uE100"
+  },
+  {
+    "name": "0_1N",
+    "glyph": "i_0_1N",
+    "unicode_dec": 57601,
+    "unicode_hex": "0xe101",
+    "unicode_escape": "\\uE101"
+  },
+  {
+    "name": "0_1S",
+    "glyph": "i_0_1S",
+    "unicode_dec": 57602,
+    "unicode_hex": "0xe102",
+    "unicode_escape": "\\uE102"
+  },
+  {
+    "name": "0_1W",
+    "glyph": "i_0_1W",
+    "unicode_dec": 57603,
+    "unicode_hex": "0xe103",
+    "unicode_escape": "\\uE103"
+  },
+  {
+    "name": "0_2NE",
+    "glyph": "i_0_2NE",
+    "unicode_dec": 57604,
+    "unicode_hex": "0xe104",
+    "unicode_escape": "\\uE104"
+  },
+  {
+    "name": "0_2NW",
+    "glyph": "i_0_2NW",
+    "unicode_dec": 57605,
+    "unicode_hex": "0xe105",
+    "unicode_escape": "\\uE105"
+  },
+  {
+    "name": "0_2SE",
+    "glyph": "i_0_2SE",
+    "unicode_dec": 57606,
+    "unicode_hex": "0xe106",
+    "unicode_escape": "\\uE106"
+  },
+  {
+    "name": "0_2SW",
+    "glyph": "i_0_2SW",
+    "unicode_dec": 57607,
+    "unicode_hex": "0xe107",
+    "unicode_escape": "\\uE107"
+  },
+  {
+    "name": "0_3",
+    "glyph": "i_0_3",
+    "unicode_dec": 57608,
+    "unicode_hex": "0xe108",
+    "unicode_escape": "\\uE108"
+  },
+  {
+    "name": "0_4",
+    "glyph": "i_0_4",
+    "unicode_dec": 57609,
+    "unicode_hex": "0xe109",
+    "unicode_escape": "\\uE109"
+  },
+  {
+    "name": "0_5",
+    "glyph": "i_0_5",
+    "unicode_dec": 57610,
+    "unicode_hex": "0xe10a",
+    "unicode_escape": "\\uE10A"
+  },
+  {
+    "name": "1_1",
+    "glyph": "i_1_1",
+    "unicode_dec": 57611,
+    "unicode_hex": "0xe10b",
+    "unicode_escape": "\\uE10B"
+  },
+  {
+    "name": "1_10",
+    "glyph": "i_1_10",
+    "unicode_dec": 57612,
+    "unicode_hex": "0xe10c",
+    "unicode_escape": "\\uE10C"
+  },
+  {
+    "name": "1_11",
+    "glyph": "i_1_11",
+    "unicode_dec": 57613,
+    "unicode_hex": "0xe10d",
+    "unicode_escape": "\\uE10D"
+  },
+  {
+    "name": "1_12",
+    "glyph": "i_1_12",
+    "unicode_dec": 57614,
+    "unicode_hex": "0xe10e",
+    "unicode_escape": "\\uE10E"
+  },
+  {
+    "name": "1_13",
+    "glyph": "i_1_13",
+    "unicode_dec": 57615,
+    "unicode_hex": "0xe10f",
+    "unicode_escape": "\\uE10F"
+  },
+  {
+    "name": "1_14",
+    "glyph": "i_1_14",
+    "unicode_dec": 57616,
+    "unicode_hex": "0xe110",
+    "unicode_escape": "\\uE110"
+  },
+  {
+    "name": "1_15",
+    "glyph": "i_1_15",
+    "unicode_dec": 57617,
+    "unicode_hex": "0xe111",
+    "unicode_escape": "\\uE111"
+  },
+  {
+    "name": "1_16",
+    "glyph": "i_1_16",
+    "unicode_dec": 57618,
+    "unicode_hex": "0xe112",
+    "unicode_escape": "\\uE112"
+  },
+  {
+    "name": "1_2",
+    "glyph": "i_1_2",
+    "unicode_dec": 57619,
+    "unicode_hex": "0xe113",
+    "unicode_escape": "\\uE113"
+  },
+  {
+    "name": "1_3",
+    "glyph": "i_1_3",
+    "unicode_dec": 57620,
+    "unicode_hex": "0xe114",
+    "unicode_escape": "\\uE114"
+  },
+  {
+    "name": "1_4",
+    "glyph": "i_1_4",
+    "unicode_dec": 57621,
+    "unicode_hex": "0xe115",
+    "unicode_escape": "\\uE115"
+  },
+  {
+    "name": "1_5",
+    "glyph": "i_1_5",
+    "unicode_dec": 57622,
+    "unicode_hex": "0xe116",
+    "unicode_escape": "\\uE116"
+  },
+  {
+    "name": "1_6",
+    "glyph": "i_1_6",
+    "unicode_dec": 57623,
+    "unicode_hex": "0xe117",
+    "unicode_escape": "\\uE117"
+  },
+  {
+    "name": "1_7",
+    "glyph": "i_1_7",
+    "unicode_dec": 57624,
+    "unicode_hex": "0xe118",
+    "unicode_escape": "\\uE118"
+  },
+  {
+    "name": "1_8",
+    "glyph": "i_1_8",
+    "unicode_dec": 57625,
+    "unicode_hex": "0xe119",
+    "unicode_escape": "\\uE119"
+  },
+  {
+    "name": "1_9",
+    "glyph": "i_1_9",
+    "unicode_dec": 57626,
+    "unicode_hex": "0xe11a",
+    "unicode_escape": "\\uE11A"
+  },
+  {
+    "name": "10_1",
+    "glyph": "i_10_1",
+    "unicode_dec": 57627,
+    "unicode_hex": "0xe11b",
+    "unicode_escape": "\\uE11B"
+  },
+  {
+    "name": "10_2",
+    "glyph": "i_10_2",
+    "unicode_dec": 57628,
+    "unicode_hex": "0xe11c",
+    "unicode_escape": "\\uE11C"
+  },
+  {
+    "name": "11_1",
+    "glyph": "i_11_1",
+    "unicode_dec": 57629,
+    "unicode_hex": "0xe11d",
+    "unicode_escape": "\\uE11D"
+  },
+  {
+    "name": "12_10",
+    "glyph": "i_12_10",
+    "unicode_dec": 57630,
+    "unicode_hex": "0xe11e",
+    "unicode_escape": "\\uE11E"
+  },
+  {
+    "name": "12_11",
+    "glyph": "i_12_11",
+    "unicode_dec": 57631,
+    "unicode_hex": "0xe11f",
+    "unicode_escape": "\\uE11F"
+  },
+  {
+    "name": "12_12E",
+    "glyph": "i_12_12E",
+    "unicode_dec": 57632,
+    "unicode_hex": "0xe120",
+    "unicode_escape": "\\uE120"
+  },
+  {
+    "name": "12_12N",
+    "glyph": "i_12_12N",
+    "unicode_dec": 57633,
+    "unicode_hex": "0xe121",
+    "unicode_escape": "\\uE121"
+  },
+  {
+    "name": "12_12NE",
+    "glyph": "i_12_12NE",
+    "unicode_dec": 57634,
+    "unicode_hex": "0xe122",
+    "unicode_escape": "\\uE122"
+  },
+  {
+    "name": "12_12NW",
+    "glyph": "i_12_12NW",
+    "unicode_dec": 57635,
+    "unicode_hex": "0xe123",
+    "unicode_escape": "\\uE123"
+  },
+  {
+    "name": "12_12S",
+    "glyph": "i_12_12S",
+    "unicode_dec": 57636,
+    "unicode_hex": "0xe124",
+    "unicode_escape": "\\uE124"
+  },
+  {
+    "name": "12_12SE",
+    "glyph": "i_12_12SE",
+    "unicode_dec": 57637,
+    "unicode_hex": "0xe125",
+    "unicode_escape": "\\uE125"
+  },
+  {
+    "name": "12_12SW",
+    "glyph": "i_12_12SW",
+    "unicode_dec": 57638,
+    "unicode_hex": "0xe126",
+    "unicode_escape": "\\uE126"
+  },
+  {
+    "name": "12_12W",
+    "glyph": "i_12_12W",
+    "unicode_dec": 57639,
+    "unicode_hex": "0xe127",
+    "unicode_escape": "\\uE127"
+  },
+  {
+    "name": "12_13",
+    "glyph": "i_12_13",
+    "unicode_dec": 57640,
+    "unicode_hex": "0xe128",
+    "unicode_escape": "\\uE128"
+  },
+  {
+    "name": "12_14",
+    "glyph": "i_12_14",
+    "unicode_dec": 57641,
+    "unicode_hex": "0xe129",
+    "unicode_escape": "\\uE129"
+  },
+  {
+    "name": "12_1E",
+    "glyph": "i_12_1E",
+    "unicode_dec": 57642,
+    "unicode_hex": "0xe12a",
+    "unicode_escape": "\\uE12A"
+  },
+  {
+    "name": "12_1N",
+    "glyph": "i_12_1N",
+    "unicode_dec": 57643,
+    "unicode_hex": "0xe12b",
+    "unicode_escape": "\\uE12B"
+  },
+  {
+    "name": "12_1NE",
+    "glyph": "i_12_1NE",
+    "unicode_dec": 57644,
+    "unicode_hex": "0xe12c",
+    "unicode_escape": "\\uE12C"
+  },
+  {
+    "name": "12_1NW",
+    "glyph": "i_12_1NW",
+    "unicode_dec": 57645,
+    "unicode_hex": "0xe12d",
+    "unicode_escape": "\\uE12D"
+  },
+  {
+    "name": "12_1S",
+    "glyph": "i_12_1S",
+    "unicode_dec": 57646,
+    "unicode_hex": "0xe12e",
+    "unicode_escape": "\\uE12E"
+  },
+  {
+    "name": "12_1SE",
+    "glyph": "i_12_1SE",
+    "unicode_dec": 57647,
+    "unicode_hex": "0xe12f",
+    "unicode_escape": "\\uE12F"
+  },
+  {
+    "name": "12_1SW",
+    "glyph": "i_12_1SW",
+    "unicode_dec": 57648,
+    "unicode_hex": "0xe130",
+    "unicode_escape": "\\uE130"
+  },
+  {
+    "name": "12_1W",
+    "glyph": "i_12_1W",
+    "unicode_dec": 57649,
+    "unicode_hex": "0xe131",
+    "unicode_escape": "\\uE131"
+  },
+  {
+    "name": "12_2E",
+    "glyph": "i_12_2E",
+    "unicode_dec": 57650,
+    "unicode_hex": "0xe132",
+    "unicode_escape": "\\uE132"
+  },
+  {
+    "name": "12_2N",
+    "glyph": "i_12_2N",
+    "unicode_dec": 57651,
+    "unicode_hex": "0xe133",
+    "unicode_escape": "\\uE133"
+  },
+  {
+    "name": "12_2NE",
+    "glyph": "i_12_2NE",
+    "unicode_dec": 57652,
+    "unicode_hex": "0xe134",
+    "unicode_escape": "\\uE134"
+  },
+  {
+    "name": "12_2NW",
+    "glyph": "i_12_2NW",
+    "unicode_dec": 57653,
+    "unicode_hex": "0xe135",
+    "unicode_escape": "\\uE135"
+  },
+  {
+    "name": "12_2S",
+    "glyph": "i_12_2S",
+    "unicode_dec": 57654,
+    "unicode_hex": "0xe136",
+    "unicode_escape": "\\uE136"
+  },
+  {
+    "name": "12_2SE",
+    "glyph": "i_12_2SE",
+    "unicode_dec": 57655,
+    "unicode_hex": "0xe137",
+    "unicode_escape": "\\uE137"
+  },
+  {
+    "name": "12_2SW",
+    "glyph": "i_12_2SW",
+    "unicode_dec": 57656,
+    "unicode_hex": "0xe138",
+    "unicode_escape": "\\uE138"
+  },
+  {
+    "name": "12_2W",
+    "glyph": "i_12_2W",
+    "unicode_dec": 57657,
+    "unicode_hex": "0xe139",
+    "unicode_escape": "\\uE139"
+  },
+  {
+    "name": "12_3E",
+    "glyph": "i_12_3E",
+    "unicode_dec": 57658,
+    "unicode_hex": "0xe13a",
+    "unicode_escape": "\\uE13A"
+  },
+  {
+    "name": "12_3N",
+    "glyph": "i_12_3N",
+    "unicode_dec": 57659,
+    "unicode_hex": "0xe13b",
+    "unicode_escape": "\\uE13B"
+  },
+  {
+    "name": "12_3NE",
+    "glyph": "i_12_3NE",
+    "unicode_dec": 57660,
+    "unicode_hex": "0xe13c",
+    "unicode_escape": "\\uE13C"
+  },
+  {
+    "name": "12_3NW",
+    "glyph": "i_12_3NW",
+    "unicode_dec": 57661,
+    "unicode_hex": "0xe13d",
+    "unicode_escape": "\\uE13D"
+  },
+  {
+    "name": "12_3S",
+    "glyph": "i_12_3S",
+    "unicode_dec": 57662,
+    "unicode_hex": "0xe13e",
+    "unicode_escape": "\\uE13E"
+  },
+  {
+    "name": "12_3SE",
+    "glyph": "i_12_3SE",
+    "unicode_dec": 57663,
+    "unicode_hex": "0xe13f",
+    "unicode_escape": "\\uE13F"
+  },
+  {
+    "name": "12_3SW",
+    "glyph": "i_12_3SW",
+    "unicode_dec": 57664,
+    "unicode_hex": "0xe140",
+    "unicode_escape": "\\uE140"
+  },
+  {
+    "name": "12_3W",
+    "glyph": "i_12_3W",
+    "unicode_dec": 57665,
+    "unicode_hex": "0xe141",
+    "unicode_escape": "\\uE141"
+  },
+  {
+    "name": "12_4E",
+    "glyph": "i_12_4E",
+    "unicode_dec": 57666,
+    "unicode_hex": "0xe142",
+    "unicode_escape": "\\uE142"
+  },
+  {
+    "name": "12_4N",
+    "glyph": "i_12_4N",
+    "unicode_dec": 57667,
+    "unicode_hex": "0xe143",
+    "unicode_escape": "\\uE143"
+  },
+  {
+    "name": "12_4NE",
+    "glyph": "i_12_4NE",
+    "unicode_dec": 57668,
+    "unicode_hex": "0xe144",
+    "unicode_escape": "\\uE144"
+  },
+  {
+    "name": "12_4NW",
+    "glyph": "i_12_4NW",
+    "unicode_dec": 57669,
+    "unicode_hex": "0xe145",
+    "unicode_escape": "\\uE145"
+  },
+  {
+    "name": "12_4S",
+    "glyph": "i_12_4S",
+    "unicode_dec": 57670,
+    "unicode_hex": "0xe146",
+    "unicode_escape": "\\uE146"
+  },
+  {
+    "name": "12_4SE",
+    "glyph": "i_12_4SE",
+    "unicode_dec": 57671,
+    "unicode_hex": "0xe147",
+    "unicode_escape": "\\uE147"
+  },
+  {
+    "name": "12_4SW",
+    "glyph": "i_12_4SW",
+    "unicode_dec": 57672,
+    "unicode_hex": "0xe148",
+    "unicode_escape": "\\uE148"
+  },
+  {
+    "name": "12_4W",
+    "glyph": "i_12_4W",
+    "unicode_dec": 57673,
+    "unicode_hex": "0xe149",
+    "unicode_escape": "\\uE149"
+  },
+  {
+    "name": "12_5E",
+    "glyph": "i_12_5E",
+    "unicode_dec": 57674,
+    "unicode_hex": "0xe14a",
+    "unicode_escape": "\\uE14A"
+  },
+  {
+    "name": "12_5N",
+    "glyph": "i_12_5N",
+    "unicode_dec": 57675,
+    "unicode_hex": "0xe14b",
+    "unicode_escape": "\\uE14B"
+  },
+  {
+    "name": "12_5NE",
+    "glyph": "i_12_5NE",
+    "unicode_dec": 57676,
+    "unicode_hex": "0xe14c",
+    "unicode_escape": "\\uE14C"
+  },
+  {
+    "name": "12_5NW",
+    "glyph": "i_12_5NW",
+    "unicode_dec": 57677,
+    "unicode_hex": "0xe14d",
+    "unicode_escape": "\\uE14D"
+  },
+  {
+    "name": "12_5S",
+    "glyph": "i_12_5S",
+    "unicode_dec": 57678,
+    "unicode_hex": "0xe14e",
+    "unicode_escape": "\\uE14E"
+  },
+  {
+    "name": "12_5SE",
+    "glyph": "i_12_5SE",
+    "unicode_dec": 57679,
+    "unicode_hex": "0xe14f",
+    "unicode_escape": "\\uE14F"
+  },
+  {
+    "name": "12_5SW",
+    "glyph": "i_12_5SW",
+    "unicode_dec": 57680,
+    "unicode_hex": "0xe150",
+    "unicode_escape": "\\uE150"
+  },
+  {
+    "name": "12_5W",
+    "glyph": "i_12_5W",
+    "unicode_dec": 57681,
+    "unicode_hex": "0xe151",
+    "unicode_escape": "\\uE151"
+  },
+  {
+    "name": "12_6E",
+    "glyph": "i_12_6E",
+    "unicode_dec": 57682,
+    "unicode_hex": "0xe152",
+    "unicode_escape": "\\uE152"
+  },
+  {
+    "name": "12_6N",
+    "glyph": "i_12_6N",
+    "unicode_dec": 57683,
+    "unicode_hex": "0xe153",
+    "unicode_escape": "\\uE153"
+  },
+  {
+    "name": "12_6NE",
+    "glyph": "i_12_6NE",
+    "unicode_dec": 57684,
+    "unicode_hex": "0xe154",
+    "unicode_escape": "\\uE154"
+  },
+  {
+    "name": "12_6NW",
+    "glyph": "i_12_6NW",
+    "unicode_dec": 57685,
+    "unicode_hex": "0xe155",
+    "unicode_escape": "\\uE155"
+  },
+  {
+    "name": "12_6S",
+    "glyph": "i_12_6S",
+    "unicode_dec": 57686,
+    "unicode_hex": "0xe156",
+    "unicode_escape": "\\uE156"
+  },
+  {
+    "name": "12_6SE",
+    "glyph": "i_12_6SE",
+    "unicode_dec": 57687,
+    "unicode_hex": "0xe157",
+    "unicode_escape": "\\uE157"
+  },
+  {
+    "name": "12_6SW",
+    "glyph": "i_12_6SW",
+    "unicode_dec": 57688,
+    "unicode_hex": "0xe158",
+    "unicode_escape": "\\uE158"
+  },
+  {
+    "name": "12_6W",
+    "glyph": "i_12_6W",
+    "unicode_dec": 57689,
+    "unicode_hex": "0xe159",
+    "unicode_escape": "\\uE159"
+  },
+  {
+    "name": "12_7E",
+    "glyph": "i_12_7E",
+    "unicode_dec": 57690,
+    "unicode_hex": "0xe15a",
+    "unicode_escape": "\\uE15A"
+  },
+  {
+    "name": "12_7N",
+    "glyph": "i_12_7N",
+    "unicode_dec": 57691,
+    "unicode_hex": "0xe15b",
+    "unicode_escape": "\\uE15B"
+  },
+  {
+    "name": "12_7NE",
+    "glyph": "i_12_7NE",
+    "unicode_dec": 57692,
+    "unicode_hex": "0xe15c",
+    "unicode_escape": "\\uE15C"
+  },
+  {
+    "name": "12_7NW",
+    "glyph": "i_12_7NW",
+    "unicode_dec": 57693,
+    "unicode_hex": "0xe15d",
+    "unicode_escape": "\\uE15D"
+  },
+  {
+    "name": "12_7S",
+    "glyph": "i_12_7S",
+    "unicode_dec": 57694,
+    "unicode_hex": "0xe15e",
+    "unicode_escape": "\\uE15E"
+  },
+  {
+    "name": "12_7SE",
+    "glyph": "i_12_7SE",
+    "unicode_dec": 57695,
+    "unicode_hex": "0xe15f",
+    "unicode_escape": "\\uE15F"
+  },
+  {
+    "name": "12_7SW",
+    "glyph": "i_12_7SW",
+    "unicode_dec": 57696,
+    "unicode_hex": "0xe160",
+    "unicode_escape": "\\uE160"
+  },
+  {
+    "name": "12_7W",
+    "glyph": "i_12_7W",
+    "unicode_dec": 57697,
+    "unicode_hex": "0xe161",
+    "unicode_escape": "\\uE161"
+  },
+  {
+    "name": "12_8",
+    "glyph": "i_12_8",
+    "unicode_dec": 57698,
+    "unicode_hex": "0xe162",
+    "unicode_escape": "\\uE162"
+  },
+  {
+    "name": "12_9",
+    "glyph": "i_12_9",
+    "unicode_dec": 57699,
+    "unicode_hex": "0xe163",
+    "unicode_escape": "\\uE163"
+  },
+  {
+    "name": "13_1",
+    "glyph": "i_13_1",
+    "unicode_dec": 57700,
+    "unicode_hex": "0xe164",
+    "unicode_escape": "\\uE164"
+  },
+  {
+    "name": "13_2",
+    "glyph": "i_13_2",
+    "unicode_dec": 57701,
+    "unicode_hex": "0xe165",
+    "unicode_escape": "\\uE165"
+  },
+  {
+    "name": "13_3",
+    "glyph": "i_13_3",
+    "unicode_dec": 57702,
+    "unicode_hex": "0xe166",
+    "unicode_escape": "\\uE166"
+  },
+  {
+    "name": "2_1",
+    "glyph": "i_2_1",
+    "unicode_dec": 57703,
+    "unicode_hex": "0xe167",
+    "unicode_escape": "\\uE167"
+  },
+  {
+    "name": "2_10",
+    "glyph": "i_2_10",
+    "unicode_dec": 57704,
+    "unicode_hex": "0xe168",
+    "unicode_escape": "\\uE168"
+  },
+  {
+    "name": "2_2",
+    "glyph": "i_2_2",
+    "unicode_dec": 57705,
+    "unicode_hex": "0xe169",
+    "unicode_escape": "\\uE169"
+  },
+  {
+    "name": "2_3",
+    "glyph": "i_2_3",
+    "unicode_dec": 57706,
+    "unicode_hex": "0xe16a",
+    "unicode_escape": "\\uE16A"
+  },
+  {
+    "name": "2_4",
+    "glyph": "i_2_4",
+    "unicode_dec": 57707,
+    "unicode_hex": "0xe16b",
+    "unicode_escape": "\\uE16B"
+  },
+  {
+    "name": "2_5",
+    "glyph": "i_2_5",
+    "unicode_dec": 57708,
+    "unicode_hex": "0xe16c",
+    "unicode_escape": "\\uE16C"
+  },
+  {
+    "name": "2_6",
+    "glyph": "i_2_6",
+    "unicode_dec": 57709,
+    "unicode_hex": "0xe16d",
+    "unicode_escape": "\\uE16D"
+  },
+  {
+    "name": "2_7",
+    "glyph": "i_2_7",
+    "unicode_dec": 57710,
+    "unicode_hex": "0xe16e",
+    "unicode_escape": "\\uE16E"
+  },
+  {
+    "name": "2_8",
+    "glyph": "i_2_8",
+    "unicode_dec": 57711,
+    "unicode_hex": "0xe16f",
+    "unicode_escape": "\\uE16F"
+  },
+  {
+    "name": "2_9",
+    "glyph": "i_2_9",
+    "unicode_dec": 57712,
+    "unicode_hex": "0xe170",
+    "unicode_escape": "\\uE170"
+  },
+  {
+    "name": "3_1",
+    "glyph": "i_3_1",
+    "unicode_dec": 57713,
+    "unicode_hex": "0xe171",
+    "unicode_escape": "\\uE171"
+  },
+  {
+    "name": "3_10",
+    "glyph": "i_3_10",
+    "unicode_dec": 57714,
+    "unicode_hex": "0xe172",
+    "unicode_escape": "\\uE172"
+  },
+  {
+    "name": "3_11",
+    "glyph": "i_3_11",
+    "unicode_dec": 57715,
+    "unicode_hex": "0xe173",
+    "unicode_escape": "\\uE173"
+  },
+  {
+    "name": "3_2",
+    "glyph": "i_3_2",
+    "unicode_dec": 57716,
+    "unicode_hex": "0xe174",
+    "unicode_escape": "\\uE174"
+  },
+  {
+    "name": "3_3",
+    "glyph": "i_3_3",
+    "unicode_dec": 57717,
+    "unicode_hex": "0xe175",
+    "unicode_escape": "\\uE175"
+  },
+  {
+    "name": "3_4",
+    "glyph": "i_3_4",
+    "unicode_dec": 57718,
+    "unicode_hex": "0xe176",
+    "unicode_escape": "\\uE176"
+  },
+  {
+    "name": "3_5",
+    "glyph": "i_3_5",
+    "unicode_dec": 57719,
+    "unicode_hex": "0xe177",
+    "unicode_escape": "\\uE177"
+  },
+  {
+    "name": "3_6",
+    "glyph": "i_3_6",
+    "unicode_dec": 57720,
+    "unicode_hex": "0xe178",
+    "unicode_escape": "\\uE178"
+  },
+  {
+    "name": "3_7",
+    "glyph": "i_3_7",
+    "unicode_dec": 57721,
+    "unicode_hex": "0xe179",
+    "unicode_escape": "\\uE179"
+  },
+  {
+    "name": "3_8",
+    "glyph": "i_3_8",
+    "unicode_dec": 57722,
+    "unicode_hex": "0xe17a",
+    "unicode_escape": "\\uE17A"
+  },
+  {
+    "name": "3_9",
+    "glyph": "i_3_9",
+    "unicode_dec": 57723,
+    "unicode_hex": "0xe17b",
+    "unicode_escape": "\\uE17B"
+  },
+  {
+    "name": "4_1",
+    "glyph": "i_4_1",
+    "unicode_dec": 57724,
+    "unicode_hex": "0xe17c",
+    "unicode_escape": "\\uE17C"
+  },
+  {
+    "name": "4_10",
+    "glyph": "i_4_10",
+    "unicode_dec": 57725,
+    "unicode_hex": "0xe17d",
+    "unicode_escape": "\\uE17D"
+  },
+  {
+    "name": "4_2",
+    "glyph": "i_4_2",
+    "unicode_dec": 57726,
+    "unicode_hex": "0xe17e",
+    "unicode_escape": "\\uE17E"
+  },
+  {
+    "name": "4_3",
+    "glyph": "i_4_3",
+    "unicode_dec": 57727,
+    "unicode_hex": "0xe17f",
+    "unicode_escape": "\\uE17F"
+  },
+  {
+    "name": "4_4",
+    "glyph": "i_4_4",
+    "unicode_dec": 57728,
+    "unicode_hex": "0xe180",
+    "unicode_escape": "\\uE180"
+  },
+  {
+    "name": "4_5",
+    "glyph": "i_4_5",
+    "unicode_dec": 57729,
+    "unicode_hex": "0xe181",
+    "unicode_escape": "\\uE181"
+  },
+  {
+    "name": "4_6",
+    "glyph": "i_4_6",
+    "unicode_dec": 57730,
+    "unicode_hex": "0xe182",
+    "unicode_escape": "\\uE182"
+  },
+  {
+    "name": "4_7",
+    "glyph": "i_4_7",
+    "unicode_dec": 57731,
+    "unicode_hex": "0xe183",
+    "unicode_escape": "\\uE183"
+  },
+  {
+    "name": "4_8",
+    "glyph": "i_4_8",
+    "unicode_dec": 57732,
+    "unicode_hex": "0xe184",
+    "unicode_escape": "\\uE184"
+  },
+  {
+    "name": "4_9",
+    "glyph": "i_4_9",
+    "unicode_dec": 57733,
+    "unicode_hex": "0xe185",
+    "unicode_escape": "\\uE185"
+  },
+  {
+    "name": "5_1",
+    "glyph": "i_5_1",
+    "unicode_dec": 57734,
+    "unicode_hex": "0xe186",
+    "unicode_escape": "\\uE186"
+  },
+  {
+    "name": "5_10",
+    "glyph": "i_5_10",
+    "unicode_dec": 57735,
+    "unicode_hex": "0xe187",
+    "unicode_escape": "\\uE187"
+  },
+  {
+    "name": "5_11",
+    "glyph": "i_5_11",
+    "unicode_dec": 57736,
+    "unicode_hex": "0xe188",
+    "unicode_escape": "\\uE188"
+  },
+  {
+    "name": "5_12",
+    "glyph": "i_5_12",
+    "unicode_dec": 57737,
+    "unicode_hex": "0xe189",
+    "unicode_escape": "\\uE189"
+  },
+  {
+    "name": "5_13",
+    "glyph": "i_5_13",
+    "unicode_dec": 57738,
+    "unicode_hex": "0xe18a",
+    "unicode_escape": "\\uE18A"
+  },
+  {
+    "name": "5_14",
+    "glyph": "i_5_14",
+    "unicode_dec": 57739,
+    "unicode_hex": "0xe18b",
+    "unicode_escape": "\\uE18B"
+  },
+  {
+    "name": "5_15",
+    "glyph": "i_5_15",
+    "unicode_dec": 57740,
+    "unicode_hex": "0xe18c",
+    "unicode_escape": "\\uE18C"
+  },
+  {
+    "name": "5_16",
+    "glyph": "i_5_16",
+    "unicode_dec": 57741,
+    "unicode_hex": "0xe18d",
+    "unicode_escape": "\\uE18D"
+  },
+  {
+    "name": "5_17",
+    "glyph": "i_5_17",
+    "unicode_dec": 57742,
+    "unicode_hex": "0xe18e",
+    "unicode_escape": "\\uE18E"
+  },
+  {
+    "name": "5_18",
+    "glyph": "i_5_18",
+    "unicode_dec": 57743,
+    "unicode_hex": "0xe18f",
+    "unicode_escape": "\\uE18F"
+  },
+  {
+    "name": "5_19",
+    "glyph": "i_5_19",
+    "unicode_dec": 57744,
+    "unicode_hex": "0xe190",
+    "unicode_escape": "\\uE190"
+  },
+  {
+    "name": "5_2",
+    "glyph": "i_5_2",
+    "unicode_dec": 57745,
+    "unicode_hex": "0xe191",
+    "unicode_escape": "\\uE191"
+  },
+  {
+    "name": "5_20",
+    "glyph": "i_5_20",
+    "unicode_dec": 57746,
+    "unicode_hex": "0xe192",
+    "unicode_escape": "\\uE192"
+  },
+  {
+    "name": "5_21",
+    "glyph": "i_5_21",
+    "unicode_dec": 57747,
+    "unicode_hex": "0xe193",
+    "unicode_escape": "\\uE193"
+  },
+  {
+    "name": "5_22",
+    "glyph": "i_5_22",
+    "unicode_dec": 57748,
+    "unicode_hex": "0xe194",
+    "unicode_escape": "\\uE194"
+  },
+  {
+    "name": "5_23",
+    "glyph": "i_5_23",
+    "unicode_dec": 57749,
+    "unicode_hex": "0xe195",
+    "unicode_escape": "\\uE195"
+  },
+  {
+    "name": "5_24",
+    "glyph": "i_5_24",
+    "unicode_dec": 57750,
+    "unicode_hex": "0xe196",
+    "unicode_escape": "\\uE196"
+  },
+  {
+    "name": "5_3",
+    "glyph": "i_5_3",
+    "unicode_dec": 57751,
+    "unicode_hex": "0xe197",
+    "unicode_escape": "\\uE197"
+  },
+  {
+    "name": "5_4",
+    "glyph": "i_5_4",
+    "unicode_dec": 57752,
+    "unicode_hex": "0xe198",
+    "unicode_escape": "\\uE198"
+  },
+  {
+    "name": "5_5",
+    "glyph": "i_5_5",
+    "unicode_dec": 57753,
+    "unicode_hex": "0xe199",
+    "unicode_escape": "\\uE199"
+  },
+  {
+    "name": "5_6",
+    "glyph": "i_5_6",
+    "unicode_dec": 57754,
+    "unicode_hex": "0xe19a",
+    "unicode_escape": "\\uE19A"
+  },
+  {
+    "name": "5_7",
+    "glyph": "i_5_7",
+    "unicode_dec": 57755,
+    "unicode_hex": "0xe19b",
+    "unicode_escape": "\\uE19B"
+  },
+  {
+    "name": "5_8",
+    "glyph": "i_5_8",
+    "unicode_dec": 57756,
+    "unicode_hex": "0xe19c",
+    "unicode_escape": "\\uE19C"
+  },
+  {
+    "name": "5_9",
+    "glyph": "i_5_9",
+    "unicode_dec": 57757,
+    "unicode_hex": "0xe19d",
+    "unicode_escape": "\\uE19D"
+  },
+  {
+    "name": "6_1",
+    "glyph": "i_6_1",
+    "unicode_dec": 57758,
+    "unicode_hex": "0xe19e",
+    "unicode_escape": "\\uE19E"
+  },
+  {
+    "name": "6_2",
+    "glyph": "i_6_2",
+    "unicode_dec": 57759,
+    "unicode_hex": "0xe19f",
+    "unicode_escape": "\\uE19F"
+  },
+  {
+    "name": "8_1",
+    "glyph": "i_8_1",
+    "unicode_dec": 57760,
+    "unicode_hex": "0xe1a0",
+    "unicode_escape": "\\uE1A0"
+  },
+  {
+    "name": "8_10",
+    "glyph": "i_8_10",
+    "unicode_dec": 57761,
+    "unicode_hex": "0xe1a1",
+    "unicode_escape": "\\uE1A1"
+  },
+  {
+    "name": "8_11",
+    "glyph": "i_8_11",
+    "unicode_dec": 57762,
+    "unicode_hex": "0xe1a2",
+    "unicode_escape": "\\uE1A2"
+  },
+  {
+    "name": "8_2",
+    "glyph": "i_8_2",
+    "unicode_dec": 57763,
+    "unicode_hex": "0xe1a3",
+    "unicode_escape": "\\uE1A3"
+  },
+  {
+    "name": "8_3",
+    "glyph": "i_8_3",
+    "unicode_dec": 57764,
+    "unicode_hex": "0xe1a4",
+    "unicode_escape": "\\uE1A4"
+  },
+  {
+    "name": "8_4",
+    "glyph": "i_8_4",
+    "unicode_dec": 57765,
+    "unicode_hex": "0xe1a5",
+    "unicode_escape": "\\uE1A5"
+  },
+  {
+    "name": "8_5",
+    "glyph": "i_8_5",
+    "unicode_dec": 57766,
+    "unicode_hex": "0xe1a6",
+    "unicode_escape": "\\uE1A6"
+  },
+  {
+    "name": "8_6",
+    "glyph": "i_8_6",
+    "unicode_dec": 57767,
+    "unicode_hex": "0xe1a7",
+    "unicode_escape": "\\uE1A7"
+  },
+  {
+    "name": "8_7",
+    "glyph": "i_8_7",
+    "unicode_dec": 57768,
+    "unicode_hex": "0xe1a8",
+    "unicode_escape": "\\uE1A8"
+  },
+  {
+    "name": "8_8",
+    "glyph": "i_8_8",
+    "unicode_dec": 57769,
+    "unicode_hex": "0xe1a9",
+    "unicode_escape": "\\uE1A9"
+  },
+  {
+    "name": "8_9",
+    "glyph": "i_8_9",
+    "unicode_dec": 57770,
+    "unicode_hex": "0xe1aa",
+    "unicode_escape": "\\uE1AA"
+  }
+]
