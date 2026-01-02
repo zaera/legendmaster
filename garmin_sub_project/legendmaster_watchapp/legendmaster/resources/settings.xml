@@ -1,0 +1,5 @@
+<settings>
+    <setting propertyKey="@Properties.CP_Data" title="Legend Data (CP,i1,i2,i3,i4,i5|...)">
+        <settingConfig type="alphaNumeric"/>
+    </setting>
+</settings>
