@@ -242,11 +242,16 @@ class legendmasterView extends WatchUi.View {
         var paces = calculatePaces();
         var midX = w / 2, midY = h / 2 + 10;
         if (controlPoints.size() == 0) { return; }
+        
         var currentData = controlPoints[currentIndex];
         var orderNumStr = (currentIndex + 1).toString();
+        orderNumStr="81";
         var cpNumStr = currentData[0].toString();
+        
         var t = (info != null && info.timerTime != null) ? info.timerTime : 0;
         var d = (info != null && info.elapsedDistance != null) ? info.elapsedDistance : 0;
+        
+        // Верхняя панель инфо
         dc.setColor(0xAAAAAA, -1);
         dc.drawText(midX, h * 0.06, Graphics.FONT_XTINY, (d / 1000.0).format("%.2f") + " km", 1|4);
         dc.drawText(midX, h * 0.17, Graphics.FONT_LARGE, formatTime(t), 1|4);
@@ -256,44 +261,117 @@ class legendmasterView extends WatchUi.View {
         drawMetersCounter(dc, w, h);
         drawProgressArc(dc, w, h);
 
-        var hasIcons = false;
-        for (var i = 1; i <= 6; i++) { if (currentData.size() > i && currentData[i] != 0) { hasIcons = true; } }
-        if (hasIcons) {
+        // Проверка наличия контента в ячейках (индексы 1-6)
+        var hasContent = false;
+        for (var i = 1; i <= 6; i++) { 
+            if (currentData.size() > i && currentData[i] != 0 && currentData[i] != null) { 
+                hasContent = true; 
+                break; 
+            } 
+        }
+
+        if (hasContent) {
             var boxSize = 38, halfBox = 19, y_delta = 30; 
-            var positions = [[midX + halfBox, midY - boxSize - halfBox + y_delta], [midX - boxSize - halfBox, midY - halfBox + y_delta], [midX - halfBox, midY - halfBox + y_delta], [midX + halfBox, midY - halfBox + y_delta], [midX - 2*halfBox, midY + halfBox+y_delta], [midX , midY + halfBox+y_delta]];
+            // Координаты 6 квадратов
+            var positions = [
+                [midX + halfBox, midY - boxSize - halfBox + y_delta], 
+                [midX - boxSize - halfBox, midY - halfBox + y_delta], 
+                [midX - halfBox, midY - halfBox + y_delta], 
+                [midX + halfBox, midY - halfBox + y_delta], 
+                [midX - 2*halfBox, midY + halfBox + y_delta], 
+                [midX, midY + halfBox + y_delta]
+            ];
+
             for (var j = 0; j < 6; j++) {
-                if (currentData.size() > j + 1 && currentData[j+1] != 0) {
+                var item = (currentData.size() > j + 1) ? currentData[j+1] : 0;
+                
+                if (item != 0 && item != null) {
                     var bx = positions[j][0], by = positions[j][1];
+                    
+                    // Рисуем серую рамку (тонкую)
                     dc.setColor(0xAAAAAA, -1); 
                     dc.setPenWidth(1);
                     dc.drawRectangle(bx, by, boxSize, boxSize);
 
                     dc.setColor(0xFFFFFF, -1);
-                    if (myFont != null) { dc.drawText(bx + halfBox, by + halfBox, myFont, (57345 + currentData[j+1]).toChar().toString(), 1|4); }
+
+                    // ЛОГИКА ВЫБОРА: ИКОНКА ИЛИ ТЕКСТ
+                    if (item instanceof Toybox.Lang.Number) {
+                        // Если число — берем иконку из кастомного шрифта
+                        if (myFont != null) {
+                            dc.drawText(bx + halfBox, by + halfBox, myFont, (57345 + item).toChar().toString(), 1|4);
+                        }
+                    } else if (item instanceof Toybox.Lang.String) {
+                        // Если строка — берем только 1-й символ и рисуем системным шрифтом
+                        if (item.length() > 0) {
+                            var charToDraw = item.substring(0, 1);
+                            dc.drawText(bx + halfBox, by + halfBox, Graphics.FONT_LARGE, charToDraw, 1|4);
+                        }
+                    }
                 }
             }
+            
+            // Отрисовка номера КП слева от сетки
             var cpOffset = (w >= 280) ? cpOffsetEnduro : cpOffsetFenix;
-            var finalCpX; var shiftCorr;
-            if (w >= 280 && cpNumStr.length() > 2) {
-                finalCpX = midX - cpOffset - 40; 
-                shiftCorr = 105; 
-            } else {
-                finalCpX = midX - cpOffset;
-                shiftCorr = (w >= 280) ? 40 : (cpNumStr.length() > 2 ? 21 : 10);
-            }
+            var finalCpX = (w >= 280 && cpNumStr.length() > 2) ? midX - cpOffset - 40 : midX - cpOffset;
+            var shiftCorr = (w >= 280 && cpNumStr.length() > 2) ? 105 : ((w >= 280) ? 40 : (cpNumStr.length() > 2 ? 21 : 10));
+            
             dc.setColor(0xFFFFFF, -1);
             dc.drawText(finalCpX, positions[0][1] + halfBox - 20, Graphics.FONT_NUMBER_HOT, cpNumStr, 2|4); 
             var cpWidth = dc.getTextWidthInPixels(cpNumStr, Graphics.FONT_NUMBER_HOT);
-            dc.drawText(finalCpX - cpWidth + shiftCorr, positions[0][1] + halfBox - 4, Graphics.FONT_LARGE, orderNumStr + ".", 2|4);
+
+            if (currentData[0]>99) {
+
+                dc.drawText(finalCpX - cpWidth + shiftCorr-5, positions[0][1] + halfBox - 4, Graphics.FONT_LARGE, orderNumStr + ".", 2|4);
+            }
+            else {
+
+                if (w <= 218) {
+
+                dc.drawText(finalCpX - cpWidth + shiftCorr-15, positions[0][1] + halfBox - 4, Graphics.FONT_LARGE, orderNumStr + ".", 2|4);
+
+                }
+            
+            else {
+                dc.drawText(finalCpX - cpWidth + shiftCorr, positions[0][1] + halfBox - 4, Graphics.FONT_LARGE, orderNumStr + ".", 2|4);
+            }
+            } 
+
         } else {
+            // --- СЦЕНАРИЙ 2: НЕТ ИКОНОК (БОЛЬШОЙ НОМЕР ПО ЦЕНТРУ) ---
             dc.setColor(0xFFFFFF, -1);
-            dc.drawText(midX, midY-19, Graphics.FONT_NUMBER_THAI_HOT, cpNumStr, 1|4);
+            dc.drawText(midX, midY - 19, Graphics.FONT_NUMBER_THAI_HOT, cpNumStr, 1|4);
             var bigCpWidth = dc.getTextWidthInPixels(cpNumStr, Graphics.FONT_NUMBER_THAI_HOT);
-            dc.drawText(midX - (bigCpWidth / 2) - 40, midY-4, Graphics.FONT_LARGE, orderNumStr + ".", 2|4);
+            
+            // Отрисовка порядкового номера (например, "81.")
+            if (currentData[0] > 99) {
+                dc.drawText(midX - (bigCpWidth / 2) - 45, midY - 4, Graphics.FONT_LARGE, orderNumStr + ".", 2|4);
+            } else {
+                dc.drawText(midX - (bigCpWidth / 2) - 40, midY - 4, Graphics.FONT_LARGE, orderNumStr + ".", 2|4);
+            }
+
+            // --- ВОЗВРАТ ПОДСКАЗКИ СЛЕДУЮЩЕГО КП ---
             if (currentIndex + 1 < controlPoints.size()) {
                 dc.setColor(0xAAAAAA, -1); 
-                dc.fillPolygon([[w/2 - 6, h/2 + 43], [w/2 + 6, h/2 + 43], [w/2, h/2 + 51]]);
-                dc.drawText(midX, midY + 65, Graphics.FONT_NUMBER_MEDIUM, controlPoints[currentIndex + 1][0].toString(), 1|4);
+                // Рисуем серый треугольник вниз
+
+                // Рисуем номер следующего КП серым цветом
+                if (w <= 218) {
+                dc.fillPolygon([
+                    [midX - 6, midY + 38-5], 
+                    [midX + 6, midY + 38-5], 
+                    [midX, midY + 49-5]
+                ]);
+                dc.drawText(midX, midY + 68, Graphics.FONT_NUMBER_MEDIUM, controlPoints[currentIndex + 1][0].toString(), 1|4);
+                }
+                else {
+                dc.fillPolygon([
+                    [midX - 6, midY + 38], 
+                    [midX + 6, midY + 38], 
+                    [midX, midY + 49]
+                    ]);
+                    dc.drawText(midX, midY + 85, Graphics.FONT_NUMBER_MEDIUM, controlPoints[currentIndex + 1][0].toString(), 1|4);
+                }
             }
         }
         drawUIElements(dc, w, h, midX, midY, pPause);
@@ -463,8 +541,26 @@ class legendmasterView extends WatchUi.View {
         return (h > 0) ? h.format("%d") + ":" + m.format("%02d") + ":" + s.format("%02d") : m.format("%02d") + ":" + s.format("%02d");
     }
 
-    function loadSettings() {
-        controlPoints = [[31, 11, 12, 13, 14, 15, 16], [131, 11, 12, 13, 14, 15, 16], [100, 0, 0, 0, 0, 0, 0], [32, 0, 0, 0, 0, 0, 0], [32, 0, 0, 0, 0, 0, 0], [32, 0, 0, 0, 0, 0, 0]];
+function loadSettings() {
+        controlPoints = [
+            // КП 31: Иконка 11, символ "%", Иконка 12, буква "A", Иконка 13, цифра "1"
+            [31, 11, "%", 12, "A", 13, "1"], 
+            
+            // КП 131: Смешанные данные, 4-я ячейка "LongText" превратится в "L"
+            [131, 1, "!", 15, "LongText", 16, "?"],
+            
+            // КП 100: Только буквы (легенда может быть текстовой)
+            [100, "N", "E", "S", "W", "X", "Y"],
+            
+            // КП 32: Обычные иконки
+            [32, 11, 12, 13, 14, 15, 16],
+
+            // КП 100: Только буквы (легенда может быть текстовой)
+            [200, 0, 0, 0, 0, 0, 0],
+            
+            // КП 32: Обычные иконки
+            [41, 0, 0, 0, 0, 0, 0]
+        ];
     }
 
     function changePage(dir) {
