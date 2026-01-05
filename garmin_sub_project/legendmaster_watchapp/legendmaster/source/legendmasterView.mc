@@ -110,21 +110,25 @@ class legendmasterView extends WatchUi.View {
         }
     }
 
-    function drawProgressArc(dc, w, h) {
+function drawProgressArc(dc, w, h) {
         var total = controlPoints.size();
         if (total == 0) { return; }
+        // ПРЕДОХРАНИТЕЛЬ: Визуально дуга считает максимум до 99
+        var displayTotal = (total > 99) ? 99 : total;
+        
         var cx = w / 2; var cy = h / 2;
         var radius = (w / 2) - 2; var thickness = 3; 
         dc.setPenWidth(thickness);
         dc.setColor(0x222222, -1);
         dc.drawArc(cx, cy, radius, Graphics.ARC_CLOCKWISE, 0, 360);
+        
         var currentIdxFloat = (currentIndex + 1).toFloat();
-        var totalFloat = total.toFloat();
+        var totalFloat = displayTotal.toFloat();
         var ratio = currentIdxFloat / totalFloat;
         var sweepFloat = ratio * 360.0;
         var currentSweep = sweepFloat.toNumber();
         if (currentSweep > 0) {
-            dc.setColor((currentIndex == total - 1) ? 0x00FF00 : 0xff5500, -1);
+            dc.setColor((currentIndex == displayTotal - 1) ? 0x00FF00 : 0xff5500, -1);
             dc.drawArc(cx, cy, radius, Graphics.ARC_CLOCKWISE, 90, 90 - currentSweep);
         }
     }
@@ -244,8 +248,12 @@ class legendmasterView extends WatchUi.View {
         if (controlPoints.size() == 0) { return; }
         
         var currentData = controlPoints[currentIndex];
-        var orderNumStr = (currentIndex + 1).toString();
-        orderNumStr="81";
+        
+        // ПРЕДОХРАНИТЕЛЬ: порядковый номер не может быть > 99
+        var displayIdx = currentIndex + 1;
+        if (displayIdx > 99) { displayIdx = 99; }
+        var orderNumStr = displayIdx.toString();
+        
         var cpNumStr = currentData[0].toString();
         
         var t = (info != null && info.timerTime != null) ? info.timerTime : 0;
@@ -544,13 +552,13 @@ class legendmasterView extends WatchUi.View {
 function loadSettings() {
         controlPoints = [
             // КП 31: Иконка 11, символ "%", Иконка 12, буква "A", Иконка 13, цифра "1"
-            [31, 11, "%", 12, "A", 13, "1"], 
+            [31, 179, 178, 177, 176, 175, 174], 
             
             // КП 131: Смешанные данные, 4-я ячейка "LongText" превратится в "L"
-            [131, 1, "!", 15, "LongText", 16, "?"],
+            [131, 173, 172, 171, 170, 169, 168],
             
             // КП 100: Только буквы (легенда может быть текстовой)
-            [100, "N", "E", "S", "W", "X", "Y"],
+            [100, 178, 177, 176, 175, 174, "Y"],
             
             // КП 32: Обычные иконки
             [32, 11, 12, 13, 14, 15, 16],
@@ -573,10 +581,17 @@ function loadSettings() {
         }
     }
 
-    function scrollIcons(step) {
-        currentIndex += step;
-        if (currentIndex < 0) { currentIndex = 0; }
-        if (currentIndex >= controlPoints.size()) { currentIndex = controlPoints.size() - 1; }
+function scrollIcons(step) {
+        var newIdx = currentIndex + step;
+        var maxIdx = controlPoints.size() - 1;
+        
+        // ПРЕДОХРАНИТЕЛЬ: жесткий лимит на 99-й элемент (индекс 98)
+        if (maxIdx > 98) { maxIdx = 98; }
+        
+        if (newIdx < 0) { newIdx = 0; }
+        if (newIdx > maxIdx) { newIdx = maxIdx; }
+        
+        currentIndex = newIdx;
         WatchUi.requestUpdate();
     }
 }
