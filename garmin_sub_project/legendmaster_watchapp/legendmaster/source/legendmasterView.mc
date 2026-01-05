@@ -83,7 +83,7 @@ class legendmasterView extends WatchUi.View {
         var posResume = [65, h / 3.4];
         var posSave   = [55, h * 0.72];
         var posDisc   = [80, h * 0.72];
-        var gpsSettings = [16, 7, 2, 5, 3, h - 22];
+        var gpsSettings = [36, 18, 6, 12, 8, h - 35];
         
         if (System.getTimer() - launchTime < 2000) { 
             drawSplashScreen(dc, w, h); 
@@ -154,7 +154,7 @@ class legendmasterView extends WatchUi.View {
         if (distanceOffset == null) { distanceOffset = totalDist; }
         var localDist = totalDist - distanceOffset;
         if (localDist < 0) { localDist = 0; }
-        if (localDist >= 100.0) { distanceOffset = totalDist; localDist = 0; }
+        if (localDist >= 1000.0) { distanceOffset = totalDist; localDist = 0; }
 
         var margin = (w >= 280) ? pacesMarginEnduro : pacesMarginFenix;
         margin = margin + 5;
@@ -163,7 +163,7 @@ class legendmasterView extends WatchUi.View {
         var text = localDist.toNumber().toString();
         var font = Graphics.FONT_SMALL;
 
-        dc.setColor(pacesColorOutline, -1);
+        dc.setColor(0x000000, -1);
         for (var dx = -2; dx <= 2; dx++) {
             for (var dy = -2; dy <= 2; dy++) {
                 var adx = (dx < 0) ? -dx : dx;
@@ -171,7 +171,7 @@ class legendmasterView extends WatchUi.View {
                 if (adx + ady != 0) { dc.drawText(x + dx, y + dy, font, text, 2|4); }
             }
         }
-        dc.setColor(0xFF5500, -1); // Цвет метров: Оранжевый
+        dc.setColor(0xFFFFFF, -1); // Цвет метров: Оранжевый
         dc.drawText(x, y, font, text, 2|4);
     }
 
@@ -406,9 +406,20 @@ class legendmasterView extends WatchUi.View {
 
     function drawGPSBottom(dc, info, w, s) {
         var acc = (info != null && info.currentLocationAccuracy != null) ? info.currentLocationAccuracy : 0;
-        var colors = [0x555555, 0xFF0000, 0xFFAA00, 0xFFFF00, 0x00FF00];
+        
+        // Если точность 0 или 1 (поиск или нет сигнала) — не рисуем ничего
+        if (acc <= 1) {
+            return;
+        }
+
+        // Цвета: [0-не исп, 1-не исп, 2-желтый, 3-желтый, 4-зеленый]
+        // Используем 0x00FF00 для зеленого и 0xFFFF00 для желтого
+        var colors = [0x000000, 0x000000, 0xFFFF00, 0xFFFF00, 0x00FF00];
+        
         var x = (w / 2) - (s[0] / 2);
         dc.setColor(colors[acc], -1);
+        
+        // Рисуем увеличенные столбики
         dc.fillRectangle(x, s[5] + (s[1] - s[4]), s[3], s[4]);
         dc.fillRectangle(x + s[3] + ((s[0] - (s[3]*2) - s[2])/2), s[5], s[2], s[1]);
         dc.fillRectangle(x + s[0] - s[3], s[5] + (s[1] - s[4]), s[3], s[4]);

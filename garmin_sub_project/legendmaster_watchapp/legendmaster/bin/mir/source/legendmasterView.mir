@@ -482,24 +482,24 @@ C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster
         %gpsSettings.8 = local;
         symbol [ gpsSettings %gpsSettings.8 86 12 23 ];
         %tmp.58 = newa 6;
-        %tmp.59 = 16;
+        %tmp.59 = 36;
         %tmp.60 = dup %tmp.58;
         %tmp.61 = aputv %tmp.60 0 %tmp.59;
-        %tmp.62 = 7;
+        %tmp.62 = 18;
         %tmp.63 = dup %tmp.61;
         %tmp.64 = aputv %tmp.63 1 %tmp.62;
-        %tmp.65 = 2;
+        %tmp.65 = 6;
         %tmp.66 = dup %tmp.64;
         %tmp.67 = aputv %tmp.66 2 %tmp.65;
-        %tmp.68 = 5;
+        %tmp.68 = 12;
         %tmp.69 = dup %tmp.67;
         %tmp.70 = aputv %tmp.69 3 %tmp.68;
-        %tmp.71 = 3;
+        %tmp.71 = 8;
         %tmp.72 = dup %tmp.70;
         %tmp.73 = aputv %tmp.72 4 %tmp.71;
         %tmp.74 = lgetv %h.2;
-        symbol [ h %tmp.74 86 43 44 ];
-        %tmp.75 = 22;
+        symbol [ h %tmp.74 86 45 46 ];
+        %tmp.75 = 35;
         %tmp.76 = sub %tmp.74 %tmp.75;
         %tmp.77 = dup %tmp.73;
         %tmp.78 = aputv %tmp.77 5 %tmp.76;
@@ -1315,26 +1315,26 @@ C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster
         goto @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_156_8_156_44_if_end;
 C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_156_8_156_44_if_end:
 [ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 157 8 ]
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_157_8_157_77_if_stmt:
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_157_8_157_78_if_stmt:
         %tmp.31 = lgetv %localDist.3;
         symbol [ localDist %tmp.31 157 12 21 ];
-        %tmp.32 = 100.0;
+        %tmp.32 = 1000.0;
         %tmp.33 = gte %tmp.31 %tmp.32;
-        bf %tmp.33 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_157_8_157_77_if_end;
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_157_8_157_77_if_true:
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_157_32_157_77_start:
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 157 34 ]
+        bf %tmp.33 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_157_8_157_78_if_end;
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_157_8_157_78_if_true:
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_157_33_157_78_start:
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 157 35 ]
         %tmp.34 = lgetv %totalDist.2;
-        symbol [ totalDist %tmp.34 157 51 60 ];
-        symbol [ distanceOffset ? 157 34 48 ];
+        symbol [ totalDist %tmp.34 157 52 61 ];
+        symbol [ distanceOffset ? 157 35 49 ];
         putv self :distanceOffset %tmp.34;
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 157 62 ]
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 157 63 ]
         %tmp.35 = 0;
         lputv %localDist.3 %tmp.35;
-        symbol [ localDist %localDist.3 157 62 71 ];
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_157_32_157_77_stop:
-        goto @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_157_8_157_77_if_end;
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_157_8_157_77_if_end:
+        symbol [ localDist %localDist.3 157 63 72 ];
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_157_33_157_78_stop:
+        goto @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_157_8_157_78_if_end;
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_157_8_157_78_if_end:
 [ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 159 8 ]
         [ "C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_151_41_176_4_start" "C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_151_41_176_4_stop" ]
         %margin.4 = local;
@@ -1417,25 +1417,24 @@ C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster
         symbol [ dc %tmp.62 166 8 10 ];
         symbol [ setColor %tmp.63 166 11 19 ];
         %tmp.63 = getv function %tmp.62 :setColor;
-        symbol [ pacesColorOutline %tmp.65 166 20 37 ];
-        %tmp.65 = getv ? :pacesColorOutline;
-        %tmp.66 = -1;
-        invoke %tmp.62 %tmp.63(%tmp.65, %tmp.66);
+        %tmp.64 = 0x000000;
+        %tmp.65 = -1;
+        invoke %tmp.62 %tmp.63(%tmp.64, %tmp.65);
 [ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 167 8 ]
         for @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_167_8_173_8_for_test @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_167_8_173_8_for_incr @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_167_8_173_8_for_end;
 C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_167_8_173_8_for_init:
         [ "C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_167_8_173_8_for_begin" "C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_167_8_173_8_for_end" ]
         %dx.9 = local;
         symbol [ dx %dx.9 167 17 19 ];
-        %tmp.67 = -2;
-        lputv %dx.9 %tmp.67;
+        %tmp.66 = -2;
+        lputv %dx.9 %tmp.66;
         symbol [ dx %dx.9 167 17 19 ];
 C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_167_8_173_8_for_test:
-        %tmp.68 = lgetv %dx.9;
-        symbol [ dx %tmp.68 167 26 28 ];
-        %tmp.69 = 2;
-        %tmp.70 = lte %tmp.68 %tmp.69;
-        bf %tmp.70 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_167_8_173_8_for_end;
+        %tmp.67 = lgetv %dx.9;
+        symbol [ dx %tmp.67 167 26 28 ];
+        %tmp.68 = 2;
+        %tmp.69 = lte %tmp.67 %tmp.68;
+        bf %tmp.69 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_167_8_173_8_for_end;
 C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_167_8_173_8_for_begin:
 C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_167_41_173_8_start:
 [ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 168 12 ]
@@ -1444,15 +1443,15 @@ C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster
         [ "C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_168_12_172_12_for_begin" "C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_168_12_172_12_for_end" ]
         %dy.10 = local;
         symbol [ dy %dy.10 168 21 23 ];
-        %tmp.71 = -2;
-        lputv %dy.10 %tmp.71;
+        %tmp.70 = -2;
+        lputv %dy.10 %tmp.70;
         symbol [ dy %dy.10 168 21 23 ];
 C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_168_12_172_12_for_test:
-        %tmp.72 = lgetv %dy.10;
-        symbol [ dy %tmp.72 168 30 32 ];
-        %tmp.73 = 2;
-        %tmp.74 = lte %tmp.72 %tmp.73;
-        bf %tmp.74 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_168_12_172_12_for_end;
+        %tmp.71 = lgetv %dy.10;
+        symbol [ dy %tmp.71 168 30 32 ];
+        %tmp.72 = 2;
+        %tmp.73 = lte %tmp.71 %tmp.72;
+        bf %tmp.73 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_168_12_172_12_for_end;
 C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_168_12_172_12_for_begin:
 C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_168_45_172_12_start:
 [ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 169 16 ]
@@ -1460,132 +1459,132 @@ C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster
         %adx.11 = local;
         symbol [ adx %adx.11 169 20 23 ];
 C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_169_26_169_43_begin:
-        %tmp.75 = lgetv %dx.9;
-        symbol [ dx %tmp.75 169 27 29 ];
-        %tmp.76 = 0;
-        %tmp.77 = lt %tmp.75 %tmp.76;
-        bf %tmp.77 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_169_26_169_43_else_false;
+        %tmp.74 = lgetv %dx.9;
+        symbol [ dx %tmp.74 169 27 29 ];
+        %tmp.75 = 0;
+        %tmp.76 = lt %tmp.74 %tmp.75;
+        bf %tmp.76 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_169_26_169_43_else_false;
 C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_169_26_169_43_true:
-        %tmp.78 = lgetv %dx.9;
-        symbol [ dx %tmp.78 169 38 40 ];
-        %tmp.79 = sub 0 %tmp.78;
-        push %tmp.79;
+        %tmp.77 = lgetv %dx.9;
+        symbol [ dx %tmp.77 169 38 40 ];
+        %tmp.78 = sub 0 %tmp.77;
+        push %tmp.78;
         goto @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_169_26_169_43_end;
 C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_169_26_169_43_else_false:
-        %tmp.80 = lgetv %dx.9;
-        symbol [ dx %tmp.80 169 43 45 ];
-        push %tmp.80;
+        %tmp.79 = lgetv %dx.9;
+        symbol [ dx %tmp.79 169 43 45 ];
+        push %tmp.79;
 C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_169_26_169_43_end:
-        %tmp.81 = phi [%tmp.77 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_169_26_169_43_begin] [%tmp.79 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_169_26_169_43_true] [%tmp.80 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_169_26_169_43_else_false] [%tmp.81 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_169_26_169_43_end];
-        lputv %adx.11 %tmp.81;
+        %tmp.80 = phi [%tmp.76 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_169_26_169_43_begin] [%tmp.78 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_169_26_169_43_true] [%tmp.79 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_169_26_169_43_else_false] [%tmp.80 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_169_26_169_43_end];
+        lputv %adx.11 %tmp.80;
         symbol [ adx %adx.11 169 20 23 ];
 [ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 170 16 ]
         [ "C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_168_45_172_12_start" "C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_168_45_172_12_stop" ]
         %ady.12 = local;
         symbol [ ady %ady.12 170 20 23 ];
 C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_170_26_170_43_begin:
-        %tmp.82 = lgetv %dy.10;
-        symbol [ dy %tmp.82 170 27 29 ];
-        %tmp.83 = 0;
-        %tmp.84 = lt %tmp.82 %tmp.83;
-        bf %tmp.84 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_170_26_170_43_else_false;
+        %tmp.81 = lgetv %dy.10;
+        symbol [ dy %tmp.81 170 27 29 ];
+        %tmp.82 = 0;
+        %tmp.83 = lt %tmp.81 %tmp.82;
+        bf %tmp.83 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_170_26_170_43_else_false;
 C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_170_26_170_43_true:
-        %tmp.85 = lgetv %dy.10;
-        symbol [ dy %tmp.85 170 38 40 ];
-        %tmp.86 = sub 0 %tmp.85;
-        push %tmp.86;
+        %tmp.84 = lgetv %dy.10;
+        symbol [ dy %tmp.84 170 38 40 ];
+        %tmp.85 = sub 0 %tmp.84;
+        push %tmp.85;
         goto @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_170_26_170_43_end;
 C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_170_26_170_43_else_false:
-        %tmp.87 = lgetv %dy.10;
-        symbol [ dy %tmp.87 170 43 45 ];
-        push %tmp.87;
+        %tmp.86 = lgetv %dy.10;
+        symbol [ dy %tmp.86 170 43 45 ];
+        push %tmp.86;
 C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_170_26_170_43_end:
-        %tmp.88 = phi [%tmp.84 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_170_26_170_43_begin] [%tmp.86 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_170_26_170_43_true] [%tmp.87 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_170_26_170_43_else_false] [%tmp.88 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_170_26_170_43_end];
-        lputv %ady.12 %tmp.88;
+        %tmp.87 = phi [%tmp.83 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_170_26_170_43_begin] [%tmp.85 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_170_26_170_43_true] [%tmp.86 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_170_26_170_43_else_false] [%tmp.87 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_170_26_170_43_end];
+        lputv %ady.12 %tmp.87;
         symbol [ ady %ady.12 170 20 23 ];
 [ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 171 16 ]
 C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_171_16_171_84_if_stmt:
-        %tmp.89 = lgetv %adx.11;
-        symbol [ adx %tmp.89 171 20 23 ];
-        %tmp.90 = lgetv %ady.12;
-        symbol [ ady %tmp.90 171 26 29 ];
-        %tmp.91 = add %tmp.89 %tmp.90;
-        %tmp.92 = 0;
-        %tmp.93 = ne %tmp.91 %tmp.92;
-        bf %tmp.93 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_171_16_171_84_if_end;
+        %tmp.88 = lgetv %adx.11;
+        symbol [ adx %tmp.88 171 20 23 ];
+        %tmp.89 = lgetv %ady.12;
+        symbol [ ady %tmp.89 171 26 29 ];
+        %tmp.90 = add %tmp.88 %tmp.89;
+        %tmp.91 = 0;
+        %tmp.92 = ne %tmp.90 %tmp.91;
+        bf %tmp.92 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_171_16_171_84_if_end;
 C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_171_16_171_84_if_true:
 C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_171_36_171_84_start:
 [ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 171 38 ]
-        %tmp.94 = lgetv %dc;
-        symbol [ dc %tmp.94 171 38 40 ];
-        symbol [ drawText %tmp.95 171 41 49 ];
-        %tmp.95 = getv function %tmp.94 :drawText;
-        %tmp.96 = lgetv %x.5;
-        symbol [ x %tmp.96 171 50 51 ];
-        %tmp.97 = lgetv %dx.9;
-        symbol [ dx %tmp.97 171 54 56 ];
-        %tmp.98 = add %tmp.96 %tmp.97;
-        %tmp.99 = lgetv %y.6;
-        symbol [ y %tmp.99 171 58 59 ];
-        %tmp.100 = lgetv %dy.10;
-        symbol [ dy %tmp.100 171 62 64 ];
-        %tmp.101 = add %tmp.99 %tmp.100;
-        %tmp.102 = lgetv %font.8;
-        symbol [ font %tmp.102 171 66 70 ];
-        %tmp.103 = lgetv %text.7;
-        symbol [ text %tmp.103 171 72 76 ];
-        %tmp.104 = 2;
-        %tmp.105 = 4;
-        %tmp.106 = bitor %tmp.104 %tmp.105;
-        invoke %tmp.94 %tmp.95(%tmp.98, %tmp.101, %tmp.102, %tmp.103, %tmp.106);
+        %tmp.93 = lgetv %dc;
+        symbol [ dc %tmp.93 171 38 40 ];
+        symbol [ drawText %tmp.94 171 41 49 ];
+        %tmp.94 = getv function %tmp.93 :drawText;
+        %tmp.95 = lgetv %x.5;
+        symbol [ x %tmp.95 171 50 51 ];
+        %tmp.96 = lgetv %dx.9;
+        symbol [ dx %tmp.96 171 54 56 ];
+        %tmp.97 = add %tmp.95 %tmp.96;
+        %tmp.98 = lgetv %y.6;
+        symbol [ y %tmp.98 171 58 59 ];
+        %tmp.99 = lgetv %dy.10;
+        symbol [ dy %tmp.99 171 62 64 ];
+        %tmp.100 = add %tmp.98 %tmp.99;
+        %tmp.101 = lgetv %font.8;
+        symbol [ font %tmp.101 171 66 70 ];
+        %tmp.102 = lgetv %text.7;
+        symbol [ text %tmp.102 171 72 76 ];
+        %tmp.103 = 2;
+        %tmp.104 = 4;
+        %tmp.105 = bitor %tmp.103 %tmp.104;
+        invoke %tmp.93 %tmp.94(%tmp.97, %tmp.100, %tmp.101, %tmp.102, %tmp.105);
 C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_171_36_171_84_stop:
         goto @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_171_16_171_84_if_end;
 C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_171_16_171_84_if_end:
 C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_168_45_172_12_stop:
 C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_168_12_172_12_for_incr:
 [ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 168 ]
-        %tmp.109 = lgetv %dy.10;
-        symbol [ dy %tmp.109 168 39 41 ];
-        %tmp.110 = add %tmp.109 1;
-        lputv %dy.10 %tmp.110;
+        %tmp.108 = lgetv %dy.10;
+        symbol [ dy %tmp.108 168 39 41 ];
+        %tmp.109 = add %tmp.108 1;
+        lputv %dy.10 %tmp.109;
         symbol [ dy %dy.10 168 39 41 ];
         goto @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_168_12_172_12_for_test;
 C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_168_12_172_12_for_end:
 C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_167_41_173_8_stop:
 C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_167_8_173_8_for_incr:
 [ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 167 ]
-        %tmp.113 = lgetv %dx.9;
-        symbol [ dx %tmp.113 167 35 37 ];
-        %tmp.114 = add %tmp.113 1;
-        lputv %dx.9 %tmp.114;
+        %tmp.112 = lgetv %dx.9;
+        symbol [ dx %tmp.112 167 35 37 ];
+        %tmp.113 = add %tmp.112 1;
+        lputv %dx.9 %tmp.113;
         symbol [ dx %dx.9 167 35 37 ];
         goto @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_167_8_173_8_for_test;
 C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_167_8_173_8_for_end:
 [ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 174 8 ]
-        %tmp.115 = lgetv %dc;
-        symbol [ dc %tmp.115 174 8 10 ];
-        symbol [ setColor %tmp.116 174 11 19 ];
-        %tmp.116 = getv function %tmp.115 :setColor;
-        %tmp.117 = 0xFF5500;
-        %tmp.118 = -1;
-        invoke %tmp.115 %tmp.116(%tmp.117, %tmp.118);
+        %tmp.114 = lgetv %dc;
+        symbol [ dc %tmp.114 174 8 10 ];
+        symbol [ setColor %tmp.115 174 11 19 ];
+        %tmp.115 = getv function %tmp.114 :setColor;
+        %tmp.116 = 0xFFFFFF;
+        %tmp.117 = -1;
+        invoke %tmp.114 %tmp.115(%tmp.116, %tmp.117);
 [ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 175 8 ]
-        %tmp.119 = lgetv %dc;
-        symbol [ dc %tmp.119 175 8 10 ];
-        symbol [ drawText %tmp.120 175 11 19 ];
-        %tmp.120 = getv function %tmp.119 :drawText;
-        %tmp.121 = lgetv %x.5;
-        symbol [ x %tmp.121 175 20 21 ];
-        %tmp.122 = lgetv %y.6;
-        symbol [ y %tmp.122 175 23 24 ];
-        %tmp.123 = lgetv %font.8;
-        symbol [ font %tmp.123 175 26 30 ];
-        %tmp.124 = lgetv %text.7;
-        symbol [ text %tmp.124 175 32 36 ];
-        %tmp.125 = 2;
-        %tmp.126 = 4;
-        %tmp.127 = bitor %tmp.125 %tmp.126;
-        invoke %tmp.119 %tmp.120(%tmp.121, %tmp.122, %tmp.123, %tmp.124, %tmp.127);
+        %tmp.118 = lgetv %dc;
+        symbol [ dc %tmp.118 175 8 10 ];
+        symbol [ drawText %tmp.119 175 11 19 ];
+        %tmp.119 = getv function %tmp.118 :drawText;
+        %tmp.120 = lgetv %x.5;
+        symbol [ x %tmp.120 175 20 21 ];
+        %tmp.121 = lgetv %y.6;
+        symbol [ y %tmp.121 175 23 24 ];
+        %tmp.122 = lgetv %font.8;
+        symbol [ font %tmp.122 175 26 30 ];
+        %tmp.123 = lgetv %text.7;
+        symbol [ text %tmp.123 175 32 36 ];
+        %tmp.124 = 2;
+        %tmp.125 = 4;
+        %tmp.126 = bitor %tmp.124 %tmp.125;
+        invoke %tmp.118 %tmp.119(%tmp.120, %tmp.121, %tmp.122, %tmp.123, %tmp.126);
 C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_151_41_176_4_stop:
     }
     [ @file = "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc"; @line = 178; @symbol_functiondef = [drawCompass,178,13,24]; @symbol_param<0> = [dc,178,25,27]; @symbol_param<1> = [info,178,29,33]; @symbol_param<2> = [w,178,35,36]; @symbol_param<3> = [h,178,38,39]; @symbol_param<4> = [pPause,178,41,47]; ]
@@ -5173,9 +5172,9 @@ C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster
     }
     [ @file = "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc"; @line = 407; @symbol_functiondef = [drawGPSBottom,407,13,26]; @symbol_param<0> = [dc,407,27,29]; @symbol_param<1> = [info,407,31,35]; @symbol_param<2> = [w,407,37,38]; @symbol_param<3> = [s,407,40,41]; ]
     function drawGPSBottom(dc, info, w, s) {
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_407_43_415_4_start:
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_407_43_426_4_start:
 [ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 408 8 ]
-        [ "C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_407_43_415_4_start" "C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_407_43_415_4_stop" ]
+        [ "C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_407_43_426_4_start" "C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_407_43_426_4_stop" ]
         %acc.1 = local;
         symbol [ acc %acc.1 408 12 15 ];
 C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_408_18_408_106_begin:
@@ -5212,492 +5211,506 @@ C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster
         %tmp.14 = phi [%tmp.9 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_408_18_408_106_begin] [%tmp.12 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_408_18_408_106_true] [%tmp.13 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_408_18_408_106_else_false] [%tmp.14 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_408_18_408_106_end];
         lputv %acc.1 %tmp.14;
         symbol [ acc %acc.1 408 12 15 ];
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 409 8 ]
-        [ "C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_407_43_415_4_start" "C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_407_43_415_4_stop" ]
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 411 8 ]
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_411_8_413_8_if_stmt:
+        %tmp.15 = lgetv %acc.1;
+        symbol [ acc %tmp.15 411 12 15 ];
+        %tmp.16 = 1;
+        %tmp.17 = lte %tmp.15 %tmp.16;
+        bf %tmp.17 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_411_8_413_8_if_end;
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_411_8_413_8_if_true:
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_411_22_413_8_start:
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 412 12 ]
+        ret ?;
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_411_22_413_8_stop:
+        goto @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_411_8_413_8_if_end;
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_411_8_413_8_if_end:
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 417 8 ]
+        [ "C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_407_43_426_4_start" "C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_407_43_426_4_stop" ]
         %colors.2 = local;
-        symbol [ colors %colors.2 409 12 18 ];
-        %tmp.15 = newa 5;
-        %tmp.16 = 0x555555;
-        %tmp.17 = dup %tmp.15;
-        %tmp.18 = aputv %tmp.17 0 %tmp.16;
-        %tmp.19 = 0xFF0000;
+        symbol [ colors %colors.2 417 12 18 ];
+        %tmp.18 = newa 5;
+        %tmp.19 = 0x000000;
         %tmp.20 = dup %tmp.18;
-        %tmp.21 = aputv %tmp.20 1 %tmp.19;
-        %tmp.22 = 0xFFAA00;
+        %tmp.21 = aputv %tmp.20 0 %tmp.19;
+        %tmp.22 = 0x000000;
         %tmp.23 = dup %tmp.21;
-        %tmp.24 = aputv %tmp.23 2 %tmp.22;
+        %tmp.24 = aputv %tmp.23 1 %tmp.22;
         %tmp.25 = 0xFFFF00;
         %tmp.26 = dup %tmp.24;
-        %tmp.27 = aputv %tmp.26 3 %tmp.25;
-        %tmp.28 = 0x00FF00;
+        %tmp.27 = aputv %tmp.26 2 %tmp.25;
+        %tmp.28 = 0xFFFF00;
         %tmp.29 = dup %tmp.27;
-        %tmp.30 = aputv %tmp.29 4 %tmp.28;
-        lputv %colors.2 %tmp.30;
-        symbol [ colors %colors.2 409 12 18 ];
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 410 8 ]
-        [ "C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_407_43_415_4_start" "C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_407_43_415_4_stop" ]
+        %tmp.30 = aputv %tmp.29 3 %tmp.28;
+        %tmp.31 = 0x00FF00;
+        %tmp.32 = dup %tmp.30;
+        %tmp.33 = aputv %tmp.32 4 %tmp.31;
+        lputv %colors.2 %tmp.33;
+        symbol [ colors %colors.2 417 12 18 ];
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 419 8 ]
+        [ "C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_407_43_426_4_start" "C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_407_43_426_4_stop" ]
         %x.3 = local;
-        symbol [ x %x.3 410 12 13 ];
-        %tmp.31 = lgetv %w;
-        symbol [ w %tmp.31 410 17 18 ];
-        %tmp.32 = 2;
-        %tmp.33 = div %tmp.31 %tmp.32;
-        %tmp.34 = lgetv %s;
-        symbol [ s %tmp.34 410 27 28 ];
-        %tmp.35 = 0;
-        %tmp.36 = agetv %tmp.34 %tmp.35;
-        %tmp.37 = 2;
-        %tmp.38 = div %tmp.36 %tmp.37;
-        %tmp.39 = sub %tmp.33 %tmp.38;
-        lputv %x.3 %tmp.39;
-        symbol [ x %x.3 410 12 13 ];
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 411 8 ]
-        %tmp.40 = lgetv %dc;
-        symbol [ dc %tmp.40 411 8 10 ];
-        symbol [ setColor %tmp.41 411 11 19 ];
-        %tmp.41 = getv function %tmp.40 :setColor;
-        %tmp.42 = lgetv %colors.2;
-        symbol [ colors %tmp.42 411 20 26 ];
-        %tmp.43 = lgetv %acc.1;
-        symbol [ acc %tmp.43 411 27 30 ];
-        %tmp.44 = agetv %tmp.42 %tmp.43;
-        %tmp.45 = -1;
-        invoke %tmp.40 %tmp.41(%tmp.44, %tmp.45);
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 412 8 ]
-        %tmp.46 = lgetv %dc;
-        symbol [ dc %tmp.46 412 8 10 ];
-        symbol [ fillRectangle %tmp.47 412 11 24 ];
-        %tmp.47 = getv function %tmp.46 :fillRectangle;
-        %tmp.48 = lgetv %x.3;
-        symbol [ x %tmp.48 412 25 26 ];
-        %tmp.49 = lgetv %s;
-        symbol [ s %tmp.49 412 28 29 ];
-        %tmp.50 = 5;
-        %tmp.51 = agetv %tmp.49 %tmp.50;
+        symbol [ x %x.3 419 12 13 ];
+        %tmp.34 = lgetv %w;
+        symbol [ w %tmp.34 419 17 18 ];
+        %tmp.35 = 2;
+        %tmp.36 = div %tmp.34 %tmp.35;
+        %tmp.37 = lgetv %s;
+        symbol [ s %tmp.37 419 27 28 ];
+        %tmp.38 = 0;
+        %tmp.39 = agetv %tmp.37 %tmp.38;
+        %tmp.40 = 2;
+        %tmp.41 = div %tmp.39 %tmp.40;
+        %tmp.42 = sub %tmp.36 %tmp.41;
+        lputv %x.3 %tmp.42;
+        symbol [ x %x.3 419 12 13 ];
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 420 8 ]
+        %tmp.43 = lgetv %dc;
+        symbol [ dc %tmp.43 420 8 10 ];
+        symbol [ setColor %tmp.44 420 11 19 ];
+        %tmp.44 = getv function %tmp.43 :setColor;
+        %tmp.45 = lgetv %colors.2;
+        symbol [ colors %tmp.45 420 20 26 ];
+        %tmp.46 = lgetv %acc.1;
+        symbol [ acc %tmp.46 420 27 30 ];
+        %tmp.47 = agetv %tmp.45 %tmp.46;
+        %tmp.48 = -1;
+        invoke %tmp.43 %tmp.44(%tmp.47, %tmp.48);
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 423 8 ]
+        %tmp.49 = lgetv %dc;
+        symbol [ dc %tmp.49 423 8 10 ];
+        symbol [ fillRectangle %tmp.50 423 11 24 ];
+        %tmp.50 = getv function %tmp.49 :fillRectangle;
+        %tmp.51 = lgetv %x.3;
+        symbol [ x %tmp.51 423 25 26 ];
         %tmp.52 = lgetv %s;
-        symbol [ s %tmp.52 412 36 37 ];
-        %tmp.53 = 1;
+        symbol [ s %tmp.52 423 28 29 ];
+        %tmp.53 = 5;
         %tmp.54 = agetv %tmp.52 %tmp.53;
         %tmp.55 = lgetv %s;
-        symbol [ s %tmp.55 412 43 44 ];
-        %tmp.56 = 4;
+        symbol [ s %tmp.55 423 36 37 ];
+        %tmp.56 = 1;
         %tmp.57 = agetv %tmp.55 %tmp.56;
-        %tmp.58 = sub %tmp.54 %tmp.57;
-        %tmp.59 = add %tmp.51 %tmp.58;
-        %tmp.60 = lgetv %s;
-        symbol [ s %tmp.60 412 50 51 ];
-        %tmp.61 = 3;
-        %tmp.62 = agetv %tmp.60 %tmp.61;
+        %tmp.58 = lgetv %s;
+        symbol [ s %tmp.58 423 43 44 ];
+        %tmp.59 = 4;
+        %tmp.60 = agetv %tmp.58 %tmp.59;
+        %tmp.61 = sub %tmp.57 %tmp.60;
+        %tmp.62 = add %tmp.54 %tmp.61;
         %tmp.63 = lgetv %s;
-        symbol [ s %tmp.63 412 56 57 ];
-        %tmp.64 = 4;
+        symbol [ s %tmp.63 423 50 51 ];
+        %tmp.64 = 3;
         %tmp.65 = agetv %tmp.63 %tmp.64;
-        invoke %tmp.46 %tmp.47(%tmp.48, %tmp.59, %tmp.62, %tmp.65);
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 413 8 ]
-        %tmp.66 = lgetv %dc;
-        symbol [ dc %tmp.66 413 8 10 ];
-        symbol [ fillRectangle %tmp.67 413 11 24 ];
-        %tmp.67 = getv function %tmp.66 :fillRectangle;
-        %tmp.68 = lgetv %x.3;
-        symbol [ x %tmp.68 413 25 26 ];
-        %tmp.69 = lgetv %s;
-        symbol [ s %tmp.69 413 29 30 ];
-        %tmp.70 = 3;
-        %tmp.71 = agetv %tmp.69 %tmp.70;
-        %tmp.72 = add %tmp.68 %tmp.71;
-        %tmp.73 = lgetv %s;
-        symbol [ s %tmp.73 413 38 39 ];
-        %tmp.74 = 0;
-        %tmp.75 = agetv %tmp.73 %tmp.74;
+        %tmp.66 = lgetv %s;
+        symbol [ s %tmp.66 423 56 57 ];
+        %tmp.67 = 4;
+        %tmp.68 = agetv %tmp.66 %tmp.67;
+        invoke %tmp.49 %tmp.50(%tmp.51, %tmp.62, %tmp.65, %tmp.68);
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 424 8 ]
+        %tmp.69 = lgetv %dc;
+        symbol [ dc %tmp.69 424 8 10 ];
+        symbol [ fillRectangle %tmp.70 424 11 24 ];
+        %tmp.70 = getv function %tmp.69 :fillRectangle;
+        %tmp.71 = lgetv %x.3;
+        symbol [ x %tmp.71 424 25 26 ];
+        %tmp.72 = lgetv %s;
+        symbol [ s %tmp.72 424 29 30 ];
+        %tmp.73 = 3;
+        %tmp.74 = agetv %tmp.72 %tmp.73;
+        %tmp.75 = add %tmp.71 %tmp.74;
         %tmp.76 = lgetv %s;
-        symbol [ s %tmp.76 413 46 47 ];
-        %tmp.77 = 3;
+        symbol [ s %tmp.76 424 38 39 ];
+        %tmp.77 = 0;
         %tmp.78 = agetv %tmp.76 %tmp.77;
-        %tmp.79 = 2;
-        %tmp.80 = mul %tmp.78 %tmp.79;
-        %tmp.81 = sub %tmp.75 %tmp.80;
-        %tmp.82 = lgetv %s;
-        symbol [ s %tmp.82 413 56 57 ];
-        %tmp.83 = 2;
-        %tmp.84 = agetv %tmp.82 %tmp.83;
-        %tmp.85 = sub %tmp.81 %tmp.84;
+        %tmp.79 = lgetv %s;
+        symbol [ s %tmp.79 424 46 47 ];
+        %tmp.80 = 3;
+        %tmp.81 = agetv %tmp.79 %tmp.80;
+        %tmp.82 = 2;
+        %tmp.83 = mul %tmp.81 %tmp.82;
+        %tmp.84 = sub %tmp.78 %tmp.83;
+        %tmp.85 = lgetv %s;
+        symbol [ s %tmp.85 424 56 57 ];
         %tmp.86 = 2;
-        %tmp.87 = div %tmp.85 %tmp.86;
-        %tmp.88 = add %tmp.72 %tmp.87;
-        %tmp.89 = lgetv %s;
-        symbol [ s %tmp.89 413 66 67 ];
-        %tmp.90 = 5;
-        %tmp.91 = agetv %tmp.89 %tmp.90;
+        %tmp.87 = agetv %tmp.85 %tmp.86;
+        %tmp.88 = sub %tmp.84 %tmp.87;
+        %tmp.89 = 2;
+        %tmp.90 = div %tmp.88 %tmp.89;
+        %tmp.91 = add %tmp.75 %tmp.90;
         %tmp.92 = lgetv %s;
-        symbol [ s %tmp.92 413 72 73 ];
-        %tmp.93 = 2;
+        symbol [ s %tmp.92 424 66 67 ];
+        %tmp.93 = 5;
         %tmp.94 = agetv %tmp.92 %tmp.93;
         %tmp.95 = lgetv %s;
-        symbol [ s %tmp.95 413 78 79 ];
-        %tmp.96 = 1;
+        symbol [ s %tmp.95 424 72 73 ];
+        %tmp.96 = 2;
         %tmp.97 = agetv %tmp.95 %tmp.96;
-        invoke %tmp.66 %tmp.67(%tmp.88, %tmp.91, %tmp.94, %tmp.97);
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 414 8 ]
-        %tmp.98 = lgetv %dc;
-        symbol [ dc %tmp.98 414 8 10 ];
-        symbol [ fillRectangle %tmp.99 414 11 24 ];
-        %tmp.99 = getv function %tmp.98 :fillRectangle;
-        %tmp.100 = lgetv %x.3;
-        symbol [ x %tmp.100 414 25 26 ];
-        %tmp.101 = lgetv %s;
-        symbol [ s %tmp.101 414 29 30 ];
-        %tmp.102 = 0;
-        %tmp.103 = agetv %tmp.101 %tmp.102;
-        %tmp.104 = add %tmp.100 %tmp.103;
-        %tmp.105 = lgetv %s;
-        symbol [ s %tmp.105 414 36 37 ];
-        %tmp.106 = 3;
-        %tmp.107 = agetv %tmp.105 %tmp.106;
-        %tmp.108 = sub %tmp.104 %tmp.107;
-        %tmp.109 = lgetv %s;
-        symbol [ s %tmp.109 414 42 43 ];
-        %tmp.110 = 5;
-        %tmp.111 = agetv %tmp.109 %tmp.110;
+        %tmp.98 = lgetv %s;
+        symbol [ s %tmp.98 424 78 79 ];
+        %tmp.99 = 1;
+        %tmp.100 = agetv %tmp.98 %tmp.99;
+        invoke %tmp.69 %tmp.70(%tmp.91, %tmp.94, %tmp.97, %tmp.100);
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 425 8 ]
+        %tmp.101 = lgetv %dc;
+        symbol [ dc %tmp.101 425 8 10 ];
+        symbol [ fillRectangle %tmp.102 425 11 24 ];
+        %tmp.102 = getv function %tmp.101 :fillRectangle;
+        %tmp.103 = lgetv %x.3;
+        symbol [ x %tmp.103 425 25 26 ];
+        %tmp.104 = lgetv %s;
+        symbol [ s %tmp.104 425 29 30 ];
+        %tmp.105 = 0;
+        %tmp.106 = agetv %tmp.104 %tmp.105;
+        %tmp.107 = add %tmp.103 %tmp.106;
+        %tmp.108 = lgetv %s;
+        symbol [ s %tmp.108 425 36 37 ];
+        %tmp.109 = 3;
+        %tmp.110 = agetv %tmp.108 %tmp.109;
+        %tmp.111 = sub %tmp.107 %tmp.110;
         %tmp.112 = lgetv %s;
-        symbol [ s %tmp.112 414 50 51 ];
-        %tmp.113 = 1;
+        symbol [ s %tmp.112 425 42 43 ];
+        %tmp.113 = 5;
         %tmp.114 = agetv %tmp.112 %tmp.113;
         %tmp.115 = lgetv %s;
-        symbol [ s %tmp.115 414 57 58 ];
-        %tmp.116 = 4;
+        symbol [ s %tmp.115 425 50 51 ];
+        %tmp.116 = 1;
         %tmp.117 = agetv %tmp.115 %tmp.116;
-        %tmp.118 = sub %tmp.114 %tmp.117;
-        %tmp.119 = add %tmp.111 %tmp.118;
-        %tmp.120 = lgetv %s;
-        symbol [ s %tmp.120 414 64 65 ];
-        %tmp.121 = 3;
-        %tmp.122 = agetv %tmp.120 %tmp.121;
+        %tmp.118 = lgetv %s;
+        symbol [ s %tmp.118 425 57 58 ];
+        %tmp.119 = 4;
+        %tmp.120 = agetv %tmp.118 %tmp.119;
+        %tmp.121 = sub %tmp.117 %tmp.120;
+        %tmp.122 = add %tmp.114 %tmp.121;
         %tmp.123 = lgetv %s;
-        symbol [ s %tmp.123 414 70 71 ];
-        %tmp.124 = 4;
+        symbol [ s %tmp.123 425 64 65 ];
+        %tmp.124 = 3;
         %tmp.125 = agetv %tmp.123 %tmp.124;
-        invoke %tmp.98 %tmp.99(%tmp.108, %tmp.119, %tmp.122, %tmp.125);
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_407_43_415_4_stop:
+        %tmp.126 = lgetv %s;
+        symbol [ s %tmp.126 425 70 71 ];
+        %tmp.127 = 4;
+        %tmp.128 = agetv %tmp.126 %tmp.127;
+        invoke %tmp.101 %tmp.102(%tmp.111, %tmp.122, %tmp.125, %tmp.128);
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_407_43_426_4_stop:
     }
-    [ @file = "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc"; @line = 417; @symbol_functiondef = [drawPauseMenu,417,13,26]; @symbol_param<0> = [dc,417,27,29]; @symbol_param<1> = [info,417,31,35]; @symbol_param<2> = [w,417,37,38]; @symbol_param<3> = [h,417,40,41]; @symbol_param<4> = [pRes,417,43,47]; @symbol_param<5> = [pSave,417,49,54]; @symbol_param<6> = [pDisc,417,56,61]; ]
+    [ @file = "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc"; @line = 428; @symbol_functiondef = [drawPauseMenu,428,13,26]; @symbol_param<0> = [dc,428,27,29]; @symbol_param<1> = [info,428,31,35]; @symbol_param<2> = [w,428,37,38]; @symbol_param<3> = [h,428,40,41]; @symbol_param<4> = [pRes,428,43,47]; @symbol_param<5> = [pSave,428,49,54]; @symbol_param<6> = [pDisc,428,56,61]; ]
     function drawPauseMenu(dc, info, w, h, pRes, pSave, pDisc) {
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_417_63_424_4_start:
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 418 8 ]
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_428_63_435_4_start:
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 429 8 ]
         %tmp.1 = lgetv %dc;
-        symbol [ dc %tmp.1 418 8 10 ];
-        symbol [ setColor %tmp.2 418 11 19 ];
+        symbol [ dc %tmp.1 429 8 10 ];
+        symbol [ setColor %tmp.2 429 11 19 ];
         %tmp.2 = getv function %tmp.1 :setColor;
         %tmp.3 = 0xFFFFFF;
         %tmp.4 = -1;
         invoke %tmp.1 %tmp.2(%tmp.3, %tmp.4);
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 419 8 ]
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 430 8 ]
         %tmp.5 = lgetv %dc;
-        symbol [ dc %tmp.5 419 8 10 ];
-        symbol [ drawText %tmp.6 419 11 19 ];
+        symbol [ dc %tmp.5 430 8 10 ];
+        symbol [ drawText %tmp.6 430 11 19 ];
         %tmp.6 = getv function %tmp.5 :drawText;
         %tmp.7 = lgetv %w;
-        symbol [ w %tmp.7 419 20 21 ];
+        symbol [ w %tmp.7 430 20 21 ];
         %tmp.8 = 2;
         %tmp.9 = div %tmp.7 %tmp.8;
         %tmp.10 = lgetv %h;
-        symbol [ h %tmp.10 419 25 26 ];
+        symbol [ h %tmp.10 430 25 26 ];
         %tmp.11 = 0.1;
         %tmp.12 = mul %tmp.10 %tmp.11;
-        symbol [ Graphics %tmp.13 419 34 42 ];
+        symbol [ Graphics %tmp.13 430 34 42 ];
         %tmp.13 = getm $.Toybox.Graphics;
-        symbol [ FONT_SMALL %tmp.14 419 43 53 ];
+        symbol [ FONT_SMALL %tmp.14 430 43 53 ];
         %tmp.14 = getv %tmp.13 :FONT_SMALL;
         %tmp.15 = "PAUSED";
         %tmp.16 = 1;
         invoke %tmp.5 %tmp.6(%tmp.9, %tmp.12, %tmp.14, %tmp.15, %tmp.16);
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 420 8 ]
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 431 8 ]
         %tmp.17 = lgetv %dc;
-        symbol [ dc %tmp.17 420 8 10 ];
-        symbol [ drawText %tmp.18 420 11 19 ];
+        symbol [ dc %tmp.17 431 8 10 ];
+        symbol [ drawText %tmp.18 431 11 19 ];
         %tmp.18 = getv function %tmp.17 :drawText;
         %tmp.19 = lgetv %w;
-        symbol [ w %tmp.19 420 20 21 ];
+        symbol [ w %tmp.19 431 20 21 ];
         %tmp.20 = 2;
         %tmp.21 = div %tmp.19 %tmp.20;
         %tmp.22 = lgetv %h;
-        symbol [ h %tmp.22 420 25 26 ];
+        symbol [ h %tmp.22 431 25 26 ];
         %tmp.23 = 2;
         %tmp.24 = div %tmp.22 %tmp.23;
         %tmp.25 = lgetv %h;
-        symbol [ h %tmp.25 420 32 33 ];
+        symbol [ h %tmp.25 431 32 33 ];
         %tmp.26 = 0.13;
         %tmp.27 = mul %tmp.25 %tmp.26;
         %tmp.28 = sub %tmp.24 %tmp.27;
-        symbol [ Graphics %tmp.29 420 43 51 ];
+        symbol [ Graphics %tmp.29 431 43 51 ];
         %tmp.29 = getm $.Toybox.Graphics;
-        symbol [ FONT_NUMBER_HOT %tmp.30 420 52 67 ];
+        symbol [ FONT_NUMBER_HOT %tmp.30 431 52 67 ];
         %tmp.30 = getv %tmp.29 :FONT_NUMBER_HOT;
         %tmp.31 = self;
-        symbol [ formatTime %tmp.32 420 69 79 ];
+        symbol [ formatTime %tmp.32 431 69 79 ];
         %tmp.32 = getv function %tmp.31 :formatTime;
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_420_80_420_140_begin:
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_420_81_420_115_begin:
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_431_80_431_140_begin:
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_431_81_431_115_begin:
         %tmp.33 = lgetv %info;
-        symbol [ info %tmp.33 420 81 85 ];
+        symbol [ info %tmp.33 431 81 85 ];
         %tmp.34 = null;
         %tmp.35 = ne %tmp.33 %tmp.34;
-        bf %tmp.35 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_420_80_420_140_else_false;
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_420_97_420_115_true:
+        bf %tmp.35 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_431_80_431_140_else_false;
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_431_97_431_115_true:
         %tmp.36 = lgetv %info;
-        symbol [ info %tmp.36 420 97 101 ];
+        symbol [ info %tmp.36 431 97 101 ];
         %tmp.37 = as %tmp.36 { (!Null) };
-        symbol [ timerTime %tmp.38 420 102 111 ];
+        symbol [ timerTime %tmp.38 431 102 111 ];
         %tmp.38 = getv %tmp.37 :timerTime;
         %tmp.39 = null;
         %tmp.40 = ne %tmp.38 %tmp.39;
         push %tmp.40;
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_420_97_420_115_end:
-        %tmp.41 = phi [%tmp.35 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_420_81_420_115_begin] [%tmp.40 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_420_97_420_115_true] [%tmp.41 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_420_97_420_115_end];
-        bf %tmp.41 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_420_80_420_140_else_false;
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_420_80_420_140_true:
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_431_97_431_115_end:
+        %tmp.41 = phi [%tmp.35 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_431_81_431_115_begin] [%tmp.40 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_431_97_431_115_true] [%tmp.41 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_431_97_431_115_end];
+        bf %tmp.41 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_431_80_431_140_else_false;
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_431_80_431_140_true:
         %tmp.42 = lgetv %info;
-        symbol [ info %tmp.42 420 123 127 ];
+        symbol [ info %tmp.42 431 123 127 ];
         %tmp.43 = as %tmp.42 { (!Null) };
-        symbol [ timerTime %tmp.44 420 128 137 ];
+        symbol [ timerTime %tmp.44 431 128 137 ];
         %tmp.44 = getv %tmp.43 :timerTime;
         push %tmp.44;
-        goto @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_420_80_420_140_end;
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_420_80_420_140_else_false:
+        goto @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_431_80_431_140_end;
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_431_80_431_140_else_false:
         %tmp.45 = 0;
         push %tmp.45;
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_420_80_420_140_end:
-        %tmp.46 = phi [%tmp.41 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_420_80_420_140_begin] [%tmp.44 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_420_80_420_140_true] [%tmp.45 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_420_80_420_140_else_false] [%tmp.46 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_420_80_420_140_end];
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_431_80_431_140_end:
+        %tmp.46 = phi [%tmp.41 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_431_80_431_140_begin] [%tmp.44 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_431_80_431_140_true] [%tmp.45 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_431_80_431_140_else_false] [%tmp.46 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_431_80_431_140_end];
         %tmp.47 = invoke %tmp.31 %tmp.32(%tmp.46);
         %tmp.48 = 1;
         invoke %tmp.17 %tmp.18(%tmp.21, %tmp.28, %tmp.30, %tmp.47, %tmp.48);
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 421 8 ]
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 432 8 ]
         %tmp.49 = lgetv %dc;
-        symbol [ dc %tmp.49 421 8 10 ];
-        symbol [ setColor %tmp.50 421 11 19 ];
+        symbol [ dc %tmp.49 432 8 10 ];
+        symbol [ setColor %tmp.50 432 11 19 ];
         %tmp.50 = getv function %tmp.49 :setColor;
         %tmp.51 = 0x00FF00;
         %tmp.52 = -1;
         invoke %tmp.49 %tmp.50(%tmp.51, %tmp.52);
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 421 35 ]
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 432 35 ]
         %tmp.53 = lgetv %dc;
-        symbol [ dc %tmp.53 421 35 37 ];
-        symbol [ drawText %tmp.54 421 38 46 ];
+        symbol [ dc %tmp.53 432 35 37 ];
+        symbol [ drawText %tmp.54 432 38 46 ];
         %tmp.54 = getv function %tmp.53 :drawText;
         %tmp.55 = lgetv %w;
-        symbol [ w %tmp.55 421 47 48 ];
+        symbol [ w %tmp.55 432 47 48 ];
         %tmp.56 = lgetv %pRes;
-        symbol [ pRes %tmp.56 421 51 55 ];
+        symbol [ pRes %tmp.56 432 51 55 ];
         %tmp.57 = 0;
         %tmp.58 = agetv %tmp.56 %tmp.57;
         %tmp.59 = sub %tmp.55 %tmp.58;
         %tmp.60 = 10;
         %tmp.61 = sub %tmp.59 %tmp.60;
         %tmp.62 = lgetv %pRes;
-        symbol [ pRes %tmp.62 421 63 67 ];
+        symbol [ pRes %tmp.62 432 63 67 ];
         %tmp.63 = 1;
         %tmp.64 = agetv %tmp.62 %tmp.63;
-        symbol [ Graphics %tmp.65 421 72 80 ];
+        symbol [ Graphics %tmp.65 432 72 80 ];
         %tmp.65 = getm $.Toybox.Graphics;
-        symbol [ FONT_XTINY %tmp.66 421 81 91 ];
+        symbol [ FONT_XTINY %tmp.66 432 81 91 ];
         %tmp.66 = getv %tmp.65 :FONT_XTINY;
         %tmp.67 = "RESUME";
         %tmp.68 = 2;
         invoke %tmp.53 %tmp.54(%tmp.61, %tmp.64, %tmp.66, %tmp.67, %tmp.68);
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 422 8 ]
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 433 8 ]
         %tmp.69 = lgetv %dc;
-        symbol [ dc %tmp.69 422 8 10 ];
-        symbol [ setColor %tmp.70 422 11 19 ];
+        symbol [ dc %tmp.69 433 8 10 ];
+        symbol [ setColor %tmp.70 433 11 19 ];
         %tmp.70 = getv function %tmp.69 :setColor;
         %tmp.71 = 0xFF5555;
         %tmp.72 = -1;
         invoke %tmp.69 %tmp.70(%tmp.71, %tmp.72);
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 422 35 ]
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 433 35 ]
         %tmp.73 = lgetv %dc;
-        symbol [ dc %tmp.73 422 35 37 ];
-        symbol [ drawText %tmp.74 422 38 46 ];
+        symbol [ dc %tmp.73 433 35 37 ];
+        symbol [ drawText %tmp.74 433 38 46 ];
         %tmp.74 = getv function %tmp.73 :drawText;
         %tmp.75 = lgetv %w;
-        symbol [ w %tmp.75 422 47 48 ];
+        symbol [ w %tmp.75 433 47 48 ];
         %tmp.76 = lgetv %pSave;
-        symbol [ pSave %tmp.76 422 51 56 ];
+        symbol [ pSave %tmp.76 433 51 56 ];
         %tmp.77 = 0;
         %tmp.78 = agetv %tmp.76 %tmp.77;
         %tmp.79 = sub %tmp.75 %tmp.78;
         %tmp.80 = 10;
         %tmp.81 = sub %tmp.79 %tmp.80;
         %tmp.82 = lgetv %pSave;
-        symbol [ pSave %tmp.82 422 64 69 ];
+        symbol [ pSave %tmp.82 433 64 69 ];
         %tmp.83 = 1;
         %tmp.84 = agetv %tmp.82 %tmp.83;
-        symbol [ Graphics %tmp.85 422 74 82 ];
+        symbol [ Graphics %tmp.85 433 74 82 ];
         %tmp.85 = getm $.Toybox.Graphics;
-        symbol [ FONT_XTINY %tmp.86 422 83 93 ];
+        symbol [ FONT_XTINY %tmp.86 433 83 93 ];
         %tmp.86 = getv %tmp.85 :FONT_XTINY;
         %tmp.87 = "SAVE";
         %tmp.88 = 2;
         invoke %tmp.73 %tmp.74(%tmp.81, %tmp.84, %tmp.86, %tmp.87, %tmp.88);
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 423 8 ]
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 434 8 ]
         %tmp.89 = lgetv %dc;
-        symbol [ dc %tmp.89 423 8 10 ];
-        symbol [ setColor %tmp.90 423 11 19 ];
+        symbol [ dc %tmp.89 434 8 10 ];
+        symbol [ setColor %tmp.90 434 11 19 ];
         %tmp.90 = getv function %tmp.89 :setColor;
         %tmp.91 = 0xAAAAAA;
         %tmp.92 = -1;
         invoke %tmp.89 %tmp.90(%tmp.91, %tmp.92);
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 423 35 ]
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 434 35 ]
         %tmp.93 = lgetv %dc;
-        symbol [ dc %tmp.93 423 35 37 ];
-        symbol [ drawText %tmp.94 423 38 46 ];
+        symbol [ dc %tmp.93 434 35 37 ];
+        symbol [ drawText %tmp.94 434 38 46 ];
         %tmp.94 = getv function %tmp.93 :drawText;
         %tmp.95 = lgetv %pDisc;
-        symbol [ pDisc %tmp.95 423 47 52 ];
+        symbol [ pDisc %tmp.95 434 47 52 ];
         %tmp.96 = 0;
         %tmp.97 = agetv %tmp.95 %tmp.96;
         %tmp.98 = 10;
         %tmp.99 = add %tmp.97 %tmp.98;
         %tmp.100 = lgetv %pDisc;
-        symbol [ pDisc %tmp.100 423 60 65 ];
+        symbol [ pDisc %tmp.100 434 60 65 ];
         %tmp.101 = 1;
         %tmp.102 = agetv %tmp.100 %tmp.101;
-        symbol [ Graphics %tmp.103 423 70 78 ];
+        symbol [ Graphics %tmp.103 434 70 78 ];
         %tmp.103 = getm $.Toybox.Graphics;
-        symbol [ FONT_XTINY %tmp.104 423 79 89 ];
+        symbol [ FONT_XTINY %tmp.104 434 79 89 ];
         %tmp.104 = getv %tmp.103 :FONT_XTINY;
         %tmp.105 = "DISCARD";
         %tmp.106 = 0;
         invoke %tmp.93 %tmp.94(%tmp.99, %tmp.102, %tmp.104, %tmp.105, %tmp.106);
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_417_63_424_4_stop:
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_428_63_435_4_stop:
     }
-    [ @file = "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc"; @line = 426; @symbol_functiondef = [drawPauseSymbol,426,13,28]; @symbol_param<0> = [dc,426,29,31]; @symbol_param<1> = [w,426,33,34]; @symbol_param<2> = [h,426,36,37]; @symbol_param<3> = [pPause,426,39,45]; ]
+    [ @file = "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc"; @line = 437; @symbol_functiondef = [drawPauseSymbol,437,13,28]; @symbol_param<0> = [dc,437,29,31]; @symbol_param<1> = [w,437,33,34]; @symbol_param<2> = [h,437,36,37]; @symbol_param<3> = [pPause,437,39,45]; ]
     function drawPauseSymbol(dc, w, h, pPause) {
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_426_47_429_4_start:
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 427 8 ]
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_437_47_440_4_start:
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 438 8 ]
         %tmp.1 = lgetv %dc;
-        symbol [ dc %tmp.1 427 8 10 ];
-        symbol [ setColor %tmp.2 427 11 19 ];
+        symbol [ dc %tmp.1 438 8 10 ];
+        symbol [ setColor %tmp.2 438 11 19 ];
         %tmp.2 = getv function %tmp.1 :setColor;
         %tmp.3 = 0x55AAFF;
         %tmp.4 = -1;
         invoke %tmp.1 %tmp.2(%tmp.3, %tmp.4);
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 427 35 ]
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 438 35 ]
         %tmp.5 = lgetv %dc;
-        symbol [ dc %tmp.5 427 35 37 ];
-        symbol [ setPenWidth %tmp.6 427 38 49 ];
+        symbol [ dc %tmp.5 438 35 37 ];
+        symbol [ setPenWidth %tmp.6 438 38 49 ];
         %tmp.6 = getv function %tmp.5 :setPenWidth;
         %tmp.7 = 3;
         invoke %tmp.5 %tmp.6(%tmp.7);
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 428 8 ]
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 439 8 ]
         %tmp.8 = lgetv %dc;
-        symbol [ dc %tmp.8 428 8 10 ];
-        symbol [ drawLine %tmp.9 428 11 19 ];
+        symbol [ dc %tmp.8 439 8 10 ];
+        symbol [ drawLine %tmp.9 439 11 19 ];
         %tmp.9 = getv function %tmp.8 :drawLine;
         %tmp.10 = lgetv %w;
-        symbol [ w %tmp.10 428 20 21 ];
+        symbol [ w %tmp.10 439 20 21 ];
         %tmp.11 = lgetv %pPause;
-        symbol [ pPause %tmp.11 428 22 28 ];
+        symbol [ pPause %tmp.11 439 22 28 ];
         %tmp.12 = 0;
         %tmp.13 = agetv %tmp.11 %tmp.12;
         %tmp.14 = sub %tmp.10 %tmp.13;
         %tmp.15 = 3;
         %tmp.16 = sub %tmp.14 %tmp.15;
         %tmp.17 = lgetv %pPause;
-        symbol [ pPause %tmp.17 428 35 41 ];
+        symbol [ pPause %tmp.17 439 35 41 ];
         %tmp.18 = 1;
         %tmp.19 = agetv %tmp.17 %tmp.18;
         %tmp.20 = 6;
         %tmp.21 = sub %tmp.19 %tmp.20;
         %tmp.22 = lgetv %w;
-        symbol [ w %tmp.22 428 48 49 ];
+        symbol [ w %tmp.22 439 48 49 ];
         %tmp.23 = lgetv %pPause;
-        symbol [ pPause %tmp.23 428 50 56 ];
+        symbol [ pPause %tmp.23 439 50 56 ];
         %tmp.24 = 0;
         %tmp.25 = agetv %tmp.23 %tmp.24;
         %tmp.26 = sub %tmp.22 %tmp.25;
         %tmp.27 = 3;
         %tmp.28 = sub %tmp.26 %tmp.27;
         %tmp.29 = lgetv %pPause;
-        symbol [ pPause %tmp.29 428 63 69 ];
+        symbol [ pPause %tmp.29 439 63 69 ];
         %tmp.30 = 1;
         %tmp.31 = agetv %tmp.29 %tmp.30;
         %tmp.32 = 6;
         %tmp.33 = add %tmp.31 %tmp.32;
         invoke %tmp.8 %tmp.9(%tmp.16, %tmp.21, %tmp.28, %tmp.33);
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 428 77 ]
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 439 77 ]
         %tmp.34 = lgetv %dc;
-        symbol [ dc %tmp.34 428 77 79 ];
-        symbol [ drawLine %tmp.35 428 80 88 ];
+        symbol [ dc %tmp.34 439 77 79 ];
+        symbol [ drawLine %tmp.35 439 80 88 ];
         %tmp.35 = getv function %tmp.34 :drawLine;
         %tmp.36 = lgetv %w;
-        symbol [ w %tmp.36 428 89 90 ];
+        symbol [ w %tmp.36 439 89 90 ];
         %tmp.37 = lgetv %pPause;
-        symbol [ pPause %tmp.37 428 91 97 ];
+        symbol [ pPause %tmp.37 439 91 97 ];
         %tmp.38 = 0;
         %tmp.39 = agetv %tmp.37 %tmp.38;
         %tmp.40 = sub %tmp.36 %tmp.39;
         %tmp.41 = 3;
         %tmp.42 = add %tmp.40 %tmp.41;
         %tmp.43 = lgetv %pPause;
-        symbol [ pPause %tmp.43 428 104 110 ];
+        symbol [ pPause %tmp.43 439 104 110 ];
         %tmp.44 = 1;
         %tmp.45 = agetv %tmp.43 %tmp.44;
         %tmp.46 = 6;
         %tmp.47 = sub %tmp.45 %tmp.46;
         %tmp.48 = lgetv %w;
-        symbol [ w %tmp.48 428 117 118 ];
+        symbol [ w %tmp.48 439 117 118 ];
         %tmp.49 = lgetv %pPause;
-        symbol [ pPause %tmp.49 428 119 125 ];
+        symbol [ pPause %tmp.49 439 119 125 ];
         %tmp.50 = 0;
         %tmp.51 = agetv %tmp.49 %tmp.50;
         %tmp.52 = sub %tmp.48 %tmp.51;
         %tmp.53 = 3;
         %tmp.54 = add %tmp.52 %tmp.53;
         %tmp.55 = lgetv %pPause;
-        symbol [ pPause %tmp.55 428 132 138 ];
+        symbol [ pPause %tmp.55 439 132 138 ];
         %tmp.56 = 1;
         %tmp.57 = agetv %tmp.55 %tmp.56;
         %tmp.58 = 6;
         %tmp.59 = add %tmp.57 %tmp.58;
         invoke %tmp.34 %tmp.35(%tmp.42, %tmp.47, %tmp.54, %tmp.59);
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_426_47_429_4_stop:
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_437_47_440_4_stop:
     }
-    [ @file = "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc"; @line = 431; @symbol_functiondef = [drawUIElements,431,13,27]; @symbol_param<0> = [dc,431,28,30]; @symbol_param<1> = [w,431,32,33]; @symbol_param<2> = [h,431,35,36]; @symbol_param<3> = [midX,431,38,42]; @symbol_param<4> = [midY,431,44,48]; @symbol_param<5> = [pPause,431,50,56]; ]
+    [ @file = "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc"; @line = 442; @symbol_functiondef = [drawUIElements,442,13,27]; @symbol_param<0> = [dc,442,28,30]; @symbol_param<1> = [w,442,32,33]; @symbol_param<2> = [h,442,35,36]; @symbol_param<3> = [midX,442,38,42]; @symbol_param<4> = [midY,442,44,48]; @symbol_param<5> = [pPause,442,50,56]; ]
     function drawUIElements(dc, w, h, midX, midY, pPause) {
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_431_58_437_4_start:
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 432 8 ]
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_442_58_448_4_start:
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 443 8 ]
         %tmp.1 = lgetv %dc;
-        symbol [ dc %tmp.1 432 8 10 ];
-        symbol [ setColor %tmp.2 432 11 19 ];
+        symbol [ dc %tmp.1 443 8 10 ];
+        symbol [ setColor %tmp.2 443 11 19 ];
         %tmp.2 = getv function %tmp.1 :setColor;
         %tmp.3 = 0x55AAFF;
         %tmp.4 = -1;
         invoke %tmp.1 %tmp.2(%tmp.3, %tmp.4);
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 433 8 ]
-        [ "C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_431_58_437_4_start" "C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_431_58_437_4_stop" ]
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 444 8 ]
+        [ "C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_442_58_448_4_start" "C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_442_58_448_4_stop" ]
         %dx.1 = local;
-        symbol [ dx %dx.1 433 12 14 ];
+        symbol [ dx %dx.1 444 12 14 ];
         %tmp.5 = 8;
         lputv %dx.1 %tmp.5;
-        symbol [ dx %dx.1 433 12 14 ];
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 433 20 ]
+        symbol [ dx %dx.1 444 12 14 ];
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 444 20 ]
         %tmp.6 = lgetv %dc;
-        symbol [ dc %tmp.6 433 20 22 ];
-        symbol [ fillPolygon %tmp.7 433 23 34 ];
+        symbol [ dc %tmp.6 444 20 22 ];
+        symbol [ fillPolygon %tmp.7 444 23 34 ];
         %tmp.7 = getv function %tmp.6 :fillPolygon;
         %tmp.8 = newa 3;
         %tmp.9 = newa 2;
         %tmp.10 = lgetv %w;
-        symbol [ w %tmp.10 433 37 38 ];
+        symbol [ w %tmp.10 444 37 38 ];
         %tmp.11 = 0.12;
         %tmp.12 = mul %tmp.10 %tmp.11;
         %tmp.13 = 10;
         %tmp.14 = sub %tmp.12 %tmp.13;
         %tmp.15 = lgetv %dx.1;
-        symbol [ dx %tmp.15 433 47 49 ];
+        symbol [ dx %tmp.15 444 47 49 ];
         %tmp.16 = add %tmp.14 %tmp.15;
         %tmp.17 = dup %tmp.9;
         %tmp.18 = aputv %tmp.17 0 %tmp.16;
         %tmp.19 = lgetv %midY;
-        symbol [ midY %tmp.19 433 51 55 ];
+        symbol [ midY %tmp.19 444 51 55 ];
         %tmp.20 = 26;
         %tmp.21 = add %tmp.19 %tmp.20;
         %tmp.22 = dup %tmp.18;
@@ -5706,18 +5719,18 @@ C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster
         %tmp.25 = aputv %tmp.24 0 %tmp.23;
         %tmp.26 = newa 2;
         %tmp.27 = lgetv %w;
-        symbol [ w %tmp.27 433 62 63 ];
+        symbol [ w %tmp.27 444 62 63 ];
         %tmp.28 = 0.12;
         %tmp.29 = mul %tmp.27 %tmp.28;
         %tmp.30 = 16;
         %tmp.31 = sub %tmp.29 %tmp.30;
         %tmp.32 = lgetv %dx.1;
-        symbol [ dx %tmp.32 433 72 74 ];
+        symbol [ dx %tmp.32 444 72 74 ];
         %tmp.33 = add %tmp.31 %tmp.32;
         %tmp.34 = dup %tmp.26;
         %tmp.35 = aputv %tmp.34 0 %tmp.33;
         %tmp.36 = lgetv %midY;
-        symbol [ midY %tmp.36 433 76 80 ];
+        symbol [ midY %tmp.36 444 76 80 ];
         %tmp.37 = 35;
         %tmp.38 = add %tmp.36 %tmp.37;
         %tmp.39 = dup %tmp.35;
@@ -5726,18 +5739,18 @@ C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster
         %tmp.42 = aputv %tmp.41 1 %tmp.40;
         %tmp.43 = newa 2;
         %tmp.44 = lgetv %w;
-        symbol [ w %tmp.44 433 87 88 ];
+        symbol [ w %tmp.44 444 87 88 ];
         %tmp.45 = 0.12;
         %tmp.46 = mul %tmp.44 %tmp.45;
         %tmp.47 = 4;
         %tmp.48 = sub %tmp.46 %tmp.47;
         %tmp.49 = lgetv %dx.1;
-        symbol [ dx %tmp.49 433 96 98 ];
+        symbol [ dx %tmp.49 444 96 98 ];
         %tmp.50 = add %tmp.48 %tmp.49;
         %tmp.51 = dup %tmp.43;
         %tmp.52 = aputv %tmp.51 0 %tmp.50;
         %tmp.53 = lgetv %midY;
-        symbol [ midY %tmp.53 433 100 104 ];
+        symbol [ midY %tmp.53 444 100 104 ];
         %tmp.54 = 35;
         %tmp.55 = add %tmp.53 %tmp.54;
         %tmp.56 = dup %tmp.52;
@@ -5745,26 +5758,26 @@ C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster
         %tmp.58 = dup %tmp.42;
         %tmp.59 = aputv %tmp.58 2 %tmp.57;
         invoke %tmp.6 %tmp.7(%tmp.59);
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 434 8 ]
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 445 8 ]
         %tmp.60 = lgetv %dc;
-        symbol [ dc %tmp.60 434 8 10 ];
-        symbol [ fillPolygon %tmp.61 434 11 22 ];
+        symbol [ dc %tmp.60 445 8 10 ];
+        symbol [ fillPolygon %tmp.61 445 11 22 ];
         %tmp.61 = getv function %tmp.60 :fillPolygon;
         %tmp.62 = newa 3;
         %tmp.63 = newa 2;
         %tmp.64 = lgetv %w;
-        symbol [ w %tmp.64 434 25 26 ];
+        symbol [ w %tmp.64 445 25 26 ];
         %tmp.65 = 0.12;
         %tmp.66 = mul %tmp.64 %tmp.65;
         %tmp.67 = 5;
         %tmp.68 = sub %tmp.66 %tmp.67;
         %tmp.69 = lgetv %dx.1;
-        symbol [ dx %tmp.69 434 34 36 ];
+        symbol [ dx %tmp.69 445 34 36 ];
         %tmp.70 = add %tmp.68 %tmp.69;
         %tmp.71 = dup %tmp.63;
         %tmp.72 = aputv %tmp.71 0 %tmp.70;
         %tmp.73 = lgetv %midY;
-        symbol [ midY %tmp.73 434 38 42 ];
+        symbol [ midY %tmp.73 445 38 42 ];
         %tmp.74 = 55;
         %tmp.75 = add %tmp.73 %tmp.74;
         %tmp.76 = dup %tmp.72;
@@ -5773,18 +5786,18 @@ C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster
         %tmp.79 = aputv %tmp.78 0 %tmp.77;
         %tmp.80 = newa 2;
         %tmp.81 = lgetv %w;
-        symbol [ w %tmp.81 434 49 50 ];
+        symbol [ w %tmp.81 445 49 50 ];
         %tmp.82 = 0.12;
         %tmp.83 = mul %tmp.81 %tmp.82;
         %tmp.84 = 11;
         %tmp.85 = sub %tmp.83 %tmp.84;
         %tmp.86 = lgetv %dx.1;
-        symbol [ dx %tmp.86 434 59 61 ];
+        symbol [ dx %tmp.86 445 59 61 ];
         %tmp.87 = add %tmp.85 %tmp.86;
         %tmp.88 = dup %tmp.80;
         %tmp.89 = aputv %tmp.88 0 %tmp.87;
         %tmp.90 = lgetv %midY;
-        symbol [ midY %tmp.90 434 63 67 ];
+        symbol [ midY %tmp.90 445 63 67 ];
         %tmp.91 = 46;
         %tmp.92 = add %tmp.90 %tmp.91;
         %tmp.93 = dup %tmp.89;
@@ -5793,18 +5806,18 @@ C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster
         %tmp.96 = aputv %tmp.95 1 %tmp.94;
         %tmp.97 = newa 2;
         %tmp.98 = lgetv %w;
-        symbol [ w %tmp.98 434 74 75 ];
+        symbol [ w %tmp.98 445 74 75 ];
         %tmp.99 = 0.12;
         %tmp.100 = mul %tmp.98 %tmp.99;
         %tmp.101 = 1;
         %tmp.102 = add %tmp.100 %tmp.101;
         %tmp.103 = lgetv %dx.1;
-        symbol [ dx %tmp.103 434 83 85 ];
+        symbol [ dx %tmp.103 445 83 85 ];
         %tmp.104 = add %tmp.102 %tmp.103;
         %tmp.105 = dup %tmp.97;
         %tmp.106 = aputv %tmp.105 0 %tmp.104;
         %tmp.107 = lgetv %midY;
-        symbol [ midY %tmp.107 434 87 91 ];
+        symbol [ midY %tmp.107 445 87 91 ];
         %tmp.108 = 46;
         %tmp.109 = add %tmp.107 %tmp.108;
         %tmp.110 = dup %tmp.106;
@@ -5812,330 +5825,330 @@ C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster
         %tmp.112 = dup %tmp.96;
         %tmp.113 = aputv %tmp.112 2 %tmp.111;
         invoke %tmp.60 %tmp.61(%tmp.113);
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 435 8 ]
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 446 8 ]
         %tmp.114 = lgetv %dc;
-        symbol [ dc %tmp.114 435 8 10 ];
-        symbol [ setPenWidth %tmp.115 435 11 22 ];
+        symbol [ dc %tmp.114 446 8 10 ];
+        symbol [ setPenWidth %tmp.115 446 11 22 ];
         %tmp.115 = getv function %tmp.114 :setPenWidth;
         %tmp.116 = 2;
         invoke %tmp.114 %tmp.115(%tmp.116);
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 435 27 ]
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 446 27 ]
         %tmp.117 = lgetv %dc;
-        symbol [ dc %tmp.117 435 27 29 ];
-        symbol [ drawLine %tmp.118 435 30 38 ];
+        symbol [ dc %tmp.117 446 27 29 ];
+        symbol [ drawLine %tmp.118 446 30 38 ];
         %tmp.118 = getv function %tmp.117 :drawLine;
         %tmp.119 = lgetv %w;
-        symbol [ w %tmp.119 435 39 40 ];
+        symbol [ w %tmp.119 446 39 40 ];
         %tmp.120 = 0.88;
         %tmp.121 = mul %tmp.119 %tmp.120;
         %tmp.122 = 15;
         %tmp.123 = sub %tmp.121 %tmp.122;
         %tmp.124 = lgetv %dx.1;
-        symbol [ dx %tmp.124 435 49 51 ];
+        symbol [ dx %tmp.124 446 49 51 ];
         %tmp.125 = sub %tmp.123 %tmp.124;
         %tmp.126 = lgetv %midY;
-        symbol [ midY %tmp.126 435 53 57 ];
+        symbol [ midY %tmp.126 446 53 57 ];
         %tmp.127 = 55;
         %tmp.128 = add %tmp.126 %tmp.127;
         %tmp.129 = lgetv %w;
-        symbol [ w %tmp.129 435 62 63 ];
+        symbol [ w %tmp.129 446 62 63 ];
         %tmp.130 = 0.88;
         %tmp.131 = mul %tmp.129 %tmp.130;
         %tmp.132 = 5;
         %tmp.133 = sub %tmp.131 %tmp.132;
         %tmp.134 = lgetv %dx.1;
-        symbol [ dx %tmp.134 435 71 73 ];
+        symbol [ dx %tmp.134 446 71 73 ];
         %tmp.135 = sub %tmp.133 %tmp.134;
         %tmp.136 = lgetv %midY;
-        symbol [ midY %tmp.136 435 75 79 ];
+        symbol [ midY %tmp.136 446 75 79 ];
         %tmp.137 = 65;
         %tmp.138 = add %tmp.136 %tmp.137;
         invoke %tmp.117 %tmp.118(%tmp.125, %tmp.128, %tmp.135, %tmp.138);
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 435 85 ]
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 446 85 ]
         %tmp.139 = lgetv %dc;
-        symbol [ dc %tmp.139 435 85 87 ];
-        symbol [ drawLine %tmp.140 435 88 96 ];
+        symbol [ dc %tmp.139 446 85 87 ];
+        symbol [ drawLine %tmp.140 446 88 96 ];
         %tmp.140 = getv function %tmp.139 :drawLine;
         %tmp.141 = lgetv %w;
-        symbol [ w %tmp.141 435 97 98 ];
+        symbol [ w %tmp.141 446 97 98 ];
         %tmp.142 = 0.88;
         %tmp.143 = mul %tmp.141 %tmp.142;
         %tmp.144 = 15;
         %tmp.145 = sub %tmp.143 %tmp.144;
         %tmp.146 = lgetv %dx.1;
-        symbol [ dx %tmp.146 435 107 109 ];
+        symbol [ dx %tmp.146 446 107 109 ];
         %tmp.147 = sub %tmp.145 %tmp.146;
         %tmp.148 = lgetv %midY;
-        symbol [ midY %tmp.148 435 111 115 ];
+        symbol [ midY %tmp.148 446 111 115 ];
         %tmp.149 = 65;
         %tmp.150 = add %tmp.148 %tmp.149;
         %tmp.151 = lgetv %w;
-        symbol [ w %tmp.151 435 120 121 ];
+        symbol [ w %tmp.151 446 120 121 ];
         %tmp.152 = 0.88;
         %tmp.153 = mul %tmp.151 %tmp.152;
         %tmp.154 = 5;
         %tmp.155 = sub %tmp.153 %tmp.154;
         %tmp.156 = lgetv %dx.1;
-        symbol [ dx %tmp.156 435 129 131 ];
+        symbol [ dx %tmp.156 446 129 131 ];
         %tmp.157 = sub %tmp.155 %tmp.156;
         %tmp.158 = lgetv %midY;
-        symbol [ midY %tmp.158 435 133 137 ];
+        symbol [ midY %tmp.158 446 133 137 ];
         %tmp.159 = 55;
         %tmp.160 = add %tmp.158 %tmp.159;
         invoke %tmp.139 %tmp.140(%tmp.147, %tmp.150, %tmp.157, %tmp.160);
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 436 8 ]
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_436_8_436_64_if_stmt:
-        symbol [ appState %tmp.162 436 12 20 ];
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 447 8 ]
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_447_8_447_64_if_stmt:
+        symbol [ appState %tmp.162 447 12 20 ];
         %tmp.162 = getv ? :appState;
         %tmp.163 = 1;
         %tmp.164 = eq %tmp.162 %tmp.163;
-        bf %tmp.164 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_436_8_436_64_if_end;
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_436_8_436_64_if_true:
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_436_27_436_64_start:
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 436 29 ]
+        bf %tmp.164 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_447_8_447_64_if_end;
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_447_8_447_64_if_true:
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_447_27_447_64_start:
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 447 29 ]
         %tmp.165 = self;
-        symbol [ drawPauseSymbol %tmp.166 436 29 44 ];
+        symbol [ drawPauseSymbol %tmp.166 447 29 44 ];
         %tmp.166 = getv function %tmp.165 :drawPauseSymbol;
         %tmp.167 = lgetv %dc;
-        symbol [ dc %tmp.167 436 45 47 ];
+        symbol [ dc %tmp.167 447 45 47 ];
         %tmp.168 = lgetv %w;
-        symbol [ w %tmp.168 436 49 50 ];
+        symbol [ w %tmp.168 447 49 50 ];
         %tmp.169 = lgetv %h;
-        symbol [ h %tmp.169 436 52 53 ];
+        symbol [ h %tmp.169 447 52 53 ];
         %tmp.170 = lgetv %pPause;
-        symbol [ pPause %tmp.170 436 55 61 ];
+        symbol [ pPause %tmp.170 447 55 61 ];
         invoke %tmp.165 %tmp.166(%tmp.167, %tmp.168, %tmp.169, %tmp.170);
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_436_27_436_64_stop:
-        goto @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_436_8_436_64_if_end;
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_436_8_436_64_if_end:
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_431_58_437_4_stop:
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_447_27_447_64_stop:
+        goto @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_447_8_447_64_if_end;
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_447_8_447_64_if_end:
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_442_58_448_4_stop:
     }
-    [ @file = "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc"; @line = 439; @symbol_functiondef = [drawSplashScreen,439,13,29]; @symbol_param<0> = [dc,439,30,32]; @symbol_param<1> = [w,439,34,35]; @symbol_param<2> = [h,439,37,38]; ]
+    [ @file = "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc"; @line = 450; @symbol_functiondef = [drawSplashScreen,450,13,29]; @symbol_param<0> = [dc,450,30,32]; @symbol_param<1> = [w,450,34,35]; @symbol_param<2> = [h,450,37,38]; ]
     function drawSplashScreen(dc, w, h) {
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_439_40_446_4_start:
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 440 8 ]
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_450_40_457_4_start:
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 451 8 ]
         %tmp.1 = lgetv %dc;
-        symbol [ dc %tmp.1 440 8 10 ];
-        symbol [ setColor %tmp.2 440 11 19 ];
+        symbol [ dc %tmp.1 451 8 10 ];
+        symbol [ setColor %tmp.2 451 11 19 ];
         %tmp.2 = getv function %tmp.1 :setColor;
         %tmp.3 = 0xAAAAAA;
         %tmp.4 = -1;
         invoke %tmp.1 %tmp.2(%tmp.3, %tmp.4);
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 440 35 ]
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 451 35 ]
         %tmp.5 = lgetv %dc;
-        symbol [ dc %tmp.5 440 35 37 ];
-        symbol [ drawText %tmp.6 440 38 46 ];
+        symbol [ dc %tmp.5 451 35 37 ];
+        symbol [ drawText %tmp.6 451 38 46 ];
         %tmp.6 = getv function %tmp.5 :drawText;
         %tmp.7 = lgetv %w;
-        symbol [ w %tmp.7 440 47 48 ];
+        symbol [ w %tmp.7 451 47 48 ];
         %tmp.8 = 2;
         %tmp.9 = div %tmp.7 %tmp.8;
         %tmp.10 = lgetv %h;
-        symbol [ h %tmp.10 440 52 53 ];
+        symbol [ h %tmp.10 451 52 53 ];
         %tmp.11 = 2;
         %tmp.12 = div %tmp.10 %tmp.11;
         %tmp.13 = 75;
         %tmp.14 = sub %tmp.12 %tmp.13;
-        symbol [ Graphics %tmp.15 440 60 68 ];
+        symbol [ Graphics %tmp.15 451 60 68 ];
         %tmp.15 = getm $.Toybox.Graphics;
-        symbol [ FONT_XTINY %tmp.16 440 69 79 ];
+        symbol [ FONT_XTINY %tmp.16 451 69 79 ];
         %tmp.16 = getv %tmp.15 :FONT_XTINY;
         %tmp.17 = "isom2024";
         %tmp.18 = 1;
         %tmp.19 = 4;
         %tmp.20 = bitor %tmp.18 %tmp.19;
         invoke %tmp.5 %tmp.6(%tmp.9, %tmp.14, %tmp.16, %tmp.17, %tmp.20);
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 441 8 ]
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 452 8 ]
         %tmp.21 = lgetv %dc;
-        symbol [ dc %tmp.21 441 8 10 ];
-        symbol [ setColor %tmp.22 441 11 19 ];
+        symbol [ dc %tmp.21 452 8 10 ];
+        symbol [ setColor %tmp.22 452 11 19 ];
         %tmp.22 = getv function %tmp.21 :setColor;
         %tmp.23 = 0xFFFFFF;
         %tmp.24 = -1;
         invoke %tmp.21 %tmp.22(%tmp.23, %tmp.24);
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 441 35 ]
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 452 35 ]
         %tmp.25 = lgetv %dc;
-        symbol [ dc %tmp.25 441 35 37 ];
-        symbol [ drawText %tmp.26 441 38 46 ];
+        symbol [ dc %tmp.25 452 35 37 ];
+        symbol [ drawText %tmp.26 452 38 46 ];
         %tmp.26 = getv function %tmp.25 :drawText;
         %tmp.27 = lgetv %w;
-        symbol [ w %tmp.27 441 47 48 ];
+        symbol [ w %tmp.27 452 47 48 ];
         %tmp.28 = 2;
         %tmp.29 = div %tmp.27 %tmp.28;
         %tmp.30 = lgetv %h;
-        symbol [ h %tmp.30 441 52 53 ];
+        symbol [ h %tmp.30 452 52 53 ];
         %tmp.31 = 2;
         %tmp.32 = div %tmp.30 %tmp.31;
         %tmp.33 = 35;
         %tmp.34 = sub %tmp.32 %tmp.33;
-        symbol [ Graphics %tmp.35 441 60 68 ];
+        symbol [ Graphics %tmp.35 452 60 68 ];
         %tmp.35 = getm $.Toybox.Graphics;
-        symbol [ FONT_LARGE %tmp.36 441 69 79 ];
+        symbol [ FONT_LARGE %tmp.36 452 69 79 ];
         %tmp.36 = getv %tmp.35 :FONT_LARGE;
         %tmp.37 = "LegendMaster";
         %tmp.38 = 1;
         %tmp.39 = 4;
         %tmp.40 = bitor %tmp.38 %tmp.39;
         invoke %tmp.25 %tmp.26(%tmp.29, %tmp.34, %tmp.36, %tmp.37, %tmp.40);
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 442 8 ]
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 453 8 ]
         %tmp.41 = lgetv %dc;
-        symbol [ dc %tmp.41 442 8 10 ];
-        symbol [ drawText %tmp.42 442 11 19 ];
+        symbol [ dc %tmp.41 453 8 10 ];
+        symbol [ drawText %tmp.42 453 11 19 ];
         %tmp.42 = getv function %tmp.41 :drawText;
         %tmp.43 = lgetv %w;
-        symbol [ w %tmp.43 442 20 21 ];
+        symbol [ w %tmp.43 453 20 21 ];
         %tmp.44 = 2;
         %tmp.45 = div %tmp.43 %tmp.44;
         %tmp.46 = lgetv %h;
-        symbol [ h %tmp.46 442 25 26 ];
+        symbol [ h %tmp.46 453 25 26 ];
         %tmp.47 = 2;
         %tmp.48 = div %tmp.46 %tmp.47;
-        symbol [ Graphics %tmp.49 442 30 38 ];
+        symbol [ Graphics %tmp.49 453 30 38 ];
         %tmp.49 = getm $.Toybox.Graphics;
-        symbol [ FONT_SMALL %tmp.50 442 39 49 ];
+        symbol [ FONT_SMALL %tmp.50 453 39 49 ];
         %tmp.50 = getv %tmp.49 :FONT_SMALL;
         %tmp.51 = "by punishman";
         %tmp.52 = 1;
         %tmp.53 = 4;
         %tmp.54 = bitor %tmp.52 %tmp.53;
         invoke %tmp.41 %tmp.42(%tmp.45, %tmp.48, %tmp.50, %tmp.51, %tmp.54);
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 443 8 ]
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 454 8 ]
         %tmp.55 = lgetv %dc;
-        symbol [ dc %tmp.55 443 8 10 ];
-        symbol [ drawText %tmp.56 443 11 19 ];
+        symbol [ dc %tmp.55 454 8 10 ];
+        symbol [ drawText %tmp.56 454 11 19 ];
         %tmp.56 = getv function %tmp.55 :drawText;
         %tmp.57 = lgetv %w;
-        symbol [ w %tmp.57 443 20 21 ];
+        symbol [ w %tmp.57 454 20 21 ];
         %tmp.58 = 2;
         %tmp.59 = div %tmp.57 %tmp.58;
         %tmp.60 = lgetv %h;
-        symbol [ h %tmp.60 443 25 26 ];
+        symbol [ h %tmp.60 454 25 26 ];
         %tmp.61 = 2;
         %tmp.62 = div %tmp.60 %tmp.61;
         %tmp.63 = 40;
         %tmp.64 = add %tmp.62 %tmp.63;
-        symbol [ Graphics %tmp.65 443 33 41 ];
+        symbol [ Graphics %tmp.65 454 33 41 ];
         %tmp.65 = getm $.Toybox.Graphics;
-        symbol [ FONT_XTINY %tmp.66 443 42 52 ];
+        symbol [ FONT_XTINY %tmp.66 454 42 52 ];
         %tmp.66 = getv %tmp.65 :FONT_XTINY;
         %tmp.67 = "Thanks to:";
         %tmp.68 = 1;
         %tmp.69 = 4;
         %tmp.70 = bitor %tmp.68 %tmp.69;
         invoke %tmp.55 %tmp.56(%tmp.59, %tmp.64, %tmp.66, %tmp.67, %tmp.70);
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 444 8 ]
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 455 8 ]
         %tmp.71 = lgetv %dc;
-        symbol [ dc %tmp.71 444 8 10 ];
-        symbol [ drawText %tmp.72 444 11 19 ];
+        symbol [ dc %tmp.71 455 8 10 ];
+        symbol [ drawText %tmp.72 455 11 19 ];
         %tmp.72 = getv function %tmp.71 :drawText;
         %tmp.73 = lgetv %w;
-        symbol [ w %tmp.73 444 20 21 ];
+        symbol [ w %tmp.73 455 20 21 ];
         %tmp.74 = 2;
         %tmp.75 = div %tmp.73 %tmp.74;
         %tmp.76 = lgetv %h;
-        symbol [ h %tmp.76 444 25 26 ];
+        symbol [ h %tmp.76 455 25 26 ];
         %tmp.77 = 2;
         %tmp.78 = div %tmp.76 %tmp.77;
         %tmp.79 = 55;
         %tmp.80 = add %tmp.78 %tmp.79;
-        symbol [ Graphics %tmp.81 444 33 41 ];
+        symbol [ Graphics %tmp.81 455 33 41 ];
         %tmp.81 = getm $.Toybox.Graphics;
-        symbol [ FONT_XTINY %tmp.82 444 42 52 ];
+        symbol [ FONT_XTINY %tmp.82 455 42 52 ];
         %tmp.82 = getv %tmp.81 :FONT_XTINY;
         %tmp.83 = "laura coach Ann10_08 killkost";
         %tmp.84 = 1;
         %tmp.85 = 4;
         %tmp.86 = bitor %tmp.84 %tmp.85;
         invoke %tmp.71 %tmp.72(%tmp.75, %tmp.80, %tmp.82, %tmp.83, %tmp.86);
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 445 8 ]
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 456 8 ]
         %tmp.87 = lgetv %dc;
-        symbol [ dc %tmp.87 445 8 10 ];
-        symbol [ drawText %tmp.88 445 11 19 ];
+        symbol [ dc %tmp.87 456 8 10 ];
+        symbol [ drawText %tmp.88 456 11 19 ];
         %tmp.88 = getv function %tmp.87 :drawText;
         %tmp.89 = lgetv %w;
-        symbol [ w %tmp.89 445 20 21 ];
+        symbol [ w %tmp.89 456 20 21 ];
         %tmp.90 = 2;
         %tmp.91 = div %tmp.89 %tmp.90;
         %tmp.92 = lgetv %h;
-        symbol [ h %tmp.92 445 25 26 ];
+        symbol [ h %tmp.92 456 25 26 ];
         %tmp.93 = 2;
         %tmp.94 = div %tmp.92 %tmp.93;
         %tmp.95 = 75;
         %tmp.96 = add %tmp.94 %tmp.95;
-        symbol [ Graphics %tmp.97 445 33 41 ];
+        symbol [ Graphics %tmp.97 456 33 41 ];
         %tmp.97 = getm $.Toybox.Graphics;
-        symbol [ FONT_XTINY %tmp.98 445 42 52 ];
+        symbol [ FONT_XTINY %tmp.98 456 42 52 ];
         %tmp.98 = getv %tmp.97 :FONT_XTINY;
         %tmp.99 = "michailova22";
         %tmp.100 = 1;
         %tmp.101 = 4;
         %tmp.102 = bitor %tmp.100 %tmp.101;
         invoke %tmp.87 %tmp.88(%tmp.91, %tmp.96, %tmp.98, %tmp.99, %tmp.102);
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_439_40_446_4_stop:
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_450_40_457_4_stop:
     }
-    [ @file = "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc"; @line = 448; @symbol_functiondef = [formatTime,448,13,23]; @symbol_param<0> = [ms,448,24,26]; ]
+    [ @file = "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc"; @line = 459; @symbol_functiondef = [formatTime,459,13,23]; @symbol_param<0> = [ms,459,24,26]; ]
     function formatTime(ms) {
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_448_28_453_4_start:
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 449 8 ]
-        [ "C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_448_28_453_4_start" "C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_448_28_453_4_stop" ]
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_459_28_464_4_start:
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 460 8 ]
+        [ "C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_459_28_464_4_start" "C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_459_28_464_4_stop" ]
         %totalSeconds.1 = local;
-        symbol [ totalSeconds %totalSeconds.1 449 12 24 ];
+        symbol [ totalSeconds %totalSeconds.1 460 12 24 ];
         %tmp.1 = lgetv %ms;
-        symbol [ ms %tmp.1 449 27 29 ];
+        symbol [ ms %tmp.1 460 27 29 ];
         %tmp.2 = 1000;
         %tmp.3 = div %tmp.1 %tmp.2;
         lputv %totalSeconds.1 %tmp.3;
-        symbol [ totalSeconds %totalSeconds.1 449 12 24 ];
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 450 8 ]
-        [ "C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_448_28_453_4_start" "C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_448_28_453_4_stop" ]
+        symbol [ totalSeconds %totalSeconds.1 460 12 24 ];
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 461 8 ]
+        [ "C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_459_28_464_4_start" "C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_459_28_464_4_stop" ]
         %h.2 = local;
-        symbol [ h %h.2 450 12 13 ];
+        symbol [ h %h.2 461 12 13 ];
         %tmp.4 = lgetv %totalSeconds.1;
-        symbol [ totalSeconds %tmp.4 450 16 28 ];
+        symbol [ totalSeconds %tmp.4 461 16 28 ];
         %tmp.5 = 3600;
         %tmp.6 = div %tmp.4 %tmp.5;
         lputv %h.2 %tmp.6;
-        symbol [ h %h.2 450 12 13 ];
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 451 8 ]
-        [ "C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_448_28_453_4_start" "C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_448_28_453_4_stop" ]
+        symbol [ h %h.2 461 12 13 ];
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 462 8 ]
+        [ "C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_459_28_464_4_start" "C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_459_28_464_4_stop" ]
         %m.3 = local;
-        symbol [ m %m.3 451 12 13 ];
+        symbol [ m %m.3 462 12 13 ];
         %tmp.7 = lgetv %totalSeconds.1;
-        symbol [ totalSeconds %tmp.7 451 17 29 ];
+        symbol [ totalSeconds %tmp.7 462 17 29 ];
         %tmp.8 = 60;
         %tmp.9 = div %tmp.7 %tmp.8;
         %tmp.10 = 60;
         %tmp.11 = mod %tmp.9 %tmp.10;
         lputv %m.3 %tmp.11;
-        symbol [ m %m.3 451 12 13 ];
-        [ "C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_448_28_453_4_start" "C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_448_28_453_4_stop" ]
+        symbol [ m %m.3 462 12 13 ];
+        [ "C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_459_28_464_4_start" "C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_459_28_464_4_stop" ]
         %s.4 = local;
-        symbol [ s %s.4 451 42 43 ];
+        symbol [ s %s.4 462 42 43 ];
         %tmp.12 = lgetv %totalSeconds.1;
-        symbol [ totalSeconds %tmp.12 451 46 58 ];
+        symbol [ totalSeconds %tmp.12 462 46 58 ];
         %tmp.13 = 60;
         %tmp.14 = mod %tmp.12 %tmp.13;
         lputv %s.4 %tmp.14;
-        symbol [ s %s.4 451 42 43 ];
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 452 8 ]
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_452_15_452_132_begin:
+        symbol [ s %s.4 462 42 43 ];
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 463 8 ]
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_463_15_463_132_begin:
         %tmp.15 = lgetv %h.2;
-        symbol [ h %tmp.15 452 16 17 ];
+        symbol [ h %tmp.15 463 16 17 ];
         %tmp.16 = 0;
         %tmp.17 = gt %tmp.15 %tmp.16;
-        bf %tmp.17 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_452_15_452_132_else_false;
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_452_15_452_132_true:
+        bf %tmp.17 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_463_15_463_132_else_false;
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_463_15_463_132_true:
         %tmp.18 = lgetv %h.2;
-        symbol [ h %tmp.18 452 25 26 ];
-        symbol [ format %tmp.19 452 27 33 ];
+        symbol [ h %tmp.18 463 25 26 ];
+        symbol [ format %tmp.19 463 27 33 ];
         %tmp.19 = getv function %tmp.18 :format;
         %tmp.20 = "%d";
         %tmp.21 = invoke %tmp.18 %tmp.19(%tmp.20);
         %tmp.22 = ":";
         %tmp.23 = add %tmp.21 %tmp.22;
         %tmp.24 = lgetv %m.3;
-        symbol [ m %tmp.24 452 48 49 ];
-        symbol [ format %tmp.25 452 50 56 ];
+        symbol [ m %tmp.24 463 48 49 ];
+        symbol [ format %tmp.25 463 50 56 ];
         %tmp.25 = getv function %tmp.24 :format;
         %tmp.26 = "%02d";
         %tmp.27 = invoke %tmp.24 %tmp.25(%tmp.26);
@@ -6143,40 +6156,40 @@ C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster
         %tmp.29 = ":";
         %tmp.30 = add %tmp.28 %tmp.29;
         %tmp.31 = lgetv %s.4;
-        symbol [ s %tmp.31 452 73 74 ];
-        symbol [ format %tmp.32 452 75 81 ];
+        symbol [ s %tmp.31 463 73 74 ];
+        symbol [ format %tmp.32 463 75 81 ];
         %tmp.32 = getv function %tmp.31 :format;
         %tmp.33 = "%02d";
         %tmp.34 = invoke %tmp.31 %tmp.32(%tmp.33);
         %tmp.35 = add %tmp.30 %tmp.34;
         push %tmp.35;
-        goto @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_452_15_452_132_end;
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_452_15_452_132_else_false:
+        goto @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_463_15_463_132_end;
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_463_15_463_132_else_false:
         %tmp.36 = lgetv %m.3;
-        symbol [ m %tmp.36 452 92 93 ];
-        symbol [ format %tmp.37 452 94 100 ];
+        symbol [ m %tmp.36 463 92 93 ];
+        symbol [ format %tmp.37 463 94 100 ];
         %tmp.37 = getv function %tmp.36 :format;
         %tmp.38 = "%02d";
         %tmp.39 = invoke %tmp.36 %tmp.37(%tmp.38);
         %tmp.40 = ":";
         %tmp.41 = add %tmp.39 %tmp.40;
         %tmp.42 = lgetv %s.4;
-        symbol [ s %tmp.42 452 117 118 ];
-        symbol [ format %tmp.43 452 119 125 ];
+        symbol [ s %tmp.42 463 117 118 ];
+        symbol [ format %tmp.43 463 119 125 ];
         %tmp.43 = getv function %tmp.42 :format;
         %tmp.44 = "%02d";
         %tmp.45 = invoke %tmp.42 %tmp.43(%tmp.44);
         %tmp.46 = add %tmp.41 %tmp.45;
         push %tmp.46;
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_452_15_452_132_end:
-        %tmp.47 = phi [%tmp.17 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_452_15_452_132_begin] [%tmp.35 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_452_15_452_132_true] [%tmp.46 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_452_15_452_132_else_false] [%tmp.47 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_452_15_452_132_end];
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_463_15_463_132_end:
+        %tmp.47 = phi [%tmp.17 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_463_15_463_132_begin] [%tmp.35 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_463_15_463_132_true] [%tmp.46 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_463_15_463_132_else_false] [%tmp.47 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_463_15_463_132_end];
         ret %tmp.47;
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_448_28_453_4_stop:
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_459_28_464_4_stop:
     }
-    [ @file = "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc"; @line = 455; @symbol_functiondef = [loadSettings,455,13,25]; ]
+    [ @file = "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc"; @line = 466; @symbol_functiondef = [loadSettings,466,13,25]; ]
     function loadSettings() {
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_455_28_457_4_start:
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 456 8 ]
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_466_28_468_4_start:
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 467 8 ]
         %tmp.1 = newa 6;
         %tmp.2 = newa 7;
         %tmp.3 = 31;
@@ -6322,127 +6335,127 @@ C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster
         %tmp.143 = aputv %tmp.142 6 %tmp.141;
         %tmp.144 = dup %tmp.121;
         %tmp.145 = aputv %tmp.144 5 %tmp.143;
-        symbol [ controlPoints ? 456 8 21 ];
+        symbol [ controlPoints ? 467 8 21 ];
         putv self :controlPoints %tmp.145;
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_455_28_457_4_stop:
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_466_28_468_4_stop:
     }
-    [ @file = "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc"; @line = 459; @symbol_functiondef = [changePage,459,13,23]; @symbol_param<0> = [dir,459,24,27]; ]
+    [ @file = "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc"; @line = 470; @symbol_functiondef = [changePage,470,13,23]; @symbol_param<0> = [dir,470,24,27]; ]
     function changePage(dir) {
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_459_29_467_4_start:
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 460 8 ]
-        [ "C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_459_29_467_4_start" "C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_459_29_467_4_stop" ]
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_470_29_478_4_start:
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 471 8 ]
+        [ "C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_470_29_478_4_start" "C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_470_29_478_4_stop" ]
         %newID.1 = local;
-        symbol [ newID %newID.1 460 12 17 ];
-        symbol [ pageID %tmp.2 460 20 26 ];
+        symbol [ newID %newID.1 471 12 17 ];
+        symbol [ pageID %tmp.2 471 20 26 ];
         %tmp.2 = getv ? :pageID;
         %tmp.3 = lgetv %dir;
-        symbol [ dir %tmp.3 460 29 32 ];
+        symbol [ dir %tmp.3 471 29 32 ];
         %tmp.4 = add %tmp.2 %tmp.3;
         lputv %newID.1 %tmp.4;
-        symbol [ newID %newID.1 460 12 17 ];
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 461 8 ]
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_461_8_466_8_if_stmt:
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_461_12_461_36_begin:
+        symbol [ newID %newID.1 471 12 17 ];
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 472 8 ]
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_472_8_477_8_if_stmt:
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_472_12_472_36_begin:
         %tmp.5 = lgetv %newID.1;
-        symbol [ newID %tmp.5 461 12 17 ];
+        symbol [ newID %tmp.5 472 12 17 ];
         %tmp.6 = -2;
         %tmp.7 = gte %tmp.5 %tmp.6;
-        bf %tmp.7 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_461_8_466_8_if_end;
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_461_27_461_36_true:
+        bf %tmp.7 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_472_8_477_8_if_end;
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_472_27_472_36_true:
         %tmp.8 = lgetv %newID.1;
-        symbol [ newID %tmp.8 461 27 32 ];
+        symbol [ newID %tmp.8 472 27 32 ];
         %tmp.9 = 1;
         %tmp.10 = lte %tmp.8 %tmp.9;
         push %tmp.10;
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_461_27_461_36_end:
-        %tmp.11 = phi [%tmp.7 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_461_12_461_36_begin] [%tmp.10 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_461_27_461_36_true] [%tmp.11 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_461_27_461_36_end];
-        bf %tmp.11 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_461_8_466_8_if_end;
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_461_8_466_8_if_true:
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_461_39_466_8_start:
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 462 12 ]
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_472_27_472_36_end:
+        %tmp.11 = phi [%tmp.7 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_472_12_472_36_begin] [%tmp.10 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_472_27_472_36_true] [%tmp.11 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_472_27_472_36_end];
+        bf %tmp.11 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_472_8_477_8_if_end;
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_472_8_477_8_if_true:
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_472_39_477_8_start:
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 473 12 ]
         %tmp.12 = lgetv %newID.1;
-        symbol [ newID %tmp.12 462 21 26 ];
-        symbol [ pageID ? 462 12 18 ];
+        symbol [ newID %tmp.12 473 21 26 ];
+        symbol [ pageID ? 473 12 18 ];
         putv self :pageID %tmp.12;
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 463 12 ]
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 474 12 ]
         %tmp.13 = null;
-        symbol [ stepsOffset ? 463 12 23 ];
+        symbol [ stepsOffset ? 474 12 23 ];
         putv self :stepsOffset %tmp.13;
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 464 12 ]
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 475 12 ]
         %tmp.14 = null;
-        symbol [ distanceOffset ? 464 12 26 ];
+        symbol [ distanceOffset ? 475 12 26 ];
         putv self :distanceOffset %tmp.14;
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 465 12 ]
-        symbol [ WatchUi %tmp.15 465 12 19 ];
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 476 12 ]
+        symbol [ WatchUi %tmp.15 476 12 19 ];
         %tmp.15 = getm $.Toybox.WatchUi;
-        symbol [ requestUpdate %tmp.16 465 20 33 ];
+        symbol [ requestUpdate %tmp.16 476 20 33 ];
         %tmp.16 = getv function %tmp.15 :requestUpdate;
         invoke %tmp.15 %tmp.16();
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_461_39_466_8_stop:
-        goto @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_461_8_466_8_if_end;
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_461_8_466_8_if_end:
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_459_29_467_4_stop:
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_472_39_477_8_stop:
+        goto @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_472_8_477_8_if_end;
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_472_8_477_8_if_end:
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_470_29_478_4_stop:
     }
-    [ @file = "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc"; @line = 469; @symbol_functiondef = [scrollIcons,469,13,24]; @symbol_param<0> = [step,469,25,29]; ]
+    [ @file = "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc"; @line = 480; @symbol_functiondef = [scrollIcons,480,13,24]; @symbol_param<0> = [step,480,25,29]; ]
     function scrollIcons(step) {
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_469_31_474_4_start:
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 470 8 ]
-        symbol [ currentIndex %tmp.1 470 8 20 ];
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_480_31_485_4_start:
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 481 8 ]
+        symbol [ currentIndex %tmp.1 481 8 20 ];
         %tmp.1 = getv self :currentIndex;
         %tmp.2 = lgetv %step;
-        symbol [ step %tmp.2 470 24 28 ];
+        symbol [ step %tmp.2 481 24 28 ];
         %tmp.3 = add %tmp.1 %tmp.2;
-        symbol [ currentIndex ? 470 8 20 ];
+        symbol [ currentIndex ? 481 8 20 ];
         putv self :currentIndex dup %tmp.3;
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 471 8 ]
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_471_8_471_50_if_stmt:
-        symbol [ currentIndex %tmp.5 471 12 24 ];
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 482 8 ]
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_482_8_482_50_if_stmt:
+        symbol [ currentIndex %tmp.5 482 12 24 ];
         %tmp.5 = getv ? :currentIndex;
         %tmp.6 = 0;
         %tmp.7 = lt %tmp.5 %tmp.6;
-        bf %tmp.7 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_471_8_471_50_if_end;
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_471_8_471_50_if_true:
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_471_30_471_50_start:
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 471 32 ]
+        bf %tmp.7 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_482_8_482_50_if_end;
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_482_8_482_50_if_true:
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_482_30_482_50_start:
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 482 32 ]
         %tmp.8 = 0;
-        symbol [ currentIndex ? 471 32 44 ];
+        symbol [ currentIndex ? 482 32 44 ];
         putv self :currentIndex %tmp.8;
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_471_30_471_50_stop:
-        goto @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_471_8_471_50_if_end;
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_471_8_471_50_if_end:
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 472 8 ]
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_472_8_472_93_if_stmt:
-        symbol [ currentIndex %tmp.10 472 12 24 ];
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_482_30_482_50_stop:
+        goto @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_482_8_482_50_if_end;
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_482_8_482_50_if_end:
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 483 8 ]
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_483_8_483_93_if_stmt:
+        symbol [ currentIndex %tmp.10 483 12 24 ];
         %tmp.10 = getv ? :currentIndex;
-        symbol [ controlPoints %tmp.12 472 28 41 ];
+        symbol [ controlPoints %tmp.12 483 28 41 ];
         %tmp.12 = getv ? :controlPoints;
-        symbol [ size %tmp.13 472 42 46 ];
+        symbol [ size %tmp.13 483 42 46 ];
         %tmp.13 = getv function %tmp.12 :size;
         %tmp.14 = invoke %tmp.12 %tmp.13();
         %tmp.15 = gte %tmp.10 %tmp.14;
-        bf %tmp.15 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_472_8_472_93_if_end;
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_472_8_472_93_if_true:
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_472_50_472_93_start:
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 472 52 ]
-        symbol [ controlPoints %tmp.17 472 67 80 ];
+        bf %tmp.15 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_483_8_483_93_if_end;
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_483_8_483_93_if_true:
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_483_50_483_93_start:
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 483 52 ]
+        symbol [ controlPoints %tmp.17 483 67 80 ];
         %tmp.17 = getv ? :controlPoints;
-        symbol [ size %tmp.18 472 81 85 ];
+        symbol [ size %tmp.18 483 81 85 ];
         %tmp.18 = getv function %tmp.17 :size;
         %tmp.19 = invoke %tmp.17 %tmp.18();
         %tmp.20 = 1;
         %tmp.21 = sub %tmp.19 %tmp.20;
-        symbol [ currentIndex ? 472 52 64 ];
+        symbol [ currentIndex ? 483 52 64 ];
         putv self :currentIndex %tmp.21;
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_472_50_472_93_stop:
-        goto @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_472_8_472_93_if_end;
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_472_8_472_93_if_end:
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 473 8 ]
-        symbol [ WatchUi %tmp.22 473 8 15 ];
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_483_50_483_93_stop:
+        goto @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_483_8_483_93_if_end;
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_483_8_483_93_if_end:
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc" 484 8 ]
+        symbol [ WatchUi %tmp.22 484 8 15 ];
         %tmp.22 = getm $.Toybox.WatchUi;
-        symbol [ requestUpdate %tmp.23 473 16 29 ];
+        symbol [ requestUpdate %tmp.23 484 16 29 ];
         %tmp.23 = getv function %tmp.22 :requestUpdate;
         invoke %tmp.22 %tmp.23();
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_469_31_474_4_stop:
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterView_mc_480_31_485_4_stop:
     }
 }
 [ @file = "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterView.mc"; @line = 1; ]
