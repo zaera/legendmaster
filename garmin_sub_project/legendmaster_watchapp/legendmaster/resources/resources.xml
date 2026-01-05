@@ -1,6 +1,7 @@
 <resources>
    <fonts>
-      <font id="LegendFont" filename="legend_font.fnt" />
+      <font id="LegendFont1" filename="legend1.fnt" />
+      <font id="LegendFont2" filename="legend2.fnt" />
    </fonts>
    <properties>
       <property id="CP_Data" type="string">31,12,45,0,8,0|32,0,122,14,0,1|33,2,50,0,0,0</property>

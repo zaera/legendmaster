@@ -11,6 +11,7 @@ class legendmasterDelegate extends WatchUi.BehaviorDelegate {
         view = v;
     }
 
+    // Обработка кнопки START/STOP (Верхняя правая)
     function onSelect() {
         var app = Application.getApp();
         if (view.appState == 0) { 
@@ -28,7 +29,15 @@ class legendmasterDelegate extends WatchUi.BehaviorDelegate {
         return true;
     }
 
+    // Обработка кнопки BACK (Нижняя правая)
     function onBack() {
+        // 1. Если мы на ГЛАВНОМ экране и старт НЕ нажат — ВЫХОД из программы
+        if (view.pageID == 0 && view.appState == 0) {
+            System.exit();
+            return true;
+        }
+
+        // 2. Если мы в меню ПАУЗЫ — СОХРАНИТЬ и ВЫЙТИ
         if (view.appState == 2) { 
             var app = Application.getApp();
             if (app.session != null) {
@@ -38,10 +47,14 @@ class legendmasterDelegate extends WatchUi.BehaviorDelegate {
             System.exit();
             return true;
         }
+
+        // 3. Во всех остальных случаях (экран иконок, компас и т.д.) — листаем страницу НАЗАД
+        // На экране иконок (pageID 1) это вернет нас на главный экран (pageID 0)
         view.changePage(-1); 
         return true;
     }
 
+    // Обработка кнопки DOWN (Нижняя левая)
     function onNextPage() {
         if (view.appState == 2) { 
             var app = Application.getApp();
@@ -57,6 +70,7 @@ class legendmasterDelegate extends WatchUi.BehaviorDelegate {
         return true;
     }
 
+    // Обработка кнопки UP (Средняя левая)
     function onPreviousPage() {
         if (view.pageID == 1) { view.scrollIcons(-1); } else { view.changePage(-1); }
         return true;

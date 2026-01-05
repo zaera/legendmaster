@@ -11,7 +11,8 @@ module Rez {
     } // Drawables
 
     module Fonts {
-        (:initialized) var LegendFont as ResourceId;
+        (:initialized) var LegendFont1 as ResourceId;
+        (:initialized) var LegendFont2 as ResourceId;
     } // Fonts
 
     module Layouts {

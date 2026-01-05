@@ -20,7 +20,14 @@ class legendmasterView extends WatchUi.View {
     var pacesColorOutline = 0xffffff; 
     // =======================================
 
-    var myFont;
+    // === ПЕРЕМЕННЫЕ СПУФИНГА ===
+    var isSpoofing = false;
+    var lastValidLoc = null;
+    var autoTestCounter = 0; // Счетчик тиков таймера
+    // ===========================
+
+    var myFont1; 
+    var myFont2; 
     var pageID = 0; 
     var currentIndex = 0;
     var launchTime;
@@ -30,15 +37,12 @@ class legendmasterView extends WatchUi.View {
     var startLocation = null;
     var lastHeading = 0.0;
     var stepsOffset = null;
-    var distanceOffset = null; // Базовая дистанция для счетчика метров
+    var distanceOffset = null; 
 
-function initialize() { 
+    function initialize() { 
         View.initialize(); 
         launchTime = System.getTimer();
-        
-        // Сразу фиксируем текущие шаги как точку отсчета
         stepsOffset = getCurrentSteps(); 
-        
         loadSettings(); 
         Sensor.setEnabledSensors([Sensor.SENSOR_HEARTRATE]);
         updateTimer = new Timer.Timer();
@@ -46,10 +50,20 @@ function initialize() {
     }
 
     function onLayout(dc) { 
-        try { myFont = WatchUi.loadResource(Rez.Fonts.LegendFont); } catch(ex) { myFont = null; }
+        try { 
+            myFont1 = WatchUi.loadResource(Rez.Fonts.LegendFont1); 
+            myFont2 = WatchUi.loadResource(Rez.Fonts.LegendFont2); 
+        } catch(ex) { 
+            myFont1 = null; 
+            myFont2 = null; 
+        }
     }
 
-    function onTimerUpdate() as Void { WatchUi.requestUpdate(); }
+function onTimerUpdate() as Void { 
+        // Мы оставляем только запрос на обновление экрана (4 раза в секунду),
+        // чтобы навигация и время обновлялись плавно.
+        WatchUi.requestUpdate(); 
+    }
 
     function onHide() {
         if (updateTimer != null) {
@@ -63,16 +77,14 @@ function initialize() {
         return (info != null && info.steps != null) ? info.steps : 0;
     }
 
-function calculatePaces() {
+    function calculatePaces() {
         var totalSteps = getCurrentSteps();
-        // stepsOffset теперь всегда имеет значение (из initialize или сброса страниц)
         if (stepsOffset == null) { stepsOffset = totalSteps; } 
         
         var localSteps = totalSteps - stepsOffset;
         if (localSteps < 0) { localSteps = 0; }
         
         var paces = localSteps / 2;
-        // Если дошли до 1000 пар (2000 шагов), сбрасываем в 0, чтобы не загромождать экран
         if (paces > 999) {
             stepsOffset = totalSteps;
             return 0;
@@ -81,11 +93,46 @@ function calculatePaces() {
     }
 
     function onUpdate(dc) {
+        // --- ЛОГИКА ОПРЕДЕЛЕНИЯ СПУФА (АКТИВНА ТОЛЬКО ПРИ appState == 1) ---
+        var info = Activity.getActivityInfo();
+        
+        if (appState == 1 && info != null && info.currentLocation != null) {
+            var curLoc = info.currentLocation.toDegrees();
+            if (lastValidLoc == null) {
+                lastValidLoc = curLoc;
+            } else {
+                // Вычисляем квадрат расстояния (упрощенно для экономии батареи)
+                var dLat = curLoc[0] - lastValidLoc[0];
+                var dLon = curLoc[1] - lastValidLoc[1];
+                var distSq = dLat*dLat + dLon*dLon;
+                
+                // Если "прыжок" > ~20км за период обновления или скорость > 60км/ч (16.6 м/с)
+                if (!isSpoofing && (distSq > 0.04 || (info.currentSpeed != null && info.currentSpeed > 16.6))) {
+                    isSpoofing = true;
+                } else if (isSpoofing && distSq < 0.04) {
+                    // Если вернулись в нормальный режим (прыжки прекратились)
+                    isSpoofing = false;
+                }
+                
+                // Обновляем последнюю валидную точку только если нет спуфинга
+                if (!isSpoofing) { 
+                    lastValidLoc = curLoc; 
+                }
+            }
+        } else if (appState == 0) {
+            // Пока старт не нажат — сбрасываем метку локации и спуфинг (если не работает автотест)
+            lastValidLoc = null;
+        }
+        // -------------------------------------------------------------------
+
+        // Базовая очистка экрана
         dc.setColor(0x000000, 0x000000);
         dc.clear();
+        
         var w = dc.getWidth();
         var h = dc.getHeight();
 
+        // Твои координаты элементов интерфейса
         var posStart  = [55, h / 3.4];
         var posPause  = [25, h / 3.4]; 
         var posResume = [65, h / 3.4];
@@ -93,35 +140,41 @@ function calculatePaces() {
         var posDisc   = [80, h * 0.72];
         var gpsSettings = [36, 18, 6, 12, 8, h - 35];
         
+        // Сплэш-скрин при запуске (2 секунды)
         if (System.getTimer() - launchTime < 2000) { 
             drawSplashScreen(dc, w, h); 
             return; 
         }
 
-        var info = Activity.getActivityInfo();
+        // Фиксация точки старта при первом получении GPS после нажатия Start
         if (appState == 1 && startLocation == null && info.currentLocation != null) {
             startLocation = info.currentLocation;
         }
 
+        // Отрисовка экранов в зависимости от состояния приложения и выбранной страницы
         if (appState == 2) { 
+            // Экран Паузы
             stepsOffset = null; 
-            distanceOffset = null; // Сброс метров при паузе
+            distanceOffset = null; 
             drawPauseMenu(dc, info, w, h, posResume, posSave, posDisc); 
         } else if (pageID == -2) { 
+            // Экран Навигации (Назад к старту)
             drawNavigation(dc, info, w, h, posPause, gpsSettings); 
         } else if (pageID == -1) { 
+            // Экран Компаса
             drawCompass(dc, info, w, h, posPause); 
         } else if (pageID == 0) { 
+            // Главный экран (Таймер/Дистанция)
             drawMain(dc, info, w, h, posStart, posPause, gpsSettings); 
         } else if (pageID == 1) { 
+            // Экран Легенды (Иконки КП)
             drawIcons(dc, info, w, h, posPause); 
         }
     }
 
-function drawProgressArc(dc, w, h) {
+    function drawProgressArc(dc, w, h) {
         var total = controlPoints.size();
         if (total == 0) { return; }
-        // ПРЕДОХРАНИТЕЛЬ: Визуально дуга считает максимум до 99
         var displayTotal = (total > 99) ? 99 : total;
         
         var cx = w / 2; var cy = h / 2;
@@ -145,8 +198,12 @@ function drawProgressArc(dc, w, h) {
         var margin = (w >= 280) ? pacesMarginEnduro : pacesMarginFenix;
         margin = margin + 5;
         var x = w - margin; 
-        var y = (h / 2) - 12; // Сдвигаем шаги чуть выше середины
-        var text = paces.toString(); 
+        var y = (h / 2) - 12; 
+        
+        // --- ЛОГИКА ТЕКСТА ПРИ СПУФЕ ---
+        var text = isSpoofing ? "SPO" : paces.toString(); 
+        // ------------------------------
+        
         var font = Graphics.FONT_SMALL;
         dc.setColor(pacesColorOutline, -1);
         for (var dx = -2; dx <= 2; dx++) {
@@ -156,12 +213,12 @@ function drawProgressArc(dc, w, h) {
                 if (adx + ady != 0) { dc.drawText(x + dx, y + dy, font, text, 2|4); }
             }
         }
-        dc.setColor(pacesColorMain, -1);
+        // Если спуф - красим основной текст в красный
+        dc.setColor(isSpoofing ? 0xFF0000 : pacesColorMain, -1);
         dc.drawText(x, y, font, text, 2|4);
     }
 
     function drawMetersCounter(dc, w, h) {
-        // Если старт не нажат — ничего не считаем и не рисуем
         if (appState == 0) { 
             distanceOffset = null; 
             return; 
@@ -176,11 +233,17 @@ function drawProgressArc(dc, w, h) {
         var margin = (w >= 280) ? pacesMarginEnduro : pacesMarginFenix;
         margin = margin + 5;
         var x = w - margin;
-        var y = (h / 2) + 12; // Сдвигаем метры чуть ниже середины
-        var text = localDist.toNumber().toString();
+        var y = (h / 2) + 12; 
+        
+        // --- ЛОГИКА ТЕКСТА ПРИ СПУФЕ ---
+        var text = isSpoofing ? "OF!" : localDist.toNumber().toString();
+        // ------------------------------
+        
         var font = Graphics.FONT_SMALL;
 
-        dc.setColor(0x000000, -1);
+        // РИСУЕМ КОНТУР (КАНТ)
+        // Если спуф — кант белый (как у SPO), если нет — кант черный
+        dc.setColor(isSpoofing ? 0xFFFFFF : 0x000000, -1);
         for (var dx = -2; dx <= 2; dx++) {
             for (var dy = -2; dy <= 2; dy++) {
                 var adx = (dx < 0) ? -dx : dx;
@@ -188,7 +251,10 @@ function drawProgressArc(dc, w, h) {
                 if (adx + ady != 0) { dc.drawText(x + dx, y + dy, font, text, 2|4); }
             }
         }
-        dc.setColor(0xFFFFFF, -1); // Цвет метров: Оранжевый
+
+        // РИСУЕМ ОСНОВНОЙ ТЕКСТ (ЦЕНТР)
+        // Если спуф — красный центр, если нет — белый метраж
+        dc.setColor(isSpoofing ? 0xFF0000 : 0xFFFFFF, -1); 
         dc.drawText(x, y, font, text, 2|4);
     }
 
@@ -233,180 +299,220 @@ function drawProgressArc(dc, w, h) {
 
     function drawMain(dc, info, w, h, pStart, pPause, gpsS) {
         var paces = calculatePaces();
-        dc.setColor(0xFFFFFF, -1);
+        // Покраснение текста (время и дистанция)
+        var txtColor = isSpoofing ? 0xFF0000 : 0xFFFFFF;
+        dc.setColor(txtColor, -1);
+        
         var t = (info != null && info.timerTime != null) ? info.timerTime : 0;
         var d = (info != null && info.elapsedDistance != null) ? info.elapsedDistance : 0;
         var hr = (info != null && info.currentHeartRate != null) ? info.currentHeartRate : "--";
+        
         dc.setColor(0xFF5555, -1);
         var hrY = h/2 - 95; 
         dc.fillCircle(w/2 - 6, hrY, 5); dc.fillCircle(w/2 + 2, hrY, 5);
         dc.fillPolygon([[w/2 - 11, hrY + 2], [w/2 + 7, hrY + 2], [w/2 - 2, hrY + 12]]);
-        dc.setColor(0xFFFFFF, -1);
+        
+        dc.setColor(txtColor, -1);
         dc.drawText(w/2 + 40, hrY - 8, Graphics.FONT_TINY, hr.toString(), 0);
         dc.drawText(w/2, h/2 - 60, Graphics.FONT_XTINY, "DISTANCE", 1);
         dc.drawText(w/2, h/2 - 40, Graphics.FONT_NUMBER_MEDIUM, (d / 1000.0).format("%.2f"), 1);
         dc.drawText(w/2, h/2 + 20, Graphics.FONT_LARGE, formatTime(t), 1);
+        
         drawPacesCounter(dc, w, h, paces);
         drawMetersCounter(dc, w, h);
         drawGPSBottom(dc, info, w, gpsS);
+        
         if (appState == 0) {
             dc.setColor(0x55AAFF, -1);
             dc.drawText(w - pStart[0]-15, pStart[1], Graphics.FONT_XTINY, "START>", 2);
         } else { drawPauseSymbol(dc, w, h, pPause); }
+
+        // РИСУЕМ СИНИЙ КРЕСТИК ВЫХОДА
+        // РИСУЕМ КРЕСТИК ВЫХОДА (КОПИЯ С ЭКРАНА ИКОНОК)
+        if (appState == 0) {
+            dc.setColor(0x55AAFF, -1);
+            dc.setPenWidth(2);
+            var midY = h / 2 + 10;
+            var dx = 8; 
+            // Рисуем крестик точно по твоим координатам из drawUIElements
+            var centerX = w * 0.88 - 10 - dx;
+            var centerY = midY + 60;
+            var sz = 5; // Размер плеча крестика
+
+            dc.drawLine(centerX - sz, centerY - sz, centerX + sz, centerY + sz);
+            dc.drawLine(centerX - sz, centerY + sz, centerX + sz, centerY - sz);
+        }
     }
 
     function drawIcons(dc, info, w, h, pPause) {
-        var paces = calculatePaces();
-        var midX = w / 2, midY = h / 2 + 10;
-        if (controlPoints.size() == 0) { return; }
-        
-        var currentData = controlPoints[currentIndex];
-        
-        // ПРЕДОХРАНИТЕЛЬ: порядковый номер не может быть > 99
-        var displayIdx = currentIndex + 1;
-        if (displayIdx > 99) { displayIdx = 99; }
-        var orderNumStr = displayIdx.toString();
-        
-        var cpNumStr = currentData[0].toString();
-        
-        var t = (info != null && info.timerTime != null) ? info.timerTime : 0;
-        var d = (info != null && info.elapsedDistance != null) ? info.elapsedDistance : 0;
-        
-        // Верхняя панель инфо
-        dc.setColor(0xAAAAAA, -1);
-        dc.drawText(midX, h * 0.06, Graphics.FONT_XTINY, (d / 1000.0).format("%.2f") + " km", 1|4);
-        dc.drawText(midX, h * 0.17, Graphics.FONT_LARGE, formatTime(t), 1|4);
-        dc.setPenWidth(1); dc.drawLine(30, h * 0.24, w - 30, h * 0.24);
-        
-        drawPacesCounter(dc, w, h, paces);
-        drawMetersCounter(dc, w, h);
-        drawProgressArc(dc, w, h);
+    var paces = calculatePaces();
+    var midX = w / 2, midY = h / 2 + 10;
+    if (controlPoints.size() == 0) { return; }
+    
+    var currentData = controlPoints[currentIndex];
+    
+    // ПРЕДОХРАНИТЕЛЬ: порядковый номер не может быть > 99
+    var displayIdx = currentIndex + 1;
+    if (displayIdx > 99) { displayIdx = 99; }
+    var orderNumStr = displayIdx.toString();
+    
+    var cpNumStr = currentData[0].toString();
+    
+    var t = (info != null && info.timerTime != null) ? info.timerTime : 0;
+    var d = (info != null && info.elapsedDistance != null) ? info.elapsedDistance : 0;
+    
+    // Цвет текста меняется на красный только при спуфинге
+    var txtColor = isSpoofing ? 0xFF0000 : 0xFFFFFF;
 
-        // Проверка наличия контента в ячейках (индексы 1-6)
-        var hasContent = false;
-        for (var i = 1; i <= 6; i++) { 
-            if (currentData.size() > i && currentData[i] != 0 && currentData[i] != null) { 
-                hasContent = true; 
-                break; 
-            } 
-        }
+    // Верхняя панель инфо
+    dc.setColor(0xAAAAAA, -1);
+    dc.drawText(midX, h * 0.06, Graphics.FONT_XTINY, (d / 1000.0).format("%.2f") + " km", 1|4);
+    dc.setColor(txtColor, -1); // Краснеет при спуфе
+    dc.drawText(midX, h * 0.17, Graphics.FONT_LARGE, formatTime(t), 1|4);
+    dc.setPenWidth(1); dc.drawLine(30, h * 0.24, w - 30, h * 0.24);
+    
+    drawPacesCounter(dc, w, h, paces);
+    drawMetersCounter(dc, w, h);
+    drawProgressArc(dc, w, h);
 
-        if (hasContent) {
-            var boxSize = 38, halfBox = 19, y_delta = 30; 
-            // Координаты 6 квадратов
-            var positions = [
-                [midX + halfBox, midY - boxSize - halfBox + y_delta], 
-                [midX - boxSize - halfBox, midY - halfBox + y_delta], 
-                [midX - halfBox, midY - halfBox + y_delta], 
-                [midX + halfBox, midY - halfBox + y_delta], 
-                [midX - 2*halfBox, midY + halfBox + y_delta], 
-                [midX, midY + halfBox + y_delta]
-            ];
+    // Проверка наличия контента в ячейках (индексы 1-6)
+    var hasContent = false;
+    for (var i = 1; i <= 6; i++) { 
+        if (currentData.size() > i && currentData[i] != 0 && currentData[i] != null) { 
+            hasContent = true; 
+            break; 
+        } 
+    }
 
-            for (var j = 0; j < 6; j++) {
-                var item = (currentData.size() > j + 1) ? currentData[j+1] : 0;
+    if (hasContent) {
+        var boxSize = 38, halfBox = 19, y_delta = 30; 
+        // Координаты 6 квадратов
+        var positions = [
+            [midX + halfBox, midY - boxSize - halfBox + y_delta], 
+            [midX - boxSize - halfBox, midY - halfBox + y_delta], 
+            [midX - halfBox, midY - halfBox + y_delta], 
+            [midX + halfBox, midY - halfBox + y_delta], 
+            [midX - 2*halfBox, midY + halfBox + y_delta], 
+            [midX, midY + halfBox + y_delta]
+        ];
+
+        for (var j = 0; j < 6; j++) {
+            var item = (currentData.size() > j + 1) ? currentData[j+1] : 0;
+            
+            if (item != 0 && item != null) {
+                var bx = positions[j][0], by = positions[j][1];
                 
-                if (item != 0 && item != null) {
-                    var bx = positions[j][0], by = positions[j][1];
-                    
-                    // Рисуем серую рамку (тонкую)
-                    dc.setColor(0xAAAAAA, -1); 
-                    dc.setPenWidth(1);
-                    dc.drawRectangle(bx, by, boxSize, boxSize);
+                // Рисуем серую рамку (тонкую)
+                dc.setColor(0xAAAAAA, -1); 
+                dc.setPenWidth(1);
+                dc.drawRectangle(bx, by, boxSize, boxSize);
 
-                    dc.setColor(0xFFFFFF, -1);
+                dc.setColor(txtColor, -1); // Краснеет при спуфе
 
-                    // ЛОГИКА ВЫБОРА: ИКОНКА ИЛИ ТЕКСТ
-                    if (item instanceof Toybox.Lang.Number) {
-                        // Если число — берем иконку из кастомного шрифта
-                        if (myFont != null) {
-                            dc.drawText(bx + halfBox, by + halfBox, myFont, (57345 + item).toChar().toString(), 1|4);
-                        }
-                    } else if (item instanceof Toybox.Lang.String) {
-                        // Если строка — берем только 1-й символ и рисуем системным шрифтом
-                        if (item.length() > 0) {
-                            var charToDraw = item.substring(0, 1);
-                            dc.drawText(bx + halfBox, by + halfBox, Graphics.FONT_LARGE, charToDraw, 1|4);
-                        }
+                // ЛОГИКА ВЫБОРА: ИКОНКА ИЛИ ТЕКСТ
+                if (item instanceof Toybox.Lang.Number) {
+                    // Используем myFont1/myFont2 как в остальном коде, или myFont если он один
+                    var fontToUse = (item < 90) ? myFont1 : myFont2;
+                    var finalID = (item < 90) ? (33 + item) : (33 + (item - 90));
+                    if (fontToUse != null) {
+                        dc.drawText(bx + halfBox, by + halfBox, fontToUse, finalID.toChar().toString(), 1|4);
+                    }
+                } else if (item instanceof Toybox.Lang.String) {
+                    if (item.length() > 0) {
+                        var charToDraw = item.substring(0, 1);
+                        dc.drawText(bx + halfBox, by + halfBox, Graphics.FONT_LARGE, charToDraw, 1|4);
                     }
                 }
             }
-            
-            // Отрисовка номера КП слева от сетки
-            var cpOffset = (w >= 280) ? cpOffsetEnduro : cpOffsetFenix;
-            var finalCpX = (w >= 280 && cpNumStr.length() > 2) ? midX - cpOffset - 40 : midX - cpOffset;
-            var shiftCorr = (w >= 280 && cpNumStr.length() > 2) ? 105 : ((w >= 280) ? 40 : (cpNumStr.length() > 2 ? 21 : 10));
-            
-            dc.setColor(0xFFFFFF, -1);
-            dc.drawText(finalCpX, positions[0][1] + halfBox - 20, Graphics.FONT_NUMBER_HOT, cpNumStr, 2|4); 
-            var cpWidth = dc.getTextWidthInPixels(cpNumStr, Graphics.FONT_NUMBER_HOT);
+        }
+        
+        // Отрисовка номера КП слева от сетки
+        var cpOffset = (w >= 280) ? cpOffsetEnduro : cpOffsetFenix;
+        var finalCpX = (w >= 280 && cpNumStr.length() > 2) ? midX - cpOffset - 40 : midX - cpOffset;
+        var shiftCorr = (w >= 280 && cpNumStr.length() > 2) ? 105 : ((w >= 280) ? 40 : (cpNumStr.length() > 2 ? 21 : 10));
+        
+        dc.setColor(txtColor, -1); // Краснеет при спуфе
+        dc.drawText(finalCpX, positions[0][1] + halfBox - 20, Graphics.FONT_NUMBER_HOT, cpNumStr, 2|4); 
+        var cpWidth = dc.getTextWidthInPixels(cpNumStr, Graphics.FONT_NUMBER_HOT);
 
-            if (currentData[0]>99) {
-
-                dc.drawText(finalCpX - cpWidth + shiftCorr-5, positions[0][1] + halfBox - 4, Graphics.FONT_LARGE, orderNumStr + ".", 2|4);
-            }
-            else {
-
-                if (w <= 218) {
-
-                dc.drawText(finalCpX - cpWidth + shiftCorr-15, positions[0][1] + halfBox - 4, Graphics.FONT_LARGE, orderNumStr + ".", 2|4);
-
-                }
-            
-            else {
-                dc.drawText(finalCpX - cpWidth + shiftCorr, positions[0][1] + halfBox - 4, Graphics.FONT_LARGE, orderNumStr + ".", 2|4);
-            }
-            } 
-
+        if (currentData[0] > 99) {
+            dc.drawText(finalCpX - cpWidth + shiftCorr - 5, positions[0][1] + halfBox - 4, Graphics.FONT_LARGE, orderNumStr + ".", 2|4);
         } else {
-            // --- СЦЕНАРИЙ 2: НЕТ ИКОНОК (БОЛЬШОЙ НОМЕР ПО ЦЕНТРУ) ---
-            dc.setColor(0xFFFFFF, -1);
-            dc.drawText(midX, midY - 19, Graphics.FONT_NUMBER_THAI_HOT, cpNumStr, 1|4);
-            var bigCpWidth = dc.getTextWidthInPixels(cpNumStr, Graphics.FONT_NUMBER_THAI_HOT);
-            
-            // Отрисовка порядкового номера (например, "81.")
-            if (currentData[0] > 99) {
-                dc.drawText(midX - (bigCpWidth / 2) - 45, midY - 4, Graphics.FONT_LARGE, orderNumStr + ".", 2|4);
+            if (w <= 218) {
+                if (currentData[0] > 9) {
+                     if (displayIdx > 9) {
+                            dc.drawText(finalCpX - cpWidth + shiftCorr - 15, positions[0][1] + halfBox - 4, Graphics.FONT_LARGE, orderNumStr + ".", 2|4);
+
+                        } 
+                        else{
+                            dc.drawText(finalCpX - cpWidth + shiftCorr - 5, positions[0][1] + halfBox - 4, Graphics.FONT_LARGE, orderNumStr + ".", 2|4);
+                        }
+                    }
+                else{
+                        if (displayIdx > 9) {
+                            dc.drawText(finalCpX - cpWidth + shiftCorr - 45, positions[0][1] + halfBox - 4, Graphics.FONT_LARGE, orderNumStr + ".", 2|4);
+                        } 
+                        else{
+                            dc.drawText(finalCpX - cpWidth + shiftCorr - 25, positions[0][1] + halfBox - 4, Graphics.FONT_LARGE, orderNumStr + ".", 2|4);
+                        }
+                    }
             } else {
-                dc.drawText(midX - (bigCpWidth / 2) - 40, midY - 4, Graphics.FONT_LARGE, orderNumStr + ".", 2|4);
+                if (currentData[0] > 9) {
+                    dc.drawText(finalCpX - cpWidth + shiftCorr, positions[0][1] + halfBox - 4, Graphics.FONT_LARGE, orderNumStr + ".", 2|4);
+                    }
+                else{
+                    if (displayIdx > 9) {
+                        dc.drawText(finalCpX - cpWidth + shiftCorr-45, positions[0][1] + halfBox - 4, Graphics.FONT_LARGE, orderNumStr + ".", 2|4);
+                        }
+                    else{
+                        dc.drawText(finalCpX - cpWidth + shiftCorr-30, positions[0][1] + halfBox - 4, Graphics.FONT_LARGE, orderNumStr + ".", 2|4);
+                    }
+                    
+                    }
             }
+        } 
 
-            // --- ВОЗВРАТ ПОДСКАЗКИ СЛЕДУЮЩЕГО КП ---
-            if (currentIndex + 1 < controlPoints.size()) {
-                dc.setColor(0xAAAAAA, -1); 
-                // Рисуем серый треугольник вниз
+    } else {
+        // --- СЦЕНАРИЙ 2: НЕТ ИКОНОК (БОЛЬШОЙ НОМЕР ПО ЦЕНТРУ) ---
+        dc.setColor(txtColor, -1); // Краснеет при спуфе
+        dc.drawText(midX, midY - 19, Graphics.FONT_NUMBER_THAI_HOT, cpNumStr, 1|4);
+        var bigCpWidth = dc.getTextWidthInPixels(cpNumStr, Graphics.FONT_NUMBER_THAI_HOT);
+        
+        // Отрисовка порядкового номера (например, "81.")
+        if (currentData[0] > 99) {
+            dc.drawText(midX - (bigCpWidth / 2) - 45, midY - 4, Graphics.FONT_LARGE, orderNumStr + ".", 2|4);
+        } else {
+            dc.drawText(midX - (bigCpWidth / 2) - 40, midY - 4, Graphics.FONT_LARGE, orderNumStr + ".", 2|4);
+        }
 
-                // Рисуем номер следующего КП серым цветом
-                if (w <= 218) {
+        // --- ВОЗВРАТ ПОДСКАЗКИ СЛЕДУЮЩЕГО КП ---
+        if (currentIndex + 1 < controlPoints.size()) {
+            dc.setColor(0xAAAAAA, -1); 
+            // Рисуем номер следующего КП серым цветом с твоими точными координатами
+            if (w <= 218) {
                 dc.fillPolygon([
-                    [midX - 6, midY + 38-5], 
-                    [midX + 6, midY + 38-5], 
-                    [midX, midY + 49-5]
+                    [midX - 6, midY + 38 - 5], 
+                    [midX + 6, midY + 38 - 5], 
+                    [midX, midY + 49 - 5]
                 ]);
                 dc.drawText(midX, midY + 68, Graphics.FONT_NUMBER_MEDIUM, controlPoints[currentIndex + 1][0].toString(), 1|4);
-                }
-                else {
+            } else {
                 dc.fillPolygon([
                     [midX - 6, midY + 38], 
                     [midX + 6, midY + 38], 
                     [midX, midY + 49]
-                    ]);
-                    dc.drawText(midX, midY + 85, Graphics.FONT_NUMBER_MEDIUM, controlPoints[currentIndex + 1][0].toString(), 1|4);
-                }
+                ]);
+                dc.drawText(midX, midY + 85, Graphics.FONT_NUMBER_MEDIUM, controlPoints[currentIndex + 1][0].toString(), 1|4);
             }
         }
-        drawUIElements(dc, w, h, midX, midY, pPause);
     }
+    drawUIElements(dc, w, h, midX, midY, pPause);
+}
 
-    // --- НАВИГАЦИЯ: БОЛЬШАЯ СТРЕЛКА ---
- // --- НАВИГАЦИЯ: БОЛЬШАЯ СТРЕЛКА С КОНТУРНЫМ ТЕКСТОМ ---
     function drawNavigation(dc, info, w, h, pPause, gpsS) {
         var cx = w / 2;
         var cy = h / 2;
-        
         var curLoc = (info != null) ? info.currentLocation : null;
-        
-        // Получаем направление (куда смотрят часы)
         var sInfo = Sensor.getInfo();
         var heading = (sInfo != null && sInfo.heading != null) ? sInfo.heading : (info != null && info.currentHeading != null ? info.currentHeading : lastHeading);
         lastHeading = heading;
@@ -417,8 +523,6 @@ function drawProgressArc(dc, w, h) {
         if (startLocation != null && curLoc != null) {
             var curDeg = curLoc.toDegrees();
             var stDeg = startLocation.toDegrees();
-
-            // 1. Расстояние по прямой (Haversine formula)
             var lat1 = Math.toRadians(curDeg[0]);
             var lon1 = Math.toRadians(curDeg[1]);
             var lat2 = Math.toRadians(stDeg[0]);
@@ -431,45 +535,32 @@ function drawProgressArc(dc, w, h) {
                     Math.cos(lat1) * Math.cos(lat2) *
                     Math.sin(dLon/2) * Math.sin(dLon/2);
             var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
-            directDist = 6371.0 * c; // Дистанция в км
+            directDist = 6371.0 * c;
 
-            // 2. Азимут на старт (Bearing)
             var yBearing = Math.sin(dLon) * Math.cos(lat2);
             var xBearing = Math.cos(lat1) * Math.sin(lat2) -
                            Math.sin(lat1) * Math.cos(lat2) * Math.cos(dLon);
             var bearing = Math.atan2(yBearing, xBearing);
-
-            // Итоговый угол стрелки относительно верха экрана
             arrowAngle = bearing - heading;
-        } else {
-            // Тестовые данные для симулятора
-            directDist = 1.45;
-            arrowAngle = 0.0; // Будет смотреть вверх
         }
 
-        // 3. Геометрия стрелки
         var padding = (w < 240) ? 12 : 8; 
         var rTip   = (w / 2) - padding;
         var rWings = (w / 2) - padding - 25; 
         var rInner = 35;
         var wingSpan = (w / 2) * 0.65; 
 
-        // Коррекция для системы координат Garmin (0 радиан = право, идем по часовой)
-        // Нам нужно 0 = Вверх, поэтому вычитаем PI/2
         var drawAngle = arrowAngle - (Math.PI / 2.0);
-
         var cosA = Math.cos(drawAngle);
         var sinA = Math.sin(drawAngle);
         var cosOrth = Math.cos(drawAngle + Math.PI/2.0);
         var sinOrth = Math.sin(drawAngle + Math.PI/2.0);
 
-        // Координаты точек (с учетом Y-вниз в dc)
         var pTip   = [cx + rTip * cosA, cy + rTip * sinA]; 
         var pWingL = [cx - rWings * cosA + wingSpan * cosOrth, cy - rWings * sinA + wingSpan * sinOrth];
         var pInner = [cx - rInner * cosA, cy - rInner * sinA];
         var pWingR = [cx - rWings * cosA - wingSpan * cosOrth, cy - rWings * sinA - wingSpan * sinOrth];
 
-        // 4. Отрисовка стрелки
         dc.setColor(0x00AAFF, -1);
         dc.fillPolygon([pTip, pWingL, pInner, pWingR]);
         
@@ -480,18 +571,17 @@ function drawProgressArc(dc, w, h) {
         dc.drawLine(pInner[0], pInner[1], pWingR[0], pWingR[1]);
         dc.drawLine(pWingR[0], pWingR[1], pTip[0], pTip[1]);
 
-        // 5. Текст с контуром
-        var distStr = (directDist < 1.0) ? (directDist * 1000).format("%d") + " m" : directDist.format("%.2f") + " km";
-        drawOutlineText(dc, cx, cy - 15, Graphics.FONT_XTINY, "BACK TO START", 0x000000, 0xFFFFFF);
-        drawOutlineText(dc, cx, cy + 15, Graphics.FONT_MEDIUM, distStr, 0x000000, 0xFFFFFF);
+        // Покраснение текста (одометр "домой" / расстояние)
+        var txtColor = isSpoofing ? 0xFF0000 : 0xFFFFFF;
+        var distStr = isSpoofing ? "GPS ERROR" : ((directDist < 1.0) ? (directDist * 1000).format("%d") + " m" : directDist.format("%.2f") + " km");
+        drawOutlineText(dc, cx, cy - 15, Graphics.FONT_XTINY, "BACK TO START", 0x000000, txtColor);
+        drawOutlineText(dc, cx, cy + 15, Graphics.FONT_MEDIUM, distStr, 0x000000, txtColor);
 
-        // 6. Доп. инфо
         drawGPSBottom(dc, info, w, gpsS);
         drawPacesCounter(dc, w, h, calculatePaces());
         drawMetersCounter(dc, w, h);
     }
 
-    // Вспомогательная функция для чистоты кода
     function drawOutlineText(dc, x, y, font, text, outColor, mainColor) {
         dc.setColor(outColor, -1);
         for (var dx = -2; dx <= 2; dx++) {
@@ -505,20 +595,10 @@ function drawProgressArc(dc, w, h) {
 
     function drawGPSBottom(dc, info, w, s) {
         var acc = (info != null && info.currentLocationAccuracy != null) ? info.currentLocationAccuracy : 0;
-        
-        // Если точность 0 или 1 (поиск или нет сигнала) — не рисуем ничего
-        if (acc <= 1) {
-            return;
-        }
-
-        // Цвета: [0-не исп, 1-не исп, 2-желтый, 3-желтый, 4-зеленый]
-        // Используем 0x00FF00 для зеленого и 0xFFFF00 для желтого
+        if (acc <= 1) { return; }
         var colors = [0x000000, 0x000000, 0xFFFF00, 0xFFFF00, 0x00FF00];
-        
         var x = (w / 2) - (s[0] / 2);
         dc.setColor(colors[acc], -1);
-        
-        // Рисуем увеличенные столбики
         dc.fillRectangle(x, s[5] + (s[1] - s[4]), s[3], s[4]);
         dc.fillRectangle(x + s[3] + ((s[0] - (s[3]*2) - s[2])/2), s[5], s[2], s[1]);
         dc.fillRectangle(x + s[0] - s[3], s[5] + (s[1] - s[4]), s[3], s[4]);
@@ -562,26 +642,59 @@ function drawProgressArc(dc, w, h) {
         return (h > 0) ? h.format("%d") + ":" + m.format("%02d") + ":" + s.format("%02d") : m.format("%02d") + ":" + s.format("%02d");
     }
 
-function loadSettings() {
-        controlPoints = [
-            // КП 31: Иконка 11, символ "%", Иконка 12, буква "A", Иконка 13, цифра "1"
-            [31, 179, 178, 177, 176, 175, 174], 
-            
-            // КП 131: Смешанные данные, 4-я ячейка "LongText" превратится в "L"
-            [131, 173, 172, 171, 170, 169, 168],
-            
-            // КП 100: Только буквы (легенда может быть текстовой)
-            [100, 178, 177, 176, 175, 174, "Y"],
-            
-            // КП 32: Обычные иконки
-            [32, 11, 12, 13, 14, 15, 16],
+    function loadSettings() {
 
-            // КП 100: Только буквы (легенда может быть текстовой)
-            [200, 0, 0, 0, 0, 0, 0],
-            
-            // КП 32: Обычные иконки
-            [41, 0, 0, 0, 0, 0, 0]
-        ];
+        controlPoints = [
+            [1, 0, 1, 2, 3, 4, 5],
+            [22, 90, 91, 92, 93, 94, 95],
+            [11, 0, 0, 0, 0, 0, 0],
+            [1, 0, 0, 0, 0, 0, 0],
+            [39, 0, 0, 0, 0, 0, 0], // Самые последние иконки
+                    // --- ШРИФТ 1 (myFont1): Иконки 0-89 ---
+        [100, 0, 1, 2, 3, 4, 5],
+        [2, 6, 7, 8, 9, 10, 11],
+        [3, 12, 13, 14, 15, 16, 17],
+        [4, 18, 19, 20, 21, 22, 23],
+        [5, 24, 25, 26, 27, 28, 29],
+        [6, 30, 31, 32, 33, 34, 35],
+        [37, 36, 37, 38, 39, 40, 41],
+        [8, 42, 43, 44, 45, 46, 47],
+        [49, 48, 49, 50, 51, 52, 53],
+        [10, 54, 55, 56, 57, 58, 59],
+        [11, 60, 61, 62, 63, 64, 65],
+        [12, 66, 67, 68, 69, 70, 71],
+        [13, 72, 73, 74, 75, 76, 77],
+        [14, 78, 79, 80, 81, 82, 83],
+        [15, 84, 85, 86, 87, 88, 89], // Последние иконки первого шрифта
+
+        [11, 0, 0, 0, 0, 0, 0],
+        [100, 0, 0, 0, 0, 0, 0],
+            [1, 0, 0, 0, 0, 0, 0],
+
+
+        // --- МОМЕНТ ПЕРЕКЛЮЧЕНИЯ (СМЕШАННЫЙ КП) ---
+        // Здесь первые 3 иконки из Font1, последние 3 из Font2
+        [100, 87, 88, 89, 90, 91, 92], 
+
+        // --- ШРИФТ 2 (myFont2): Иконки 90-179 ---
+        [17, 90, 91, 92, 93, 94, 95],
+        [18, 96, 97, 98, 99, 100, 101],
+        [19, 102, 103, 104, 105, 106, 107],
+        [20, 108, 109, 110, 111, 112, 113],
+        [21, 114, 115, 116, 117, 118, 119],
+        [22, 120, 121, 122, 123, 124, 125],
+        [23, 126, 127, 128, 129, 130, 131],
+        [24, 132, 133, 134, 135, 136, 137],
+        [25, 138, 139, 140, 141, 142, 143],
+        [26, 144, 145, 146, 147, 148, 149],
+        [27, 150, 151, 152, 153, 154, 155],
+        [28, 156, 157, 158, 159, 160, 161],
+        [29, 162, 163, 164, 165, 166, 167],
+        [30, 168, 169, 170, 171, 172, 173],
+        [31, 174, 175, 176, 177, 178, 179], // Самые последние иконки
+        
+             
+             ];
     }
 
     function changePage(dir) {
@@ -589,21 +702,17 @@ function loadSettings() {
         if (newID >= -2 && newID <= 1) { 
             pageID = newID; 
             stepsOffset = null; 
-            distanceOffset = null; // Сброс метров при смене страницы
+            distanceOffset = null; 
             WatchUi.requestUpdate(); 
         }
     }
 
-function scrollIcons(step) {
+    function scrollIcons(step) {
         var newIdx = currentIndex + step;
         var maxIdx = controlPoints.size() - 1;
-        
-        // ПРЕДОХРАНИТЕЛЬ: жесткий лимит на 99-й элемент (индекс 98)
         if (maxIdx > 98) { maxIdx = 98; }
-        
         if (newIdx < 0) { newIdx = 0; }
         if (newIdx > maxIdx) { newIdx = maxIdx; }
-        
         currentIndex = newIdx;
         WatchUi.requestUpdate();
     }
