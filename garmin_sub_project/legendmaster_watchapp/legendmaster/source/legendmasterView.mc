@@ -32,9 +32,13 @@ class legendmasterView extends WatchUi.View {
     var stepsOffset = null;
     var distanceOffset = null; // Базовая дистанция для счетчика метров
 
-    function initialize() { 
+function initialize() { 
         View.initialize(); 
         launchTime = System.getTimer();
+        
+        // Сразу фиксируем текущие шаги как точку отсчета
+        stepsOffset = getCurrentSteps(); 
+        
         loadSettings(); 
         Sensor.setEnabledSensors([Sensor.SENSOR_HEARTRATE]);
         updateTimer = new Timer.Timer();
@@ -59,12 +63,16 @@ class legendmasterView extends WatchUi.View {
         return (info != null && info.steps != null) ? info.steps : 0;
     }
 
-    function calculatePaces() {
+function calculatePaces() {
         var totalSteps = getCurrentSteps();
-        if (stepsOffset == null) { stepsOffset = totalSteps; }
+        // stepsOffset теперь всегда имеет значение (из initialize или сброса страниц)
+        if (stepsOffset == null) { stepsOffset = totalSteps; } 
+        
         var localSteps = totalSteps - stepsOffset;
         if (localSteps < 0) { localSteps = 0; }
+        
         var paces = localSteps / 2;
+        // Если дошли до 1000 пар (2000 шагов), сбрасываем в 0, чтобы не загромождать экран
         if (paces > 999) {
             stepsOffset = totalSteps;
             return 0;
@@ -153,6 +161,11 @@ function drawProgressArc(dc, w, h) {
     }
 
     function drawMetersCounter(dc, w, h) {
+        // Если старт не нажат — ничего не считаем и не рисуем
+        if (appState == 0) { 
+            distanceOffset = null; 
+            return; 
+        }
         var info = Activity.getActivityInfo();
         var totalDist = (info != null && info.elapsedDistance != null) ? info.elapsedDistance : 0.0;
         if (distanceOffset == null) { distanceOffset = totalDist; }
