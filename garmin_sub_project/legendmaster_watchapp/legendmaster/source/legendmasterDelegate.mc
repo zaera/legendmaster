@@ -11,8 +11,15 @@ class legendmasterDelegate extends WatchUi.BehaviorDelegate {
         view = v;
     }
 
-    // Обработка кнопки START/STOP (Верхняя правая)
+    // Вспомогательная проверка: заняты ли мы показом сообщения
+    function isBusy() {
+        return (view.msgTimer > 0);
+    }
+
+    // Обработка кнопки START/STOP
     function onSelect() {
+        if (isBusy()) { return true; }
+        
         var app = Application.getApp();
         if (view.appState == 0) { 
             app.session = ActivityRecording.createSession({:name=>"LegendRun", :sport=>ActivityRecording.SPORT_RUNNING});
@@ -29,15 +36,15 @@ class legendmasterDelegate extends WatchUi.BehaviorDelegate {
         return true;
     }
 
-    // Обработка кнопки BACK (Нижняя правая)
+    // Обработка кнопки BACK
     function onBack() {
-        // 1. Если мы на ГЛАВНОМ экране и старт НЕ нажат — ВЫХОД из программы
+        if (isBusy()) { return true; }
+
         if (view.pageID == 0 && view.appState == 0) {
             System.exit();
             return true;
         }
 
-        // 2. Если мы в меню ПАУЗЫ — СОХРАНИТЬ и ВЫЙТИ
         if (view.appState == 2) { 
             var app = Application.getApp();
             if (app.session != null) {
@@ -48,14 +55,14 @@ class legendmasterDelegate extends WatchUi.BehaviorDelegate {
             return true;
         }
 
-        // 3. Во всех остальных случаях (экран иконок, компас и т.д.) — листаем страницу НАЗАД
-        // На экране иконок (pageID 1) это вернет нас на главный экран (pageID 0)
         view.changePage(-1); 
         return true;
     }
 
-    // Обработка кнопки DOWN (Нижняя левая)
+    // Обработка кнопки DOWN
     function onNextPage() {
+        if (isBusy()) { return true; }
+
         if (view.appState == 2) { 
             var app = Application.getApp();
             if (app.session != null) {
@@ -70,8 +77,10 @@ class legendmasterDelegate extends WatchUi.BehaviorDelegate {
         return true;
     }
 
-    // Обработка кнопки UP (Средняя левая)
+    // Обработка кнопки UP
     function onPreviousPage() {
+        if (isBusy()) { return true; }
+        
         if (view.pageID == 1) { view.scrollIcons(-1); } else { view.changePage(-1); }
         return true;
     }

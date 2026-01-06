@@ -16,6 +16,8 @@ class legendmasterView extends WatchUi.View {
     var cpOffsetEnduro = 70;
     var cpOffsetFenix  = 50;
 
+    var msgTimer = 0; // Таймер для сообщения
+
     var pacesColorMain    = 0x000000; 
     var pacesColorOutline = 0xffffff; 
     // =======================================
@@ -59,6 +61,12 @@ class legendmasterView extends WatchUi.View {
         }
     }
 
+// function onDataReceived(newData) {
+//     controlPoints = newData; // Обновляем данные в памяти
+//     msgTimer = 8; // Ставим таймер (если экран обновляется 4 раза в сек, это 2 секунды)
+//     WatchUi.requestUpdate(); // Заставляем экран перерисоваться
+// }
+
 function onTimerUpdate() as Void { 
         // Мы оставляем только запрос на обновление экрана (4 раза в секунду),
         // чтобы навигация и время обновлялись плавно.
@@ -93,38 +101,6 @@ function onTimerUpdate() as Void {
     }
 
     function onUpdate(dc) {
-        // --- ЛОГИКА ОПРЕДЕЛЕНИЯ СПУФА (АКТИВНА ТОЛЬКО ПРИ appState == 1) ---
-        var info = Activity.getActivityInfo();
-        
-        if (appState == 1 && info != null && info.currentLocation != null) {
-            var curLoc = info.currentLocation.toDegrees();
-            if (lastValidLoc == null) {
-                lastValidLoc = curLoc;
-            } else {
-                // Вычисляем квадрат расстояния (упрощенно для экономии батареи)
-                var dLat = curLoc[0] - lastValidLoc[0];
-                var dLon = curLoc[1] - lastValidLoc[1];
-                var distSq = dLat*dLat + dLon*dLon;
-                
-                // Если "прыжок" > ~20км за период обновления или скорость > 60км/ч (16.6 м/с)
-                if (!isSpoofing && (distSq > 0.04 || (info.currentSpeed != null && info.currentSpeed > 16.6))) {
-                    isSpoofing = true;
-                } else if (isSpoofing && distSq < 0.04) {
-                    // Если вернулись в нормальный режим (прыжки прекратились)
-                    isSpoofing = false;
-                }
-                
-                // Обновляем последнюю валидную точку только если нет спуфинга
-                if (!isSpoofing) { 
-                    lastValidLoc = curLoc; 
-                }
-            }
-        } else if (appState == 0) {
-            // Пока старт не нажат — сбрасываем метку локации и спуфинг (если не работает автотест)
-            lastValidLoc = null;
-        }
-        // -------------------------------------------------------------------
-
         // Базовая очистка экрана
         dc.setColor(0x000000, 0x000000);
         dc.clear();
@@ -132,12 +108,61 @@ function onTimerUpdate() as Void {
         var w = dc.getWidth();
         var h = dc.getHeight();
 
+        // --- ЛОГИКА УВЕДОМЛЕНИЯ О ПРИЕМЕ ДАННЫХ ---
+        if (msgTimer > 0) {
+            msgTimer--; 
+            
+            var rectW = 200; // Ширина рамки
+            var rectH = 80;  // Высота рамки
+            var rectX = (w - rectW) / 2;
+            var rectY = (h - rectH) / 2;
+
+            // Рисуем черный фон подложки
+            dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
+            dc.fillRectangle(rectX, rectY, rectW, rectH);
+
+            // Рисуем зеленую рамку
+            dc.setColor(0x00FF00, -1); 
+            dc.setPenWidth(4); // Жирная рамка
+            dc.drawRectangle(rectX, rectY, rectW, rectH);
+
+            // Рисуем текст
+            dc.drawText(w/2, h/2, Graphics.FONT_MEDIUM, "Data received!", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+            
+            return; 
+        }
+
+        // --- ЛОГИКА ОПРЕДЕЛЕНИЯ СПУФА ---
+        var info = Activity.getActivityInfo();
+        if (appState == 1 && info != null && info.currentLocation != null) {
+            var curLoc = info.currentLocation.toDegrees();
+            if (lastValidLoc == null) {
+                lastValidLoc = curLoc;
+            } else {
+                var dLat = curLoc[0] - lastValidLoc[0];
+                var dLon = curLoc[1] - lastValidLoc[1];
+                var distSq = dLat*dLat + dLon*dLon;
+                
+                if (!isSpoofing && (distSq > 0.04 || (info.currentSpeed != null && info.currentSpeed > 16.6))) {
+                    isSpoofing = true;
+                } else if (isSpoofing && distSq < 0.04) {
+                    isSpoofing = false;
+                }
+                
+                if (!isSpoofing) { 
+                    lastValidLoc = curLoc; 
+                }
+            }
+        } else if (appState == 0) {
+            lastValidLoc = null;
+        }
+
         // Твои координаты элементов интерфейса
-        var posStart  = [55, h / 3.4];
-        var posPause  = [25, h / 3.4]; 
-        var posResume = [65, h / 3.4];
-        var posSave   = [55, h * 0.72];
-        var posDisc   = [80, h * 0.72];
+        var posStart    = [55, h / 3.4];
+        var posPause    = [25, h / 3.4]; 
+        var posResume   = [65, h / 3.4];
+        var posSave     = [55, h * 0.72];
+        var posDisc     = [80, h * 0.72];
         var gpsSettings = [36, 18, 6, 12, 8, h - 35];
         
         // Сплэш-скрин при запуске (2 секунды)
@@ -146,30 +171,33 @@ function onTimerUpdate() as Void {
             return; 
         }
 
-        // Фиксация точки старта при первом получении GPS после нажатия Start
+        // Фиксация точки старта
         if (appState == 1 && startLocation == null && info.currentLocation != null) {
             startLocation = info.currentLocation;
         }
 
-        // Отрисовка экранов в зависимости от состояния приложения и выбранной страницы
+        // Отрисовка экранов
         if (appState == 2) { 
-            // Экран Паузы
             stepsOffset = null; 
             distanceOffset = null; 
             drawPauseMenu(dc, info, w, h, posResume, posSave, posDisc); 
         } else if (pageID == -2) { 
-            // Экран Навигации (Назад к старту)
             drawNavigation(dc, info, w, h, posPause, gpsSettings); 
         } else if (pageID == -1) { 
-            // Экран Компаса
             drawCompass(dc, info, w, h, posPause); 
         } else if (pageID == 0) { 
-            // Главный экран (Таймер/Дистанция)
             drawMain(dc, info, w, h, posStart, posPause, gpsSettings); 
         } else if (pageID == 1) { 
-            // Экран Легенды (Иконки КП)
             drawIcons(dc, info, w, h, posPause); 
         }
+    }
+
+    // Добавь также этот метод внутрь класса View
+    function onDataReceived(newData) {
+        controlPoints = newData;
+        currentIndex = 0; // Сбрасываем на первое КП
+        msgTimer = 8;     // 8 тиков по 250мс = 2 секунды
+        WatchUi.requestUpdate();
     }
 
     function drawProgressArc(dc, w, h) {

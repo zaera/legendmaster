@@ -3,36 +3,42 @@ using Toybox.Position;
 using Toybox.ActivityRecording;
 using Toybox.WatchUi;
 using Toybox.Communications;
-using Toybox.Application.Storage;
 
 class legendmasterApp extends Application.AppBase {
     var session = null;
+    var mView = null; // Храним активную вьюху здесь
 
     function initialize() { 
         AppBase.initialize(); 
     }
 
-    // Обработчик сообщений от телефона (Android/iOS)
-// Указываем компилятору точные типы для соответствия API
-function onPhoneAppMessage(msg as Communications.PhoneAppMessage) as Void {
+    // Обработчик сообщений от телефона
+    function onPhoneAppMessage(msg as Communications.PhoneAppMessage) as Void {
         if (msg.data != null) {
-            var app = Application.getApp();
-            // Используем старый надежный метод setProperty для Fenix 3
-            // Он работает и на новых, и на старых часах одинаково
-            app.setProperty("cp_data", msg.data);
+            // 1. Сохраняем данные в постоянную память (setProperty)
+            // Это позволит данным выжить после закрытия приложения
+            Application.getApp().setProperty("cp_data", msg.data);
+            
+            // 2. Передаем данные напрямую в активную вьюху для мгновенного обновления
+            // Проверяем, что mView создана и в ней есть нужный метод
+            if (mView != null && mView has :onDataReceived) {
+                mView.onDataReceived(msg.data);
+            }
+            
+            // 3. Запрашиваем перерисовку интерфейса
             WatchUi.requestUpdate();
         }
     }
 
     function onStart(state) {
-        // Как в Hike2: включаем GPS в непрерывном режиме
+        // Включаем GPS в непрерывном режиме
         Position.enableLocationEvents(Position.LOCATION_CONTINUOUS, method(:onPosition));
         
-        // Регистрируем обработчик входящих сообщений от телефона
+        // Регистрируем обработчик входящих сообщений
         Communications.registerForPhoneAppMessages(method(:onPhoneAppMessage));
     }
 
-function onPosition(info as Position.Info) as Void {
+    function onPosition(info as Position.Info) as Void {
         WatchUi.requestUpdate();
     }
 
@@ -44,7 +50,8 @@ function onPosition(info as Position.Info) as Void {
     }
 
     function getInitialView() {
-        var view = new legendmasterView();
-        return [ view, new legendmasterDelegate(view) ];
+        // Создаем вьюху один раз и сохраняем ссылку в переменную класса
+        mView = new legendmasterView();
+        return [ mView, new legendmasterDelegate(mView) ];
     }
 }
