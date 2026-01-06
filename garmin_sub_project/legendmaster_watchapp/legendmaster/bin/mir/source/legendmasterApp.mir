@@ -6,138 +6,201 @@ using Toybox.Position;
 using Toybox.ActivityRecording;
 [ @file = "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterApp.mc"; @line = 4; @symbol_usingdef<0> = [Toybox,4,6,12]; @symbol_usingdef<1> = [WatchUi,4,13,20]; ]
 using Toybox.WatchUi;
-[ @file = "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterApp.mc"; @line = 6; @symbol_classdef = [legendmasterApp,6,6,21]; @symbol_extends<0> = [Application,6,30,41]; @symbol_extends<1> = [AppBase,6,42,49]; ]
+[ @file = "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterApp.mc"; @line = 5; @symbol_usingdef<0> = [Toybox,5,6,12]; @symbol_usingdef<1> = [Communications,5,13,27]; ]
+using Toybox.Communications;
+[ @file = "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterApp.mc"; @line = 6; @symbol_usingdef<0> = [Toybox,6,6,12]; @symbol_usingdef<1> = [Application,6,13,24]; @symbol_usingdef<2> = [Storage,6,25,32]; ]
+using Toybox.Application.Storage;
+[ @file = "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterApp.mc"; @line = 8; @symbol_classdef = [legendmasterApp,8,6,21]; @symbol_extends<0> = [Application,8,30,41]; @symbol_extends<1> = [AppBase,8,42,49]; ]
 class legendmasterApp extends Application.AppBase {
-    [ @file = "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterApp.mc"; @line = 6; ]
+    [ @file = "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterApp.mc"; @line = 8; ]
     <init> {
     }
-    [ @file = "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterApp.mc"; @line = 6; ]
+    [ @file = "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterApp.mc"; @line = 8; ]
     static
     <init> {
     }
-    [ @file = "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterApp.mc"; @line = 7; @position = 8; @symbol_vardef = [session,7,8,15]; ]
+    [ @file = "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterApp.mc"; @line = 9; @position = 8; @symbol_vardef = [session,9,8,15]; ]
     var session = null;
-    [ @file = "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterApp.mc"; @line = 9; @symbol_functiondef = [initialize,9,13,23]; ]
+    [ @file = "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterApp.mc"; @line = 11; @symbol_functiondef = [initialize,11,13,23]; ]
     function initialize() as Void {
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_9_26_9_50_start:
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterApp.mc" 9 28 ]
-        symbol [ AppBase %tmp.2 9 28 35 ];
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_11_26_13_4_start:
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterApp.mc" 12 8 ]
+        symbol [ AppBase %tmp.2 12 8 15 ];
         %tmp.2 = getv ? :AppBase;
-        symbol [ initialize %tmp.3 9 36 46 ];
+        symbol [ initialize %tmp.3 12 16 26 ];
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_9_26_9_50_stop:
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_11_26_13_4_stop:
     }
-    [ @file = "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterApp.mc"; @line = 11; @symbol_functiondef = [onStart,11,13,20]; @symbol_param<0> = [state,11,21,26]; ]
+    [ @file = "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterApp.mc"; @line = 17; @symbol_functiondef = [onPhoneAppMessage,17,9,26]; @symbol_param<0> = [msg,17,27,30]; @symbol_param<0>_type<0> = [Communications,17,34,48]; @symbol_param<0>_type<1> = [PhoneAppMessage,17,49,64]; ]
+    function onPhoneAppMessage(msg as Communications.PhoneAppMessage) as Void {
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_17_74_25_4_start:
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterApp.mc" 18 8 ]
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_18_8_24_8_if_stmt:
+        %tmp.1 = lgetv %msg;
+        symbol [ msg %tmp.1 18 12 15 ];
+        symbol [ data %tmp.2 18 16 20 ];
+        %tmp.2 = getv %tmp.1 :data;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_18_8_24_8_if_end;
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_18_8_24_8_if_true:
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_18_30_24_8_start:
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterApp.mc" 19 12 ]
+        [ "C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_18_30_24_8_start" "C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_18_30_24_8_stop" ]
+        %app.1 = local;
+        symbol [ app %app.1 19 16 19 ];
+        symbol [ Application %tmp.5 19 22 33 ];
+        %tmp.5 = getm $.Toybox.Application;
+        symbol [ getApp %tmp.6 19 34 40 ];
+        %tmp.6 = getv function %tmp.5 :getApp;
+        %tmp.7 = invoke %tmp.5 %tmp.6();
+        lputv %app.1 %tmp.7;
+        symbol [ app %app.1 19 16 19 ];
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterApp.mc" 22 12 ]
+        %tmp.8 = lgetv %app.1;
+        symbol [ app %tmp.8 22 12 15 ];
+        symbol [ setProperty %tmp.9 22 16 27 ];
+        %tmp.9 = getv function %tmp.8 :setProperty;
+        %tmp.10 = "cp_data";
+        %tmp.11 = lgetv %msg;
+        symbol [ msg %tmp.11 22 39 42 ];
+        symbol [ data %tmp.12 22 43 47 ];
+        %tmp.12 = getv %tmp.11 :data;
+        invoke %tmp.8 %tmp.9(%tmp.10, %tmp.12);
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterApp.mc" 23 12 ]
+        symbol [ WatchUi %tmp.13 23 12 19 ];
+        %tmp.13 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.14 23 20 33 ];
+        %tmp.14 = getv function %tmp.13 :requestUpdate;
+        invoke %tmp.13 %tmp.14();
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_18_30_24_8_stop:
+        goto @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_18_8_24_8_if_end;
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_18_8_24_8_if_end:
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_17_74_25_4_stop:
+    }
+    [ @file = "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterApp.mc"; @line = 27; @symbol_functiondef = [onStart,27,13,20]; @symbol_param<0> = [state,27,21,26]; ]
     function onStart(state) {
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_11_28_14_4_start:
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterApp.mc" 13 8 ]
-        symbol [ Position %tmp.1 13 8 16 ];
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_27_28_33_4_start:
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterApp.mc" 29 8 ]
+        symbol [ Position %tmp.1 29 8 16 ];
         %tmp.1 = getm $.Toybox.Position;
-        symbol [ enableLocationEvents %tmp.2 13 17 37 ];
+        symbol [ enableLocationEvents %tmp.2 29 17 37 ];
         %tmp.2 = getv function %tmp.1 :enableLocationEvents;
-        symbol [ Position %tmp.3 13 38 46 ];
+        symbol [ Position %tmp.3 29 38 46 ];
         %tmp.3 = getm $.Toybox.Position;
-        symbol [ LOCATION_CONTINUOUS %tmp.4 13 47 66 ];
+        symbol [ LOCATION_CONTINUOUS %tmp.4 29 47 66 ];
         %tmp.4 = getv %tmp.3 :LOCATION_CONTINUOUS;
         %tmp.5 = self;
-        symbol [ method %tmp.6 13 68 74 ];
+        symbol [ method %tmp.6 29 68 74 ];
         %tmp.6 = getv function %tmp.5 :method;
         %tmp.8 = const :onPosition;
-        symbol [ onPosition %tmp.8 13 76 86 const ];
+        symbol [ onPosition %tmp.8 29 76 86 const ];
         %tmp.9 = invoke %tmp.5 %tmp.6(%tmp.8);
         invoke %tmp.1 %tmp.2(%tmp.4, %tmp.9);
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_11_28_14_4_stop:
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterApp.mc" 32 8 ]
+        symbol [ Communications %tmp.10 32 8 22 ];
+        %tmp.10 = getm $.Toybox.Communications;
+        symbol [ registerForPhoneAppMessages %tmp.11 32 23 50 ];
+        %tmp.11 = getv function %tmp.10 :registerForPhoneAppMessages;
+        %tmp.12 = self;
+        symbol [ method %tmp.13 32 51 57 ];
+        %tmp.13 = getv function %tmp.12 :method;
+        %tmp.15 = const :onPhoneAppMessage;
+        symbol [ onPhoneAppMessage %tmp.15 32 59 76 const ];
+        %tmp.16 = invoke %tmp.12 %tmp.13(%tmp.15);
+        invoke %tmp.10 %tmp.11(%tmp.16);
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_27_28_33_4_stop:
     }
-    [ @file = "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterApp.mc"; @line = 16; @symbol_functiondef = [onPosition,16,13,23]; @symbol_param<0> = [info,16,24,28]; @symbol_param<0>_type<0> = [Position,16,32,40]; @symbol_param<0>_type<1> = [Info,16,41,45]; ]
+    [ @file = "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterApp.mc"; @line = 35; @symbol_functiondef = [onPosition,35,9,19]; @symbol_param<0> = [info,35,20,24]; @symbol_param<0>_type<0> = [Position,35,28,36]; @symbol_param<0>_type<1> = [Info,35,37,41]; ]
     function onPosition(info as Position.Info) as Void {
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_16_55_18_4_start:
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterApp.mc" 17 8 ]
-        symbol [ WatchUi %tmp.1 17 8 15 ];
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_35_51_37_4_start:
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterApp.mc" 36 8 ]
+        symbol [ WatchUi %tmp.1 36 8 15 ];
         %tmp.1 = getm $.Toybox.WatchUi;
-        symbol [ requestUpdate %tmp.2 17 16 29 ];
+        symbol [ requestUpdate %tmp.2 36 16 29 ];
         %tmp.2 = getv function %tmp.1 :requestUpdate;
         invoke %tmp.1 %tmp.2();
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_16_55_18_4_stop:
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_35_51_37_4_stop:
     }
-    [ @file = "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterApp.mc"; @line = 20; @symbol_functiondef = [onStop,20,13,19]; @symbol_param<0> = [state,20,20,25]; ]
+    [ @file = "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterApp.mc"; @line = 39; @symbol_functiondef = [onStop,39,13,19]; @symbol_param<0> = [state,39,20,25]; ]
     function onStop(state) {
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_20_27_23_4_start:
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterApp.mc" 21 8 ]
-        symbol [ Position %tmp.1 21 8 16 ];
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_39_27_44_4_start:
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterApp.mc" 40 8 ]
+        symbol [ Position %tmp.1 40 8 16 ];
         %tmp.1 = getm $.Toybox.Position;
-        symbol [ enableLocationEvents %tmp.2 21 17 37 ];
+        symbol [ enableLocationEvents %tmp.2 40 17 37 ];
         %tmp.2 = getv function %tmp.1 :enableLocationEvents;
-        symbol [ Position %tmp.3 21 38 46 ];
+        symbol [ Position %tmp.3 40 38 46 ];
         %tmp.3 = getm $.Toybox.Position;
-        symbol [ LOCATION_DISABLE %tmp.4 21 47 63 ];
+        symbol [ LOCATION_DISABLE %tmp.4 40 47 63 ];
         %tmp.4 = getv %tmp.3 :LOCATION_DISABLE;
         %tmp.5 = self;
-        symbol [ method %tmp.6 21 65 71 ];
+        symbol [ method %tmp.6 40 65 71 ];
         %tmp.6 = getv function %tmp.5 :method;
         %tmp.8 = const :onPosition;
-        symbol [ onPosition %tmp.8 21 73 83 const ];
+        symbol [ onPosition %tmp.8 40 73 83 const ];
         %tmp.9 = invoke %tmp.5 %tmp.6(%tmp.8);
         invoke %tmp.1 %tmp.2(%tmp.4, %tmp.9);
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterApp.mc" 22 8 ]
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_22_8_22_72_if_stmt:
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_22_12_22_51_begin:
-        symbol [ session %tmp.11 22 12 19 ];
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterApp.mc" 41 8 ]
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_41_8_43_8_if_stmt:
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_41_12_41_51_begin:
+        symbol [ session %tmp.11 41 12 19 ];
         %tmp.11 = getv ? :session;
         %tmp.12 = null;
         %tmp.13 = ne %tmp.11 %tmp.12;
-        bf %tmp.13 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_22_8_22_72_if_end;
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_22_31_22_51_true:
-        symbol [ session %tmp.15 22 31 38 ];
+        bf %tmp.13 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_41_8_43_8_if_end;
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_41_31_41_51_true:
+        symbol [ session %tmp.15 41 31 38 ];
         %tmp.15 = getv ? :session;
         %tmp.16 = as %tmp.15 { (!Null) };
-        symbol [ isRecording %tmp.17 22 39 50 ];
+        symbol [ isRecording %tmp.17 41 39 50 ];
         %tmp.17 = getv function %tmp.16 :isRecording;
         %tmp.18 = invoke %tmp.16 %tmp.17();
         push %tmp.18;
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_22_31_22_51_end:
-        %tmp.19 = phi [%tmp.13 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_22_12_22_51_begin] [%tmp.18 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_22_31_22_51_true] [%tmp.19 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_22_31_22_51_end];
-        bf %tmp.19 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_22_8_22_72_if_end;
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_22_8_22_72_if_true:
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_22_54_22_72_start:
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterApp.mc" 22 56 ]
-        symbol [ session %tmp.21 22 56 63 ];
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_41_31_41_51_end:
+        %tmp.19 = phi [%tmp.13 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_41_12_41_51_begin] [%tmp.18 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_41_31_41_51_true] [%tmp.19 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_41_31_41_51_end];
+        bf %tmp.19 @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_41_8_43_8_if_end;
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_41_8_43_8_if_true:
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_41_54_43_8_start:
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterApp.mc" 42 12 ]
+        symbol [ session %tmp.21 42 12 19 ];
         %tmp.21 = getv ? :session;
-        symbol [ stop %tmp.22 22 64 68 ];
+        symbol [ stop %tmp.22 42 20 24 ];
         %tmp.22 = getv function %tmp.21 :stop;
         invoke %tmp.21 %tmp.22();
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_22_54_22_72_stop:
-        goto @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_22_8_22_72_if_end;
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_22_8_22_72_if_end:
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_20_27_23_4_stop:
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_41_54_43_8_stop:
+        goto @C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_41_8_43_8_if_end;
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_41_8_43_8_if_end:
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_39_27_44_4_stop:
     }
-    [ @file = "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterApp.mc"; @line = 25; @symbol_functiondef = [getInitialView,25,13,27]; ]
+    [ @file = "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterApp.mc"; @line = 46; @symbol_functiondef = [getInitialView,46,13,27]; ]
     function getInitialView() {
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_25_30_28_4_start:
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterApp.mc" 26 8 ]
-        [ "C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_25_30_28_4_start" "C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_25_30_28_4_stop" ]
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_46_30_49_4_start:
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterApp.mc" 47 8 ]
+        [ "C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_46_30_49_4_start" "C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_46_30_49_4_stop" ]
         %view.1 = local;
-        symbol [ view %view.1 26 12 16 ];
-        symbol [ legendmasterView %tmp.4 26 23 39 ];
+        symbol [ view %view.1 47 12 16 ];
+        symbol [ legendmasterView %tmp.4 47 23 39 ];
         %tmp.4 = getv ? :legendmasterView;
         %tmp.1 = newc %tmp.4 ();
         lputv %view.1 %tmp.1;
-        symbol [ view %view.1 26 12 16 ];
-[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterApp.mc" 27 8 ]
+        symbol [ view %view.1 47 12 16 ];
+[ "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterApp.mc" 48 8 ]
         %tmp.5 = newa 2;
         %tmp.6 = lgetv %view.1;
-        symbol [ view %tmp.6 27 17 21 ];
+        symbol [ view %tmp.6 48 17 21 ];
         %tmp.7 = dup %tmp.5;
         %tmp.8 = aputv %tmp.7 0 %tmp.6;
-        symbol [ legendmasterDelegate %tmp.12 27 27 47 ];
+        symbol [ legendmasterDelegate %tmp.12 48 27 47 ];
         %tmp.12 = getv ? :legendmasterDelegate;
         %tmp.13 = lgetv %view.1;
-        symbol [ view %tmp.13 27 48 52 ];
+        symbol [ view %tmp.13 48 48 52 ];
         %tmp.9 = newc %tmp.12 (%tmp.13);
         %tmp.14 = dup %tmp.8;
         %tmp.15 = aputv %tmp.14 1 %tmp.9;
         ret %tmp.15;
-C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_25_30_28_4_stop:
+C__Users_punishman_Documents_GitHub_legendmaster_garmin_sub_project_legendmaster_watchapp_legendmaster_source_legendmasterApp_mc_46_30_49_4_stop:
     }
 }
 [ @file = "C:\Users\punishman\Documents\GitHub\legendmaster\garmin_sub_project\legendmaster_watchapp\legendmaster\source\legendmasterApp.mc"; @line = 1; ]
