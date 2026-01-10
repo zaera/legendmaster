@@ -50,6 +50,10 @@ class legendmasterView extends WatchUi.View {
         updateTimer = new Timer.Timer();
         updateTimer.start(method(:onTimerUpdate), 250, true);
     }
+    // Добавь это строго в таком виде:
+    function onSensor(sensorData as Sensor.SensorData) as Void {
+        // Оставляем пустым, это нужно только для поддержания активности сенсоров
+    }
 
     function onLayout(dc) { 
         try { 
@@ -287,43 +291,91 @@ function onTimerUpdate() as Void {
     }
 
     function drawCompass(dc, info, w, h, pPause) {
-        var paces = calculatePaces();
-        var ringWidth = 30; var arrowW = 20; var arrowL = (w / 2) - 40; 
-        var cx = w / 2; var cy = h / 2;
-        var sInfo = Sensor.getInfo();
-        var heading = (sInfo != null && sInfo.heading != null) ? sInfo.heading : ((info != null && info.currentHeading != null) ? info.currentHeading : lastHeading);
-        lastHeading = heading;
-        var sectorColors = [0xFF0000, 0xFFFF00, 0x00FF00, 0x000000, 0x0000FF, 0xFFFFFF, 0x00FFFF, 0xFFAA00, 0xAA00FF, 0xAAAAAA, 0x00AA00, 0xAA0000, 0x0000AA, 0x00aaff, 0xff5500, 0x550055];
-        for (var i = 0; i < 16; i++) {
-            dc.setColor(sectorColors[i], -1);
-            var angleDeg = (i * 22.5).toFloat();
-            dc.setPenWidth(ringWidth);
-            dc.drawArc(cx, cy, (w/2)-(ringWidth/2), Graphics.ARC_CLOCKWISE, 90-angleDeg, 90-angleDeg-22.5);
-            if (i % 2 != 0) {
-                var charIndex = (i - 1) / 2; var textColor = 0x000000;
-                if (i == 3) { textColor = 0xAAAAAA; } else if (i == 11 || i == 15) { textColor = 0xFFFFFF; }
-                dc.setColor(textColor, -1);
-                var midAngleRad = (90 - angleDeg - 11.25) * (Math.PI / 180.0);
-                var dist = (w / 2.0) - (ringWidth / 2.0);
-                dc.drawText(cx + dist * Math.cos(midAngleRad), cy - dist * Math.sin(midAngleRad), Graphics.FONT_TINY, (65 + charIndex).toChar().toString(), 1|4);
-            }
-        }
-        var sAngle = -heading - (Math.PI / 2.0); 
-        var cosA = Math.cos(sAngle); var sinA = Math.sin(sAngle);
-        var cosOrth = Math.cos(sAngle + Math.PI / 2.0); var sinOrth = Math.sin(sAngle + Math.PI / 2.0);
-        var p1 = [cx + cosOrth * (arrowW / 2), cy + sinOrth * (arrowW / 2)];
-        var p2 = [cx - cosOrth * (arrowW / 2), cy - sinOrth * (arrowW / 2)];
-        dc.setColor(0xFF0000, -1);
-        dc.fillPolygon([p1, p2, [p2[0] + cosA * arrowL, p2[1] + sinA * arrowL], [p1[0] + cosA * arrowL, p1[1] + sinA * arrowL]]);
-        dc.setColor(0xFFFFFF, -1); dc.setPenWidth(2);
-        var p5 = [p2[0] - cosA * arrowL, p2[1] - sinA * arrowL];
-        var p6 = [p1[0] - cosA * arrowL, p1[1] - sinA * arrowL];
-        dc.drawLine(p1[0], p1[1], p6[0], p6[1]); dc.drawLine(p2[0], p2[1], p5[0], p5[1]); dc.drawLine(p5[0], p5[1], p6[0], p6[1]);
-        
-        drawPacesCounter(dc, w, h, paces);
-        drawMetersCounter(dc, w, h);
-        if (appState == 1) { drawPauseSymbol(dc, w, h, pPause); }
+    var paces = calculatePaces();
+    var ringWidth = 30; 
+    var arrowW = 20; 
+    var arrowL = (w / 2) - 40; 
+    var cx = w / 2; 
+    var cy = h / 2;
+    
+    // 1. ПОЛУЧЕНИЕ НАПРАВЛЕНИЯ (HEADING)
+    var sInfo = Sensor.getInfo();
+    var curHeading = null;
+
+    // Сначала пробуем самый точный источник - магнитный компас
+    if (sInfo != null && sInfo.heading != null) {
+        curHeading = sInfo.heading;
+    } 
+    // Если компас спит, пробуем направление движения из GPS
+    else if (info != null && info.currentHeading != null) {
+        curHeading = info.currentHeading;
     }
+
+    // Если данные получены - обновляем, если нет - держим последнее известное значение
+    if (curHeading != null) {
+        lastHeading = curHeading;
+    }
+    var heading = lastHeading;
+
+    // 2. ОТРИСОВКА ЦВЕТНОГО КОЛЬЦА
+    var sectorColors = [0xFF0000, 0xFFFF00, 0x00FF00, 0x000000, 0x0000FF, 0xFFFFFF, 0x00FFFF, 0xFFAA00, 0xAA00FF, 0xAAAAAA, 0x00AA00, 0xAA0000, 0x0000AA, 0x00aaff, 0xff5500, 0x550055];
+    
+    for (var i = 0; i < 16; i++) {
+        dc.setColor(sectorColors[i], -1);
+        var angleDeg = (i * 22.5).toFloat();
+        dc.setPenWidth(ringWidth);
+        // Рисуем дугу сектора
+        dc.drawArc(cx, cy, (w/2)-(ringWidth/2), Graphics.ARC_CLOCKWISE, 90-angleDeg, 90-angleDeg-22.5);
+        
+        // Рисуем буквы/метки в секторах (каждый второй)
+        if (i % 2 != 0) {
+            var charIndex = (i - 1) / 2; 
+            var textColor = 0x000000;
+            // Улучшение читаемости на темных секторах
+            if (i == 3) { textColor = 0xAAAAAA; } 
+            else if (i == 11 || i == 15) { textColor = 0xFFFFFF; }
+            
+            dc.setColor(textColor, -1);
+            var midAngleRad = (90 - angleDeg - 11.25) * (Math.PI / 180.0);
+            var dist = (w / 2.0) - (ringWidth / 2.0);
+            dc.drawText(cx + dist * Math.cos(midAngleRad), cy - dist * Math.sin(midAngleRad), Graphics.FONT_TINY, (65 + charIndex).toChar().toString(), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        }
+    }
+
+    // 3. ОТРИСОВКА СТРЕЛКИ (С УЧЕТОМ Heading)
+    var sAngle = -heading - (Math.PI / 2.0); 
+    var cosA = Math.cos(sAngle); 
+    var sinA = Math.sin(sAngle);
+    var cosOrth = Math.cos(sAngle + Math.PI / 2.0); 
+    var sinOrth = Math.sin(sAngle + Math.PI / 2.0);
+
+    // Точки передней части (красный полигон)
+    var p1 = [cx + cosOrth * (arrowW / 2), cy + sinOrth * (arrowW / 2)];
+    var p2 = [cx - cosOrth * (arrowW / 2), cy - sinOrth * (arrowW / 2)];
+    var p3 = [p2[0] + cosA * arrowL, p2[1] + sinA * arrowL];
+    var p4 = [p1[0] + cosA * arrowL, p1[1] + sinA * arrowL];
+
+    dc.setColor(0xFF0000, -1);
+    dc.fillPolygon([p1, p2, p3, p4]);
+
+    // Точки задней части (белый контур)
+    dc.setColor(0xFFFFFF, -1); 
+    dc.setPenWidth(2);
+    var p5 = [p2[0] - cosA * arrowL, p2[1] - sinA * arrowL];
+    var p6 = [p1[0] - cosA * arrowL, p1[1] - sinA * arrowL];
+    
+    dc.drawLine(p1[0], p1[1], p6[0], p6[1]); 
+    dc.drawLine(p2[0], p2[1], p5[0], p5[1]); 
+    dc.drawLine(p5[0], p5[1], p6[0], p6[1]);
+    
+    // 4. ДОПОЛНИТЕЛЬНЫЕ ЭЛЕМЕНТЫ
+    drawPacesCounter(dc, w, h, paces);
+    drawMetersCounter(dc, w, h);
+    
+    if (appState == 1) { 
+        drawPauseSymbol(dc, w, h, pPause); 
+    }
+}
 
     function drawMain(dc, info, w, h, pStart, pPause, gpsS) {
         var paces = calculatePaces();
