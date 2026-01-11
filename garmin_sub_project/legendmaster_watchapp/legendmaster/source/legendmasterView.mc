@@ -35,23 +35,52 @@ class legendmasterView extends WatchUi.View {
     var launchTime;
     var appState = 0; 
     var controlPoints = []; 
-    var updateTimer as Timer.Timer?;
+    var updateTimer; 
     var startLocation = null;
     var lastHeading = 0.0;
     var stepsOffset = null;
     var distanceOffset = null; 
+
+    function resetSpoof() {
+        isSpoofing = false;
+        lastValidLoc = null;
+        WatchUi.requestUpdate();
+    }
+
+    function startSession() {
+        if (appState == 0) {
+            appState = 1;
+            WatchUi.requestUpdate();
+        }
+    }
+
+    function exitApp() {
+        System.exit();
+    }
 
     function initialize() { 
         View.initialize(); 
         launchTime = System.getTimer();
         stepsOffset = getCurrentSteps(); 
         loadSettings(); 
-        Sensor.setEnabledSensors([Sensor.SENSOR_HEARTRATE]);
+        
+        if (Sensor has :setEnabledSensors) {
+            Sensor.setEnabledSensors([Sensor.SENSOR_HEARTRATE]);
+        }
+        
         updateTimer = new Timer.Timer();
         updateTimer.start(method(:onTimerUpdate), 250, true);
+
+        if (Sensor has :registerSensorDataListener) {
+            try {
+                Sensor.registerSensorDataListener(method(:onSensor), { :period => 1 });
+            } catch(ex) {
+                System.println("Sensor listener not supported");
+            }
+        }
     }
-    // Добавь это строго в таком виде:
-    function onSensor(sensorData as Sensor.SensorData) as Void {
+
+    function onSensor(sensorData as Toybox.Sensor.SensorData) as Void {
         // Оставляем пустым, это нужно только для поддержания активности сенсоров
     }
 
@@ -65,15 +94,7 @@ class legendmasterView extends WatchUi.View {
         }
     }
 
-// function onDataReceived(newData) {
-//     controlPoints = newData; // Обновляем данные в памяти
-//     msgTimer = 8; // Ставим таймер (если экран обновляется 4 раза в сек, это 2 секунды)
-//     WatchUi.requestUpdate(); // Заставляем экран перерисоваться
-// }
-
-function onTimerUpdate() as Void { 
-        // Мы оставляем только запрос на обновление экрана (4 раза в секунду),
-        // чтобы навигация и время обновлялись плавно.
+    function onTimerUpdate() as Void { 
         WatchUi.requestUpdate(); 
     }
 
@@ -105,63 +126,12 @@ function onTimerUpdate() as Void {
     }
 
     function onUpdate(dc) {
-        // Базовая очистка экрана
         dc.setColor(0x000000, 0x000000);
         dc.clear();
         
         var w = dc.getWidth();
         var h = dc.getHeight();
 
-        // --- ЛОГИКА УВЕДОМЛЕНИЯ О ПРИЕМЕ ДАННЫХ ---
-        if (msgTimer > 0) {
-            msgTimer--; 
-            
-            var rectW = 200; // Ширина рамки
-            var rectH = 80;  // Высота рамки
-            var rectX = (w - rectW) / 2;
-            var rectY = (h - rectH) / 2;
-
-            // Рисуем черный фон подложки
-            dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
-            dc.fillRectangle(rectX, rectY, rectW, rectH);
-
-            // Рисуем зеленую рамку
-            dc.setColor(0x00FF00, -1); 
-            dc.setPenWidth(4); // Жирная рамка
-            dc.drawRectangle(rectX, rectY, rectW, rectH);
-
-            // Рисуем текст
-            dc.drawText(w/2, h/2, Graphics.FONT_MEDIUM, "Data received!", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-            
-            return; 
-        }
-
-        // --- ЛОГИКА ОПРЕДЕЛЕНИЯ СПУФА ---
-        var info = Activity.getActivityInfo();
-        if (appState == 1 && info != null && info.currentLocation != null) {
-            var curLoc = info.currentLocation.toDegrees();
-            if (lastValidLoc == null) {
-                lastValidLoc = curLoc;
-            } else {
-                var dLat = curLoc[0] - lastValidLoc[0];
-                var dLon = curLoc[1] - lastValidLoc[1];
-                var distSq = dLat*dLat + dLon*dLon;
-                
-                if (!isSpoofing && (distSq > 0.04 || (info.currentSpeed != null && info.currentSpeed > 16.6))) {
-                    isSpoofing = true;
-                } else if (isSpoofing && distSq < 0.04) {
-                    isSpoofing = false;
-                }
-                
-                if (!isSpoofing) { 
-                    lastValidLoc = curLoc; 
-                }
-            }
-        } else if (appState == 0) {
-            lastValidLoc = null;
-        }
-
-        // Твои координаты элементов интерфейса
         var posStart    = [55, h / 3.4];
         var posPause    = [25, h / 3.4]; 
         var posResume   = [65, h / 3.4];
@@ -169,38 +139,68 @@ function onTimerUpdate() as Void {
         var posDisc     = [80, h * 0.72];
         var gpsSettings = [36, 18, 6, 12, 8, h - 35];
         
-        // Сплэш-скрин при запуске (2 секунды)
+        var settings = System.getDeviceSettings();
+        var hasTouch = (settings has :isTouchScreen) ? settings.isTouchScreen : false;
+
+        if (msgTimer > 0) {
+            msgTimer--; 
+            var rectW = 200; var rectH = 80;
+            var rectX = (w - rectW) / 2; var rectY = (h - rectH) / 2;
+            dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
+            dc.fillRectangle(rectX, rectY, rectW, rectH);
+            dc.setColor(0x00FF00, -1); 
+            dc.setPenWidth(4);
+            dc.drawRectangle(rectX, rectY, rectW, rectH);
+            dc.drawText(w/2, h/2, Graphics.FONT_MEDIUM, "Data received!", 1|4);
+            return; 
+        }
+
+        var info = Activity.getActivityInfo();
+        if (appState == 1 && info != null && info.currentLocation != null) {
+            var curLoc = info.currentLocation.toDegrees();
+            if (lastValidLoc == null) { lastValidLoc = curLoc; } 
+            else {
+                var dLat = curLoc[0] - lastValidLoc[0];
+                var dLon = curLoc[1] - lastValidLoc[1];
+                var distSq = dLat*dLat + dLon*dLon;
+                if (!isSpoofing && (distSq > 0.04 || (info.currentSpeed != null && info.currentSpeed > 16.6))) {
+                    isSpoofing = true;
+                } else if (isSpoofing && distSq < 0.04) {
+                    isSpoofing = false;
+                }
+                if (!isSpoofing) { lastValidLoc = curLoc; }
+            }
+        } else if (appState == 0) {
+            lastValidLoc = null;
+        }
+
         if (System.getTimer() - launchTime < 2000) { 
             drawSplashScreen(dc, w, h); 
             return; 
         }
 
-        // Фиксация точки старта
         if (appState == 1 && startLocation == null && info.currentLocation != null) {
             startLocation = info.currentLocation;
         }
 
-        // Отрисовка экранов
         if (appState == 2) { 
-            stepsOffset = null; 
-            distanceOffset = null; 
+            stepsOffset = null; distanceOffset = null; 
             drawPauseMenu(dc, info, w, h, posResume, posSave, posDisc); 
         } else if (pageID == -2) { 
             drawNavigation(dc, info, w, h, posPause, gpsSettings); 
         } else if (pageID == -1) { 
             drawCompass(dc, info, w, h, posPause); 
         } else if (pageID == 0) { 
-            drawMain(dc, info, w, h, posStart, posPause, gpsSettings); 
+            drawMain(dc, info, w, h, posStart, posPause, gpsSettings, hasTouch); 
         } else if (pageID == 1) { 
             drawIcons(dc, info, w, h, posPause); 
         }
     }
 
-    // Добавь также этот метод внутрь класса View
     function onDataReceived(newData) {
         controlPoints = newData;
-        currentIndex = 0; // Сбрасываем на первое КП
-        msgTimer = 8;     // 8 тиков по 250мс = 2 секунды
+        currentIndex = 0; 
+        msgTimer = 8; 
         WatchUi.requestUpdate();
     }
 
@@ -232,9 +232,7 @@ function onTimerUpdate() as Void {
         var x = w - margin; 
         var y = (h / 2) - 12; 
         
-        // --- ЛОГИКА ТЕКСТА ПРИ СПУФЕ ---
         var text = isSpoofing ? "SPO" : paces.toString(); 
-        // ------------------------------
         
         var font = Graphics.FONT_SMALL;
         dc.setColor(pacesColorOutline, -1);
@@ -245,7 +243,6 @@ function onTimerUpdate() as Void {
                 if (adx + ady != 0) { dc.drawText(x + dx, y + dy, font, text, 2|4); }
             }
         }
-        // Если спуф - красим основной текст в красный
         dc.setColor(isSpoofing ? 0xFF0000 : pacesColorMain, -1);
         dc.drawText(x, y, font, text, 2|4);
     }
@@ -267,14 +264,10 @@ function onTimerUpdate() as Void {
         var x = w - margin;
         var y = (h / 2) + 12; 
         
-        // --- ЛОГИКА ТЕКСТА ПРИ СПУФЕ ---
         var text = isSpoofing ? "OF!" : localDist.toNumber().toString();
-        // ------------------------------
         
         var font = Graphics.FONT_SMALL;
 
-        // РИСУЕМ КОНТУР (КАНТ)
-        // Если спуф — кант белый (как у SPO), если нет — кант черный
         dc.setColor(isSpoofing ? 0xFFFFFF : 0x000000, -1);
         for (var dx = -2; dx <= 2; dx++) {
             for (var dy = -2; dy <= 2; dy++) {
@@ -284,105 +277,84 @@ function onTimerUpdate() as Void {
             }
         }
 
-        // РИСУЕМ ОСНОВНОЙ ТЕКСТ (ЦЕНТР)
-        // Если спуф — красный центр, если нет — белый метраж
         dc.setColor(isSpoofing ? 0xFF0000 : 0xFFFFFF, -1); 
         dc.drawText(x, y, font, text, 2|4);
     }
 
     function drawCompass(dc, info, w, h, pPause) {
-    var paces = calculatePaces();
-    var ringWidth = 30; 
-    var arrowW = 20; 
-    var arrowL = (w / 2) - 40; 
-    var cx = w / 2; 
-    var cy = h / 2;
-    
-    // 1. ПОЛУЧЕНИЕ НАПРАВЛЕНИЯ (HEADING)
-    var sInfo = Sensor.getInfo();
-    var curHeading = null;
-
-    // Сначала пробуем самый точный источник - магнитный компас
-    if (sInfo != null && sInfo.heading != null) {
-        curHeading = sInfo.heading;
-    } 
-    // Если компас спит, пробуем направление движения из GPS
-    else if (info != null && info.currentHeading != null) {
-        curHeading = info.currentHeading;
-    }
-
-    // Если данные получены - обновляем, если нет - держим последнее известное значение
-    if (curHeading != null) {
-        lastHeading = curHeading;
-    }
-    var heading = lastHeading;
-
-    // 2. ОТРИСОВКА ЦВЕТНОГО КОЛЬЦА
-    var sectorColors = [0xFF0000, 0xFFFF00, 0x00FF00, 0x000000, 0x0000FF, 0xFFFFFF, 0x00FFFF, 0xFFAA00, 0xAA00FF, 0xAAAAAA, 0x00AA00, 0xAA0000, 0x0000AA, 0x00aaff, 0xff5500, 0x550055];
-    
-    for (var i = 0; i < 16; i++) {
-        dc.setColor(sectorColors[i], -1);
-        var angleDeg = (i * 22.5).toFloat();
-        dc.setPenWidth(ringWidth);
-        // Рисуем дугу сектора
-        dc.drawArc(cx, cy, (w/2)-(ringWidth/2), Graphics.ARC_CLOCKWISE, 90-angleDeg, 90-angleDeg-22.5);
-        
-        // Рисуем буквы/метки в секторах (каждый второй)
-        if (i % 2 != 0) {
-            var charIndex = (i - 1) / 2; 
-            var textColor = 0x000000;
-            // Улучшение читаемости на темных секторах
-            if (i == 3) { textColor = 0xAAAAAA; } 
-            else if (i == 11 || i == 15) { textColor = 0xFFFFFF; }
-            
-            dc.setColor(textColor, -1);
-            var midAngleRad = (90 - angleDeg - 11.25) * (Math.PI / 180.0);
-            var dist = (w / 2.0) - (ringWidth / 2.0);
-            dc.drawText(cx + dist * Math.cos(midAngleRad), cy - dist * Math.sin(midAngleRad), Graphics.FONT_TINY, (65 + charIndex).toChar().toString(), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-        }
-    }
-
-    // 3. ОТРИСОВКА СТРЕЛКИ (С УЧЕТОМ Heading)
-    var sAngle = -heading - (Math.PI / 2.0); 
-    var cosA = Math.cos(sAngle); 
-    var sinA = Math.sin(sAngle);
-    var cosOrth = Math.cos(sAngle + Math.PI / 2.0); 
-    var sinOrth = Math.sin(sAngle + Math.PI / 2.0);
-
-    // Точки передней части (красный полигон)
-    var p1 = [cx + cosOrth * (arrowW / 2), cy + sinOrth * (arrowW / 2)];
-    var p2 = [cx - cosOrth * (arrowW / 2), cy - sinOrth * (arrowW / 2)];
-    var p3 = [p2[0] + cosA * arrowL, p2[1] + sinA * arrowL];
-    var p4 = [p1[0] + cosA * arrowL, p1[1] + sinA * arrowL];
-
-    dc.setColor(0xFF0000, -1);
-    dc.fillPolygon([p1, p2, p3, p4]);
-
-    // Точки задней части (белый контур)
-    dc.setColor(0xFFFFFF, -1); 
-    dc.setPenWidth(2);
-    var p5 = [p2[0] - cosA * arrowL, p2[1] - sinA * arrowL];
-    var p6 = [p1[0] - cosA * arrowL, p1[1] - sinA * arrowL];
-    
-    dc.drawLine(p1[0], p1[1], p6[0], p6[1]); 
-    dc.drawLine(p2[0], p2[1], p5[0], p5[1]); 
-    dc.drawLine(p5[0], p5[1], p6[0], p6[1]);
-    
-    // 4. ДОПОЛНИТЕЛЬНЫЕ ЭЛЕМЕНТЫ
-    drawPacesCounter(dc, w, h, paces);
-    drawMetersCounter(dc, w, h);
-    
-    if (appState == 1) { 
-        drawPauseSymbol(dc, w, h, pPause); 
-    }
-}
-
-    function drawMain(dc, info, w, h, pStart, pPause, gpsS) {
         var paces = calculatePaces();
-        // Покраснение текста (время и дистанция)
-        var txtColor = isSpoofing ? 0xFF0000 : 0xFFFFFF;
-        dc.setColor(txtColor, -1);
+        var ringWidth = 30; 
+        var arrowW = 20; 
+        var arrowL = (w / 2) - 40; 
+        var cx = w / 2; 
+        var cy = h / 2;
         
+        var curHeading = null;
+        var sInfo = Sensor.getInfo();
+
+        if (sInfo != null && sInfo has :heading && sInfo.heading != null) {
+            curHeading = sInfo.heading;
+        } 
+        else if (info != null && info has :currentHeading && info.currentHeading != null) {
+            curHeading = info.currentHeading;
+        }
+
+        if (curHeading != null) {
+            lastHeading = curHeading;
+        }
+        var heading = lastHeading;
+
+        var sectorColors = [0xFF0000, 0xFFFF00, 0x00FF00, 0x000000, 0x0000FF, 0xFFFFFF, 0x00FFFF, 0xFFAA00, 0xAA00FF, 0xAAAAAA, 0x00AA00, 0xAA0000, 0x0000AA, 0x00aaff, 0xff5500, 0x550055];
+        
+        for (var i = 0; i < 16; i++) {
+            dc.setColor(sectorColors[i], -1);
+            var angleDeg = (i * 22.5).toFloat();
+            dc.setPenWidth(ringWidth);
+            dc.drawArc(cx, cy, (w/2)-(ringWidth/2), Graphics.ARC_CLOCKWISE, 90-angleDeg, 90-angleDeg-22.5);
+            
+            if (i % 2 != 0) {
+                var charIndex = (i - 1) / 2; 
+                var textColor = 0x000000;
+                if (i == 3) { textColor = 0xAAAAAA; } 
+                else if (i == 11 || i == 15) { textColor = 0xFFFFFF; }
+                
+                dc.setColor(textColor, -1);
+                var midAngleRad = (90 - angleDeg - 11.25) * (Math.PI / 180.0);
+                var dist = (w / 2.0) - (ringWidth / 2.0);
+                dc.drawText(cx + dist * Math.cos(midAngleRad), cy - dist * Math.sin(midAngleRad), Graphics.FONT_TINY, (65 + charIndex).toChar().toString(), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+            }
+        }
+
+        var sAngle = -heading - (Math.PI / 2.0); 
+        var cosA = Math.cos(sAngle); 
+        var sinA = Math.sin(sAngle);
+        var cosOrth = Math.cos(sAngle + Math.PI / 2.0); 
+        var sinOrth = Math.sin(sAngle + Math.PI / 2.0);
+
+        var p1 = [cx + cosOrth * (arrowW / 2), cy + sinOrth * (arrowW / 2)];
+        var p2 = [cx - cosOrth * (arrowW / 2), cy - sinOrth * (arrowW / 2)];
+        var p3 = [p2[0] + cosA * arrowL, p2[1] + sinA * arrowL];
+        var p4 = [p1[0] + cosA * arrowL, p1[1] + sinA * arrowL];
+
+        dc.setColor(0xFF0000, -1);
+        dc.fillPolygon([p1, p2, p3, p4]);
+
+        dc.setColor(0xFFFFFF, -1); 
+        dc.setPenWidth(2);
+        var p5 = [p2[0] - cosA * arrowL, p2[1] - sinA * arrowL];
+        var p6 = [p1[0] - cosA * arrowL, p1[1] - sinA * arrowL];
+        
+        dc.drawLine(p1[0], p1[1], p6[0], p6[1]); 
+        dc.drawLine(p2[0], p2[1], p5[0], p5[1]); 
+        dc.drawLine(p5[0], p5[1], p6[0], p6[1]);
+        
+        drawPacesCounter(dc, w, h, paces);
+        drawMetersCounter(dc, w, h);
+    }
+
+    function drawMain(dc, info, w, h, pStart, pPause, gpsS, hasTouch) {
+        var paces = calculatePaces();
+        var txtColor = isSpoofing ? 0xFF0000 : 0xFFFFFF;
         var t = (info != null && info.timerTime != null) ? info.timerTime : 0;
         var d = (info != null && info.elapsedDistance != null) ? info.elapsedDistance : 0;
         var hr = (info != null && info.currentHeartRate != null) ? info.currentHeartRate : "--";
@@ -405,257 +377,154 @@ function onTimerUpdate() as Void {
         if (appState == 0) {
             dc.setColor(0x55AAFF, -1);
             dc.drawText(w - pStart[0]-15, pStart[1], Graphics.FONT_XTINY, "START>", 2);
-        } else { drawPauseSymbol(dc, w, h, pPause); }
-
-        // РИСУЕМ СИНИЙ КРЕСТИК ВЫХОДА
-        // РИСУЕМ КРЕСТИК ВЫХОДА (КОПИЯ С ЭКРАНА ИКОНОК)
-        if (appState == 0) {
-            dc.setColor(0x55AAFF, -1);
-            dc.setPenWidth(2);
-            var midY = h / 2 + 10;
-            var dx = 8; 
-            // Рисуем крестик точно по твоим координатам из drawUIElements
-            var centerX = w * 0.88 - 10 - dx;
-            var centerY = midY + 60;
-            var sz = 5; // Размер плеча крестика
-
-            dc.drawLine(centerX - sz, centerY - sz, centerX + sz, centerY + sz);
-            dc.drawLine(centerX - sz, centerY + sz, centerX + sz, centerY - sz);
+            
+            if (hasTouch) {
+                dc.setPenWidth(2);
+                var midY = h / 2 + 10;
+                var centerX = w * 0.88 - 18; var centerY = midY + 60;
+                dc.drawLine(centerX - 5, centerY - 5, centerX + 5, centerY + 5);
+                dc.drawLine(centerX - 5, centerY + 5, centerX + 5, centerY - 5);
+            }
+        } else { 
+            drawPauseSymbol(dc, w, h, pPause); 
         }
     }
 
     function drawIcons(dc, info, w, h, pPause) {
-    var paces = calculatePaces();
-    var midX = w / 2, midY = h / 2 + 10;
-    if (controlPoints.size() == 0) { return; }
-    
-    var currentData = controlPoints[currentIndex];
-    
-    // ПРЕДОХРАНИТЕЛЬ: порядковый номер не может быть > 99
-    var displayIdx = currentIndex + 1;
-    if (displayIdx > 99) { displayIdx = 99; }
-    var orderNumStr = displayIdx.toString();
-    
-    var cpNumStr = currentData[0].toString();
-    
-    var t = (info != null && info.timerTime != null) ? info.timerTime : 0;
-    var d = (info != null && info.elapsedDistance != null) ? info.elapsedDistance : 0;
-    
-    // Цвет текста меняется на красный только при спуфинге
-    var txtColor = isSpoofing ? 0xFF0000 : 0xFFFFFF;
+        var paces = calculatePaces();
+        var midX = w / 2, midY = h / 2 + 10;
+        if (controlPoints.size() == 0) { return; }
+        
+        var currentData = controlPoints[currentIndex];
+        var displayIdx = currentIndex + 1;
+        if (displayIdx > 99) { displayIdx = 99; }
+        var orderNumStr = displayIdx.toString() + ".";
+        var cpNumStr = currentData[0].toString();
+        
+        var t = (info != null && info.timerTime != null) ? info.timerTime : 0;
+        var d = (info != null && info.elapsedDistance != null) ? info.elapsedDistance : 0;
+        var txtColor = isSpoofing ? 0xFF0000 : 0xFFFFFF;
 
-    // Верхняя панель инфо
-    dc.setColor(0xAAAAAA, -1);
-    dc.drawText(midX, h * 0.06, Graphics.FONT_XTINY, (d / 1000.0).format("%.2f") + " km", 1|4);
-    dc.setColor(txtColor, -1); // Краснеет при спуфе
-    dc.drawText(midX, h * 0.17, Graphics.FONT_LARGE, formatTime(t), 1|4);
-    dc.setPenWidth(1); dc.drawLine(30, h * 0.24, w - 30, h * 0.24);
-    
-    drawPacesCounter(dc, w, h, paces);
-    drawMetersCounter(dc, w, h);
-    drawProgressArc(dc, w, h);
+        // 1. Верхняя панель инфо
+        dc.setColor(0xAAAAAA, -1);
+        dc.drawText(midX, h * 0.06, Graphics.FONT_XTINY, (d / 1000.0).format("%.2f") + " km", 1|4);
+        dc.setColor(txtColor, -1); 
+        dc.drawText(midX, h * 0.17, Graphics.FONT_LARGE, formatTime(t), 1|4);
+        dc.setPenWidth(1); dc.drawLine(30, h * 0.24, w - 30, h * 0.24);
+        
+        drawPacesCounter(dc, w, h, paces);
+        drawMetersCounter(dc, w, h);
+        drawProgressArc(dc, w, h);
 
-    // Проверка наличия контента в ячейках (индексы 1-6)
-    var hasContent = false;
-    for (var i = 1; i <= 6; i++) { 
-        if (currentData.size() > i && currentData[i] != 0 && currentData[i] != null) { 
-            hasContent = true; 
-            break; 
-        } 
-    }
+        var hasContent = false;
+        for (var i = 1; i <= 6; i++) { 
+            if (currentData.size() > i && currentData[i] != 0 && currentData[i] != null) { 
+                hasContent = true; 
+                break; 
+            } 
+        }
 
-    if (hasContent) {
-        var boxSize = 38, halfBox = 19, y_delta = 30; 
-        // Координаты 6 квадратов
-        var positions = [
-            [midX + halfBox, midY - boxSize - halfBox + y_delta], 
-            [midX - boxSize - halfBox, midY - halfBox + y_delta], 
-            [midX - halfBox, midY - halfBox + y_delta], 
-            [midX + halfBox, midY - halfBox + y_delta], 
-            [midX - 2*halfBox, midY + halfBox + y_delta], 
-            [midX, midY + halfBox + y_delta]
-        ];
+        if (hasContent) {
+            var boxSize = 38, halfBox = 19, y_delta = 30; 
+            var positions = [[midX + halfBox, midY - boxSize - halfBox + y_delta], [midX - boxSize - halfBox, midY - halfBox + y_delta], [midX - halfBox, midY - halfBox + y_delta], [midX + halfBox, midY - halfBox + y_delta], [midX - 2*halfBox, midY + halfBox + y_delta], [midX, midY + halfBox + y_delta]];
 
-        for (var j = 0; j < 6; j++) {
-            var item = (currentData.size() > j + 1) ? currentData[j+1] : 0;
-            
-            if (item != 0 && item != null) {
-                var bx = positions[j][0], by = positions[j][1];
-                
-                // Рисуем серую рамку (тонкую)
-                dc.setColor(0xAAAAAA, -1); 
-                dc.setPenWidth(1);
-                dc.drawRectangle(bx, by, boxSize, boxSize);
+            for (var j = 0; j < 6; j++) {
+                var item = (currentData.size() > j + 1) ? currentData[j+1] : 0;
+                if (item != 0 && item != null) {
+                    var bx = positions[j][0], by = positions[j][1];
+                    dc.setColor(0xAAAAAA, -1); 
+                    dc.setPenWidth(1);
+                    dc.drawRectangle(bx, by, boxSize, boxSize);
+                    dc.setColor(txtColor, -1);
 
-                dc.setColor(txtColor, -1); // Краснеет при спуфе
-
-                // ЛОГИКА ВЫБОРА: ИКОНКА ИЛИ ТЕКСТ
-                if (item instanceof Toybox.Lang.Number) {
-                    // Используем myFont1/myFont2 как в остальном коде, или myFont если он один
-                    var fontToUse = (item < 90) ? myFont1 : myFont2;
-                    var finalID = (item < 90) ? (33 + item) : (33 + (item - 90));
-                    if (fontToUse != null) {
-                        dc.drawText(bx + halfBox, by + halfBox, fontToUse, finalID.toChar().toString(), 1|4);
-                    }
-                } else if (item instanceof Toybox.Lang.String) {
-                    if (item.length() > 0) {
-                        var charToDraw = item.substring(0, 1);
-                        dc.drawText(bx + halfBox, by + halfBox, Graphics.FONT_LARGE, charToDraw, 1|4);
+                    // Безопасная проверка типа для старых часов
+                    if (item instanceof Toybox.Lang.Number) {
+                        var fontToUse = (item < 90) ? myFont1 : myFont2;
+                        var finalID = (item < 90) ? (33 + item) : (33 + (item - 90));
+                        if (fontToUse != null) {
+                            dc.drawText(bx + halfBox, by + halfBox, fontToUse, finalID.toChar().toString(), 1|4);
+                        }
+                    } else {
+                        // Если строка, берем первый символ безопасно
+                        var s = item.toString();
+                        if (s.length() > 0) {
+                            dc.drawText(bx + halfBox, by + halfBox, Graphics.FONT_LARGE, s.substring(0, 1), 1|4);
+                        }
                     }
                 }
             }
-        }
-        
-        // Отрисовка номера КП слева от сетки
-        var cpOffset = (w >= 280) ? cpOffsetEnduro : cpOffsetFenix;
-        var finalCpX = (w >= 280 && cpNumStr.length() > 2) ? midX - cpOffset - 40 : midX - cpOffset;
-        var shiftCorr = (w >= 280 && cpNumStr.length() > 2) ? 105 : ((w >= 280) ? 40 : (cpNumStr.length() > 2 ? 21 : 10));
-        
-        dc.setColor(txtColor, -1); // Краснеет при спуфе
-        dc.drawText(finalCpX, positions[0][1] + halfBox - 20, Graphics.FONT_NUMBER_HOT, cpNumStr, 2|4); 
-        var cpWidth = dc.getTextWidthInPixels(cpNumStr, Graphics.FONT_NUMBER_HOT);
 
-        if (currentData[0] > 99) {
-            dc.drawText(finalCpX - cpWidth + shiftCorr - 5, positions[0][1] + halfBox - 4, Graphics.FONT_LARGE, orderNumStr + ".", 2|4);
+            dc.setColor(txtColor, -1);
+            var topBoxX = positions[0][0];
+            var vCenterY = positions[0][1] + halfBox - 4;
+            var cpAnchorX = topBoxX - 20;
+
+            dc.drawText(cpAnchorX, vCenterY - 16, Graphics.FONT_NUMBER_HOT, cpNumStr, Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER);
+            dc.drawText(topBoxX + 25, vCenterY - 35, Graphics.FONT_LARGE, orderNumStr, Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER);
+
         } else {
-            if (w <= 218) {
-                if (currentData[0] > 9) {
-                     if (displayIdx > 9) {
-                            dc.drawText(finalCpX - cpWidth + shiftCorr - 15, positions[0][1] + halfBox - 4, Graphics.FONT_LARGE, orderNumStr + ".", 2|4);
+            dc.setColor(txtColor, -1);
+            dc.drawText(midX, midY - 19, Graphics.FONT_NUMBER_THAI_HOT, cpNumStr, 1|4);
+            
+            var wBigCP = dc.getTextWidthInPixels(cpNumStr, Graphics.FONT_NUMBER_THAI_HOT);
+            var orderX = midX - (wBigCP / 2) - 12;
+            dc.drawText(orderX, midY - 4, Graphics.FONT_LARGE, orderNumStr, Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER);
 
-                        } 
-                        else{
-                            dc.drawText(finalCpX - cpWidth + shiftCorr - 5, positions[0][1] + halfBox - 4, Graphics.FONT_LARGE, orderNumStr + ".", 2|4);
-                        }
-                    }
-                else{
-                        if (displayIdx > 9) {
-                            dc.drawText(finalCpX - cpWidth + shiftCorr - 45, positions[0][1] + halfBox - 4, Graphics.FONT_LARGE, orderNumStr + ".", 2|4);
-                        } 
-                        else{
-                            dc.drawText(finalCpX - cpWidth + shiftCorr - 25, positions[0][1] + halfBox - 4, Graphics.FONT_LARGE, orderNumStr + ".", 2|4);
-                        }
-                    }
-            } else {
-                if (currentData[0] > 9) {
-                    dc.drawText(finalCpX - cpWidth + shiftCorr, positions[0][1] + halfBox - 4, Graphics.FONT_LARGE, orderNumStr + ".", 2|4);
-                    }
-                else{
-                    if (displayIdx > 9) {
-                        dc.drawText(finalCpX - cpWidth + shiftCorr-45, positions[0][1] + halfBox - 4, Graphics.FONT_LARGE, orderNumStr + ".", 2|4);
-                        }
-                    else{
-                        dc.drawText(finalCpX - cpWidth + shiftCorr-30, positions[0][1] + halfBox - 4, Graphics.FONT_LARGE, orderNumStr + ".", 2|4);
-                    }
-                    
-                    }
-            }
-        } 
-
-    } else {
-        // --- СЦЕНАРИЙ 2: НЕТ ИКОНОК (БОЛЬШОЙ НОМЕР ПО ЦЕНТРУ) ---
-        dc.setColor(txtColor, -1); // Краснеет при спуфе
-        dc.drawText(midX, midY - 19, Graphics.FONT_NUMBER_THAI_HOT, cpNumStr, 1|4);
-        var bigCpWidth = dc.getTextWidthInPixels(cpNumStr, Graphics.FONT_NUMBER_THAI_HOT);
-        
-        // Отрисовка порядкового номера (например, "81.")
-        if (currentData[0] > 99) {
-            dc.drawText(midX - (bigCpWidth / 2) - 45, midY - 4, Graphics.FONT_LARGE, orderNumStr + ".", 2|4);
-        } else {
-            dc.drawText(midX - (bigCpWidth / 2) - 40, midY - 4, Graphics.FONT_LARGE, orderNumStr + ".", 2|4);
-        }
-
-        // --- ВОЗВРАТ ПОДСКАЗКИ СЛЕДУЮЩЕГО КП ---
-        if (currentIndex + 1 < controlPoints.size()) {
-            dc.setColor(0xAAAAAA, -1); 
-            // Рисуем номер следующего КП серым цветом с твоими точными координатами
-            if (w <= 218) {
-                dc.fillPolygon([
-                    [midX - 6, midY + 38 - 5], 
-                    [midX + 6, midY + 38 - 5], 
-                    [midX, midY + 49 - 5]
-                ]);
-                dc.drawText(midX, midY + 68, Graphics.FONT_NUMBER_MEDIUM, controlPoints[currentIndex + 1][0].toString(), 1|4);
-            } else {
-                dc.fillPolygon([
-                    [midX - 6, midY + 38], 
-                    [midX + 6, midY + 38], 
-                    [midX, midY + 49]
-                ]);
-                dc.drawText(midX, midY + 85, Graphics.FONT_NUMBER_MEDIUM, controlPoints[currentIndex + 1][0].toString(), 1|4);
+            if (currentIndex + 1 < controlPoints.size()) {
+                dc.setColor(0xAAAAAA, -1); 
+                var polyY = (w <= 218) ? midY + 33 : midY + 38;
+                dc.fillPolygon([[midX - 6, polyY], [midX + 6, polyY], [midX, polyY + 11]]);
+                
+                var nextCpStr = controlPoints[currentIndex + 1][0].toString();
+                dc.drawText(midX, (w <= 218) ? midY + 68 : midY + 85, Graphics.FONT_NUMBER_MEDIUM, nextCpStr, 1|4);
             }
         }
+        drawUIElements(dc, w, h, midX, midY, pPause);
     }
-    drawUIElements(dc, w, h, midX, midY, pPause);
-}
 
     function drawNavigation(dc, info, w, h, pPause, gpsS) {
-        var cx = w / 2;
-        var cy = h / 2;
+        var cx = w / 2; var cy = h / 2;
         var curLoc = (info != null) ? info.currentLocation : null;
         var sInfo = Sensor.getInfo();
-        var heading = (sInfo != null && sInfo.heading != null) ? sInfo.heading : (info != null && info.currentHeading != null ? info.currentHeading : lastHeading);
+        var heading = (sInfo != null && sInfo has :heading && sInfo.heading != null) ? sInfo.heading : (info != null && info has :currentHeading && info.currentHeading != null ? info.currentHeading : lastHeading);
         lastHeading = heading;
-
-        var directDist = 0.0;
-        var arrowAngle = 0.0;
-
-        if (startLocation != null && curLoc != null) {
-            var curDeg = curLoc.toDegrees();
-            var stDeg = startLocation.toDegrees();
-            var lat1 = Math.toRadians(curDeg[0]);
-            var lon1 = Math.toRadians(curDeg[1]);
-            var lat2 = Math.toRadians(stDeg[0]);
-            var lon2 = Math.toRadians(stDeg[1]);
-
-            var dLat = lat2 - lat1;
-            var dLon = lon2 - lon1;
-
-            var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
-                    Math.cos(lat1) * Math.cos(lat2) *
-                    Math.sin(dLon/2) * Math.sin(dLon/2);
-            var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
-            directDist = 6371.0 * c;
-
-            var yBearing = Math.sin(dLon) * Math.cos(lat2);
-            var xBearing = Math.cos(lat1) * Math.sin(lat2) -
-                           Math.sin(lat1) * Math.cos(lat2) * Math.cos(dLon);
-            var bearing = Math.atan2(yBearing, xBearing);
-            arrowAngle = bearing - heading;
-        }
-
-        var padding = (w < 240) ? 12 : 8; 
-        var rTip   = (w / 2) - padding;
-        var rWings = (w / 2) - padding - 25; 
-        var rInner = 35;
-        var wingSpan = (w / 2) * 0.65; 
-
-        var drawAngle = arrowAngle - (Math.PI / 2.0);
-        var cosA = Math.cos(drawAngle);
-        var sinA = Math.sin(drawAngle);
-        var cosOrth = Math.cos(drawAngle + Math.PI/2.0);
-        var sinOrth = Math.sin(drawAngle + Math.PI/2.0);
-
-        var pTip   = [cx + rTip * cosA, cy + rTip * sinA]; 
-        var pWingL = [cx - rWings * cosA + wingSpan * cosOrth, cy - rWings * sinA + wingSpan * sinOrth];
-        var pInner = [cx - rInner * cosA, cy - rInner * sinA];
-        var pWingR = [cx - rWings * cosA - wingSpan * cosOrth, cy - rWings * sinA - wingSpan * sinOrth];
-
-        dc.setColor(0x00AAFF, -1);
-        dc.fillPolygon([pTip, pWingL, pInner, pWingR]);
         
-        dc.setColor(0xFFFFFF, -1);
-        dc.setPenWidth(3);
-        dc.drawLine(pTip[0], pTip[1], pWingL[0], pWingL[1]);
-        dc.drawLine(pWingL[0], pWingL[1], pInner[0], pInner[1]);
-        dc.drawLine(pInner[0], pInner[1], pWingR[0], pWingR[1]);
-        dc.drawLine(pWingR[0], pWingR[1], pTip[0], pTip[1]);
-
-        // Покраснение текста (одометр "домой" / расстояние)
+        var directDist = 0.0; var arrowAngle = 0.0;
+        if (startLocation != null && curLoc != null) {
+            var curD = curLoc.toDegrees(); var stD = startLocation.toDegrees();
+            var lat1 = Math.toRadians(curD[0]); var lon1 = Math.toRadians(curD[1]);
+            var lat2 = Math.toRadians(stD[0]); var lon2 = Math.toRadians(stD[1]);
+            var dLat = lat2 - lat1; var dLon = lon2 - lon1;
+            var a = Math.sin(dLat/2) * Math.sin(dLat/2) + Math.cos(lat1) * Math.cos(lat2) * Math.sin(dLon/2) * Math.sin(dLon/2);
+            directDist = 6371.0 * (2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)));
+            arrowAngle = Math.atan2(Math.sin(dLon) * Math.cos(lat2), Math.cos(lat1) * Math.sin(lat2) - Math.sin(lat1) * Math.cos(lat2) * Math.cos(dLon)) - heading;
+        }
+        
+        var drawA = arrowAngle - (Math.PI / 2.0);
+        var cosA = Math.cos(drawA); var sinA = Math.sin(drawA);
+        var cosO = Math.cos(drawA + Math.PI/2.0); var sinO = Math.sin(drawA + Math.PI/2.0);
+        var rTip = (w/2)-8; var rIn = 35; var span = (w/2)*0.65;
+        
+        dc.setColor(0x00AAFF, -1);
+        dc.fillPolygon([[cx + rTip*cosA, cy + rTip*sinA], [cx - (rTip-25)*cosA + span*cosO, cy - (rTip-25)*sinA + span*sinO], [cx - rIn*cosA, cy - rIn*sinA], [cx - (rTip-25)*cosA - span*cosO, cy - (rTip-25)*sinA - span*sinO]]);
+        
         var txtColor = isSpoofing ? 0xFF0000 : 0xFFFFFF;
-        var distStr = isSpoofing ? "GPS ERROR" : ((directDist < 1.0) ? (directDist * 1000).format("%d") + " m" : directDist.format("%.2f") + " km");
+        var distS = isSpoofing ? "GPS ERROR" : ((directDist < 1.0) ? (directDist * 1000).format("%d") + " m" : directDist.format("%.2f") + " km");
+        
         drawOutlineText(dc, cx, cy - 15, Graphics.FONT_XTINY, "BACK TO START", 0x000000, txtColor);
-        drawOutlineText(dc, cx, cy + 15, Graphics.FONT_MEDIUM, distStr, 0x000000, txtColor);
+        drawOutlineText(dc, cx, cy + 15, Graphics.FONT_MEDIUM, distS, 0x000000, txtColor);
+
+        // --- КООРДИНАТЫ С ЧЕРНОЙ ОКАНТОВКОЙ (ДЛЯ ЧИТАЕМОСТИ) ---
+        if (info != null && info.currentLocation != null) {
+            var loc = info.currentLocation.toDegrees();
+            var latStr = loc[0].format("%.5f");
+            var lonStr = loc[1].format("%.5f");
+            
+            // Используем серый или белый цвет для самих цифр, а черный для контура
+            var coordColor = 0xAAAAAA; 
+            drawOutlineText(dc, cx, cy + 42, Graphics.FONT_XTINY, latStr, 0x000000, coordColor);
+            drawOutlineText(dc, cx, cy + 54, Graphics.FONT_XTINY, lonStr, 0x000000, coordColor);
+        }
 
         drawGPSBottom(dc, info, w, gpsS);
         drawPacesCounter(dc, w, h, calculatePaces());
@@ -664,33 +533,51 @@ function onTimerUpdate() as Void {
 
     function drawOutlineText(dc, x, y, font, text, outColor, mainColor) {
         dc.setColor(outColor, -1);
-        for (var dx = -2; dx <= 2; dx++) {
-            for (var dy = -2; dy <= 2; dy++) {
-                if (dx*dx + dy*dy > 0) { dc.drawText(x + dx, y + dy, font, text, 1|4); }
-            }
-        }
-        dc.setColor(mainColor, -1);
-        dc.drawText(x, y, font, text, 1|4);
+        for (var dx = -2; dx <= 2; dx++) { for (var dy = -2; dy <= 2; dy++) { if (dx*dx+dy*dy>0) { dc.drawText(x+dx, y+dy, font, text, 1|4); } } }
+        dc.setColor(mainColor, -1); dc.drawText(x, y, font, text, 1|4);
     }
 
     function drawGPSBottom(dc, info, w, s) {
         var acc = (info != null && info.currentLocationAccuracy != null) ? info.currentLocationAccuracy : 0;
         if (acc <= 1) { return; }
-        var colors = [0x000000, 0x000000, 0xFFFF00, 0xFFFF00, 0x00FF00];
+        dc.setColor([0x000000, 0x000000, 0xFFFF00, 0xFFFF00, 0x00FF00][acc], -1);
         var x = (w / 2) - (s[0] / 2);
-        dc.setColor(colors[acc], -1);
         dc.fillRectangle(x, s[5] + (s[1] - s[4]), s[3], s[4]);
         dc.fillRectangle(x + s[3] + ((s[0] - (s[3]*2) - s[2])/2), s[5], s[2], s[1]);
         dc.fillRectangle(x + s[0] - s[3], s[5] + (s[1] - s[4]), s[3], s[4]);
     }
 
-    function drawPauseMenu(dc, info, w, h, pRes, pSave, pDisc) {
+function drawPauseMenu(dc, info, w, h, pRes, pSave, pDisc) {
         dc.setColor(0xFFFFFF, -1);
         dc.drawText(w/2, h * 0.1, Graphics.FONT_SMALL, "PAUSED", 1);
         dc.drawText(w/2, h/2 - (h * 0.13), Graphics.FONT_NUMBER_HOT, formatTime((info != null && info.timerTime != null) ? info.timerTime : 0), 1);
+        
+        // Правые кнопки
         dc.setColor(0x00FF00, -1); dc.drawText(w - pRes[0]-10, pRes[1], Graphics.FONT_XTINY, "RESUME", 2);
         dc.setColor(0xFF5555, -1); dc.drawText(w - pSave[0]-10, pSave[1], Graphics.FONT_XTINY, "SAVE", 2);
+
+        // Левая верхняя (Discard)
         dc.setColor(0xAAAAAA, -1); dc.drawText(pDisc[0]+10, pDisc[1], Graphics.FONT_XTINY, "DISCARD", 0);
+        
+        // --- ЛОГИКА RESET SPOOF С ИНДИКАТОРОМ КНОПКИ ---
+        var textX = pDisc[0] + 15; // Чуть больше отступ для линии
+        var textY = h / 2 - 40;
+        var buttonY = h / 2;      // Уровень средней кнопки
+        
+        dc.setColor(0xFFAA00, -1); 
+        
+        // 1. Рисуем жирную точку прямо напротив средней кнопки
+        // (x=5 для XP3, чтобы была у самого края)
+        dc.fillCircle(8, buttonY, 4); 
+
+        // 2. Рисуем соединительную линию от точки вверх до надписи
+        dc.setPenWidth(2);
+        dc.drawLine(8, buttonY, 8, textY);     // Вертикальная линия
+        dc.drawLine(8, textY, textX - 5, textY); // Короткая горизонтальная к тексту
+        dc.setPenWidth(1);
+
+        // 3. Сама надпись
+        dc.drawText(textX, textY, Graphics.FONT_XTINY, "RESET\nSPOOF", 0 | 4);
     }
 
     function drawPauseSymbol(dc, w, h, pPause) {
@@ -711,8 +598,9 @@ function onTimerUpdate() as Void {
         dc.setColor(0xFFFFFF, -1); dc.drawText(w/2, h/2-35, Graphics.FONT_LARGE, "LegendMaster", 1|4);
         dc.drawText(w/2, h/2, Graphics.FONT_SMALL, "by punishman", 1|4);
         dc.drawText(w/2, h/2+40, Graphics.FONT_XTINY, "Thanks to:", 1|4);
-        dc.drawText(w/2, h/2+55, Graphics.FONT_XTINY, "laura coach Ann10_08 killkost", 1|4);
-        dc.drawText(w/2, h/2+75, Graphics.FONT_XTINY, "michailova22", 1|4);
+        dc.drawText(w/2, h/2+55, Graphics.FONT_XTINY, "laura coach", 1|4);
+        dc.drawText(w/2, h/2+75, Graphics.FONT_XTINY, "Ann10_08 killkost", 1|4);
+        dc.drawText(w/2, h/2+95, Graphics.FONT_XTINY, "michailova22", 1|4);
     }
 
     function formatTime(ms) {
@@ -722,70 +610,11 @@ function onTimerUpdate() as Void {
         return (h > 0) ? h.format("%d") + ":" + m.format("%02d") + ":" + s.format("%02d") : m.format("%02d") + ":" + s.format("%02d");
     }
 
-    // function loadSettings() {
-
-    //     controlPoints = [
-    //         [1, 0, 1, 2, 3, 4, 5],
-    //         [22, 90, 91, 92, 93, 94, 95],
-    //         [11, 0, 0, 0, 0, 0, 0],
-    //         [1, 0, 0, 0, 0, 0, 0],
-    //         [39, 0, 0, 0, 0, 0, 0], // Самые последние иконки
-    //                 // --- ШРИФТ 1 (myFont1): Иконки 0-89 ---
-    //     [100, 0, 1, 2, 3, 4, 5],
-    //     [2, 6, 7, 8, 9, 10, 11],
-    //     [3, 12, 13, 14, 15, 16, 17],
-    //     [4, 18, 19, 20, 21, 22, 23],
-    //     [5, 24, 25, 26, 27, 28, 29],
-    //     [6, 30, 31, 32, 33, 34, 35],
-    //     [37, 36, 37, 38, 39, 40, 41],
-    //     [8, 42, 43, 44, 45, 46, 47],
-    //     [49, 48, 49, 50, 51, 52, 53],
-    //     [10, 54, 55, 56, 57, 58, 59],
-    //     [11, 60, 61, 62, 63, 64, 65],
-    //     [12, 66, 67, 68, 69, 70, 71],
-    //     [13, 72, 73, 74, 75, 76, 77],
-    //     [14, 78, 79, 80, 81, 82, 83],
-    //     [15, 84, 85, 86, 87, 88, 89], // Последние иконки первого шрифта
-
-    //     [11, 0, 0, 0, 0, 0, 0],
-    //     [100, 0, 0, 0, 0, 0, 0],
-    //         [1, 0, 0, 0, 0, 0, 0],
-
-
-    //     // --- МОМЕНТ ПЕРЕКЛЮЧЕНИЯ (СМЕШАННЫЙ КП) ---
-    //     // Здесь первые 3 иконки из Font1, последние 3 из Font2
-    //     [100, 87, 88, 89, 90, 91, 92], 
-
-    //     // --- ШРИФТ 2 (myFont2): Иконки 90-179 ---
-    //     [17, 90, 91, 92, 93, 94, 95],
-    //     [18, 96, 97, 98, 99, 100, 101],
-    //     [19, 102, 103, 104, 105, 106, 107],
-    //     [20, 108, 109, 110, 111, 112, 113],
-    //     [21, 114, 115, 116, 117, 118, 119],
-    //     [22, 120, 121, 122, 123, 124, 125],
-    //     [23, 126, 127, 128, 129, 130, 131],
-    //     [24, 132, 133, 134, 135, 136, 137],
-    //     [25, 138, 139, 140, 141, 142, 143],
-    //     [26, 144, 145, 146, 147, 148, 149],
-    //     [27, 150, 151, 152, 153, 154, 155],
-    //     [28, 156, 157, 158, 159, 160, 161],
-    //     [29, 162, 163, 164, 165, 166, 167],
-    //     [30, 168, 169, 170, 171, 172, 173],
-    //     [31, 174, 175, 176, 177, 178, 179], // Самые последние иконки
-        
-             
-    //          ];
-    // }
-
-function loadSettings() {
-        var app = Application.getApp();
-        // getProperty — это "золотой стандарт" для CIQ 1.x
-        var data = app.getProperty("cp_data");
-
+    function loadSettings() {
+        var data = Application.getApp().getProperty("cp_data");
         if (data != null && data instanceof Toybox.Lang.Array) {
             controlPoints = data;
         } else {
-            // Твои стандартные КП
             controlPoints = [[31, 179, 178, 177, 176, 175, 174]];
         }
     }
