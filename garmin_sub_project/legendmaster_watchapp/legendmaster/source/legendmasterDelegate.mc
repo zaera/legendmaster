@@ -59,9 +59,9 @@ class legendmasterTouchDelegate extends WatchUi.InputDelegate {
 
         if (view.appState == 2) {
             // Кнопка RESUME (справа сверху)
-            if (x > w * 0.5 && y > h * 0.2 && y < h * 0.4) { return triggerStartStop(view); }
-            // Текст поднят на 40 пикселей, поэтому смещаем зону вверх (примерно h * 0.3 до h * 0.5)
-            if (x < w * 0.4 && y > (h * 0.5 - 60) && y < (h * 0.5 - 20)) { 
+            if (x > w * 0.5 && y > h * 0.1 && y < h * 0.45) { return triggerStartStop(view); }
+            // RESET SPOOF (Слева по центру)
+            if (x < w * 0.4 && y > (h * 0.5 - 80) && y < (h * 0.5 + 20)) { 
                 view.resetSpoof(); 
                 return true; 
             }
@@ -80,17 +80,23 @@ class legendmasterTouchDelegate extends WatchUi.InputDelegate {
             return true; 
         }
 
+        // --- ЗОНА ПАУЗЫ ДЛЯ СТРАНИЦЫ 1 (ИКОНКИ) ---
         if (view.pageID == 1) {
             if (x > w * 0.7 && y > h * 0.7) { view.pageID = 0; WatchUi.requestUpdate(); return true; }
-            if (view.appState == 1 && x > w * 0.5 && y > h * 0.25 && y < h * 0.45) { return triggerStartStop(view); }
+            // Расширенная зона: от центра вправо до края, по высоте от 15% до 50% экрана
+            if (view.appState == 1 && x > w * 0.5 && y > h * 0.15 && y < h * 0.5) { return triggerStartStop(view); }
             return true; 
         }
 
+        // --- ЗОНА ПАУЗЫ ДЛЯ СТРАНИЦЫ 0 (ГЛАВНАЯ) ---
         if (view.pageID == 0) {
             if (view.appState == 0) {
                 if (x > w * 0.7 && y > h * 0.7) { System.exit(); return true; }
-                if (x > w * 0.5 && y > h * 0.2 && y < h * 0.4) { return triggerStartStop(view); }
-            } else if (view.appState == 1 && x > w * 0.5 && y > h * 0.25 && y < h * 0.45) { return triggerStartStop(view); }
+                if (x > w * 0.5 && y > h * 0.15 && y < h * 0.45) { return triggerStartStop(view); }
+            } else if (view.appState == 1) {
+                // Аналогично расширяем здесь
+                if (x > w * 0.5 && y > h * 0.15 && y < h * 0.5) { return triggerStartStop(view); }
+            }
         }
         return true; 
     }

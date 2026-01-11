@@ -416,9 +416,11 @@ class legendmasterView extends WatchUi.View {
         drawMetersCounter(dc, w, h);
         drawProgressArc(dc, w, h);
 
+        // Проверка наличия контента в ячейках
         var hasContent = false;
         for (var i = 1; i <= 6; i++) { 
-            if (currentData.size() > i && currentData[i] != 0 && currentData[i] != null) { 
+            // ИЗМЕНЕНО: Проверка только на null, чтобы 0 был валидным
+            if (currentData.size() > i && currentData[i] != null) { 
                 hasContent = true; 
                 break; 
             } 
@@ -429,8 +431,11 @@ class legendmasterView extends WatchUi.View {
             var positions = [[midX + halfBox, midY - boxSize - halfBox + y_delta], [midX - boxSize - halfBox, midY - halfBox + y_delta], [midX - halfBox, midY - halfBox + y_delta], [midX + halfBox, midY - halfBox + y_delta], [midX - 2*halfBox, midY + halfBox + y_delta], [midX, midY + halfBox + y_delta]];
 
             for (var j = 0; j < 6; j++) {
-                var item = (currentData.size() > j + 1) ? currentData[j+1] : 0;
-                if (item != 0 && item != null) {
+                // ИЗМЕНЕНО: Если данных нет в массиве, считаем это null
+                var item = (currentData.size() > j + 1) ? currentData[j+1] : null;
+                
+                // ИЗМЕНЕНО: Теперь 0 проходит проверку, а null - нет
+                if (item != null) {
                     var bx = positions[j][0], by = positions[j][1];
                     dc.setColor(0xAAAAAA, -1); 
                     dc.setPenWidth(1);
@@ -463,6 +468,7 @@ class legendmasterView extends WatchUi.View {
             dc.drawText(topBoxX + 25, vCenterY - 35, Graphics.FONT_LARGE, orderNumStr, Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER);
 
         } else {
+            // --- СЦЕНАРИЙ 2: НЕТ ИКОНОК (ПО ЦЕНТРУ) ---
             dc.setColor(txtColor, -1);
             dc.drawText(midX, midY - 19, Graphics.FONT_NUMBER_THAI_HOT, cpNumStr, 1|4);
             
@@ -523,7 +529,7 @@ class legendmasterView extends WatchUi.View {
             // Используем серый или белый цвет для самих цифр, а черный для контура
             var coordColor = 0xAAAAAA; 
             drawOutlineText(dc, cx, cy + 42, Graphics.FONT_XTINY, latStr, 0x000000, coordColor);
-            drawOutlineText(dc, cx, cy + 54, Graphics.FONT_XTINY, lonStr, 0x000000, coordColor);
+            drawOutlineText(dc, cx, cy + 60, Graphics.FONT_XTINY, lonStr, 0x000000, coordColor);
         }
 
         drawGPSBottom(dc, info, w, gpsS);
@@ -615,7 +621,7 @@ function drawPauseMenu(dc, info, w, h, pRes, pSave, pDisc) {
         if (data != null && data instanceof Toybox.Lang.Array) {
             controlPoints = data;
         } else {
-            controlPoints = [[31, 179, 178, 177, 176, 175, 174]];
+            controlPoints = [[31, 0, 56, null, 95, 109, null]];
         }
     }
 
