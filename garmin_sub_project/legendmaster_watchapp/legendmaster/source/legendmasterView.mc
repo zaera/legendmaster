@@ -378,12 +378,16 @@ class legendmasterView extends WatchUi.View {
             dc.setColor(0x55AAFF, -1);
             dc.drawText(w - pStart[0]-15, pStart[1], Graphics.FONT_XTINY, "START>", 2);
             
-            if (hasTouch) {
+            // Исправленный блок отрисовки крестика выхода
+            if (hasTouch || w <= 218) { // Рисуем и для тача, и для маленьких экранов (Fenix 3)
                 dc.setPenWidth(2);
-                var midY = h / 2 + 10;
-                var centerX = w * 0.88 - 18; var centerY = midY + 60;
-                dc.drawLine(centerX - 5, centerY - 5, centerX + 5, centerY + 5);
-                dc.drawLine(centerX - 5, centerY + 5, centerX + 5, centerY - 5);
+                // Используем динамические координаты от края экрана
+                var centerX = w * 0.85; 
+                var centerY = h * 0.75;
+                
+                // Рисуем крестик (X)
+                dc.drawLine(centerX - 6, centerY - 6, centerX + 6, centerY + 6);
+                dc.drawLine(centerX - 6, centerY + 6, centerX + 6, centerY - 6);
             }
         } else { 
             drawPauseSymbol(dc, w, h, pPause); 
@@ -520,16 +524,12 @@ class legendmasterView extends WatchUi.View {
         drawOutlineText(dc, cx, cy - 15, Graphics.FONT_XTINY, "BACK TO START", 0x000000, txtColor);
         drawOutlineText(dc, cx, cy + 15, Graphics.FONT_MEDIUM, distS, 0x000000, txtColor);
 
-        // --- КООРДИНАТЫ С ЧЕРНОЙ ОКАНТОВКОЙ (ДЛЯ ЧИТАЕМОСТИ) ---
+        // --- КООРДИНАТЫ КРАСНЫМ ЦВЕТОМ ДЛЯ ЧИТАЕМОСТИ ---
         if (info != null && info.currentLocation != null) {
             var loc = info.currentLocation.toDegrees();
-            var latStr = loc[0].format("%.5f");
-            var lonStr = loc[1].format("%.5f");
-            
-            // Используем серый или белый цвет для самих цифр, а черный для контура
-            var coordColor = 0xAAAAAA; 
-            drawOutlineText(dc, cx, cy + 42, Graphics.FONT_XTINY, latStr, 0x000000, coordColor);
-            drawOutlineText(dc, cx, cy + 60, Graphics.FONT_XTINY, lonStr, 0x000000, coordColor);
+            dc.setColor(0xFF0000, -1); // Чистый красный цвет
+            dc.drawText(cx, cy + 42, Graphics.FONT_XTINY, loc[0].format("%.5f"), 1);
+            dc.drawText(cx, cy + 58, Graphics.FONT_XTINY, loc[1].format("%.5f"), 1);
         }
 
         drawGPSBottom(dc, info, w, gpsS);
